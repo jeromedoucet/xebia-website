@@ -1,6 +1,8 @@
 xebia-website
 =============
 
+Project board: https://trello.com/board/corporate-web-site-2012/4fe319d537985068397de16d
+
 New version of Xebia's website
 
 This website has to be both a showcase for Xebia's offers and a POC for new Webtechnologies (HTML5, CSS3)
