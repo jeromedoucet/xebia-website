@@ -6,7 +6,7 @@ a{
 	position: absolute;
 	left:0;
 	bottom:0;
-	background:black;
+	background-color:none;
 	opacity:0.8;
 	width:100%;
 	text-align:center;
@@ -15,7 +15,7 @@ a{
 
 #slidingSpacesNavigationMap{
 	position: fixed;
-	opacity:0.5;
+	opacity:1;
 	text-align:center;
 	float:right;
 	line-height:10px;
@@ -23,21 +23,24 @@ a{
 }
 
 #slidingSpacesNavigationMap a{
-	float:left;
-	width:10px;
-	height:10px;
-	margin:2px;
-	-webkit-border-radius:10px;
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin: 2px;
+	background-image: url(../img/interface/gamepad_off.png);
+	background-repeat: no-repeat;
+	background-position: -42px -2px;	/*-webkit-border-radius:10px;
 	-moz-border-radius:10px;
+	border-radius:10px;*/
 }
 
 .slidingSpacesNavigationMap{
 	position: absolute;
 	bottom:0;
 	right:0;
-	background:black;
-	filter: alpha(opacity = 50);
-	opacity:0.5;
+	background-color:none;
+	filter: alpha(opacity = 100);
+	opacity:1;
 	text-align:center;
 	float:right;
 	line-height:10px;
@@ -45,16 +48,16 @@ a{
 
 .slidingSpacesNavigationDot{
 	position: relative;
-	background:white;
-	filter: alpha(opacity = 40);
-	opacity:0.4;
+	background-color:none;
+	filter: alpha(opacity = 100);
+	opacity:1;
 }
 
 .slidingSpacesNavigationDotActual{
 	position: relative;
-	background:white;
-	filter: alpha(opacity = 80);
-	opacity:0.8;
+	background-color:none;
+	filter: alpha(opacity = 100);
+	opacity:1;
 	float:left;
 }
 
@@ -124,7 +127,7 @@ a{
 #slidingSpacesPlayerTimerIn{
 	width:0%;
 	height:4px;
-	background:black;
+	background-color:none;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
