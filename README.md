@@ -12,3 +12,4 @@ Il tourne avec Jekyll, avec un minimum de liquid et un peu de js.
 Url Utiles
 ----------
 * [Trello du projet](https://trello.com/board/corporate-web-site-2012/4fe319d537985068397de16d)
+* [Site déployé](http://xebia-france.github.com/xebia-website/)
