@@ -38,7 +38,7 @@
     					createTimeBar			: false,
     					displace 				: 'row',
     					easing 					: 'linear',
-    					feedbackArrows 			: false,
+    					feedbackArrows 			: true,
     					fullScreenBackground 	: false,
     					linkClass 				: '',
     					mapPosition				: 'bottom_right',
@@ -691,14 +691,14 @@
     		 	
     		 	function createSensibleAreas(){
     		 		
-    		 		$(elementToScroll).append("<div id='slidingSpacesSensibleArea_up' class='slidingSpacesSensibleArea'><a href='javascript:void(0);'></a></div>");
+    		 		$(elementToScroll).append("<div id='' class='slidingSpacesSensibleArea'><a href='javascript:void(0);'></a></div>");
     		 		$(elementToScroll).append("<div id='slidingSpacesSensibleArea_right' class='slidingSpacesSensibleArea'><a href='javascript:void(0);'></a></div>");
     		 		$(elementToScroll).append("<div id='slidingSpacesSensibleArea_down' class='slidingSpacesSensibleArea'><a href='javascript:void(0);'></a></div>");
     		 		$(elementToScroll).append("<div id='slidingSpacesSensibleArea_left' class='slidingSpacesSensibleArea'><a href='javascript:void(0);'></a></div>");
     		 		
     		 		if(elementToScroll != "html,body"){
-    		 			$("#slidingSpacesSensibleArea_up").width($(elementToScroll).width());
-    		 			$("#slidingSpacesSensibleArea_up").offset({
+    		 			$("#").width($(elementToScroll).width());
+    		 			$("#").offset({
     		 				top:$(elementToScroll).offset().top+
 	 							eval($(elementToScroll).css("border-top-width").replace("px",""))
     		 			});
@@ -1604,8 +1604,8 @@
     		 	
     		 	function positionSensibleAreas(){
     		 		if(elementToScroll != "html,body"){
-    		 			$("#slidingSpacesSensibleArea_up").width($(elementToScroll).width());
-    		 			$("#slidingSpacesSensibleArea_up").offset({
+    		 			$("#").width($(elementToScroll).width());
+    		 			$("#").offset({
     		 				top:$(elementToScroll).offset().top+
 	 							eval($(elementToScroll).css("border-top-width").replace("px",""))
     		 			});
