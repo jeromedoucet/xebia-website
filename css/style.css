@@ -302,7 +302,7 @@ body{
 }
 /* ---------------------------------------------------------------------------------------------  Fonds commun  */
 
-/* Bruit graphique*/
+/* Bruit graphique
 .noise {
   background-image: url(../img/interface/pattern_noise.png);
   background-repeat: repeat;
@@ -312,7 +312,7 @@ body{
   z-index: 12;
   top: 0px;	
   opacity:0.8;
-}
+}*/
 
 .noise2 {
   background-image: url(../img/interface/pattern_noise_nb.gif);
