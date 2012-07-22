@@ -426,3 +426,54 @@ body{
   top: 0px;
   opacity:0.8;
 }
+
+/* ---------------------------------------------------------------------------------------------  Passions */
+.blackboard {
+	background-image: url(../img/passions/tableau.jpg);
+}
+.parallax-viewport {
+	position: relative;
+	overflow: hidden;
+	width: 820px;
+	height: 463px;
+}
+.parallax-layer {
+	position: absolute;
+}
+#slides {
+	width: 820px;
+	height: 463px;
+	margin: 0 auto;
+}
+#slides .pagination {
+	margin: 10px auto 0;
+	width: 100px;
+}
+#slides .pagination li {
+	float: left;
+	margin: 0 1px;
+	list-style: none;
+}
+#slides .pagination li a {
+	display: block;
+	width: 12px;
+	height: 0;
+	padding-top: 12px;
+	background-image: url(http://slidesjs.com/examples/images-with-captions/img/pagination.png);
+	background-position: 0 0;
+	float: left;
+	overflow: hidden;
+}
+#slides .pagination li.current a {
+	background-position: 0 -12px;
+}
+#slides .prev {
+	position: absolute;
+	margin-top: 200px;
+	margin-left: -34px;
+}
+#slides .next {
+	position: absolute;
+	margin-top: 200px;
+	margin-left: 830px;
+}
