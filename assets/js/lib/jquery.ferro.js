@@ -1446,18 +1446,14 @@
     			function preloadBackgroundImages(){
     				var cache = [];
 					
-						console.log('class:'+opts.backGroundImageClass);
     				$(" ."+opts.backGroundImageClass).each(function(){
     					var $img = $(this);
     					var cacheImage= '';
-						console.dir($(this));
 						if ($img[0].nodeName == 'IMG'){
 							 cacheImage = document.createElement('img');
-							console.log('img');
 						}
 						if ($img[0].nodeName == 'DIV'){
 							 cacheImage = document.createElement('div');
-							console.log('div');
 						}
   				      		cacheImage.src = $img.attr("src");
   				      	cache.push(cacheImage);	
