@@ -8,7 +8,7 @@ define(['text!/assets/tmpl/passions.html',
     	initialize: function() {
     		$(this.template()).appendTo(this.$el).hide().fadeIn().slideDown();
             this.$('.parallax-layer').parallax();
-            this.$('#slides').slides({
+            this.$('#blackboard-slides').slides({
                 prev: 'prev',
                 next: 'next'
             });
