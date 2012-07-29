@@ -62,10 +62,12 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
             console.log(self.slideOffset.left +' :: '+ self.slideOffset.top);
             console.groupEnd();
             */
+
             self.$spot.css({
                 left: event.pageX - self.slideOffset.left - self.spotRadius,
                 top: event.pageY - self.slideOffset.top - self.spotRadius
             });
+
             // console.log(self.$spot.css('left') + " :: " + self.$spot.css('top'));
         }
     });
