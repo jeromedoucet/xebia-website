@@ -309,9 +309,200 @@ body{
 
 /* ---------------------------------------------------------------------------------------------  Divers  */
 
+#passport-view {
+    margin: 0 auto;
+}
 
-#passeport{
-	
+#passport-container {
+    width:100%;
+    display: inline-block;
+}
+
+#passport{
+    width: 864px;
+    height: 623px;
+    float: left;
+}
+#passport .turn-page{
+    background-color:#ccc;
+}
+
+#passport .p1 {
+    background-image: url('../img/passport/front.png');
+    width: 100%;
+    color: #F9F7E3;
+    font-family: Arial;
+    text-shadow:-1px 0px #000;
+}
+
+#title {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#links-title {
+    text-align: center;
+    margin-top: 325px;
+    font-size: 30px;
+    text-decoration:underline;
+}
+
+#links-container {
+    list-style-image:url('../img/passport/passport-puce.png');
+    line-height: 35px;
+    margin-left: 125px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #F9F7E3;
+    font-family: Arial;
+    text-shadow:-1px 0px #000;
+}
+
+#links-container ul {
+    margin-top: 3px;
+}
+
+#links-container li:before {
+    content: url('../img/passport/passport-arrow.png');
+    vertical-align: super;
+    margin-right: 15px;
+}
+
+#links-container li {
+    vertical-align: top;
+    cursor: pointer;
+}
+
+#previous-page-arrow {
+    background-repeat: no-repeat;
+    width:41px;
+    height:41px;
+    margin-top: 300px;
+    vertical-align: middle;
+    float: left;
+    margin-right: 2%;
+}
+
+.previous {
+    background-image: url('../img/passport/passport-page-change-disabled.png');
+}
+
+.active-previous {
+    background-image: url('../img/passport/passport-page-change.png');
+}
+
+.hover-previous {
+    background-image: url('../img/passport/passport-page-change.png');
+}
+
+#next-page-arrow {
+    background-repeat: no-repeat;
+    width:41px;
+    height:41px;
+    margin-top: 300px;
+    float: left;
+    margin-left: 2%;
+}
+
+.next {
+    background-image: url('../img/passport/passport-page-change-disabled.png');
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.active-next {
+    background-image: url('../img/passport/passport-page-change.png');
+}
+
+.hover-next {
+    background-image: url('../img/passport/passport-page-change.png');
+}
+
+#passport-bar {
+    width:100%;
+    display: inline-block;
+}
+
+#passport-pagination {
+    height:50px;
+    width:110px;
+    margin:auto;
+    background-image: url('../img/passport/passport-bar.png');
+    background-repeat: no-repeat;
+}
+
+#passport-pagination ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+#passport-pagination li {
+    float: left;
+    width: 13px;
+    height: 13px;
+    margin-top: 5px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.bar{
+    background-image: url('../img/passport/passport-off.png');
+    background-repeat: no-repeat;
+}
+
+.selected{
+    background-image: url('../img/passport/passport-on.png');
+    background-repeat: no-repeat;
+}
+
+.active{
+    background-image: url('../img/passport/passport-on.png');
+    background-repeat: no-repeat;
+}
+
+#passport .p2 {
+    background-image: url('../img/passport/page-left.png');
+}
+
+#passport-code {
+    margin-right: 280px;
+    margin-top: 85px;
+    font-weight: bold;
+    color: #A1959A;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#passport .p3 {
+    background-image: url('../img/passport/page-right.png');
+}
+
+#passport .p4 {
+    background-image: url('../img/passport/page-left.png');
+}
+
+#passport .p5 {
+    background-image: url('../img/passport/page-right.png');
+}
+
+#passport .p6 {
+    background-image: url('../img/passport/page-left.png');
+}
+
+#passport .p7 {
+    background-image: url('../img/passport/page-right.png');
+}
+
+#passport .p8 {
+    background-image: url('../img/passport/back.png');
 }
 /* ---------------------------------------------------------------------------------------------  Fonds commun  */
 

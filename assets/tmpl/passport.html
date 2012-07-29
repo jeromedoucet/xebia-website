@@ -3,5 +3,40 @@
 	<h1 class="titre_partie">Who we are</h1>
 </div>
 
-	<div id="flipbook"></div>
+<div id="passport-view" style="z-index:1000; position:absolute; top:100px; left: 300px;">
+    <div id="passport-container">
+        <div id="previous-page-arrow" class="previous"></div>
+        <div id="passport">
+            <div>
+                <div id="title">Passport</div>
+                <div id="links-title">Presentation</div>
+                <div id="links-container">
+                    <ul>
+                        <li id="link1" page="2" onclick='$("#passport").turn("page", $(this).attr("page"));'>Who we are</li>
+                        <li id="link2" page="4" onclick='$("#passport").turn("page", $(this).attr("page"));'>Where we are</li>
+                        <li id="link3" page="6" onclick='$("#passport").turn("page", $(this).attr("page"));'>What we do</li>
+                    </ul>
+                </div>
+            </div>
+            <div> Blah </div>
+            <div> Blah </div>
+            <div> Blah </div>
+            <div> Blah </div>
+            <div> Blah </div>
+            <div> Blah </div>
+            <div> Back </div>
+        </div>
+        <div id="next-page-arrow" class="next active-next"></div>
+    </div>
+    <div id="passport-bar">
+        <div id="passport-pagination">
+            <ul>
+                <li id="bar1" class="bar selected" page="1" />
+                <li id="bar2" class="bar" page="2" />
+                <li id="bar3" class="bar" page="4" />
+                <li id="bar4" class="bar" page="6" />
+                <li id="bar5" class="bar" page="8" />
+            </ul>
+        </div>
+    </div>
 </div>

@@ -7,7 +7,8 @@ requirejs.config({
         'jquery.easing': 'lib/jquery.easing',
         'jquery.ferro': 'lib/jquery.ferro',
         'handlebars': 'lib/handlebars',
-        'router': 'Router'
+        'router': 'Router',
+        'turnjs':'lib/turn-3.min'
     },
     shim:{
         'backbone':{ deps:['jquery', 'underscore'] },
@@ -17,7 +18,7 @@ requirejs.config({
     }
 });
 
-require(['router','jquery','underscore','backbone','handlebars','less','jquery.easing','jquery.ferro'],
+require(['router','jquery','underscore','backbone','handlebars','less','jquery.easing','jquery.ferro','turnjs'],
     function (router) {
         new router();
         Backbone.history.start();
