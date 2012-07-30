@@ -10,7 +10,8 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
         $slide:null,
         slideOffset: null,
 
-        $spot: null,    
+        $spot: null,
+        spotDisplayed:false,
         spotRadius: 230,
 
     	initialize: function() {
@@ -60,27 +61,21 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
         onMouseLeave: function (event){
             var self = getView(this, event);
             self.$spot.css('opacity', 0);
+            self.spotDisplayed = false;
             self.$slide.off('mousemove', self.attachSpotToMouse);
         },
         attachSpotToMouse: function (event){
             var self = event.data.self;
 
-            if (self.$spot.css('opacity') <= 1){
+            if (!self.spotDisplayed){
                 self.$spot.css('opacity', 1);
+                self.spotDisplayed = true;
             }
-
-            /*$console.group();
-            console.log(event.pageX +' :: '+event.pageY);
-            console.log(self.slideOffset.left +' :: '+ self.slideOffset.top);
-            console.groupEnd();
-            */
 
             self.$spot.css({
                 left: event.pageX - self.slideOffset.left - self.spotRadius,
                 top: event.pageY - self.slideOffset.top - self.spotRadius
             });
-
-            // console.log(self.$spot.css('left') + " :: " + self.$spot.css('top'));
         }
     });
 
