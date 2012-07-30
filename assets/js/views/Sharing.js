@@ -19,58 +19,55 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
             this.$slide = $('#slidingSpacesOuterDiv_sharing');
             this.$spot = this.$el.find('.spot');
     	},
+
     	render: function() {
     		this.onWindowResize();
-            //this.onMouseEnter();
+            this.onMouseEnter();
             $(window).on('resize', {self:this}, this.onWindowResize);
             this.$slide.on('mouseenter', {self:this}, this.onMouseEnter);
             this.$slide.on('mouseleave', {self:this}, this.onMouseLeave);
     	},
+
         remove: function() {
             $(window).off('resize', this.onWindowResize);
             this.$slide.off();
             this.$el.remove();
         },
 
-        /*********************************
-         * Event Handlers
-         */
-        onWindowResize: function(event){
-            var self = this.$bouda ? this : event.data.self;
-
-            self.centerBouda();
-            self.saveSlideOffset();
-        },
         saveSlideOffset:function(){
             this.slideOffset = this.$slide.offset();
         },
+
         centerBouda: function(){
             this.$bouda.css({
                 left : $(window).width()/2 - this.boudaWidth/2,
                 top : $(window).height()/2 - this.boudaHeight/2
             });
         },
+
+        /*********************************
+         * Event Handlers
+         */
+        onWindowResize: function(event){
+            var self = getView(this, event);
+            self.centerBouda();
+            self.saveSlideOffset();
+        },
         onMouseEnter: function (event){
-            var self = this.$bouda ? this : event.data.self;
-            console.log('opacity : '+self.$spot.css('opacity'));
-            if (self.$spot.css('opacity') <= 1){
-                console.log('mousemove added');
-                self.$spot.css('opacity', 1);
-                $(window).on('mousemove', {self:self}, self.attachSpotToMouse);
-            }
+            var self = getView(this, event);
+            self.$slide.on('mousemove', {self:self}, self.attachSpotToMouse);
         },
         onMouseLeave: function (event){
-            var self = this.$bouda ? this : event.data.self;
-            if (self.$spot.css('opacity') >= 0){
-                console.log('mousemove removed');
-                $(window).off('mousemove', this.attachSpotToMouse);
-                self.$spot.css('opacity', 0);
-            }
+            var self = getView(this, event);
+            self.$spot.css('opacity', 0);
+            self.$slide.off('mousemove', self.attachSpotToMouse);
         },
-
-
         attachSpotToMouse: function (event){
             var self = event.data.self;
+
+            if (self.$spot.css('opacity') <= 1){
+                self.$spot.css('opacity', 1);
+            }
 
             /*$console.group();
             console.log(event.pageX +' :: '+event.pageY);
@@ -86,4 +83,15 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
             // console.log(self.$spot.css('left') + " :: " + self.$spot.css('top'));
         }
     });
+
+    /* 
+     * This method return self if it's the view else it 
+     * return a "self" variable passed when we add handler, 
+     * like this:
+     * 
+     * $('#...').on('anEvent', {self:this}, this.myHandler);
+     */
+    function getView(self, event){
+        return (self instanceof Backbone.View) ? self : event.data.self;
+    }
 });
