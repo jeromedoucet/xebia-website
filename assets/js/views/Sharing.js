@@ -10,22 +10,25 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
         $slide:null,
         slideOffset: null,
 
-        $spot: null,
+        $spot: null,    
         spotRadius: 230,
 
     	initialize: function() {
     		$(this.template()).appendTo(this.$el).hide().fadeIn().slideDown();
             this.$bouda = this.$el.find('.bouda');
             this.$slide = $('#slidingSpacesOuterDiv_sharing');
+            this.$spot = this.$el.find('.spot');
     	},
     	render: function() {
     		this.onWindowResize();
+            //this.onMouseEnter();
             $(window).on('resize', {self:this}, this.onWindowResize);
-            $(window).on('mousemove', {self:this}, this.attachSpotToMouse);
+            this.$slide.on('mouseenter', {self:this}, this.onMouseEnter);
+            this.$slide.on('mouseleave', {self:this}, this.onMouseLeave);
     	},
         remove: function() {
             $(window).off('resize', this.onWindowResize);
-            $(window).off('mousemove', this.attachSpotToMouse);
+            this.$slide.off();
             this.$el.remove();
         },
 
@@ -47,15 +50,27 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
                 top : $(window).height()/2 - this.boudaHeight/2
             });
         },
+        onMouseEnter: function (event){
+            var self = this.$bouda ? this : event.data.self;
+            console.log('opacity : '+self.$spot.css('opacity'));
+            if (self.$spot.css('opacity') <= 1){
+                console.log('mousemove added');
+                self.$spot.css('opacity', 1);
+                $(window).on('mousemove', {self:self}, self.attachSpotToMouse);
+            }
+        },
+        onMouseLeave: function (event){
+            var self = this.$bouda ? this : event.data.self;
+            if (self.$spot.css('opacity') >= 0){
+                console.log('mousemove removed');
+                $(window).off('mousemove', this.attachSpotToMouse);
+                self.$spot.css('opacity', 0);
+            }
+        },
 
 
         attachSpotToMouse: function (event){
             var self = event.data.self;
-
-            if (!self.$spot){
-                self.$spot = $('<img class="spot" src="assets/img/sharing/spot_trimed.png" />');
-                self.$spot.appendTo(self.$el);
-            }
 
             /*$console.group();
             console.log(event.pageX +' :: '+event.pageY);
