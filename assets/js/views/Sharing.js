@@ -3,13 +3,25 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
     	el: '#sharing > .content',
     	template: Handlebars.compile(source),
 
-        $bouda:null,
+        $boudha:null,
         boudaWidth: 648,
         boudaHeight: 601,
         $rays:null,
         rayonWidth: 1451,
         rayonHeight: 909,
-        
+
+        $hands:null,
+
+        /* The first cell is the top offset and,
+         * the second the left offset from center of window
+         */
+        offsetHands: { 
+            blog: [241, -319],
+            book: [-210, -425],
+            contrat: [219, 284],
+            techevent: [-228, 330]
+        },
+
         $slide:null,
         slideOffset: null,
 
@@ -17,12 +29,14 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
         spotDisplayed:false,
         spotRadius: 230,
 
-    	initialize: function() {
+
+    	initialize: function() {           
     		$(this.template()).appendTo(this.$el).hide().fadeIn().slideDown();
-            this.$bouda = this.$el.find('.boudha');
+            this.$boudha = this.$el.find('.boudha');
             this.$rays = this.$el.find('.rays');
             this.$slide = $('#slidingSpacesOuterDiv_sharing');
             this.$spot = this.$el.find('.spot');
+            this.$hands = this.$el.find('.hand');
     	},
 
     	render: function() {
@@ -43,15 +57,28 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
             this.slideOffset = this.$slide.offset();
         },
 
-        centerBouda: function(){
-            this.$bouda.css({
-                left : $(window).width()/2 - this.boudaWidth/2,
-                top : $(window).height()/2 - this.boudaHeight/2
+        centerElements: function(){
+            var vCenter = $(window).height()/2, hCenter = $(window).width()/2 
+
+            this.$boudha.css({
+                left : hCenter - this.boudaWidth/2,
+                top : vCenter - this.boudaHeight/2
             });
 
             this.$rays.css({
-                left : $(window).width()/2 - this.rayonWidth/2,
-                top : $(window).height()/2 - this.rayonHeight/2 - 24 // TMP : Valeur magic pour pallier le décalage des rayons
+                left : hCenter - this.rayonWidth/2,
+                top : vCenter - this.rayonHeight/2 - 24 // TMP : Valeur magic pour pallier le décalage des rayons
+            });
+
+            var self = this;
+            $.each(this.offsetHands, function(handClass, offset) { 
+                var $hand = self.$el.find('.'+handClass);
+                if ($hand.length > 0){
+                    $hand.css({
+                        top : vCenter + offset[0],
+                        left : hCenter + offset[1]
+                    });
+                }
             });
         },
 
@@ -60,7 +87,7 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
          */
         onWindowResize: function(event){
             var self = getView(this, event);
-            self.centerBouda();
+            self.centerElements();
             self.saveSlideOffset();
         },
         onMouseEnter: function (event){

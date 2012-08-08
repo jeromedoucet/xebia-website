@@ -1,6 +1,7 @@
 requirejs.config({
     paths:{
         'jquery':'lib/jquery.min',
+        'jquery.quickeach':'lib/jquery.quickeach',
         'backbone':'lib/backbone.min',
         'underscore':'lib/underscore.min',
         'less':'lib/less.min',
@@ -18,7 +19,7 @@ requirejs.config({
     }
 });
 
-require(['router','jquery','underscore','backbone','handlebars','less','jquery.easing','jquery.ferro','turnjs'],
+require(['router','jquery', 'jquery.quickeach','underscore','backbone','handlebars','less','jquery.easing','jquery.ferro','turnjs'],
     function (router) {
         new router();
         Backbone.history.start();
