@@ -4,8 +4,11 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
     	template: Handlebars.compile(source),
 
         $bouda:null,
-        boudaWidth: 1400,
-        boudaHeight: 1338,
+        boudaWidth: 648,
+        boudaHeight: 601,
+        $rays:null,
+        rayonWidth: 1451,
+        rayonHeight: 909,
         
         $slide:null,
         slideOffset: null,
@@ -16,7 +19,8 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
 
     	initialize: function() {
     		$(this.template()).appendTo(this.$el).hide().fadeIn().slideDown();
-            this.$bouda = this.$el.find('.bouda');
+            this.$bouda = this.$el.find('.boudha');
+            this.$rays = this.$el.find('.rays');
             this.$slide = $('#slidingSpacesOuterDiv_sharing');
             this.$spot = this.$el.find('.spot');
     	},
@@ -43,6 +47,11 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
             this.$bouda.css({
                 left : $(window).width()/2 - this.boudaWidth/2,
                 top : $(window).height()/2 - this.boudaHeight/2
+            });
+
+            this.$rays.css({
+                left : $(window).width()/2 - this.rayonWidth/2,
+                top : $(window).height()/2 - this.rayonHeight/2 - 24 // TMP : Valeur magic pour pallier le décalage des rayons
             });
         },
 
