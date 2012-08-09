@@ -1,14 +1,20 @@
 #sharing > .content{
 
-	.boudha, .rays, .hand{
+	.sharingEl{
 		position: absolute;
+	}
+
+	.boudha, .hand{
+		.sharingEl();
 		z-index: 1001;
-		.rays{
-			z-index: 1000;
-		}
+	}
+	.rays{
+		.sharingEl();
+		z-index: 1000;
+		opacity: 0.3;
 	}
 	.spot{
-		position: absolute;
+		.sharingEl();
 		z-index: 999;
 		-webkit-transition: opacity 0.5s linear;
 		-moz-transition: opacity 0.5s linear;

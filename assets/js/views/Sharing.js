@@ -16,10 +16,10 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
          * the second the left offset from center of window
          */
         offsetHands: { 
-            blog: [241, -319],
-            book: [-210, -425],
-            contrat: [219, 284],
-            techevent: [-228, 330]
+            blog: [229, 220],
+            book: [-235, -420],
+            contrat: [-245, 330],
+            techevent: [241, -310]
         },
 
         $slide:null,
