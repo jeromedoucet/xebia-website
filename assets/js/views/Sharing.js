@@ -3,7 +3,7 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
     	el: '#sharing > .content',
     	template: Handlebars.compile(source),
 
-        $boudha:null,
+        $shiva:null,
         boudaWidth: 648,
         boudaHeight: 601,
         $rays:null,
@@ -32,9 +32,9 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
 
     	initialize: function() {           
     		$(this.template()).appendTo(this.$el).hide().fadeIn().slideDown();
-            this.$boudha = this.$el.find('.boudha');
-            this.$rays = this.$el.find('.rays');
             this.$slide = $('#slidingSpacesOuterDiv_sharing');
+            this.$shiva = this.$el.find('.shiva');
+            this.$rays = this.$el.find('.rays');
             this.$spot = this.$el.find('.spot');
             this.$hands = this.$el.find('.hand');
     	},
@@ -60,7 +60,7 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
         centerElements: function(){
             var vCenter = $(window).height()/2, hCenter = $(window).width()/2 
 
-            this.$boudha.css({
+            this.$shiva.css({
                 left : hCenter - this.boudaWidth/2,
                 top : vCenter - this.boudaHeight/2
             });
