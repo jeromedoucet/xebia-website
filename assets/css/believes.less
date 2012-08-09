@@ -1,0 +1,70 @@
+.transition-timing(@top-timing, @left-timing, @opacity-timing, @transform-timing) {
+    transition-timing-function: @top-timing, @left-timing, @opacity-timing, @transform-timing;
+    -ms-transition-timing-function: @top-timing, @left-timing, @opacity-timing, @transform-timing;
+    -webkit-transition-timing-function: @top-timing, @left-timing, @opacity-timing, @transform-timing;
+    -o-transition-timing-function: @top-timing, @left-timing, @opacity-timing, @transform-timing;
+    -moz-transition-timing-function: @top-timing, @left-timing, @opacity-timing, @transform-timing;
+}
+
+.rotate(@angle) {
+    transform: rotate(@angle);
+    -ms-transform: rotate(@angle);
+    -webkit-transform: rotate(@angle);
+    -o-transform: rotate(@angle);
+    -moz-transform: rotate(@angle);
+}
+
+.transform-delay(@top-delay, @left-delay, @opacity-delay, @transform-delay) {
+    transition-delay: @top-delay, @left-delay, @opacity-delay, @transform-delay;
+    -ms-transition-delay: @top-delay, @left-delay, @opacity-delay, @transform-delay;
+    -webkit-transition-delay: @top-delay, @left-delay, @opacity-delay, @transform-delay;
+    -o-transition-delay: @top-delay, @left-delay, @opacity-delay, @transform-delay;
+    -moz-transition-delay: @top-delay, @left-delay, @opacity-delay, @transform-delay;
+}
+
+.transform-duration(@duration) {
+    transition-duration: @duration;
+    -ms-transition-duration: @duration;
+    -webkit-transition-duration: @duration;
+    -o-transition-duration: @duration;
+    -moz-transition-duration: @duration;
+}
+
+#galets {
+    width: 500px;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+
+    img {
+        position: absolute;
+        left: 40%;
+        top: 0%;
+        z-index: 2000;
+
+        opacity: 0;
+
+        transition-property: top, left, opacity, transform;
+        -ms-transition-property: top, left, opacity, -ms-transform;
+        -webkit-transition-property: top, left, opacity, -webkit-transform;
+        -o-transition-property: top, left, opacity, -o-transform;
+        -moz-transition-property: top, left, opacity, -moz-transform;
+
+        .transition-timing(ease-out, ease-in, linear, ease-in-out);
+        .transform-delay(0s, 0.1s, 0s, 0.1s);
+        .transform-duration(0.5s);
+    }
+
+    .rotateRight {
+        .rotate(20deg);
+    }
+
+    .rotateLeft {
+        .rotate(-20deg);
+    }
+
+    .galetEnd {
+        .rotate(0deg);
+        opacity: 1;
+    }
+}
