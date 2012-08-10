@@ -16,10 +16,10 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
          * the second the left offset from center of window
          */
         offsetHands: { 
-            blog: [229, 220],
-            book: [-235, -420],
-            contrat: [-245, 330],
-            techevent: [241, -310]
+            blog: [142, 160],
+            book: [-325, -485],
+            contrat: [-315, 250],
+            techevent: [151, -375]
         },
 
         $slide:null,
@@ -45,11 +45,14 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
             $(window).on('resize', {self:this}, this.onWindowResize);
             this.$slide.on('mouseenter', {self:this}, this.onMouseEnter);
             this.$slide.on('mouseleave', {self:this}, this.onMouseLeave);
+            this.$hands.on('mouseover', {self:this}, this.onMouseEnterInHandZone);
+            this.$hands.on('mouseleave', {self:this}, this.onMouseLeaveOutHandZone);
     	},
 
         remove: function() {
             $(window).off('resize', this.onWindowResize);
             this.$slide.off();
+            this.$hands.off();
             this.$el.remove();
         },
 
@@ -100,6 +103,19 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
             self.spotDisplayed = false;
             self.$slide.off('mousemove', self.attachSpotToMouse);
         },
+        onMouseEnterInHandZone: function (event){
+            var self = getView(this, event);
+            var offset = $(this).offset();
+            self.$slide.off('mousemove', self.attachSpotToMouse);
+            self.$spot.css({
+                left: offset.left - self.slideOffset.left + $(this).width()/2,// - self.spotRadius,
+                top: offset.top - self.slideOffset.top + $(this).height()/2,// - self.spotRadius
+            });
+        },
+        onMouseLeaveOutHandZone: function (event){
+            var self = getView(this, event);
+            self.onMouseEnter()
+        },
         attachSpotToMouse: function (event){
             var self = event.data.self;
 
@@ -109,8 +125,8 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
             }
 
             self.$spot.css({
-                left: event.pageX - self.slideOffset.left - self.spotRadius,
-                top: event.pageY - self.slideOffset.top - self.spotRadius
+                left: event.pageX - self.slideOffset.left,// - self.spotRadius,
+                top: event.pageY - self.slideOffset.top// - self.spotRadius
             });
         }
     });
