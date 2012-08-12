@@ -1,4 +1,8 @@
-define(['text!/assets/tmpl/sharing.html'], function (source) {
+define(['text!/assets/tmpl/sharing.html',
+        'modernizr', 
+        'jquery.circlemouse'], 
+
+function (source) {
     return Backbone.View.extend({
     	el: '#sharing > .content',
     	template: Handlebars.compile(source),
@@ -45,8 +49,11 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
             $(window).on('resize', {self:this}, this.onWindowResize);
             this.$slide.on('mouseenter', {self:this}, this.onMouseEnter);
             this.$slide.on('mouseleave', {self:this}, this.onMouseLeave);
-            this.$hands.on('mouseover', {self:this}, this.onMouseEnterInHandZone);
-            this.$hands.on('mouseleave', {self:this}, this.onMouseLeaveOutHandZone);
+            this.$hands.circlemouse({
+                onMouseEnter: this.onMouseEnterInHandZone,
+                onMouseLeave: this.onMouseLeaveOutHandZone,
+                context : this
+            });
     	},
 
         remove: function() {
@@ -61,19 +68,21 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
         },
 
         centerElements: function(){
-            var vCenter = $(window).height()/2, hCenter = $(window).width()/2 
+            var self = this, vCenter = $(window).height()/2, hCenter = $(window).width()/2 
 
+            // center shiva
             this.$shiva.css({
                 left : hCenter - this.boudaWidth/2,
                 top : vCenter - this.boudaHeight/2
             });
 
+            // center rays
             this.$rays.css({
                 left : hCenter - this.rayonWidth/2,
                 top : vCenter - this.rayonHeight/2 - 24 // TMP : Valeur magic pour pallier le décalage des rayons
             });
 
-            var self = this;
+            // place icones
             $.each(this.offsetHands, function(handClass, offset) { 
                 var $hand = self.$el.find('.'+handClass);
                 if ($hand.length > 0){
@@ -103,19 +112,6 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
             self.spotDisplayed = false;
             self.$slide.off('mousemove', self.attachSpotToMouse);
         },
-        onMouseEnterInHandZone: function (event){
-            var self = getView(this, event);
-            var offset = $(this).offset();
-            self.$slide.off('mousemove', self.attachSpotToMouse);
-            self.$spot.css({
-                left: offset.left - self.slideOffset.left + $(this).width()/2,// - self.spotRadius,
-                top: offset.top - self.slideOffset.top + $(this).height()/2,// - self.spotRadius
-            });
-        },
-        onMouseLeaveOutHandZone: function (event){
-            var self = getView(this, event);
-            self.onMouseEnter()
-        },
         attachSpotToMouse: function (event){
             var self = event.data.self;
 
@@ -125,10 +121,32 @@ define(['text!/assets/tmpl/sharing.html'], function (source) {
             }
 
             self.$spot.css({
-                left: event.pageX - self.slideOffset.left,// - self.spotRadius,
-                top: event.pageY - self.slideOffset.top// - self.spotRadius
+                left: event.pageX - self.slideOffset.left - self.spotRadius,
+                top: event.pageY - self.slideOffset.top - self.spotRadius
             });
-        }
+        },
+
+        /**
+         * Non-convential JQuery event Handlers for JQuery.CircleMouse
+         * We can't use 'this' for retrieve current DOM element, 'this' in this case
+         * is the circleMouse plugin. To retrieve the backbone view we use 'context'.
+         */
+        onMouseEnterInHandZone: function (event, el, self){
+            self.$slide.off('mousemove', self.attachSpotToMouse);
+            var offset = el.offset();
+            self.$spot.css({
+                left: offset.left - self.slideOffset.left + el.width()/2 - self.spotRadius,
+                top: offset.top - self.slideOffset.top + el.height()/2 - self.spotRadius
+            });
+            console.log("onMouseEnterInHandZone");
+            console.log(offset.left - self.slideOffset.left + el.width()/2);
+            console.log(offset.left - self.slideOffset.left );
+            console.log(el.width()/2 );
+        },
+        onMouseLeaveOutHandZone: function (event, el, self){
+            self.onMouseEnter();
+            console.log("onMouseLeaveOutHandZone");
+        },
     });
 
     /* 
