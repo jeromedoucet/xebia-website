@@ -134,18 +134,16 @@ function (source) {
         onMouseEnterInHandZone: function (event, el, self){
             self.$slide.off('mousemove', self.attachSpotToMouse);
             var offset = el.offset();
+            self.$spot.addClass('magnetized');
             self.$spot.css({
                 left: offset.left - self.slideOffset.left + el.width()/2 - self.spotRadius,
                 top: offset.top - self.slideOffset.top + el.height()/2 - self.spotRadius
             });
             console.log("onMouseEnterInHandZone");
-            console.log(offset.left - self.slideOffset.left + el.width()/2);
-            console.log(offset.left - self.slideOffset.left );
-            console.log(el.width()/2 );
         },
         onMouseLeaveOutHandZone: function (event, el, self){
             self.onMouseEnter();
-            console.log("onMouseLeaveOutHandZone");
+            self.$spot.removeClass('magnetized');
         },
     });
 
