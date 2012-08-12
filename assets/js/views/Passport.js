@@ -1,4 +1,4 @@
-define(['text!/assets/tmpl/passport.html'], function (source) {
+define(['text!/assets/tmpl/passport.html','turnjs'], function (source) {
     return Backbone.View.extend({
     	el: '#passeport > .content',
     	template: Handlebars.compile(source),

@@ -21,7 +21,7 @@ requirejs.config({
     }
 });
 
-require(['router','jquery','underscore','backbone','handlebars','less','jquery.easing','jquery.ferro','turnjs'],
+require(['router','jquery','underscore','backbone','handlebars','less','jquery.easing','jquery.ferro'],
     function (router) {
         new router();
         Backbone.history.start();
