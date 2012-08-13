@@ -1,0 +1,70 @@
+// Blackboard
+@blackboard-width: 1114px;
+@blackboard-height: 627px;
+
+// Slider arrows
+@arrow-width: 24px;
+@arrow-margin-side: 10px;
+@arrow-margin-top: 200px;
+
+// Slider pager
+@pager-width: 100px;
+
+
+#passions > .content {
+
+	z-index: 100;
+
+	#blackboard-slides {
+		width: @blackboard-width;
+		height: @blackboard-height;
+	}
+
+	.blackboard {
+		background-image: url(/assets/img/passions/tableau.jpg);
+	}
+	.parallax-viewport {
+		position: relative;
+		overflow: hidden;
+		width: @blackboard-width;
+		height: @blackboard-height;
+	}
+	.parallax-layer {
+		position: absolute;
+	}
+
+	/* Pagination */
+	.pagination {
+		margin: 10px auto 0;
+		width: @pager-width;
+	}
+	.pagination li {
+		float: left;
+		margin: 0 1px;
+		list-style: none;
+	}
+	.pagination li a {
+		display: block;
+		width: 12px;
+		height: 0;
+		padding-top: 12px;
+		background-image: url(http://slidesjs.com/examples/images-with-captions/img/pagination.png);
+		background-position: 0 0;
+		float: left;
+		overflow: hidden;
+	}
+	.pagination li.current a {
+		background-position: 0 -12px;
+	}
+	.prev {
+		position: absolute;
+		margin-top: @arrow-margin-top;
+		margin-left: -(@arrow-margin-side + @arrow-width);
+	}
+	.next {
+		position: absolute;
+		margin-top: @arrow-margin-top;
+		margin-left: @blackboard-width + @arrow-margin-side;
+	}
+
+}

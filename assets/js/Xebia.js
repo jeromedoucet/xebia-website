@@ -11,13 +11,17 @@ requirejs.config({
         'less':'lib/less.min',
         'handlebars': 'lib/handlebars',
         'router': 'Router',
-        'turnjs':'lib/turn-3.min'
+        'turnjs':'lib/turn-3.min',
+        'jquery.parallax':'lib/jquery.parallax.min',
+        'slides':'lib/slides.min.jquery'
     },
     shim:{
         'backbone':{ deps:['jquery', 'underscore'] },
         'jquery.easing':{ deps:['jquery'] },
         'jquery.ferro':{ deps:['jquery.easing'] },
-        'router':{ deps:['backbone'] }
+        'router':{ deps:['backbone'] },
+        'jquery.parallax':{ deps: ['jquery'] },
+        'slides':{ deps: ['jquery'] }
     }
 });
 
