@@ -29,7 +29,7 @@ define(['text!/assets/tmpl/passions.html',
                 { src: 'assets/img/passions/keywords_cat5_devant.png', width: 799, height: 500 }
             ]
         ],
-        tableau: {
+        blackboard: {
             width: 1114,
             height: 627
         },
@@ -62,8 +62,8 @@ define(['text!/assets/tmpl/passions.html',
         },
         centerElements: function() {
             this.$slidesWrapper.css({
-                left : ($(window).width() - this.tableau.width)/2,
-                top : ($(window).height() - this.tableau.height)/2
+                left : ($(window).width() - this.blackboard.width)/2,
+                top : ($(window).height() - this.blackboard.height)/2
             });
         },
         addSlide: function(slide, indexSlide) {
@@ -76,7 +76,7 @@ define(['text!/assets/tmpl/passions.html',
         },
         addParallaxLayer: function(layer, indexSlide) {
             var divCode = '<div class="parallax-layer" style="width:' + layer.width + 'px; height:' + layer.height + 'px;">'
-                        + '<img src="' + layer.src + '" alt="" style="top:' + (this.tableau.height - layer.height)/2 + 'px; left:' + (this.tableau.width - layer.width)/2 + 'px;" />'
+                        + '<img src="' + layer.src + '" alt="" style="top:' + (this.blackboard.height - layer.height)/2 + 'px; left:' + (this.blackboard.width - layer.width)/2 + 'px;" />'
                         + '</div>';
             $('#cat' + indexSlide).append(divCode);
         }
