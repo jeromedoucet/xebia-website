@@ -4,11 +4,11 @@
 
 // Slider arrows
 @arrow-width: 24px;
+@arrow-height: 43px;
 @arrow-margin-side: 10px;
-@arrow-margin-top: 200px;
 
 // Slider pager
-@pager-width: 100px;
+@pager-width: 90px;
 
 
 #passions > .content {
@@ -40,7 +40,7 @@
 	}
 	.pagination li {
 		float: left;
-		margin: 0 1px;
+		margin: 0 3px;
 		list-style: none;
 	}
 	.pagination li a {
@@ -58,12 +58,12 @@
 	}
 	.prev {
 		position: absolute;
-		margin-top: @arrow-margin-top;
+		margin-top: (@blackboard-height - @arrow-height)/2;
 		margin-left: -(@arrow-margin-side + @arrow-width);
 	}
 	.next {
 		position: absolute;
-		margin-top: @arrow-margin-top;
+		margin-top: (@blackboard-height - @arrow-height)/2;
 		margin-left: @blackboard-width + @arrow-margin-side;
 	}
 
