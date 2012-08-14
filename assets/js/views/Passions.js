@@ -40,15 +40,14 @@ define(['text!/assets/tmpl/passions.html',
 
             var that = this;
             $.each(this.slides, function (indexSlide) {
+                // Construct blackboard and images
                 that.addSlide(this, indexSlide);
-            });
 
-            // Parallax
-            for(var i=0; i<this.slides.length; i++) {
-                this.$('#cat' + i + ' .parallax-layer').parallax({
-                    mouseport: jQuery('#cat' + i)
+                // Parallax
+                that.$('#slide' + indexSlide + ' .parallax-layer').parallax({
+                    mouseport: jQuery('#slide' + indexSlide)
                 });
-            }
+            });
 
             // Slides
             this.$slidesWrapper.slides({
@@ -67,7 +66,7 @@ define(['text!/assets/tmpl/passions.html',
             });
         },
         addSlide: function(slide, indexSlide) {
-            this.$slides.append('<div class="blackboard"><div class="parallax-viewport" id="cat' + indexSlide +'"></div></div>');
+            this.$slides.append('<div class="blackboard"><div class="parallax-viewport" id="slide' + indexSlide +'"></div></div>');
 
             var that = this;
             $.each(slide, function () {
@@ -78,7 +77,7 @@ define(['text!/assets/tmpl/passions.html',
             var divCode = '<div class="parallax-layer" style="width:' + layer.width + 'px; height:' + layer.height + 'px;">'
                         + '<img src="' + layer.src + '" alt="" style="top:' + (this.blackboard.height - layer.height)/2 + 'px; left:' + (this.blackboard.width - layer.width)/2 + 'px;" />'
                         + '</div>';
-            $('#cat' + indexSlide).append(divCode);
+            $('#slide' + indexSlide).append(divCode);
         }
     });
 });
