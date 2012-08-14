@@ -15,27 +15,27 @@ define(['views/Passport','views/Believes','views/Passions','views/Sharing','view
         passport: function() {
             if(!this._passport)
                 this._passport = new Passport();
-            this._passport.render();
+            this.showView(this._passport);
         },
         sharing: function() {
             if(!this._sharing)
                 this._sharing = new Sharing();
-            this._sharing.render();
+            this.showView(this._sharing);
         },
         passions: function() {
             if(!this._passions)
                 this._passions = new Passions();
-            this._passions.render();
+            this.showView(this._passions);
         },
         believes: function() {
             if(!this._believes)
                 this._believes = new Believes();
-            this._believes.render();
+            this.showView(this._believes);
         },
         join: function() {
             if(!this._join)
                 this._join = new Join();
-            this._join.render();
+            this.showView(this._join);
         },
         createFerroSlider: function() {
             var matrix = 
@@ -57,6 +57,14 @@ define(['views/Passport','views/Believes','views/Passions','views/Sharing','view
                 time: 400
             });
           });
+        },
+        showView: function(view) {
+            if (this.currentView){
+                this.currentView.close();
+            }
+
+            this.currentView = view;
+            this.currentView.render();
         }
     });
 });

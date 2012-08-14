@@ -34,6 +34,8 @@ define(['text!/assets/tmpl/passions.html',
             height: 627
         },
     	initialize: function() {
+            _.bindAll(this);
+
             $(this.template()).appendTo(this.$el).hide().fadeIn().slideDown();
             this.$slidesWrapper = $('#slides-wrapper');
             this.$slides = $('.slides_container');
@@ -57,7 +59,10 @@ define(['text!/assets/tmpl/passions.html',
     	},
         render: function() {
             this.centerElements();
-            $(window).bind('resize', _.bind(this.centerElements, this));
+            $(window).bind('resize', this.centerElements);
+        },
+        onClose: function() {
+            $(window).unbind('resize', this.centerElements);
         },
         centerElements: function() {
             this.$slidesWrapper.css({

@@ -56,11 +56,11 @@ function (source) {
             });
     	},
 
-        remove: function() {
+        onClose: function() {
             $(window).off('resize', this.onWindowResize);
             this.$slide.off();
             this.$hands.off();
-            this.$el.remove();
+            //this.$el.remove();
         },
 
         saveSlideOffset:function(){
