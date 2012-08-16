@@ -129,7 +129,7 @@ function (source) {
         /**
          * Non-convential JQuery event Handlers for JQuery.CircleMouse
          * We can't use 'this' for retrieve current DOM element, 'this' in this case
-         * is the circleMouse plugin. To retrieve the backbone view we use 'context'.
+         * is the circleMouse plugin. To retrieve the backbone view we use 'self'.
          */
         onMouseEnterInHandZone: function (event, el, self){
             self.$slide.off('mousemove', self.attachSpotToMouse);
@@ -139,7 +139,6 @@ function (source) {
                 left: offset.left - self.slideOffset.left + el.width()/2 - self.spotRadius,
                 top: offset.top - self.slideOffset.top + el.height()/2 - self.spotRadius
             });
-            console.log("onMouseEnterInHandZone");
         },
         onMouseLeaveOutHandZone: function (event, el, self){
             self.onMouseEnter();
