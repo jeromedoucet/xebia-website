@@ -33,9 +33,11 @@ function (source) {
         spotDisplayed:false,
         spotRadius: 230,
 
+        circleMouseHandler:null,
+
 
     	initialize: function() {           
-    		$(this.template()).appendTo(this.$el).hide().fadeIn().slideDown();
+            $(this.template()).appendTo(this.$el).hide().fadeIn().slideDown();
             this.$slide = $('#slidingSpacesOuterDiv_sharing');
             this.$shiva = this.$el.find('.shiva');
             this.$rays = this.$el.find('.rays');
@@ -59,7 +61,7 @@ function (source) {
         onClose: function() {
             $(window).off('resize', this.onWindowResize);
             this.$slide.off();
-            this.$hands.off();
+            this.$hands.off().removeData('inside, cursor, circlemouse');
             //this.$el.remove();
         },
 
