@@ -47,7 +47,7 @@ define(['text!/assets/tmpl/passions.html',
 
                 // Parallax
                 that.$('#slide' + indexSlide + ' .parallax-layer').parallax({
-                    mouseport: jQuery('#slide' + indexSlide)
+                    mouseport: $('#slide' + indexSlide),
                 });
             });
 
@@ -71,7 +71,7 @@ define(['text!/assets/tmpl/passions.html',
             });
         },
         addSlide: function(slide, indexSlide) {
-            this.$slides.append('<div class="blackboard"><div class="parallax-viewport" id="slide' + indexSlide +'"></div></div>');
+            this.$slides.append('<div class="blackboard parallax-viewport" id="slide' + indexSlide +'"></div>');
 
             var that = this;
             $.each(slide, function () {
@@ -79,10 +79,8 @@ define(['text!/assets/tmpl/passions.html',
             });
         },
         addParallaxLayer: function(layer, indexSlide) {
-            var divCode = '<div class="parallax-layer" style="width:' + layer.width + 'px; height:' + layer.height + 'px;">'
-                        + '<img src="' + layer.src + '" alt="" style="top:' + (this.blackboard.height - layer.height)/2 + 'px; left:' + (this.blackboard.width - layer.width)/2 + 'px;" />'
-                        + '</div>';
-            $('#slide' + indexSlide).append(divCode);
+            var imgCode = '<img class="parallax-layer" style="width:' + layer.width + 'px; height:' + layer.height + 'px;" src="' + layer.src + '" alt="" />';
+            $('#slide' + indexSlide).append(imgCode);
         }
     });
 });
