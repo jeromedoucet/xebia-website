@@ -38,7 +38,7 @@ define(['text!/assets/tmpl/passions.html',
 
             $(this.template()).appendTo(this.$el).hide().fadeIn().slideDown();
             this.$slidesWrapper = $('#slides-wrapper');
-            this.$slides = $('.slides_container');
+            this.$slides = $('.slides-container');
 
             var that = this;
             $.each(this.slides, function (indexSlide) {
@@ -53,6 +53,7 @@ define(['text!/assets/tmpl/passions.html',
 
             // Slides
             this.$slidesWrapper.slides({
+                container: 'slides-container',
                 prev: 'prev',
                 next: 'next'
             });
