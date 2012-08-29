@@ -72,7 +72,7 @@ define(['text!/assets/tmpl/passions.html',
             });
         },
         addSlide: function(slide, indexSlide) {
-            this.$slides.append('<div class="blackboard parallax-viewport" id="slide' + indexSlide +'"></div>');
+            this.$slides.append('<div class="parallax-viewport" id="slide' + indexSlide +'"></div>');
 
             var that = this;
             $.each(slide, function () {
