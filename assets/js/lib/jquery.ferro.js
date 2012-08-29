@@ -586,7 +586,8 @@
 	    		 		});
 
     		 		}
-    		 		
+
+                    /*
     				$("#slidingSpacesNavigationMap").bind("mouseover",function(event){
     						$("#slidingSpacesNavigationMap").stop();
     						$("#slidingSpacesNavigationMap").animate({
@@ -599,6 +600,7 @@
     		 				opacity:0.5
     		 			},0);
     		 		});
+    		 		*/
     		 		
     		 		positionMap();
     		 	}

@@ -38,10 +38,10 @@ define(['views/Passport','views/Believes','views/Passions','views/Sharing','view
             this.showView(this._join);
         },
         createFerroSlider: function() {
-            var matrix = 
-            [[{full : 0}, {full : 1}, {full : 0}],
+            var matrix =
+            [[{full : 0}, {full:1,moveDirection:'yx'}, {full : 0}],
             [{full : 1}, {full : 1,first : true}, {full : 1}],
-            [{full : 0}, {full : 1}, {full : 0}]];
+            [{full : 0}, {full:1,moveDirection:'yx'}, {full : 0}]];
 
             $(document).ready(function() {
               $(".sliding").ferroSlider({
