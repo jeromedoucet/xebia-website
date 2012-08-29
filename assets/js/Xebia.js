@@ -27,12 +27,9 @@ requirejs.config({
 
 require(['router','jquery','underscore','backbone','handlebars','less','jquery.easing','jquery.ferro'],
     function (Router) {
-        // onClose lose method available for views
+        // onClose method available for views
         Backbone.View.prototype.close = function(){
-            //this.remove();
-            //this.unbind();
             if (this.onClose) {
-                console.log('onClose ' + this.$el.selector);
                 this.onClose();
             }
         }
