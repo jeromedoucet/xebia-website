@@ -37,6 +37,36 @@
       height: 500px;
       position: absolute;
 
+      .clickAndDiscover {
+          padding-left: 50px;
+          font-family: "HandOfSeanRegular";
+          color: white;
+          font-weight: bold;
+          .rotate(-18deg);
+          position: absolute;
+          top: 450px;
+          left: 120px;
+          background-image: url(/assets/img/believes/arrow_right.png);
+          background-repeat: no-repeat;
+          z-index: 1001;
+      }
+
+      .nowYouKnow {
+          padding-right: 60px;
+          font-family: "HandOfSeanRegular";
+          color: white;
+          font-weight: bold;
+          .rotate(-18deg);
+          position: absolute;
+          top: 250px;
+          left: -200px;
+          background-image: url(/assets/img/believes/arrow_left.png);
+          background-repeat: no-repeat;
+          background-position: right;
+          z-index: 1001;
+          display: none;
+      }
+
       img {
           top: -300px;
           left: 0px;
@@ -69,10 +99,11 @@
           opacity: 1;
       }
   }
-  
+
   .rayons {
-    position: absolute;
-	  opacity: 0.7;
+      position: absolute;
+      z-index: 1000;
+      opacity: 0.3;
   }
-  
+
 }

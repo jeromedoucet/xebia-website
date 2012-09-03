@@ -30,11 +30,6 @@ define(['text!/assets/tmpl/believes.html'], function (source) {
            $(window).unbind('resize', this.onWindowResize);
         },  
         displayNextGalet: function () {
-            if (this.nbGaletsDisplayed == 4) {
-                alert("TODO : display thanks message");
-                $("#believes").unbind("click");
-                return;
-            }
 
             var galet = $("#galet" + (this.nbGaletsDisplayed + 1)).show();
             var position = galet.position();
@@ -46,6 +41,11 @@ define(['text!/assets/tmpl/believes.html'], function (source) {
             galet.addClass("galetEnd");
 
             this.nbGaletsDisplayed++;
+
+            if (this.nbGaletsDisplayed == 4) {
+                this.$(".nowYouKnow").fadeIn(4000);
+                $("#believes").unbind("click");
+            }
         },
         onWindowResize: function() {
            var windowHeight = $(window).height(), windowWidth = $(window).width() 
