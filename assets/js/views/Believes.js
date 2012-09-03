@@ -6,11 +6,13 @@ define(['text!/assets/tmpl/believes.html'], function (source) {
         nbGaletsDisplayed: 0,
         leftOffset: [50, 125, 22, 130],
         topOffset: [380, 230, 100, -30],
+        rayonWidth: 1828,
+        rayonHeight: 914,
 
         initialize: function () {
             _.bindAll(this);           
-           
-            $(this.template()).appendTo(this.$el);
+
+            $(this.template()).appendTo(this.$el).hide().fadeIn().slideDown();
 
             var self = this;
             $("#believes").click(function () {
@@ -18,14 +20,15 @@ define(['text!/assets/tmpl/believes.html'], function (source) {
             });
             
             this.$galetsWrapper = $('#galets');
+            this.$rays = this.$el.find('.rayons');            
         },
         render: function () {
-           this.onWindowResize();
+           this.onWindowResize();                   
            $(window).bind('resize', this.onWindowResize);
         },
         onClose: function() {
            $(window).unbind('resize', this.onWindowResize);
-        },
+        },  
         displayNextGalet: function () {
             if (this.nbGaletsDisplayed == 4) {
                 alert("TODO : display thanks message");
@@ -45,9 +48,16 @@ define(['text!/assets/tmpl/believes.html'], function (source) {
             this.nbGaletsDisplayed++;
         },
         onWindowResize: function() {
+           var windowHeight = $(window).height(), windowWidth = $(window).width() 
+           
            this.$galetsWrapper.css({
-               left : ($(window).width() - this.$galetsWrapper.width())/2,
-               top : ($(window).height() - this.$galetsWrapper.height())/2
+               left : (windowWidth - this.$galetsWrapper.width())/2,
+               top : (windowHeight - this.$galetsWrapper.height())/2
+           });
+
+           this.$rays.css({
+               left : (windowWidth - this.rayonWidth)/2,
+               top : (windowHeight - this.rayonHeight)/2
            });
         }
     });
