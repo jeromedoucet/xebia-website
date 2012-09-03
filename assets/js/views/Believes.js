@@ -3,22 +3,30 @@ define(['text!/assets/tmpl/believes.html'], function (source) {
     	el: '#believes > .content',
     	template: Handlebars.compile(source),
 
-        nbGaletsDisplayed:0,
-        leftOffset:[-10, 65, -42, 70],
-        topOffset:[0, 150, 280, 410],
+        nbGaletsDisplayed: 0,
+        leftOffset: [50, 125, 22, 130],
+        topOffset: [380, 230, 100, -30],
 
-        initialize:function () {
+        initialize: function () {
+            _.bindAll(this);           
+           
             $(this.template()).appendTo(this.$el);
 
             var self = this;
             $("#believes").click(function () {
                 self.displayNextGalet();
             });
+            
+            this.$galetsWrapper = $('#galets');
         },
-        render:function () {
-
+        render: function () {
+           this.onWindowResize();
+           $(window).bind('resize', this.onWindowResize);
         },
-        displayNextGalet:function () {
+        onClose: function() {
+           $(window).unbind('resize', this.onWindowResize);
+        },
+        displayNextGalet: function () {
             if (this.nbGaletsDisplayed == 4) {
                 alert("TODO : display thanks message");
                 $("#believes").unbind("click");
@@ -29,12 +37,18 @@ define(['text!/assets/tmpl/believes.html'], function (source) {
             var position = galet.position();
 
             galet.css({
-                left:this.leftOffset[this.nbGaletsDisplayed] + position.left,
-                top:$("#galets").height() - this.topOffset[this.nbGaletsDisplayed]
+                left:this.leftOffset[this.nbGaletsDisplayed],
+                top:this.topOffset[this.nbGaletsDisplayed]
             });
             galet.addClass("galetEnd");
 
             this.nbGaletsDisplayed++;
+        },
+        onWindowResize: function() {
+           this.$galetsWrapper.css({
+               left : ($(window).width() - this.$galetsWrapper.width())/2,
+               top : ($(window).height() - this.$galetsWrapper.height())/2
+           });
         }
     });
 });
