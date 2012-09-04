@@ -28,11 +28,10 @@ define(['text!/assets/tmpl/believes.html'], function (source) {
         },
         onClose: function() {
            $(window).unbind('resize', this.onWindowResize);
+           $("#believes").unbind("click");
         },  
         displayNextGalet: function () {
-
             var galet = $("#galet" + (this.nbGaletsDisplayed + 1)).show();
-            var position = galet.position();
 
             galet.css({
                 left:this.leftOffset[this.nbGaletsDisplayed],
@@ -48,7 +47,7 @@ define(['text!/assets/tmpl/believes.html'], function (source) {
             }
         },
         onWindowResize: function() {
-           var windowHeight = $(window).height(), windowWidth = $(window).width() 
+           var windowHeight = $(window).height(), windowWidth = $(window).width();
            
            this.$galetsWrapper.css({
                left : (windowWidth - this.$galetsWrapper.width())/2,
