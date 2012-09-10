@@ -6,8 +6,6 @@ a {
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: none;
-    opacity: 0.8;
     width: 100%;
     text-align: center;
     height: 50px;
@@ -15,7 +13,6 @@ a {
 
 #slidingSpacesNavigationMap {
     position: fixed;
-    opacity: 1;
     text-align: center;
     float: right;
     line-height: 10px;
@@ -66,8 +63,7 @@ a {
 
 .slidingSpacesNavigationDotEmpty {
     position: relative;
-    filter: alpha(opacity = 0);
-    opacity: 0;
+    background: none !important;
     float: left;
 }
 
@@ -92,13 +88,9 @@ a {
 
 #slidingSpacesPlayer div {
     float: left;
-    filter: alpha(opacity = 80);
-    opacity: 0.8;
 }
 
 #slidingSpacesPlayer div:hover {
-    filter: alpha(opacity = 100);
-    opacity: 1;
     cursor: pointer;
 }
 
@@ -136,25 +128,25 @@ a {
 }
 
 .playerPlay {
-    background: url(../img/interface/play.png) no-repeat;
+    background: url(/assets/img/ferro/play.png) no-repeat;
 }
 
 .playerPause {
-    background: url(../img/interface/pause.png) no-repeat;
+    background: url(/assets/img/ferro/pause.png) no-repeat;
 }
 
-#{
-	top:0;
-	width:100%;
-	height:50px;	
-	background:url(../img/interface/sens_up.png) center no-repeat white;
+#slidingSpacesSensibleArea_up {
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: url(/assets/img/ferro/sens_up.png) center no-repeat white;
 }
 
 #slidingSpacesSensibleArea_right {
     right: 0;
     width: 50px;
     height: 100%;
-    background: url(../img/interface/sens_right.png) center no-repeat white;
+    background: url(/assets/img/ferro/sens_right.png) center no-repeat white;
 }
 
 #slidingSpacesSensibleArea_down {
@@ -164,7 +156,7 @@ a {
     width: 100%;
     height: 50px;
     background-color: #0CC;
-    background-image: url(../img/interface/sens_down.png);
+    background-image: url(/assets/img/ferro/sens_down.png);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -173,7 +165,7 @@ a {
     left: 0;
     width: 50px;
     height: 100%;
-    background: url(../img/interface/sens_left.png) center no-repeat white;
+    background: url(/assets/img/ferro/sens_left.png) center no-repeat white;
 }
 
 .slidingSpacesSensibleArea {
