@@ -39,13 +39,12 @@ define(['views/Passport','views/Believes','views/Passions','views/Sharing','view
         },
         createFerroSlider: function() {
             var matrix =
-            [[{full : 0}, {full:1,moveDirection:'yx'}, {full : 0}],
-            [{full : 1}, {full : 1,first : true}, {full : 1}],
-            [{full : 0}, {full:1,moveDirection:'yx'}, {full : 0}]];
+            [[{full : 0}, {full : 1}, {full : 0}],
+            [{full : 1}, {full : 1, first : true}, {full : 1}],
+            [{full : 0}, {full: 1}, {full : 0}]];
 
             $(document).ready(function() {
               $(".sliding").ferroSlider({
-                axis: 'xy',
                 displace: matrix,
                 easing: 'easeOutExpo',
                 createMap: true,
@@ -54,7 +53,7 @@ define(['views/Passport','views/Believes','views/Passions','views/Sharing','view
                 mapPosition: 'bottom_left',
                 backGroundImageClass: 'bg',
                 preloadBackgroundImages: true,
-                time: 400
+                time: 300
             });
           });
         },
