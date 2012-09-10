@@ -47,7 +47,7 @@ define(['text!/assets/tmpl/passions.html',
 
                 // Parallax
                 that.$('#slide' + indexSlide + ' .parallax-layer').parallax({
-                    mouseport: $('#slide' + indexSlide),
+                    mouseport: $('#slide' + indexSlide)
                 });
             });
 

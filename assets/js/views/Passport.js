@@ -1,89 +1,75 @@
 define(['text!/assets/tmpl/passport.html','turnjs'], function (source) {
     return Backbone.View.extend({
-    	el: '#passeport > .content',
+    	el: '#passport > .content',
     	template: Handlebars.compile(source),
         events: {
+        },passport: {
+            width: 860,
+            height: 618
         },
     	initialize: function() {
-    		$(this.template()).appendTo(this.$el).hide().fadeIn().slideDown();
-            $('#passport').turn({gradients: true, acceleration: true});
-            $("#passport").bind("first", function(event) {
-                $("#previous-page-arrow").removeClass("active-previous");
-                $("#next-page-arrow").addClass("active-next");
-            });
-            $("#passport").bind("last", function(event) {
-                $("#previous-page-arrow").addClass("active-previous");
-                $("#next-page-arrow").removeClass("active-next");
-            });
-            $("#passport").bind("turning", function(event, page, view){
-                $("[id^=bar]").removeClass("selected");
+            _.bindAll(this);
+
+            $(this.template()).appendTo(this.$el).hide().fadeIn().slideDown();
+            this.$passportWrapper = $('#passport-wrapper');
+            this.$passport = $('#passport-container');
+
+            this.$passport.turn({gradients: true, acceleration: true});
+            this.$passport.bind("turning", function(event, page, view){
+                $("[id^=bar]").removeClass("current");
                 switch(page){
                     case 1:
-                        $("#bar1").addClass("selected");
+                        $("#bar1").addClass("current");
                         break;
                     case 2:
                     case 3:
-                        $("#bar2").addClass("selected");
+                        $("#bar2").addClass("current");
                         break;
                     case 4:
                     case 5:
-                        $("#bar3").addClass("selected");
+                        $("#bar3").addClass("current");
                         break;
                     case 6:
                     case 7:
-                        $("#bar4").addClass("selected");
+                        $("#bar4").addClass("current");
                         break;
                     case 8:
-                        $("#bar5").addClass("selected");
+                        $("#bar5").addClass("current");
                         break;
                     default:
-                        $("#bar1").addClass("selected");
-                }
-                if ((page != 1) && (page != 8)) {
-                    $("#previous-page-arrow").addClass("active-previous");
-                    $("#next-page-arrow").addClass("active-next");
+                        $("#bar1").addClass("current");
                 }
             });
-            $("[id^=bar]").hover(
-                function () {
-                    $(this).addClass("active");
-                },
-                function () {
-                    $(this).removeClass("active");
-                }
-            );
-            $("#previous-page-arrow").hover(
-                function () {
-                    if ($("#passport").turn("page") != 1) {
-                        $(this).addClass("hover-previous");
-                    }
-                },
-                function () {
-                    $(this).removeClass("hover-previous");
-                }
-            );
-            $("#next-page-arrow").hover(
-                function () {
-                    if ($("#passport").turn("page") != 8) {
-                        $(this).addClass("hover-next");
-                    }
-                },
-                function () {
-                    $(this).removeClass("hover-next");
-                }
-            );
+
+            var that = this;
+
             $("[id^=bar]").click(function () {
-                $("#passport").turn("page", $(this).attr("page"));
+                that.$passport.turn("page", $(this).attr("page"));
             });
-            $("#next-page-arrow").click(function () {
-                $("#passport").turn("next");
+            $(".passport-next").click(function () {
+                that.$passport.turn("next");
+                return false;
             });
-            $("#previous-page-arrow").click(function () {
-                $("#passport").turn("previous");
+            $(".passport-prev").click(function () {
+                that.$passport.turn("previous");
+                return false;
             });
     	},
-    	render: function() {
-
-    	}
+        render: function() {
+            this.centerElements();
+            $(window).bind('resize', this.centerElements);
+        },
+        onClose: function() {
+            $(window).unbind('resize', this.centerElements);
+        },
+        centerElements: function() {
+            this.$passportWrapper.css({
+                left : ($(window).width() - this.passport.width)/2,
+                top : ($(window).height() - this.passport.height)/2
+            });
+            $('.passport-pagination').css({
+                top : ((($(window).height() - this.passport.height)/2) + this.passport.height)
+            });
+        }
     });
 });

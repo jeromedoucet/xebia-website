@@ -9,7 +9,7 @@ define(['views/Passport','views/Believes','views/Passions','views/Sharing','view
             '!passions': 'passions',
             '!believes': 'believes',
             '!join-us': 'join',
-            '!passeport': 'passport',
+            '!passport': 'passport',
             '*path': 'passport'
         },
         passport: function() {
