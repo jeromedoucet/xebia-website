@@ -46,10 +46,12 @@ define(['text!/assets/tmpl/passport.html','turnjs'], function (source) {
             $("[id^=bar]").click(function () {
                 that.$passport.turn("page", $(this).attr("page"));
             });
+
             $(".passport-next").click(function () {
                 that.$passport.turn("next");
                 return false;
             });
+
             $(".passport-prev").click(function () {
                 that.$passport.turn("previous");
                 return false;
