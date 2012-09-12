@@ -19,7 +19,7 @@ define(
                 slidingSpacesNavigationDot_passions:-82,
                 slidingSpacesNavigationDot_passport:-11,
                 slidingSpacesNavigationDot_sharing:-119,
-                slidingSpacesNavigationDot_join_us:-155
+                slidingSpacesNavigationDot_joinUs:-155
             },
             initialize:function () {
                 $(this.el).append('<div id="gamepad-tooltip" style="position: absolute; display: none;"></div>');
