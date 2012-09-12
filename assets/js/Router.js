@@ -1,8 +1,9 @@
-define(['views/Passport','views/Believes','views/Passions','views/Sharing','views/Join'],
-    function (Passport,Believes,Passions,Sharing,Join) {
+define(['views/Passport','views/Believes','views/Passions','views/Sharing','views/Join','views/Gamepad'],
+    function (Passport,Believes,Passions,Sharing,Join,Gamepad) {
     return Backbone.Router.extend({
         initialize: function() {
             this.createFerroSlider();
+            new Gamepad();
         },
         routes: {
             '!sharing': 'sharing',
@@ -32,7 +33,7 @@ define(['views/Passport','views/Believes','views/Passions','views/Sharing','view
                 this._believes = new Believes();
             this.showView(this._believes);
         },
-        join: function() {
+        joinUs: function() {
             if(!this._join)
                 this._join = new Join();
             this.showView(this._join);
@@ -43,8 +44,7 @@ define(['views/Passport','views/Believes','views/Passions','views/Sharing','view
             [{full : 1}, {full : 1, first : true}, {full : 1}],
             [{full : 0}, {full: 1}, {full : 0}]];
 
-            $(document).ready(function() {
-              $(".sliding").ferroSlider({
+            $(".sliding").ferroSlider({
                 displace: matrix,
                 easing: 'easeOutExpo',
                 createMap: true,
@@ -55,7 +55,6 @@ define(['views/Passport','views/Believes','views/Passions','views/Sharing','view
                 preloadBackgroundImages: true,
                 time: 300
             });
-          });
         },
         showView: function(view) {
             if (this.currentView){
