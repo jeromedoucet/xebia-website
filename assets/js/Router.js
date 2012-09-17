@@ -1,9 +1,10 @@
-define(['views/Passport','views/Believes','views/Passions','views/Sharing','views/Join','views/Gamepad'],
-    function (Passport,Believes,Passions,Sharing,Join,Gamepad) {
+define(['views/Passport','views/Believes','views/Passions','views/Sharing','views/Join','views/Gamepad','views/Thanks'],
+    function (Passport,Believes,Passions,Sharing,Join,Gamepad,Thanks) {
     return Backbone.Router.extend({
         initialize: function() {
             this.createFerroSlider();
             new Gamepad();
+            new Thanks();
         },
         routes: {
             '!sharing': 'sharing',

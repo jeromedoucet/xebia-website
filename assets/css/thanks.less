@@ -1,0 +1,46 @@
+// Tab to show/hide panel
+@tab-width: 184px;
+@tab-height: 72px;
+@tab-difference: 8px;
+
+@panel-width: 100%;
+@panel-height: 100px;
+
+@partners-width: 932px;
+@logo-height: 40px;
+
+#thanksPanel {
+
+    position: fixed;
+    bottom: -@panel-height;
+    width: @panel-width;
+    height: @panel-height;
+    z-index: 1002;
+    background-color: rgba(48, 5, 44, 0.8);
+
+    #tab-link {
+        display: block;
+        background-image: url('/assets/img/thanks/thanks-to-bt.png');
+        width: @tab-width;
+        height: @tab-height;
+        margin: -@tab-height+@tab-difference auto 0;
+    }
+
+    #partners {
+        width: @partners-width;
+        height: @logo-height;
+        margin: ((@panel-height - @logo-height)/2-@tab-difference) auto (@panel-height - @logo-height)/2;
+    }
+
+    #partners li {
+        float: left;
+        list-style: none;
+        height: @logo-height;
+        padding: 0 10px;
+    }
+
+    #partners li img {
+        max-height: @logo-height;
+    }
+
+}
