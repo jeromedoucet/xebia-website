@@ -1,4 +1,5 @@
-define(['text!/assets/tmpl/thanks.html'],
+define(['text!/assets/tmpl/thanks.html',
+    'jqdock'],
     function (source) {
         return Backbone.View.extend({
             el:'#thanksPanel',
@@ -8,6 +9,11 @@ define(['text!/assets/tmpl/thanks.html'],
             template:Handlebars.compile(source),
             initialize:function () {
                 $(this.template()).appendTo(this.$el);
+                $('#partners').jqDock({
+                    align:'middle',
+                    size:30,
+                    distance:80
+                });
             },
             togglePanel:function (event) {
                 event.preventDefault();

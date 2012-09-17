@@ -6,8 +6,8 @@
 @panel-width: 100%;
 @panel-height: 100px;
 
-@partners-width: 932px;
-@logo-height: 40px;
+@partners-width: 860px;
+@logo-height: 30px;
 
 #thanksPanel {
 
@@ -30,17 +30,23 @@
         width: @partners-width;
         height: @logo-height;
         margin: ((@panel-height - @logo-height)/2-@tab-difference) auto (@panel-height - @logo-height)/2;
-    }
 
-    #partners li {
-        float: left;
-        list-style: none;
-        height: @logo-height;
-        padding: 0 10px;
-    }
+        .jqDockItem {
+            float: left;
+            list-style: none;
+            padding: 0 10px;
+            opacity: 0.5;
+            -webkit-transition-property: opacity;
+            -webkit-transition-duration: 1s;
+        }
+        .jqDockItem:hover {
+            opacity: 1;
+            -webkit-transition-duration: 0.3s;
+        }
 
-    #partners li img {
-        max-height: @logo-height;
+        * {
+            padding: 0 10px;
+        }
     }
 
 }
