@@ -1,7 +1,11 @@
 // Tab to show/hide panel
-@tab-width: 184px;
-@tab-height: 72px;
-@tab-difference: 8px;
+@cloud-width: 181px;
+@cloud-height: 25px;
+@button-width: 141px;
+@button-height: 91px;
+@button-difference: 25px;
+@arrow-width: 27px;
+@arrow-height: 25px;
 
 @panel-width: 100%;
 @panel-height: 100px;
@@ -16,20 +20,57 @@
     width: @panel-width;
     height: @panel-height;
     z-index: 1002;
-    background-color: rgba(48, 5, 44, 0.8);
+    background-color: rgba(54, 10, 45, 0.8);
 
     #tab-link {
         display: block;
-        background-image: url('/assets/img/thanks/thanks-to-bt.png');
-        width: @tab-width;
-        height: @tab-height;
-        margin: -@tab-height+@tab-difference auto 0;
+        background-image: url('/assets/img/thanks/thanksto_bt_bg.png');
+        width: @cloud-width;
+        height: @cloud-height;
+        margin: -@cloud-height auto 0;
+
+        .button {
+            background-image: url('/assets/img/thanks/thanksto_bt_off.png');
+            width: @button-width;
+            height: @button-height;
+            position: absolute;
+            top: -@button-height + @button-difference;
+            margin-left: (@cloud-width - @button-width)/ 2;
+        }
+
+        .arrow {
+            background-image: url('/assets/img/thanks/thanksto_triangle_haut.png');
+            width: @arrow-width;
+            height: @arrow-height;
+            position: absolute;
+            top: -@button-height + @button-difference - @arrow-height + 10px;
+            margin-left: (@cloud-width - @arrow-width)/ 2;
+            -webkit-transition-property: margin-top;
+            -moz-transition-property: margin-top;
+            -o-transition-property: margin-top;
+            -webkit-transition-duration: 0.3s;
+            -moz-transition-duration: 0.3s;
+            -o-transition-duration: 0.3s;
+
+            &.down {
+                background-image: url('/assets/img/thanks/thanksto_triangle_bas.png');
+            }
+        }
+
+        &:hover {
+            .button {
+                background-image: url('/assets/img/thanks/thanksto_bt.png');
+            }
+            .arrow {
+                margin-top: -10px;
+            }
+        }
     }
 
     #partners {
         width: @partners-width;
         height: @logo-height;
-        margin: ((@panel-height - @logo-height)/2-@tab-difference) auto (@panel-height - @logo-height)/2;
+        margin: (@panel-height - @logo-height)/2 auto (@panel-height - @logo-height)/2;
 
         .jqDockItem {
             float: left;
@@ -42,12 +83,13 @@
             -webkit-transition-duration: 1s;
             -moz-transition-duration: 1s;
             -o-transition-duration: 1s;
-        }
-        .jqDockItem:hover {
-            opacity: 1;
-            -webkit-transition-duration: 0.3s;
-            -moz-transition-duration: 0.3s;
-            -o-transition-duration: 0.3s;
+
+            &:hover {
+                opacity: 1;
+                -webkit-transition-duration: 0.3s;
+                -moz-transition-duration: 0.3s;
+                -o-transition-duration: 0.3s;
+            }
         }
     }
 

@@ -22,11 +22,13 @@ define(['text!/assets/tmpl/thanks.html',
                     $(this.el).animate({
                         bottom:'0px'
                     }, 100);
+                    $('#tab-link .arrow').addClass('down');
                 } else {
                     // Hide panel
                     $(this.el).animate({
                         bottom:'-100px'
                     }, 100);
+                    $('#tab-link .arrow').removeClass('down');
                 }
             }
         });
