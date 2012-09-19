@@ -28,7 +28,7 @@ define(
             },
             showTooltip:function (event) {
                 $('#gamepad-tooltip').css('background-image', 'url(/assets/img/interface/bulles_sprites.png)');
-                $('#gamepad-tooltip').css('background-position-y', this.tooltipBackgroundPosition[event.target.id]);
+                $('#gamepad-tooltip').css('background-position', '0 ' + this.tooltipBackgroundPosition[event.target.id] + 'px');
                 $('#gamepad-tooltip').css('top', event.target.offsetTop + this.tooltip.top);
                 $('#gamepad-tooltip').css('left', event.target.offsetLeft - this.tooltip.width / 2 + this.tooltip.left);
                 $('#gamepad-tooltip').show();
