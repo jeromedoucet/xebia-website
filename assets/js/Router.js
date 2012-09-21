@@ -49,7 +49,7 @@ define(['views/Passport','views/Believes','views/Passions','views/Sharing','view
                 displace: matrix,
                 easing: 'easeOutExpo',
                 createMap: true,
-                feedbackArrows: false,
+                feedbackArrows: true,
                 fullScreenBackground: true,
                 mapPosition: 'bottom_left',
                 backGroundImageClass: 'bg',

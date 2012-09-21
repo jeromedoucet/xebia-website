@@ -893,7 +893,7 @@
     					
     					if(direction != null){
     						
-    				 		var iconName = "img/"+direction+"_arrow.png";
+    				 		var iconName = "/assets/img/ferro/sens_"+direction+".png";
     				 		
     				 		$("#slidingSpacesNavigationFeedback").stop();
     				 		$("#slidingSpacesNavigationFeedback").css({
@@ -901,7 +901,7 @@
     				 				backgroundRepeat: "no-repeat",
     				 				backgroundPosition: "center center",
     					 			opacity : "1",
-    					 			"z-index" : 1000
+    					 			"z-index" : 3000
     				 		});
     				 		
     				 		$("#slidingSpacesNavigationFeedback").show();
