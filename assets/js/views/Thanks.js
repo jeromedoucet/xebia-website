@@ -21,7 +21,7 @@ define(['text!/assets/tmpl/thanks.html',
                     // Show panel
                     $(this.el).animate({
                         bottom:'0px'
-                    }, 100);
+                    }, 300);
                     $('#tab-link .arrow').addClass('down');
                 } else {
                     // Hide panel
