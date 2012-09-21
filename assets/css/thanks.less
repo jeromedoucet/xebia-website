@@ -7,11 +7,29 @@
 @arrow-width: 27px;
 @arrow-height: 25px;
 
+// Transparent panel
 @panel-width: 100%;
 @panel-height: 100px;
 
+// Partners list and logos
 @partners-width: 860px;
 @logo-height: 30px;
+
+.transition-property(@property){
+    transition-property: @property;
+    -ms-transition-property: @property;
+    -webkit-transition-property: @property;
+    -o-transition-property: @property;
+    -moz-transition-property: @property;
+}
+
+.transition-duration(@duration){
+    transition-duration: @duration;
+    -ms-transition-duration: @duration;
+    -webkit-transition-duration: @duration;
+    -o-transition-duration: @duration;
+    -moz-transition-duration: @duration;
+}
 
 #thanksPanel {
 
@@ -45,12 +63,8 @@
             position: absolute;
             top: -@button-height + @button-difference - @arrow-height + 10px;
             margin-left: (@cloud-width - @arrow-width)/ 2;
-            -webkit-transition-property: margin-top;
-            -moz-transition-property: margin-top;
-            -o-transition-property: margin-top;
-            -webkit-transition-duration: 0.3s;
-            -moz-transition-duration: 0.3s;
-            -o-transition-duration: 0.3s;
+            .transition-property(margin-top);
+            .transition-duration(0.3s);
 
             &.down {
                 background-image: url('/assets/img/thanks/thanksto_triangle_bas.png');
@@ -77,18 +91,12 @@
             list-style: none;
             padding: 0 10px;
             opacity: 0.5;
-            -webkit-transition-property: opacity;
-            -moz-transition-property: opacity;
-            -o-transition-property: opacity;
-            -webkit-transition-duration: 1s;
-            -moz-transition-duration: 1s;
-            -o-transition-duration: 1s;
+            .transition-property(opacity);
+            .transition-duration(1s);
 
             &:hover {
                 opacity: 1;
-                -webkit-transition-duration: 0.3s;
-                -moz-transition-duration: 0.3s;
-                -o-transition-duration: 0.3s;
+                .transition-duration(0.3s);
             }
         }
     }
