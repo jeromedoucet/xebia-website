@@ -7,11 +7,11 @@ define(['views/Passport','views/Believes','views/Passions','views/Sharing','view
             new Thanks();
         },
         routes: {
-            '!sharing': 'sharing',
-            '!passions': 'passions',
-            '!believes': 'believes',
-            '!joinUs': 'joinUs',
-            '!passport': 'passport',
+            'sharing': 'sharing',
+            'passions': 'passions',
+            'believes': 'believes',
+            'joinUs': 'joinUs',
+            'passport': 'passport',
             '*path': 'passport'
         },
         passport: function() {

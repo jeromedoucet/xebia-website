@@ -254,7 +254,7 @@
 		        						scrollTop: topShift,
 		        						scrollLeft: leftShift
 		        					},0);
-		    						window.location.hash = "#!"+toMove.id;
+		    						window.location.hash = "#"+toMove.id;
 		    						actualElementObject = toMove;
 		    						
 		    						destroyEvent('endslide');
@@ -302,6 +302,7 @@
     		 		$(window).resize(function(){
     		 			revalidate();
 	    		 	});
+                    revalidate();
     		 	}
 	    		 	
     		 		
@@ -413,7 +414,7 @@
 						});
 					}
 					
-					window.location.hash = "#!"+toMove.id;
+					window.location.hash = "#"+toMove.id;
 					
 					actualCol = toMove.column;
 					actualRow = toMove.row;
@@ -1349,7 +1350,7 @@
 	    						actualOffsetX = leftShift;
 	    						actualOffsetY = topShift;
 	    						
-	    						window.location.hash = "#!"+toMove.id;
+	    						window.location.hash = "#"+toMove.id;
 	    						
 	    						var start = new Date().getTime();
 								for (var i = 0; i < 1e7; i++) {
