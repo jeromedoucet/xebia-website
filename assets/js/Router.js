@@ -5,6 +5,9 @@ define(['views/Passport','views/Believes','views/Passions','views/Sharing','view
             this.createFerroSlider();
             new Gamepad();
             new Thanks();
+
+            $('.bg').css('left', '0');
+            $('.bg').css('width', $(window).width());
         },
         routes: {
             'sharing': 'sharing',
