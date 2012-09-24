@@ -118,6 +118,7 @@ function (source) {
             var self = event.data.self;
 
             if (!self.spotDisplayed){
+                self.saveSlideOffset();
                 self.$spot.css('opacity', 1);
                 self.spotDisplayed = true;
             }
