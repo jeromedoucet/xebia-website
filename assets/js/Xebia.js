@@ -39,7 +39,7 @@ require(['router', 'jquery', 'underscore', 'backbone', 'handlebars', 'less', 'jq
         new Router();
         Backbone.history.start();
 
-        var $loaderContainer = $('#percent-container');
+        /*var $loaderContainer = $('#percent-container');
         var $percent = $('#percent');
         var $imgs = $('img');
         var nbElToPreload = $imgs.length, nbElPreloaded = 0;
@@ -60,6 +60,6 @@ require(['router', 'jquery', 'underscore', 'backbone', 'handlebars', 'less', 'jq
 
             }
             img.src = $(item).attr('src');
-        });
+        });*/
     }
 );
