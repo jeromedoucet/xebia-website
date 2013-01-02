@@ -1,0 +1,278 @@
+body {
+  margin: 0px;
+}
+.content {
+  font: 18px 'UbuntuMedium', Arial, sans-serif;
+  width: 100%;
+  position: relative;
+}
+
+.nav {
+  width: 100%;
+  height: 35px;
+  top: 0px;
+  vertical-align: middle;
+  text-align: center;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+  border-bottom: 5px solid rgb(190, 186, 184);
+  a {
+    font: 15px 'UbuntuMedium', Arial, sans-serif;
+    text-decoration: none;
+    color: rgb(86, 18, 76); /* TODO ask benjamin */
+    text-transform: uppercase;
+    margin: 0px 15px;
+    line-height: 35px;
+  }
+  .pointer {
+    display: none;
+    width: 13px;
+    height: 7px;
+    position: absolute;
+    top: 28px;
+    left: 10px;
+    background: url('../images/nav-pointer.png') no-repeat;
+  }
+}
+
+.hello {
+  background: url('../images/hello-bg.png') repeat-x;
+  margin-top: 25px;
+  position: relative;
+
+  .hello-content {
+    width: 1200px;
+    height: 700px;
+    margin: auto;
+    background: url('../images/hello.png') no-repeat;
+    .slide {
+      position: absolute;
+      top: 233px;
+      right: 200px;
+      width: 611px;
+      height: 289px;
+      background: url('../images/slide1.png') no-repeat;
+    }
+  }
+  .icosahedron { /* http://en.wikipedia.org/wiki/Icosahedron */
+    width: 218px;
+    height: 173px;
+    position: absolute;
+    top: 349px;
+    right: 0px;
+    background: url('../images/icosahedron.png') no-repeat;
+  }
+}
+.passion {
+  background: url('../images/passion-bg.png') repeat-x;
+  margin-top: 10px;
+  height: 720px;
+}
+h2 {
+  color: rgb(86, 18, 76);
+  font: 65px 'UbuntuLight', Arial, sans-serif;
+  text-transform: uppercase;
+}
+.trust {
+  background: url('../images/trust-bg.png');
+  height: 720px;
+  position: relative;
+  .boids {
+    width: 620px;
+    height: 80px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url('../images/trust-boids.png') no-repeat;
+  }
+
+  .trust-content{
+    width: 1000px;
+    margin: auto;
+    position: relative;
+    padding-top: 150px;
+
+    .logos {
+      height: 80px;
+    }
+
+    .row1 {
+      background: url('../images/logos-row1.png') no-repeat;
+    }
+    .row2 {
+      background: url('../images/logos-row2.png') no-repeat;
+    }
+
+    h2 {
+      color: #0EAED7;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .study {
+      width: 310px;
+      color: white;
+      font: 11px 'UbuntuLight', Arial, sans-serif;
+      display: inline-block;
+      margin-top: 50px;
+      img {
+        z-index: 1;
+      }
+      h3 {
+        font: 18px 'UbuntuLightItalic', Arial, sans-serif;
+        font-weight: 600;
+        background-color: rgba(0,0,0,0.3);
+        padding: 5px 10px;
+        margin-top: -35px;
+        z-index: 5;
+      }
+      p {
+        line-height: 16px;
+      }
+      .study-link {
+        background-color: #0EAED7;
+        text-transform: uppercase;
+        font: 13px 'UbuntuLight', Arial, sans-serif;
+        padding: 5px 10px;
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+        color: white;
+      }
+    }
+    .middle {
+      margin: 0 30px;
+    }
+  }
+}
+
+.universe-content, .contact-content, .work-content, .tagline {
+
+  width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.universe {
+  padding-bottom: 70px;
+  h2 {
+    margin-bottom: 0px;
+  }
+  p {
+    font: 15px 'UbuntuLightItalic', Arial, sans-serif;
+    font-weight: 100;
+    margin-bottom: 50px;
+    line-height: 22px;
+  }
+  .bubble {
+    background-color: rgb(241, 240, 238);
+    width: 220px;
+    height: 220px;
+    border-radius: 110px;
+    position: relative;
+    display: inline-block;
+    margin: 0px 15px;
+    p {
+      position: absolute;
+      top: 105px;
+      left: 45px;
+      width: 130px;
+      text-align: center;
+      font: 11px 'UbuntuLight', Arial, sans-serif;
+      font-weight: normal;
+    }
+  }
+  .blog {
+    background: url('../images/universe-blog-logo.png') 65px 40px no-repeat rgb(241, 240, 238);
+  }
+  .studio {
+    background: url('../images/universe-studio-logo.png') 65px 30px no-repeat rgb(241, 240, 238);
+  }
+  .training {
+    background: url('../images/universe-training-logo.png') 65px 20px no-repeat rgb(241, 240, 238);
+  }
+  .agile {
+    background: url('../images/universe-agile-logo.png') 70px 25px no-repeat rgb(241, 240, 238);
+  }
+  .first {
+    margin-left: 0px;
+  }
+  .last {
+    margin-right: 0px;
+  }
+  .bubble-link {
+    position: absolute;
+    top: 170px;
+    right: 0px;
+    background-color: rgb(86, 18, 76);
+    text-transform: uppercase;
+    font: 15px 'UbuntuLight', Arial, sans-serif;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+  }
+
+}
+
+.contact {
+  background-color: rgb(241, 240, 238);
+  padding: 10px 0px;
+  height: 500px;
+  .contact-content {
+
+  }
+}
+
+.work {
+  padding: 10px 0px;
+  position: relative;
+  .work-boids {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 464px;
+    height: 363px;
+    background: url('../images/work-boids.png') no-repeat;
+  }
+  .work-content {
+    height: 500px;
+    .map {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 335px;
+      height: 266px;
+      background: url('../images/work-map.png') no-repeat;
+    }
+    .gps {
+      position: absolute;
+      top: 100px;
+      left: 400px;
+      font: 15px 'UbuntuLight', Arial, sans-serif;
+      p {
+      }
+      h3 {
+        font-size: 14px;
+      }
+      hr {
+        /*border-bottom: 1px solid rgb(241, 240, 238);*/
+      }
+    }
+
+  }
+}
+footer {
+
+  background-color: rgb(241, 240, 238);
+  height: 80px;
+  .tagline {
+    height: 80px;
+    background: url('../images/footer-tagline.png') 0px 20px no-repeat rgb(241, 240, 238);
+  }
+}
+
+.debug {
+    border: 1px solid lime;
+}
