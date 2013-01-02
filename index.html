@@ -1,105 +1,124 @@
-<!DOCTYPE HTML>
-<html lang="en">
-
+<!doctype html>
+<html>
 <head>
-    <script type="text/javascript">
-        if ((navigator.userAgent.match(/iPhone/i)) ||
-                (navigator.userAgent.match(/iPad/i)) ||
-                (navigator.userAgent.match(/iPod/i)) ||
-                (navigator.userAgent.match(/symbian/i)) ||
-                (navigator.userAgent.match(/android/i)) ||
-                (navigator.userAgent.match(/series60/i)) ||
-                (navigator.userAgent.match(/windows ce/i)) ||
-                (navigator.userAgent.match(/blackberry/i)) ||
-                (navigator.userAgent.match(/palm/i)))
-            window.location = "/mobile.html";
-    </script>
-    <meta charset="utf-8">
-    <title>Xebia France</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width">
-
-    <link rel="stylesheet" type="text/css" href="assets/css/jquery.ferro.css">
-    <link rel="stylesheet/less" type="text/css" href="assets/css/mixins.less">
-    <link rel="stylesheet/less" type="text/css" href="assets/css/fonts.less">
-    <link rel="stylesheet/less" type="text/css" href="assets/css/xebia.less">
-    <link rel="stylesheet/less" type="text/css" href="assets/css/passport.less">
-    <link rel="stylesheet/less" type="text/css" href="assets/css/sharing.less">
-    <link rel="stylesheet/less" type="text/css" href="assets/css/believes.less">
-    <link rel="stylesheet/less" type="text/css" href="assets/css/passions.less">
-    <link rel="stylesheet/less" type="text/css" href="assets/css/thanks.less">
-
-    <script data-main="assets/js/Xebia.js" src="assets/js/lib/require.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Xebia</title>
+  <link rel="stylesheet" type="text/css" href="./styles/typo.css">
+  <link rel="stylesheet/less" type="text/css" href="./styles/main.less">
+  <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+  <script src="./scripts/vendor/less-1.3.1.min.js"></script>
 </head>
-
 <body>
 
-<div id="percent-container">
-    <div id="percent"></div>
-</div>
+<div class="content">
+  <div class="nav">
+    <a href="#">hello</a>
+    <a href="#">our passions</a>
+    <a href="#">they trust us</a>
+    <a href="#">join us</a>
+    <a href="#">xebia universe</a>
+    <a href="#">contact</a>
+    <div class="pointer"></div>
+  </div>
 
-<div id="passport" class="sliding">
-    <div class="content"></div>
-
-    <div class="bg">
-        <img src="assets/img/who_we_are/map_monde3.png" class="bg bg_map_monde"/>
-
-        <div class="degrad_radial_violet2" style="opacity:0.4;"></div>
-        <div class="noise2" style="opacity:0.5;"></div>
+  <div class="hello">
+    <div class="hello-content">
+      <div class="slide">
+      </div>
     </div>
-</div>
-
-<div id="believes" class="sliding">
-    <div class="content"></div>
-
-    <div class="bg">
-        <div class="degrad_radial_violet2" style="opacity:0.4;"></div>
-        <img src="assets/img/believes/plage2.gif" class="bg_believes bg"/>
+    <div class="icosahedron">
     </div>
-</div>
+  </div>
 
-<div id="passions" class="sliding">
-    <div class="bg">
-        <div class="noise2" style="opacity:0.6;"></div>
-        <div class="degrad_radial_violet2" style="opacity:0.3;"></div>
-        <img src="assets/img/passions/bg_passions.gif" class="bg_passions bg"/>
+  <div class="passion">
+  </div>
+
+  <div class="trust">
+    <div class="boids"></div>
+    <div class="trust-content">
+      <h2>they trust us</h2>
+      <div class="logos row1">
+      </div>
+      <div class="logos row2">
+      </div>
+      <div class="study">
+        <img src="./images/study1.png" alt="study 1">
+        <h3>Study 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero risus, dapibus ac rutrum nec, placerat a risus. Ut est nulla, viverra eget dictum sed, feugiat eu dolor. Duis interdum porttitor nisl, quis ultricies metus dictum id.</p>
+        <a href="" class="study-link">view the project</a>
+      </div>
+      <div class="study middle">
+        <img src="./images/study2.png" alt="study 2">
+        <h3>Study 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero risus, dapibus ac rutrum nec, placerat a risus. Ut est nulla, viverra eget dictum sed, feugiat eu dolor. Duis interdum porttitor nisl, quis ultricies metus dictum id.</p>
+        <a href="" class="study-link">view the project</a>
+      </div>
+      <div class="study">
+        <img src="./images/study3.png" alt="study 3">
+        <h3>Study 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero risus, dapibus ac rutrum nec, placerat a risus. Ut est nulla, viverra eget dictum sed, feugiat eu dolor. Duis interdum porttitor nisl, quis ultricies metus dictum id.</p>
+        <a href="" class="study-link">view the project</a>
+      </div>
     </div>
+  </div>
 
-    <div class="content"></div>
-</div>
-
-<div id="sharing" class="sliding">
-    <div class="content"></div>
-
-    <div class="bg">
-        <div class="bonhommes" style="opacity:0.4;"></div>
-        <div class="noise2" style="opacity:0.8;"></div>
-        <div class="degrad_radial_violet2" style="opacity:0.7;"></div>
+  <div class="universe">
+    <div class="universe-content">
+      <h2>xebia universe</h2>
+      <p>Xebia strives continuously to promote and encourage innovation and ideas for all - Our consultants have their fingers on the pulse of new technology trends - They share their experience, their know-how and their belief in software development done right to the Java community.</p>
+      <div class="bubble blog first">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="" class="bubble-link">blog xebia</a>
+      </div>
+      <div class="bubble studio">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="" class="bubble-link">xebia studio</a>
+      </div>
+      <div class="bubble training">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="" class="bubble-link">xebia training</a>
+      </div>
+      <div class="bubble agile last">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="" class="bubble-link">agile contract</a>
+      </div>
     </div>
-</div>
+  </div>
 
-<div id="joinUs" class="sliding">
-    <div class="content"></div>
-
-    <div class="bg">
-        <div class="degrad_radial_violet2" style="opacity:0.7;"></div>
-        <div class="noise2" style="opacity:0.8;"></div>
-        <div class="bg_join_us" style="opacity:0.5;"></div>
+  <div class="contact">
+    <div class="contact-content">
+      <h2>contact</h2>
     </div>
+  </div>
+
+  <div class="work">
+    <div class="work-boids">
+    </div>
+    <div class="work-content">
+      <h2>we work</h2>
+      <div class="gps">
+        <h3>AND...</h3>
+        <h3>Xebia Netherlands</h3>
+        <p>
+          Utrechtsesweg 49<br>
+          1213 TL Hilversum Pays Bas
+        </p>
+        <h3>Xebia India</h3>
+        <p>
+          612 BPTP Park Centra - Sector 30<br>
+          Gurgaon 122002 Haryana
+        </p>
+      </div>
+      <div class="map">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="tagline">
+    </div>
+  </footer>
 </div>
-
-<!-- Liens Externes -->
-<ul class="menu_liens_externes centered">
-    <li class="menu_liens_externes_item_1"><a href="mailto:info@xebia.fr" target="_blank">@</a></li>
-    <li class="menu_liens_externes_item_2"><a href="http://blog.xebia.fr/" target="_blank">Blog</a></li>
-    <li class="menu_liens_externes_item_1"><a href="http://training.xebia.fr/" target="_blank">Training</a></li>
-    <li class="menu_liens_externes_item_2"><a href="http://studio.xebia.fr/" target="_blank">Studio</a></li>
-    <li class="menu_liens_externes_item_1"><a href="http://www.xebialabs.com/" target="_blank">Labs</a></li>
-</ul>
-
-<!-- Bandeau Thanks to -->
-<div id="thanksPanel"></div>
-
 </body>
+
 </html>
