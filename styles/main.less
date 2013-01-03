@@ -1,3 +1,4 @@
+/* Palette */
 @violet: #6a205f;
 @pink: #b60051;
 @darkviolet: #44093b;
@@ -8,14 +9,25 @@
 @blue: #26a6c6;
 @green: #86a50c;
 
+/* Global */
 body {
   margin: 0px;
+}
+a {
+  text-decoration: none;
+}
+h2 {
+  color: @violet;
+  font: 65px 'UbuntuLight', Arial, sans-serif;
+  text-transform: uppercase;
 }
 .content {
   font: 18px 'UbuntuMedium', Arial, sans-serif;
   width: 100%;
   position: relative;
 }
+
+/* Navigation */
 
 .nav {
   width: 100%;
@@ -29,7 +41,6 @@ body {
   border-bottom: 5px solid rgb(190, 186, 184);
   a {
     font: 15px 'UbuntuMedium', Arial, sans-serif;
-    text-decoration: none;
     color: @violet;
     text-transform: uppercase;
     margin: 0px 15px;
@@ -46,6 +57,14 @@ body {
   }
 }
 
+/* Content */
+.universe-content, .contact-content, .work-content, .tagline {
+  width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+/* Hello http://essentials.xebia.com/make-it-visible */
 .hello {
   background: url('../images/hello-bg.png') repeat-x;
   margin-top: 25px;
@@ -59,10 +78,10 @@ body {
     position: relative;
     .slide {
       position: absolute;
-      top: 256px;
-      right: 60px;
+      top: 233px;
+      right: 68px;
       width: 564px;
-      height: 266px;
+      height: 289px;
       background: url('../images/slide1.png') no-repeat;
       z-index: 10;
     }
@@ -80,25 +99,25 @@ body {
       right: 44px;
     }
   }
-  .icosahedron { /* http://en.wikipedia.org/wiki/Icosahedron */
+  /* http://en.wikipedia.org/wiki/Icosahedron */
+  .icosahedron {
     width: 218px;
     height: 173px;
     position: absolute;
-    top: 350px;
+    top: 349px;
     right: 0px;
     background: url('../images/icosahedron.png') no-repeat;
   }
 }
+
+/* Passion http://essentials.xebia.com/make-it-work-right-fast */
 .passion {
   background: url('../images/passion-bg.png') center top no-repeat;
   margin-top: 10px; 
   height: 720px;
 }
-h2 {
-  color: @violet;
-  font: 65px 'UbuntuLight', Arial, sans-serif;
-  text-transform: uppercase;
-}
+
+/* Trust http://essentials.xebia.com/dare-to-say-no */
 .trust {
   background: url('../images/trust-bg.png');
   height: 720px;
@@ -160,7 +179,6 @@ h2 {
         text-transform: uppercase;
         font: 13px 'UbuntuLight', Arial, sans-serif;
         padding: 5px 10px;
-        text-decoration: none;
         margin-top: 10px;
         display: inline-block;
         color: white;
@@ -172,13 +190,7 @@ h2 {
   }
 }
 
-.universe-content, .contact-content, .work-content, .tagline {
-
-  width: 1000px;
-  margin: auto;
-  position: relative;
-}
-
+/* Universe http://essentials.xebia.com/one-feature-at-a-time */
 .universe {
   padding-bottom: 70px;
   h2 {
@@ -234,13 +246,12 @@ h2 {
     text-transform: uppercase;
     font: 15px 'UbuntuLight', Arial, sans-serif;
     padding: 5px 10px;
-    text-decoration: none;
     display: inline-block;
     color: white;
   }
-
 }
 
+/* Contact http://essentials.xebia.com/rich-communication */
 .contact {
   background: url('../images/contact-bg.png');
   padding: 0px;
@@ -298,6 +309,7 @@ h2 {
   }
 }
 
+/* Work http://essentials.xebia.com/done */
 .work {
   padding: 10px 0px;
   position: relative;
@@ -336,8 +348,8 @@ h2 {
 
   }
 }
-footer {
 
+footer {
   background-color: @lightgrey;
   height: 80px;
   .tagline {
