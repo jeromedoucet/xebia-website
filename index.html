@@ -1,43 +1,52 @@
 <!doctype html>
 <html>
 <head>
-  <title>Xebia</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Xebia</title>
   <link rel="stylesheet" type="text/css" href="./styles/typo.css">
   <link rel="stylesheet/less" type="text/css" href="./styles/main.less">
-  <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+  <script src="./scripts/vendor/jquery-1.8.3.min.js"></script>
   <script src="./scripts/vendor/less-1.3.1.min.js"></script>
+  <script src="./scripts/main.js"></script>
 </head>
 <body>
 
 <div class="content">
   <div class="nav">
-    <a href="#">hello</a>
-    <a href="#">our passions</a>
-    <a href="#">they trust us</a>
-    <a href="#">join us</a>
-    <a href="#">xebia universe</a>
-    <a href="#">contact</a>
+    <a href="#hello">hello</a>
+    <a href="#passion">our passions</a>
+    <a href="#trust">they trust us</a>
+    <a href="#universe">xebia universe</a>
+    <a href="#contact">contact</a>
+    <a href="#work">work</a>
     <div class="pointer"></div>
   </div>
 
-  <div class="hello">
+  <div class="hello" id="hello">
     <div class="hello-content">
-      <div class="slide">
-      </div>
+      <div class="slide"></div>
+      <div class="france">80</div>
+      <div class="worldwide">300</div>
     </div>
     <div class="icosahedron">
     </div>
   </div>
 
-  <div class="passion">
+  <div class="passion" id="passion">
+<!--
+Software craftmanship -> http://blog.xebia.fr/tag/software-craftsmanship/
+BigData -> http://blog.xebia.fr/category/nosql/
+Cloud -> http://blog.xebia.fr/category/nosql/
+Agile -> http://blog.xebia.fr/category/agilite/
+DevOps -> http://blog.xebia.fr/tag/devops/
+Java & friends -> http://blog.xebia.fr/category/java-jee/
+Web -> http://blog.xebia.fr/category/woa/
+Mobility -> http://blog.xebia.fr/category/mobilite/
+-->
+
   </div>
 
-  <div class="trust">
+  <div class="trust" id="trust">
     <div class="boids"></div>
     <div class="trust-content">
       <h2>they trust us</h2>
@@ -66,7 +75,7 @@
     </div>
   </div>
 
-  <div class="universe">
+  <div class="universe" id="universe">
     <div class="universe-content">
       <h2>xebia universe</h2>
       <p>Xebia strives continuously to promote and encourage innovation and ideas for all - Our consultants have their fingers on the pulse of new technology trends - They share their experience, their know-how and their belief in software development done right to the Java community.</p>
@@ -89,13 +98,26 @@
     </div>
   </div>
 
-  <div class="contact">
+  <div class="contact" id="contact">
     <div class="contact-content">
       <h2>contact</h2>
+      <form name="contact">
+        <div class="message">
+          <label>Your message</label>
+          <input type="text">
+        </div>
+        
+        <div class="infos">
+          <label>Your name</label><input type="text" name="name">
+          <label>Your email</label><input type="text" name="mail">
+          <label>Firm</label><input type="text" name="firm">
+        </div>
+        <input type="submit" value="send" class="send">
+      </form>
     </div>
   </div>
 
-  <div class="work">
+  <div class="work" id="work">
     <div class="work-boids">
     </div>
     <div class="work-content">

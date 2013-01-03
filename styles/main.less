@@ -1,3 +1,13 @@
+@violet: #6a205f;
+@pink: #b60051;
+@darkviolet: #44093b;
+@darkgrey: #6d626b;
+@mauve: #a893a4;
+@lightgrey: #f1f0ee;
+@grey: #d7d5d0;
+@blue: #26a6c6;
+@green: #86a50c;
+
 body {
   margin: 0px;
 }
@@ -14,13 +24,13 @@ body {
   vertical-align: middle;
   text-align: center;
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   background-color: white;
   border-bottom: 5px solid rgb(190, 186, 184);
   a {
     font: 15px 'UbuntuMedium', Arial, sans-serif;
     text-decoration: none;
-    color: rgb(86, 18, 76); /* TODO ask benjamin */
+    color: @violet;
     text-transform: uppercase;
     margin: 0px 15px;
     line-height: 35px;
@@ -42,36 +52,50 @@ body {
   position: relative;
 
   .hello-content {
-    width: 1200px;
+    width: 1100px;
     height: 700px;
     margin: auto;
-    position: relative;
     background: url('../images/hello.png') no-repeat;
+    position: relative;
     .slide {
       position: absolute;
-      top: 233px;
-      right: 120px;
-      width: 611px;
-      height: 289px;
+      top: 256px;
+      right: 60px;
+      width: 564px;
+      height: 266px;
       background: url('../images/slide1.png') no-repeat;
+      z-index: 10;
+    }
+    .france , .worldwide {
+      color: @violet;
+      font-size: 40px;
+      position: absolute;
+    }
+    .france {
+      bottom: 70px;
+      right: 391px;
+    }
+    .worldwide {
+      bottom: 70px;
+      right: 44px;
     }
   }
   .icosahedron { /* http://en.wikipedia.org/wiki/Icosahedron */
     width: 218px;
     height: 173px;
     position: absolute;
-    top: 349px;
+    top: 350px;
     right: 0px;
     background: url('../images/icosahedron.png') no-repeat;
   }
 }
 .passion {
-  background: url('../images/passion-bg.png') repeat-x;
-  margin-top: 10px;
+  background: url('../images/passion-bg.png') center top no-repeat;
+  margin-top: 10px; 
   height: 720px;
 }
 h2 {
-  color: rgb(86, 18, 76);
+  color: @violet;
   font: 65px 'UbuntuLight', Arial, sans-serif;
   text-transform: uppercase;
 }
@@ -106,7 +130,7 @@ h2 {
     }
 
     h2 {
-      color: #0EAED7;
+      color: @blue;
       position: absolute;
       right: 0px;
       top: 0px;
@@ -132,7 +156,7 @@ h2 {
         line-height: 16px;
       }
       .study-link {
-        background-color: #0EAED7;
+        background-color: @blue;
         text-transform: uppercase;
         font: 13px 'UbuntuLight', Arial, sans-serif;
         padding: 5px 10px;
@@ -167,7 +191,7 @@ h2 {
     line-height: 22px;
   }
   .bubble {
-    background-color: rgb(241, 240, 238);
+    background-color: @grey;
     width: 220px;
     height: 220px;
     border-radius: 110px;
@@ -188,10 +212,10 @@ h2 {
     background: url('../images/universe-blog-logo.png') 65px 40px no-repeat rgb(241, 240, 238);
   }
   .studio {
-    background: url('../images/universe-studio-logo.png') 65px 30px no-repeat rgb(241, 240, 238);
+    background: url('../images/universe-studio-logo.png') 70px 25px no-repeat rgb(241, 240, 238);
   }
   .training {
-    background: url('../images/universe-training-logo.png') 65px 20px no-repeat rgb(241, 240, 238);
+    background: url('../images/universe-training-logo.png') 62px 31px no-repeat rgb(241, 240, 238);
   }
   .agile {
     background: url('../images/universe-agile-logo.png') 70px 25px no-repeat rgb(241, 240, 238);
@@ -206,7 +230,7 @@ h2 {
     position: absolute;
     top: 170px;
     right: 0px;
-    background-color: rgb(86, 18, 76);
+    background-color: @violet;
     text-transform: uppercase;
     font: 15px 'UbuntuLight', Arial, sans-serif;
     padding: 5px 10px;
@@ -218,11 +242,59 @@ h2 {
 }
 
 .contact {
-  background-color: rgb(241, 240, 238);
-  padding: 10px 0px;
-  height: 500px;
+  background: url('../images/contact-bg.png');
+  padding: 0px;
   .contact-content {
+    height: 700px;
+    width: 1160px;
+    background: url('../images/contact.png') no-repeat;
+    position: relative;
+    h2 {
+      color: white;
+      line-height: 160px;
+      padding-left: 10px;
+    }
+    form {
+      display: block;
+      width: 998px;
+      position: absolute;
+      top: 280px;
+      height: 160px;
+      left: 15px;
+      font: 15px 'UbuntuLight', Arial, sans-serif;
+      .infos {
+        float: left;
+        width: 300px;
+        label {
+          color: @darkgrey;
+          text-align: right;
+          display: inline-block;
+          width: 50px;
 
+          /* no wrap */
+        }
+        input {
+          display: inline-block;
+          width: 200px;
+          border: 0px;
+        }
+      }
+      .message {
+        float: right;
+      }
+    }
+    
+    .send {
+      background-color: @violet;
+      text-transform: uppercase;
+      color: white;
+      border: 0;
+      position: absolute;
+      bottom: -32px;
+      height: 30px;
+      width: 100px;
+      right: -2px;
+    }
   }
 }
 
@@ -266,7 +338,7 @@ h2 {
 }
 footer {
 
-  background-color: rgb(241, 240, 238);
+  background-color: @lightgrey;
   height: 80px;
   .tagline {
     height: 80px;
