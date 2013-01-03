@@ -8,3 +8,4 @@
 
 2013-01-03
 * cleaner smooth scrolling version
+* fix scroll position
