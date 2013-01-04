@@ -26,13 +26,15 @@
 
 <div class="content">
   <div class="nav">
-    <a href="#hello">hello</a>
-    <a href="#passion">our passions</a>
-    <a href="#trust">they trust us</a>
-    <a href="#universe">xebia universe</a>
-    <a href="#contact">contact</a>
-    <a href="#work">work</a>
-    <div class="pointer"></div>
+    <div class="nav-content">
+      <a href="#hello">hello</a>
+      <a href="#passion">our passions</a>
+      <a href="#trust">they trust us</a>
+      <a href="#universe">xebia universe</a>
+      <a href="#contact">contact</a>
+      <a href="#work">work</a>
+      <div class="pointer"></div>
+    </div>
   </div>
 
   <div class="hello" id="hello">
@@ -46,17 +48,25 @@
   </div>
 
   <div class="passion" id="passion">
-<!--
-Software craftmanship -> http://blog.xebia.fr/tag/software-craftsmanship/
-BigData -> http://blog.xebia.fr/category/nosql/
-Cloud -> http://blog.xebia.fr/category/nosql/
-Agile -> http://blog.xebia.fr/category/agilite/
-DevOps -> http://blog.xebia.fr/tag/devops/
-Java & friends -> http://blog.xebia.fr/category/java-jee/
-Web -> http://blog.xebia.fr/category/woa/
-Mobility -> http://blog.xebia.fr/category/mobilite/
--->
-
+    <div class="passion-content">
+      <p>
+        In order to meet the needs of our clients, we remain<br>
+        constantly at the forefront of technology trends.<br>
+        To discover our many areas of expertise,<br>
+        please read through our website
+      </p>
+      <a class="software" href="http://blog.xebia.fr/tag/software-craftsmanship/">Software</a>
+      <a class="craftmanship" href="http://blog.xebia.fr/tag/software-craftsmanship/">craftmanship</a>
+      <a class="bigdata" href="http://blog.xebia.fr/category/nosql/">BigData</a>
+      <a class="cloud" href="http://blog.xebia.fr/category/nosql/">Cloud</a>
+      <a class="agile" href="http://blog.xebia.fr/category/agilite/">Agile</a>
+      <a class="devops" href="http://blog.xebia.fr/tag/devops/">DevOps</a>
+      <a class="java" href="http://blog.xebia.fr/category/java-jee/">Java &amp;<br>friends</a>
+      <a class="web" href="http://blog.xebia.fr/category/woa/">Web</a>
+      <a class="mobility" href="http://blog.xebia.fr/category/mobilite/">Mobility</a>
+    </div>
+    <div class="passion-boids">
+    </div>
   </div>
 
   <div class="trust" id="trust">
@@ -94,19 +104,19 @@ Mobility -> http://blog.xebia.fr/category/mobilite/
       <p>Xebia strives continuously to promote and encourage innovation and ideas for all - Our consultants have their fingers on the pulse of new technology trends - They share their experience, their know-how and their belief in software development done right to the Java community.</p>
       <div class="bubble blog first">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="" class="bubble-link">blog xebia</a>
+        <a class="bubble-link" href="http://blog.xebia.fr/">blog xebia</a>
       </div>
       <div class="bubble studio">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="" class="bubble-link">xebia studio</a>
+        <a class="bubble-link" href="http://studio.xebia.fr/">xebia studio</a>
       </div>
       <div class="bubble training">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="" class="bubble-link">xebia training</a>
+        <a class="bubble-link" href="http://training.xebia.com/">xebia training</a>
       </div>
       <div class="bubble agile last">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="" class="bubble-link">agile contract</a>
+        <a class="bubble-link" href="http://www.contrat-agile.org/">agile contract</a>
       </div>
     </div>
   </div>
@@ -128,6 +138,9 @@ Mobility -> http://blog.xebia.fr/category/mobilite/
         <input type="submit" value="send" class="send">
       </form>
     </div>
+    <div class="contact-flare"></div>
+    <div class="contact-bidule"></div>
+    <div class="contact-boids"></div>
   </div>
 
   <div class="work" id="work">
@@ -135,19 +148,33 @@ Mobility -> http://blog.xebia.fr/category/mobilite/
     </div>
     <div class="work-content">
       <h2>we work</h2>
-      <div class="gps">
-        <h3>AND...</h3>
+      <div class="france">
+        <h3>XEBIA FRANCE</h3>
+        <p>
+          <span>156 bd Hausmann - 75008 Paris<span>
+          <p>+33 (0)1 53 89 99 99</p>
+          <p>+33 (0)1 53 89 99 97</p>
+          <p>info@xebia.fr</p>
+        </p>
+      </div>
+      <!--
+      <div class="netherlands">
+        <div class="and">AND...</div>
         <h3>Xebia Netherlands</h3>
         <p>
           Utrechtsesweg 49<br>
           1213 TL Hilversum Pays Bas
         </p>
+      </div>
+      <div class="india">
+        <div class="and">AND...</div>
         <h3>Xebia India</h3>
         <p>
           612 BPTP Park Centra - Sector 30<br>
           Gurgaon 122002 Haryana
         </p>
       </div>
+    -->
       <div class="map">
       </div>
     </div>
