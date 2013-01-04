@@ -14,6 +14,10 @@
 * on hover on clickable element, adding opacity
 * work skin
 
+2013-01-04
+* adding ponies
+* new universe icons
+
 TODO:
 * skin text in forms
 * skin work india/netherlands
