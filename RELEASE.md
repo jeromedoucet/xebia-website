@@ -21,3 +21,4 @@ TODO:
 * parralax
 * pointer nav animation
 * hello carousel
+* bug scroll universe section
