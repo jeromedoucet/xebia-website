@@ -18,6 +18,10 @@
 * adding ponies
 * new universe icons
 
+2013-01-05
+* fix contact assets
+* adding power-up xebia studio picto
+
 TODO:
 * skin text in forms
 * skin work india/netherlands
