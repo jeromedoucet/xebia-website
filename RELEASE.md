@@ -22,6 +22,7 @@
 * fix contact assets
 * adding power-up xebia studio picto
 * adding netherlands and india infos
+* adding contact form mailto: please test this one
 
 TODO:
 * skin text in forms
