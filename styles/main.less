@@ -474,7 +474,7 @@ h2 {
     background: url('../images/work-boids.png') no-repeat;
   }
   .work-content {
-    height: 500px;
+    height: 550px;
     position: relative;
     .map {
       position: absolute;
@@ -484,33 +484,50 @@ h2 {
       height: 252px;
       background: url('../images/work-map.png') no-repeat;
     }
-    .france {
+    .france, .netherlands, .india {
       position: absolute;
-      top: 185px;
-      left: 460px;
       font: 15px 'UbuntuLightItalic', Arial, sans-serif;
       color: @darkgrey;
-      background: url('../images/work-icons.png') no-repeat 0px 80px;
       border-top: 1px solid @grey;
       border-bottom: 1px solid @grey;
-      width: 400px;
+      width: 420px;
       padding-bottom: 20px;
-      span {
-        margin-left: -20px;
-        margin-bottom: 5px;
-        display: block;
-      }
-      p {
-        line-height: 20px;
-        margin: 0px 20px;
-      }
       h3 {
         font: 17px 'UbuntuRegular', Arial, sans-serif;
         font-weight: bold;
         color: @violet;
       }
-      hr {
-        /*border-bottom: 1px solid rgb(241, 240, 238);*/
+      p {
+        line-height: 20px;
+        margin: 0px 20px;
+      }
+      a {
+        color: @darkgrey;
+      }
+      .and {
+        margin-top: -25px;
+
+        font: 14px 'UbuntuRegular', Arial, sans-serif;
+        font-weight: bold;
+        color: @violet;
+      }
+    }
+    .netherlands {
+      top: 415px;
+      left: 5px;
+    }
+    .india {
+      top: 415px;
+      left: 460px;
+    }
+    .france {
+      top: 185px;
+      left: 460px;
+      background: url('../images/work-icons.png') no-repeat 0px 80px;
+      span {
+        margin-left: -20px;
+        margin-bottom: 5px;
+        display: block;
       }
     }
   }
