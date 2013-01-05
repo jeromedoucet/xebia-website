@@ -21,6 +21,7 @@
 2013-01-05
 * fix contact assets
 * adding power-up xebia studio picto
+* adding netherlands and india infos
 
 TODO:
 * skin text in forms
