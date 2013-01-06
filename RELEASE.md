@@ -23,10 +23,10 @@
 * adding power-up xebia studio picto
 * adding netherlands and india infos
 * adding contact form mailto: please test this one
+* adding navigation box-shadow
 
 TODO:
 * skin text in forms
-* skin work india/netherlands
 * trust assets
 * parralax
 * pointer nav animation
