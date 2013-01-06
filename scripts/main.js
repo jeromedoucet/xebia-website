@@ -15,20 +15,20 @@ Xebia = {
   },
   menuSlider: function() {
 
-    var scrollTop = $(window).scrollTop();
+    var top = $(window).scrollTop();
     var pointer = $('.nav .pointer');
 
-    if ( scrollTop < 550 ) {
+    if ( top < 550 ) {
       pointer.animate({left: "185px"}, 300); // hello
-    } else if ( scrollTop < 1300 ) {
+    } else if ( top < 1300 ) {
       pointer.animate({left: "295px"}, 300); // passion
-    } else if ( scrollTop < 2000 ) {
+    } else if ( top < 2000 ) {
       pointer.animate({left: "440px"}, 300); // trust
-    } else if ( scrollTop < 2850 ) {
+    } else if ( top < 2850 ) {
       pointer.animate({left: "585px"}, 300); // universe
-    } else if ( scrollTop < 3450 ) {
+    } else if ( top < 3450 ) {
       pointer.animate({left: "715px"}, 300); // contact
-    } else if ( scrollTop < 4500 ) {
+    } else if ( top < 4500 ) {
       pointer.animate({left: "805px"}, 300); // work
     } else {
       pointer.animate({left: "185px"}, 300);

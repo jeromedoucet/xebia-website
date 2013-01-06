@@ -25,6 +25,12 @@
 * adding contact form mailto: please test this one
 * adding navigation box-shadow
 
+2013-01-06
+* adding pointer animation
+* adding underscore.js for debounce
+* replacing input form message by textarea
+* styling text in contact form
+
 TODO:
 * skin text in forms
 * trust assets

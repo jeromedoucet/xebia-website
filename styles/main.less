@@ -146,51 +146,15 @@ h2 {
       position: absolute;
       font-weight: 600;
     }
-    .software {
-      top: 180px;
-      right: 273px;
-      font-size: 30px;
-    }
-    .craftmanship {
-      top: 220px;
-      right: 263px;
-      font-size: 23px;
-    }
-    .bigdata {
-      top: 245px;
-      right: 497px;
-      font-size: 25px;
-    }
-    .cloud {
-      top: 249px;
-      right: 116px;
-      font-size: 30px;
-    }
-    .agile {
-      top: 348px;
-      right: 681px;
-      font-size: 30px;
-    }
-    .devops {
-      top: 388px;
-      right: 391px;
-      font-size: 23px;
-    }
-    .java {
-      top: 363px;
-      right: 68px;
-      font-size: 29px;
-    }
-    .web {
-      top: 478px;
-      right: 503px;
-      font-size: 30px;
-    }
-    .mobility {
-      top: 464px;
-      right: 225px;
-      font-size: 30px;
-    }
+    .software     {top: 180px; right: 273px; font-size: 30px; }
+    .craftmanship {top: 220px; right: 263px; font-size: 23px; }
+    .bigdata      {top: 245px; right: 497px; font-size: 25px; }
+    .cloud        {top: 249px; right: 116px; font-size: 30px; }
+    .agile        {top: 348px; right: 681px; font-size: 30px; }
+    .devops       {top: 388px; right: 391px; font-size: 23px; }
+    .java         {top: 363px; right:  68px; font-size: 29px; }
+    .web          {top: 478px; right: 503px; font-size: 30px; }
+    .mobility     {top: 464px; right: 225px; font-size: 30px; }
   }
   .passion-boids {
     width: 513px;
@@ -395,11 +359,13 @@ h2 {
         }
         input {
           display: inline-block;
-          width: 280px;
+          width: 260px;
           height: 20px;
-          padding: 5px 0px;
+          padding: 5px 10px;
           border: 0px;
           margin: 5px;
+          font: 15px 'UbuntuLightItalic', Arial, sans-serif;
+          color: @darkgrey;
         }
       }
       .message {
@@ -417,11 +383,13 @@ h2 {
           font: 15px 'UbuntuLightItalic', Arial, sans-serif;
           margin-left: -10px;
         }
-        input {
+        textarea {
+          font: 15px 'UbuntuLightItalic', Arial, sans-serif;
+          color: @darkgrey;
           display: inline-block;
-          width: 510px;
+          width: 490px;
           height: 80px;
-          padding: 5px 0px;
+          padding: 5px 10px;
           border: 0px;
           margin: 5px;
         }
@@ -542,9 +510,11 @@ h2 {
     margin-left: 165px;
     margin-bottom: 20px;
     position: relative;
-    .work-twitter{
+    a {
       position: absolute;
       display: block;
+    }
+    .work-twitter{
       top: 13px;
       left: 50px;
       width: 140px;
@@ -552,8 +522,6 @@ h2 {
       background: url('../images/work-twitter.png') no-repeat;
     }
     .work-viadeo{
-      position: absolute;
-      display: block;
       top: 13px;
       left: 300px;
       width: 140px;
@@ -561,8 +529,6 @@ h2 {
       background: url('../images/work-viadeo.png') no-repeat;
     }
     .work-googleplus{
-      position: absolute;
-      display: block;
       top: 15px;
       left: 500px;
       width: 140px;
@@ -570,8 +536,6 @@ h2 {
       background: url('../images/work-googleplus.png') no-repeat;
     }
     .work-linkedin{
-      position: absolute;
-      display: block;
       top: 12px;
       left: 700px;
       width: 140px;
