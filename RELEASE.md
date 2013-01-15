@@ -31,8 +31,12 @@
 * replacing input form message by textarea
 * styling text in contact form
 
+2013-01-15
+* passion assets update
+* introduction assets update (clientS)
+* adding real h2 subtitles for screenreaders
+
 TODO:
-* skin text in forms
 * trust assets
 * parralax
 * pointer nav animation

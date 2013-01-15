@@ -86,19 +86,34 @@ h2 {
     margin: auto;
     background: url('../images/hello.png') no-repeat;
     position: relative;
+    h2 {
+      position: absolute;
+      top: 45px;
+      left: 90px;
+      margin: 0px;
+    }
     .slide {
       position: absolute;
-      top: 233px;
+      top: 211px;
       right: 68px;
       width: 564px;
-      height: 289px;
+      height: 310px;
       background: url('../images/slide1.png') no-repeat;
       z-index: 10;
+    }
+    .hello-people {
+      width: 100%;
+      background: url('../images/hello-people.png') bottom right no-repeat;
+      height: 120px;
+      position: absolute;
+      bottom: 13px;
+      right: 13px;
     }
     .france , .worldwide {
       color: @violet;
       font-size: 40px;
       position: absolute;
+      z-index: 5;
     }
     .france {
       bottom: 70px;
@@ -107,6 +122,14 @@ h2 {
     .worldwide {
       bottom: 70px;
       right: 44px;
+    }
+    .hello-laptop {
+      width: 364px;
+      height: 293px;
+      position: absolute;
+      bottom: 42px;
+      left: 47px;
+      background: url('../images/hello-laptop.png') no-repeat;
     }
   }
   /* http://en.wikipedia.org/wiki/Icosahedron */
@@ -122,7 +145,7 @@ h2 {
 
 /* Passion http://essentials.xebia.com/make-it-work-right-fast */
 .passion {
-  background: url('../images/passion-bg.png') center top no-repeat;
+  background: url('../images/passion-bg.jpg') center top no-repeat;
   margin-top: 10px; 
   height: 720px;
   position: relative;
@@ -131,14 +154,24 @@ h2 {
     width: 1000px;
     height: 720px;
     margin: auto;
+    h2 {
+      position: absolute;
+      top: 30px;
+      left: 0px;
+      margin: 0px;
+    }
     p {
       position: absolute;
-      top: 95px;
-      left: 4px;
+      top: 100px;
+      left: 0px;
       line-height: 22px; /* TODO grr doesnt work */
       color: @darkgrey;
       font: 16px 'UbuntuLightItalic', Arial, sans-serif;
       font-weight: 600;
+    }
+    .passion-bubbles {
+      background: url('../images/passion-bubbles.png') 224px 95px no-repeat;
+      height: 570px;
     }
     a {
       font-family: 'UbuntuLightItalic', Arial, sans-serif;
@@ -157,10 +190,11 @@ h2 {
     .mobility     {top: 464px; right: 225px; font-size: 30px; }
   }
   .passion-boids {
-    width: 513px;
-    height: 221px;
+    width: 675px;
+    height: 346px;
     position: absolute;
-    bottom: 0px;
+    bottom: -100px;
+    z-index: 10;
     left: 0px;
     background: url('../images/passion-boids.png') no-repeat;
   }
@@ -172,12 +206,13 @@ h2 {
   background: url('../images/trust-bg.png');
   height: 720px;
   position: relative;
-  .boids {
+  .trust-boids {
     width: 620px;
-    height: 80px;
+    height: 150px;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: -80px;
+    left: 80px;
+    z-index: 15;
     background: url('../images/trust-boids.png') no-repeat;
   }
 
