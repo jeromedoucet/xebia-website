@@ -34,6 +34,7 @@
 2013-01-15
 * adding carousel
 * empty trust region
+* fixing iPad and iPhone viewport issue
 * passion assets update
 * contact assets update
 * introduction assets update (clientS)
