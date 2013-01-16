@@ -170,15 +170,15 @@
         <div class="contact-join"></div>
         <div class="contact-pointer"></div>
 
-        <form name="contact" onsubmit="location='mailto:rh@xebia.fr?subject=contact&body=Name:'+escape(this.name.value)+'%0D%0A'+'Email:'+escape(this.mail.value)+'%0D%0A'+'Firm:'+escape(this.firm.value)+'%0D%0A'+escape(this.message.value); return false">
+        <form name="contact" onsubmit="location='mailto:info@xebia.fr?subject=contact&body=Name:'+escape(this.name.value)+'%0D%0A'+'Email:'+escape(this.mail.value)+'%0D%0A'+'Firm:'+escape(this.firm.value)+'%0D%0A'+escape(this.message.value); return false">
           <div class="message">
             <label>Your message</label>
             <textarea name="message"></textarea>
           </div>
           
           <div class="infos">
-            <label>Your name</label><input type="text" name="name">
-            <label>Your email</label><input type="text" name="mail">
+            <label>Your name</label><input type="text" name="name" required>
+            <label>Your email</label><input type="email" name="mail" required>
             <label>Firm</label><input type="text" name="firm">
           </div>
           <input type="submit" value="send" class="send">
@@ -219,12 +219,13 @@
       </div>
       <div class="map">
       </div>
-    </div>
-    <div class="social">
-      <a href="https://twitter.com/XebiaFr" class="work-twitter"></a>
-      <a href="http://fr.viadeo.com/fr/profile/xebia-it-architects.xebia-it-architects" class="work-viadeo"></a>
-      <a href="https://plus.google.com/100396468532572979348" class="work-googleplus"></a>
-      <a href="http://www.linkedin.com/company/xebia" class="work-linkedin"></a>
+
+      <div class="social">
+        <a href="https://twitter.com/XebiaFr" class="work-twitter"></a>
+        <a href="http://fr.viadeo.com/fr/profile/xebia-it-architects.xebia-it-architects" class="work-viadeo"></a>
+        <a href="https://plus.google.com/100396468532572979348" class="work-googleplus"></a>
+        <a href="http://www.linkedin.com/company/xebia" class="work-linkedin"></a>
+      </div>
     </div>
   </div>
 
