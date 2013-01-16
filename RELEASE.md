@@ -35,6 +35,7 @@
 * adding carousel
 * empty trust region
 * passion assets update
+* contact assets update
 * introduction assets update (clientS)
 * adding real h2 subtitles for screenreaders
 
