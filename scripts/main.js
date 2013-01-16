@@ -22,6 +22,21 @@ Xebia = {
     });
     var timer = setInterval(function(){Xebia.next()}, 10000);
 
+
+    $('.contact-join').bind('click', function() {
+      $('.contact-talk').removeClass('active');
+      $(this).addClass('active');
+      $('.contact-form-talk').fadeOut('slow');
+      $('.contact-form-join').fadeIn('slow');
+    });
+
+    $('.contact-talk').bind('click', function() {
+      $('.contact-join').removeClass('active');
+      $(this).addClass('active');
+      $('.contact-form-join').fadeOut('slow');
+      $('.contact-form-talk').fadeIn('slow');
+    });
+
   },
   menuSlider: function() {
 

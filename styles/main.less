@@ -443,12 +443,21 @@ h2 {
 
     .contact-talk {
       position: absolute;
-      background: url('../images/contact-talk-hover.png') no-repeat 0px 0px;
+      background: url('../images/contact-talk.png') no-repeat 0px 0px;
       width: 244px;
       height: 97px;
       top: 148px;
       left: 124px;
+      cursor: pointer;
+      &.active {
+        background: url('../images/contact-talk-hover.png') no-repeat 0px 0px !important;
+      }
+      &:hover {
+        background: url('../images/contact-talk-hover.png') no-repeat 0px 0px;
+      }
     }
+    
+
     .contact-slash {
       position: absolute;
       background: url('../images/contact-slash.png') no-repeat 0px 0px;
@@ -464,6 +473,13 @@ h2 {
       height: 100px;
       top: 148px;
       left: 553px;
+      cursor: pointer;
+      &.active {
+        background: url('../images/contact-join-hover.png') no-repeat 0px 0px !important;
+      }
+      &:hover {
+        background: url('../images/contact-join-hover.png') no-repeat 0px 0px;
+      }
     }
     .contact-pointer {
       position: absolute;
@@ -479,13 +495,13 @@ h2 {
       line-height: 160px;
       padding-left: 10px;
     }
-    form {
+    .contact-form-talk, .contact-form-join {
       display: block;
       width: 998px;
       position: absolute;
       background-color: @grey;
       top: 280px;
-      height: 160px;
+      height: 200px;
       left: 15px;
       font: 15px 'UbuntuLight', Arial, sans-serif;
       .infos {
@@ -533,7 +549,7 @@ h2 {
           color: @darkgrey;
           display: inline-block;
           width: 490px;
-          height: 80px;
+          height: 122px;
           padding: 5px 10px;
           border: 0px;
           margin: 5px;

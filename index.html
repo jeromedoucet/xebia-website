@@ -165,21 +165,38 @@
     <div class="pattern">
       <div class="contact-content">
         <h2>contact</h2>
-        <div class="contact-talk"></div>
+        <div class="contact-talk active"></div>
         <div class="contact-slash"></div>
         <div class="contact-join"></div>
         <div class="contact-pointer"></div>
 
-        <form name="contact" onsubmit="location='mailto:info@xebia.fr?subject=contact&body=Name:'+escape(this.name.value)+'%0D%0A'+'Email:'+escape(this.mail.value)+'%0D%0A'+'Firm:'+escape(this.firm.value)+'%0D%0A'+escape(this.message.value); return false">
+        <form name="contact" class="contact-form-talk" onsubmit="location='mailto:info@xebia.fr?subject='+escape(this.title.value)+'&body=Name:'+escape(this.name.value)+'%0D%0A'+'Email:'+escape(this.mail.value)+'%0D%0A'+'Firm:'+escape(this.firm.value)+'%0D%0A'+escape(this.message.value); return false">
           <div class="message">
             <label>Your message</label>
             <textarea name="message"></textarea>
           </div>
           
           <div class="infos">
+            <label>Title</label><input type="text" name="title" required>
             <label>Your name</label><input type="text" name="name" required>
             <label>Your email</label><input type="email" name="mail" required>
             <label>Firm</label><input type="text" name="firm">
+          </div>
+          <input type="submit" value="send" class="send">
+        </form>
+
+
+        <form name="contact" class="contact-form-join" onsubmit="location='mailto:recrutement@xebia.fr?subject='+escape(this.title.value)+'&body=Name:'+escape(this.name.value)+'%0D%0A'+'Email:'+escape(this.mail.value)+'%0D%0A'+escape(this.message.value); return false">
+          <div class="message">
+            <label>Your message</label>
+            <textarea name="message"></textarea>
+          </div>
+          
+          <div class="infos">
+            <label>Title</label><input type="text" name="title" required>
+            <label>Your name</label><input type="text" name="name" required>
+            <label>Your email</label><input type="email" name="mail" required>
+            <label>Viadeo / Linkedin</label><input type="email" name="mail" required>
           </div>
           <input type="submit" value="send" class="send">
         </form>
