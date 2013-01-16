@@ -32,13 +32,13 @@
 * styling text in contact form
 
 2013-01-15
+* adding carousel
 * empty trust region
 * passion assets update
 * introduction assets update (clientS)
 * adding real h2 subtitles for screenreaders
 
 TODO:
-* hello carousel
 * trust assets
 * parralax
 * mobile tests

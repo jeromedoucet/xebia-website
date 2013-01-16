@@ -3,6 +3,7 @@ $(document).ready(function() {
 });
 
 Xebia = {
+  current : 0,
   init: function(){
 
     $(".nav a").click(function(event){   
@@ -11,6 +12,15 @@ Xebia = {
     });
 
     $(window).scroll(_.debounce(Xebia.menuSlider, 100));
+
+    this.next();
+    $('.dot1').bind('click', function() {
+      Xebia.next();
+    });
+    $('.dot2').bind('click', function() {
+      Xebia.next();
+    });
+    var timer = setInterval(function(){Xebia.next()}, 3500);
 
   },
   menuSlider: function() {
@@ -33,6 +43,14 @@ Xebia = {
     } else {
       pointer.animate({left: "185px"}, 300);
     }
+  },
+  next: function() {
+    $(".slide" + this.current).fadeOut(600);
+    $(".dot" + this.current).removeClass('active');
+    nbSlides = $('.carousel-slides').children().size();
+    this.current = (this.current >= nbSlides) ? 1 : this.current + 1;
+    $(".slide" + this.current).fadeIn(700);
+    $(".dot" + this.current).addClass('active');
   }
 }
 

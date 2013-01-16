@@ -92,7 +92,7 @@ h2 {
       left: 90px;
       margin: 0px;
     }
-    .slide {
+    .slide1 {
       position: absolute;
       top: 211px;
       right: 68px;
@@ -100,6 +100,35 @@ h2 {
       height: 310px;
       background: url('../images/slide1.png') no-repeat;
       z-index: 10;
+      display: none;
+    }
+    .slide2 {
+      position: absolute;
+      top: 211px;
+      right: 68px;
+      width: 564px;
+      height: 310px;
+      background: url('../images/slide2.png') no-repeat;
+      z-index: 10;
+      display: none;
+    }
+    .carousel-dots {
+      position: absolute;
+      bottom: 220px;
+      right: 220px;
+      color: rgb(189,183,187);
+      z-index: 15;
+      font-size: 25px;
+      div {
+        display: inline-block;
+        margin: 0 1px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .active {
+        color: rgb(108,98,107);
+      }
     }
     .hello-people {
       width: 100%;
