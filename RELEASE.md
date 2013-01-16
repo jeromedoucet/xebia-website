@@ -40,8 +40,14 @@
 * introduction assets update (clientS)
 * adding real h2 subtitles for screenreaders
 
+2013-01-16
+* updating last assets
+* carousel timer to 10s
+
 TODO:
 * trust assets
+* ombre plus haute (+20px)
+* refacto CSS
 * parralax
 * mobile tests
 * bug scroll universe section

@@ -81,17 +81,61 @@ h2 {
   margin-top: 25px;
   position: relative;
 
+  .hello-line {
+      position: absolute;
+      top: 293px;
+      left: 0px;
+      width: 100%;
+      height: 7px;
+      background: url('../images/hello-hr.png') repeat-x;
+      z-index: 5;
+  }
   .hello-content {
     width: 1100px;
     height: 700px;
     margin: auto;
-    background: url('../images/hello.png') no-repeat;
     position: relative;
     h2 {
       position: absolute;
       top: 45px;
       left: 90px;
       margin: 0px;
+    }
+    .hello-content-icosahedron {
+      position: absolute;
+      top: 150px;
+      left: 100px;
+      width: 322px;
+      height: 230px;
+      background: url('../images/hello-content-icosahedron.png') no-repeat;
+      z-index: 10;
+    }
+    .hello-boids-back {
+      position: absolute;
+      top: 70px;
+      left: 441px;
+      width: 500px;
+      height: 230px;
+      background: url('../images/hello-boids-back.png') no-repeat;
+      z-index: 5;
+    }
+    .hello-boids-front {
+      position: absolute;
+      top: 85px;
+      left: 470px;
+      width: 300px;
+      height: 150px;
+      background: url('../images/hello-boids-front.png') no-repeat;
+      z-index: 12;
+    }
+    .hello-slide-bg {
+      position: absolute;
+      top: 220px;
+      left: 620px;
+      width: 460px;
+      height: 80px;
+      z-index: 10;
+      background-color: #f1f0ee;
     }
     .slide1 {
       position: absolute;
@@ -160,16 +204,18 @@ h2 {
       bottom: 42px;
       left: 47px;
       background: url('../images/hello-laptop.png') no-repeat;
+      z-index: 5;
     }
   }
   /* http://en.wikipedia.org/wiki/Icosahedron */
   .icosahedron {
-    width: 218px;
-    height: 173px;
+    width: 100%;
+    height: 220px;
     position: absolute;
-    top: 349px;
+    top: 300px;
     right: 0px;
-    background: url('../images/icosahedron.png') no-repeat;
+    background: url('../images/icosahedron.png') bottom right no-repeat;
+    background-color: rgb(241,240,238);
   }
 }
 
@@ -397,7 +443,7 @@ h2 {
 
     .contact-talk {
       position: absolute;
-      background: url('../images/contact-talk.png') no-repeat 0px 0px;
+      background: url('../images/contact-talk-hover.png') no-repeat 0px 0px;
       width: 244px;
       height: 97px;
       top: 148px;
@@ -521,11 +567,12 @@ h2 {
     background: url('../images/contact-illustration.png') no-repeat;
   }
   .contact-boids {
-    width: 389px;
-    height: 66px;
+    width: 513px;
+    height: 358px;
     position: absolute;
-    top: 634px;
-    right: 106px;
+    top: 650px;
+    right: 60px;
+    z-index: 5;
     background: url('../images/contact-boids.png') no-repeat;
   }
 }
@@ -536,10 +583,10 @@ h2 {
   position: relative;
   .work-boids {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 516px;
-    height: 312px;
+    top: 55px;
+    right: -30px;
+    width: 217px;
+    height: 239px;
     background: url('../images/work-boids.png') no-repeat;
   }
   .work-content {

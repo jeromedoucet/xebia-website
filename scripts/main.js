@@ -20,7 +20,7 @@ Xebia = {
     $('.dot2').bind('click', function() {
       Xebia.next();
     });
-    var timer = setInterval(function(){Xebia.next()}, 3500);
+    var timer = setInterval(function(){Xebia.next()}, 10000);
 
   },
   menuSlider: function() {
