@@ -170,6 +170,21 @@
         <div class="contact-join"></div>
         <div class="contact-pointer"></div>
 
+        <form name="contact" class="contact-form-join" onsubmit="location='mailto:recrutement@xebia.fr?subject='+escape(this.title.value)+'&body=Name:'+escape(this.name.value)+'%0D%0A'+'Email:'+escape(this.mail.value)+'%0D%0A'+'Viadeo / Linkedin:'+escape(this.profil.value)+'%0D%0A'+escape(this.message.value); return false">
+          <div class="message">
+            <label>Your message</label>
+            <textarea name="message" tabindex="11"></textarea>
+          </div>
+          
+          <div class="infos">
+            <label>Title</label><input type="text" name="title" required tabindex="7">
+            <label>Your name</label><input type="text" name="name" required tabindex="8">
+            <label>Your email</label><input type="email" name="mail" required tabindex="9">
+            <label>Viadeo / Linkedin</label><input type="url" name="profil" tabindex="10">
+          </div>
+          <input type="submit" value="send" class="send" tabindex="12">
+        </form>
+
         <form name="contact" class="contact-form-talk" onsubmit="location='mailto:info@xebia.fr?subject='+escape(this.title.value)+'&body=Name:'+escape(this.name.value)+'%0D%0A'+'Email:'+escape(this.mail.value)+'%0D%0A'+'Firm:'+escape(this.firm.value)+'%0D%0A'+escape(this.message.value); return false">
           <div class="message">
             <label>Your message</label>
@@ -185,21 +200,6 @@
           <input type="submit" value="send" class="send" tabindex="6">
         </form>
 
-
-        <form name="contact" class="contact-form-join" onsubmit="location='mailto:recrutement@xebia.fr?subject='+escape(this.title.value)+'&body=Name:'+escape(this.name.value)+'%0D%0A'+'Email:'+escape(this.mail.value)+'%0D%0A'+'Viadeo / Linkedin:'+escape(this.profil.value)+'%0D%0A'+escape(this.message.value); return false">
-          <div class="message">
-            <label>Your message</label>
-            <textarea name="message" tabindex="11"></textarea>
-          </div>
-          
-          <div class="infos">
-            <label>Title</label><input type="text" name="title" required tabindex="7">
-            <label>Your name</label><input type="text" name="name" required tabindex="8">
-            <label>Your email</label><input type="email" name="mail" required tabindex="9">
-            <label>Viadeo / Linkedin</label><input type="url" name="profil" tabindex="10">
-          </div>
-          <input type="submit" value="send" class="send" tabindex="12">
-        </form>
       </div>
       <div class="contact-illustration"></div>
       <div class="contact-boids"></div>
