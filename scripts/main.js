@@ -28,6 +28,7 @@ Xebia = {
       $(this).addClass('active');
       $('.contact-form-talk').fadeOut('slow');
       $('.contact-form-join').fadeIn('slow');
+      $('.contact-pointer').animate({left: "750px"}, 300);
     });
 
     $('.contact-talk').bind('click', function() {
@@ -35,6 +36,7 @@ Xebia = {
       $(this).addClass('active');
       $('.contact-form-join').fadeOut('slow');
       $('.contact-form-talk').fadeIn('slow');
+      $('.contact-pointer').animate({left: "230px"}, 300);
     });
 
   },
@@ -44,7 +46,9 @@ Xebia = {
     var pointer = $('.nav .pointer');
 
     if ( top < 550 ) {
-      pointer.animate({left: "185px"}, 300); // hello
+      pointer.
+      
+      ({left: "185px"}, 300); // hello
     } else if ( top < 1300 ) {
       pointer.animate({left: "295px"}, 300); // passion
     } else if ( top < 1455 ) {// prev: 2000 
