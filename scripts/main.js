@@ -46,9 +46,7 @@ Xebia = {
     var pointer = $('.nav .pointer');
 
     if ( top < 550 ) {
-      pointer.
-      
-      ({left: "185px"}, 300); // hello
+      pointer.animate({left: "185px"}, 300); // hello
     } else if ( top < 1300 ) {
       pointer.animate({left: "295px"}, 300); // passion
     } else if ( top < 1455 ) {// prev: 2000 
