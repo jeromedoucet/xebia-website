@@ -662,6 +662,11 @@ h2 {
   font-weight: bold;
   color: #6a205f;
 }
+.work .work-content .france h3 a,
+.work .work-content .netherlands h3 a,
+.work .work-content .india h3 a {
+  color: #6a205f;
+}
 .work .work-content .france p,
 .work .work-content .netherlands p,
 .work .work-content .india p {
