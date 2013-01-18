@@ -46,19 +46,19 @@ Xebia = {
     var pointer = $('.nav .pointer');
 
     if ( top < 550 ) {
-      pointer.animate({left: "185px"}, 300); // hello
+      pointer.animate({left: "150px"}, 300); // hello
     } else if ( top < 1300 ) {
-      pointer.animate({left: "295px"}, 300); // passion
+      pointer.animate({left: "260px"}, 300); // passion
     } else if ( top < 1455 ) {// prev: 2000 
-      pointer.animate({left: "440px"}, 300); // trust
+      pointer.animate({left: "405px"}, 300); // trust
     } else if ( top < 2080 ) { // prev: 2850 preprev 2530
-      pointer.animate({left: "585px"}, 300); // universe
+      pointer.animate({left: "555px"}, 300); // universe
     } else if ( top < 3130 ) { // prev: 3450
-      pointer.animate({left: "715px"}, 300); // contact
+      pointer.animate({left: "680px"}, 300); // contact
     } else if ( top < 4180 ) { // prev: 4500
       pointer.animate({left: "805px"}, 300); // work
     } else {
-      pointer.animate({left: "185px"}, 300);
+      pointer.animate({left: "150px"}, 300);
     }
   },
   next: function() {
