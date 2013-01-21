@@ -53,9 +53,10 @@
 * universe: alignement des textes
 
 2013-01-21
-* adding 404 page
 * trust: clients logos
+* adding 404 page
 * jquery 1.9
+* removing strange ./
 
 TODO:
 * trust assets
