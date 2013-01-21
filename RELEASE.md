@@ -43,6 +43,19 @@
 2013-01-16
 * updating last assets
 * carousel timer to 10s
+* plus de "you are here"
+* passage du carousel à 10s
+* update des derniers assets
+* alignement des liens sociaux
+* validation du mail
+* nom et mail required
+* destinataire: info@
+* universe: alignement des textes
+
+2013-01-21
+* adding 404 page
+* trust: clients logos
+* jquery 1.9
 
 TODO:
 * trust assets
