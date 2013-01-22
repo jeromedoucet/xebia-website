@@ -21,6 +21,10 @@ Xebia = {
       Xebia.next();
     });
     var timer = setInterval(function(){Xebia.next()}, 10000);
+    var timerSmallLogo = setInterval(function(){Xebia.nextClient('.logo-small div')}, 2100);
+    var timerSmallLogo = setInterval(function(){Xebia.nextClient('.logo-large div')}, 1800);
+
+    this.initLogos();
 
 
     $('.contact-join').bind('click', function() {
@@ -60,6 +64,51 @@ Xebia = {
     } else {
       pointer.animate({left: "150px"}, 300);
     }
+  },
+  random: function(min, max) {
+    return Math.floor(Math.random() * (max-min)) + min;
+  },
+  initLogos: function(){
+    for (var i = 0; i < 26; i ++) {
+      $('<div>')
+      .css('background',
+        "url('../images/trust-logos-small.png') -"+(i*170)+"px 0px no-repeat")
+      .hide()
+      .appendTo('.logo-small')
+    }
+
+    for (var i = 0; i < 6; i ++) {
+      var hiddenLogos = $('.logo-small div').filter(":hidden");
+      hiddenLogos.eq(this.random(0,hiddenLogos.length)).show();
+    }
+
+
+    for (var i = 0; i < 14; i ++) {
+      $('<div>')
+      .css('background',
+        "url('../images/trust-logos-large.png') -"+(i*220)+"px 0px no-repeat")
+      .hide()
+      .appendTo('.logo-large')
+    }
+
+    for (var i = 0; i < 5; i ++) {
+      var hiddenLogos = $('.logo-large div').filter(":hidden");
+      hiddenLogos.eq(this.random(0,hiddenLogos.length)).show();
+    }
+
+  },
+  nextClient: function(selector) {
+    var visibleLogos = $(selector).filter(":visible");
+    var oldLogo = visibleLogos.eq(this.random(0,visibleLogos.length));
+    var hiddenLogos = $(selector).filter(":hidden");
+    var newLogo = hiddenLogos.eq(this.random(0,hiddenLogos.length));
+
+    $(oldLogo).fadeOut("slow", function(){
+      //$(oldLogo).clone().appendTo(selector);
+      $(oldLogo).replaceWith($(newLogo));
+      $(newLogo).fadeIn("slow");
+    });
+
   },
   next: function() {
     $(".slide" + this.current).fadeOut(600);

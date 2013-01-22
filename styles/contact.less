@@ -1,0 +1,169 @@
+@import "colors.less";
+/* Contact http://essentials.xebia.com/rich-communication */
+.contact {
+  background: url('../images/contact-flare.jpg') no-repeat top right @darkviolet;
+  width: 100%;
+  height: 700px;
+  padding: 0px;
+  position: relative;
+  .pattern {
+    background: url('../images/contact-bg.png') transparent;
+  }
+  .contact-content {
+    height: 700px;
+    width: 1000px;
+    position: relative;
+    z-index: 9;
+
+    .contact-talk {
+      position: absolute;
+      background: url('../images/contact-talk.png') no-repeat 0px 0px;
+      width: 244px;
+      height: 97px;
+      top: 148px;
+      left: 124px;
+      cursor: pointer;
+      &.active {
+        background: url('../images/contact-talk-hover.png') no-repeat 0px 0px !important;
+      }
+      &:hover {
+        background: url('../images/contact-talk-hover.png') no-repeat 0px 0px;
+      }
+    }
+    
+
+    .contact-slash {
+      position: absolute;
+      background: url('../images/contact-slash.png') no-repeat 0px 0px;
+      width: 244px;
+      height: 140px;
+      top: 120px;
+      left: 433px;
+    }
+    .contact-join {
+      position: absolute;
+      background: url('../images/contact-join.png') no-repeat 0px 0px;
+      width: 360px;
+      height: 100px;
+      top: 148px;
+      left: 553px;
+      cursor: pointer;
+      &.active {
+        background: url('../images/contact-join-hover.png') no-repeat 0px 0px !important;
+      }
+      &:hover {
+        background: url('../images/contact-join-hover.png') no-repeat 0px 0px;
+      }
+    }
+    .contact-pointer {
+      position: absolute;
+      background: url('../images/contact-pointer.png') no-repeat 0px 0px;
+      width: 244px;
+      height: 13px;
+      top: 267px;
+      left: 230px;
+    }
+
+    h2 {
+      color: white;
+      line-height: 160px;
+      padding-left: 10px;
+    }
+    .contact-form-join { display:none }
+    .contact-form-talk, .contact-form-join {
+      display: block;
+      width: 998px;
+      position: absolute;
+      background-color: @grey;
+      top: 280px;
+      height: 200px;
+      left: 15px;
+      font: 15px 'UbuntuLight', Arial, sans-serif;
+      .infos {
+        float: left;
+        width: 450px;
+        padding-top: 20px;
+        label {
+          color: @darkgrey;
+          text-align: right;
+          display: inline-block;
+          width: 100px;
+          white-space: nowrap;
+          font: 15px 'UbuntuLightItalic', Arial, sans-serif;
+          margin-right: 10px;
+          font-weight: 100;
+        }
+        input {
+          display: inline-block;
+          width: 260px;
+          height: 20px;
+          padding: 5px 10px;
+          border: 0px;
+          margin: 5px;
+          font: 15px 'UbuntuLightItalic', Arial, sans-serif;
+          color: @darkgrey;
+        }
+      }
+      .message {
+        text-align: left;
+        color: @darkgrey;
+        float: right;
+        width: 540px;
+        padding-top: 20px;
+        label {
+          color: @darkgrey;
+          text-align: right;
+          display: block;
+          width: 100px;
+          white-space: nowrap;
+          font: 15px 'UbuntuLightItalic', Arial, sans-serif;
+          margin-left: -10px;
+        }
+        textarea {
+          font: 15px 'UbuntuLightItalic', Arial, sans-serif;
+          color: @darkgrey;
+          display: inline-block;
+          width: 490px;
+          height: 122px;
+          padding: 5px 10px;
+          border: 0px;
+          margin: 5px;
+        }
+      }
+    }
+    
+    .send {
+      background-color: @violet;
+      text-transform: uppercase;
+      color: white;
+      border: 0;
+      position: absolute;
+      bottom: -30px;
+      height: 30px;
+      width: 80px;
+      right: -1px;
+      font: 18px 'UbuntuLight', Arial, sans-serif;
+      font-weight: 600;
+    }
+    .send:hover {
+      opacity: 0.9;
+    }
+  }
+  .contact-illustration {
+    width: 691px;
+    height: 218px;
+    position: absolute;
+    top: 482px;
+    left: 0px;
+    background: url('../images/contact-illustration.png') no-repeat;
+  }
+  .contact-boids {
+    width: 513px;
+    height: 358px;
+    position: absolute;
+    top: 650px;
+    right: 60px;
+    z-index: 5;
+    background: url('../images/contact-boids.png') no-repeat;
+  }
+}

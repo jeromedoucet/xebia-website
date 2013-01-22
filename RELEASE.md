@@ -55,8 +55,10 @@
 2013-01-21
 * trust: clients logos
 * adding 404 page
-* jquery 1.9
+* jquery 1.9 and less 1.3.3
 * removing strange ./
+* exploding less files
+* adding grunt with mincss
 
 TODO:
 * trust assets

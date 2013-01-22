@@ -1,0 +1,173 @@
+/* Colors */
+/* Contact http://essentials.xebia.com/rich-communication */
+.contact {
+  background: url('../images/contact-flare.jpg') no-repeat top right #44093b;
+  width: 100%;
+  height: 700px;
+  padding: 0px;
+  position: relative;
+}
+.contact .pattern {
+  background: url('../images/contact-bg.png') transparent;
+}
+.contact .contact-content {
+  height: 700px;
+  width: 1000px;
+  position: relative;
+  z-index: 9;
+}
+.contact .contact-content .contact-talk {
+  position: absolute;
+  background: url('../images/contact-talk.png') no-repeat 0px 0px;
+  width: 244px;
+  height: 97px;
+  top: 148px;
+  left: 124px;
+  cursor: pointer;
+}
+.contact .contact-content .contact-talk.active {
+  background: url('../images/contact-talk-hover.png') no-repeat 0px 0px !important;
+}
+.contact .contact-content .contact-talk:hover {
+  background: url('../images/contact-talk-hover.png') no-repeat 0px 0px;
+}
+.contact .contact-content .contact-slash {
+  position: absolute;
+  background: url('../images/contact-slash.png') no-repeat 0px 0px;
+  width: 244px;
+  height: 140px;
+  top: 120px;
+  left: 433px;
+}
+.contact .contact-content .contact-join {
+  position: absolute;
+  background: url('../images/contact-join.png') no-repeat 0px 0px;
+  width: 360px;
+  height: 100px;
+  top: 148px;
+  left: 553px;
+  cursor: pointer;
+}
+.contact .contact-content .contact-join.active {
+  background: url('../images/contact-join-hover.png') no-repeat 0px 0px !important;
+}
+.contact .contact-content .contact-join:hover {
+  background: url('../images/contact-join-hover.png') no-repeat 0px 0px;
+}
+.contact .contact-content .contact-pointer {
+  position: absolute;
+  background: url('../images/contact-pointer.png') no-repeat 0px 0px;
+  width: 244px;
+  height: 13px;
+  top: 267px;
+  left: 230px;
+}
+.contact .contact-content h2 {
+  color: white;
+  line-height: 160px;
+  padding-left: 10px;
+}
+.contact .contact-content .contact-form-join {
+  display: none;
+}
+.contact .contact-content .contact-form-talk,
+.contact .contact-content .contact-form-join {
+  display: block;
+  width: 998px;
+  position: absolute;
+  background-color: #d7d5d0;
+  top: 280px;
+  height: 200px;
+  left: 15px;
+  font: 15px 'UbuntuLight', Arial, sans-serif;
+}
+.contact .contact-content .contact-form-talk .infos,
+.contact .contact-content .contact-form-join .infos {
+  float: left;
+  width: 450px;
+  padding-top: 20px;
+}
+.contact .contact-content .contact-form-talk .infos label,
+.contact .contact-content .contact-form-join .infos label {
+  color: #6d626b;
+  text-align: right;
+  display: inline-block;
+  width: 100px;
+  white-space: nowrap;
+  font: 15px 'UbuntuLightItalic', Arial, sans-serif;
+  margin-right: 10px;
+  font-weight: 100;
+}
+.contact .contact-content .contact-form-talk .infos input,
+.contact .contact-content .contact-form-join .infos input {
+  display: inline-block;
+  width: 260px;
+  height: 20px;
+  padding: 5px 10px;
+  border: 0px;
+  margin: 5px;
+  font: 15px 'UbuntuLightItalic', Arial, sans-serif;
+  color: #6d626b;
+}
+.contact .contact-content .contact-form-talk .message,
+.contact .contact-content .contact-form-join .message {
+  text-align: left;
+  color: #6d626b;
+  float: right;
+  width: 540px;
+  padding-top: 20px;
+}
+.contact .contact-content .contact-form-talk .message label,
+.contact .contact-content .contact-form-join .message label {
+  color: #6d626b;
+  text-align: right;
+  display: block;
+  width: 100px;
+  white-space: nowrap;
+  font: 15px 'UbuntuLightItalic', Arial, sans-serif;
+  margin-left: -10px;
+}
+.contact .contact-content .contact-form-talk .message textarea,
+.contact .contact-content .contact-form-join .message textarea {
+  font: 15px 'UbuntuLightItalic', Arial, sans-serif;
+  color: #6d626b;
+  display: inline-block;
+  width: 490px;
+  height: 122px;
+  padding: 5px 10px;
+  border: 0px;
+  margin: 5px;
+}
+.contact .contact-content .send {
+  background-color: #6a205f;
+  text-transform: uppercase;
+  color: white;
+  border: 0;
+  position: absolute;
+  bottom: -30px;
+  height: 30px;
+  width: 80px;
+  right: -1px;
+  font: 18px 'UbuntuLight', Arial, sans-serif;
+  font-weight: 600;
+}
+.contact .contact-content .send:hover {
+  opacity: 0.9;
+}
+.contact .contact-illustration {
+  width: 691px;
+  height: 218px;
+  position: absolute;
+  top: 482px;
+  left: 0px;
+  background: url('../images/contact-illustration.png') no-repeat;
+}
+.contact .contact-boids {
+  width: 513px;
+  height: 358px;
+  position: absolute;
+  top: 650px;
+  right: 60px;
+  z-index: 5;
+  background: url('../images/contact-boids.png') no-repeat;
+}

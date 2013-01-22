@@ -1,0 +1,73 @@
+/* Colors */
+/* Universe http://essentials.xebia.com/one-feature-at-a-time */
+.universe {
+  padding-bottom: 70px;
+}
+.universe h2 {
+  margin-bottom: 0px;
+}
+.universe p {
+  font: 15px 'UbuntuLightItalic', Arial, sans-serif;
+  font-weight: 100;
+  margin-bottom: 50px;
+  line-height: 22px;
+}
+.universe .bubble {
+  background-color: #d7d5d0;
+  width: 220px;
+  height: 220px;
+  border-radius: 110px;
+  position: relative;
+  display: inline-block;
+  margin: 0px 15px;
+}
+.universe .bubble p {
+  position: absolute;
+  top: 105px;
+  left: 30px;
+  width: 160px;
+  text-align: center;
+  font: 11px 'UbuntuLight', Arial, sans-serif;
+  font-weight: normal;
+}
+.universe .blog {
+  background: url('../images/universe-blog-logo.png') 65px 40px no-repeat #f1f0ee;
+}
+.universe .studio {
+  background: url('../images/universe-studio-logo.jpg') 70px 28px no-repeat #f1f0ee;
+}
+.universe .training {
+  background: url('../images/universe-training-logo.png') 62px 31px no-repeat #f1f0ee;
+}
+.universe .agile {
+  background: url('../images/universe-agile-logo.png') 70px 25px no-repeat #f1f0ee;
+}
+.universe .code {
+  background: url('../images/universe-code-logo.png') 55px 40px no-repeat #f1f0ee;
+}
+.universe .essentials {
+  background: url('../images/universe-essentials-logo.png') 75px 30px no-repeat #f1f0ee;
+}
+.universe .events {
+  background: url('../images/universe-events-logo.png') 75px 30px no-repeat #f1f0ee;
+}
+.universe .video {
+  background: url('../images/universe-video-logo.png') 65px 33px no-repeat #f1f0ee;
+}
+.universe .first {
+  margin-left: 0px;
+}
+.universe .last {
+  margin-right: 0px;
+}
+.universe .bubble-link {
+  position: absolute;
+  top: 170px;
+  right: 0px;
+  background-color: #6a205f;
+  text-transform: uppercase;
+  font: 15px 'UbuntuLight', Arial, sans-serif;
+  padding: 5px 10px;
+  display: inline-block;
+  color: white;
+}
