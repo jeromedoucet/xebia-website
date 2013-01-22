@@ -60,10 +60,14 @@
 * exploding less files
 * adding grunt with mincss
 
+2013-01-22
+* merging benoit facebook pull request
+* fixing random trust logos
+* real pictos assets
+
+
 TODO:
-* trust assets
 * ombre plus haute (+20px)
-* refacto CSS
 * parralax
 * mobile tests
 * bug scroll universe section

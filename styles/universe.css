@@ -30,29 +30,32 @@
   font: 11px 'UbuntuLight', Arial, sans-serif;
   font-weight: normal;
 }
-.universe .blog {
-  background: url('../images/universe-blog-logo.png') 65px 40px no-repeat #f1f0ee;
-}
 .universe .studio {
   background: url('../images/universe-studio-logo.jpg') 70px 28px no-repeat #f1f0ee;
 }
 .universe .training {
-  background: url('../images/universe-training-logo.png') 62px 31px no-repeat #f1f0ee;
+  background: url('../images/universe-training-logo.png') 50px 15px no-repeat #f1f0ee;
 }
-.universe .agile {
-  background: url('../images/universe-agile-logo.png') 70px 25px no-repeat #f1f0ee;
+.universe .labs {
+  background: url('../images/universe-labs-logo.png') 40px 15px no-repeat #f1f0ee;
+}
+.universe .blog {
+  background: url('../images/universe-blog-logo.png') 42px 15px no-repeat #f1f0ee;
+}
+.universe .video {
+  background: url('../images/universe-video-logo.png') 40px 20px no-repeat #f1f0ee;
 }
 .universe .code {
-  background: url('../images/universe-code-logo.png') 55px 40px no-repeat #f1f0ee;
+  background: url('../images/universe-code-logo.png') 45px 20px no-repeat #f1f0ee;
+}
+.universe .events {
+  background: url('../images/universe-events-logo.png') 45px 15px no-repeat #f1f0ee;
+}
+.universe .agile {
+  background: url('../images/universe-agile-logo.png') 45px 15px no-repeat #f1f0ee;
 }
 .universe .essentials {
   background: url('../images/universe-essentials-logo.png') 75px 30px no-repeat #f1f0ee;
-}
-.universe .events {
-  background: url('../images/universe-events-logo.png') 75px 30px no-repeat #f1f0ee;
-}
-.universe .video {
-  background: url('../images/universe-video-logo.png') 65px 33px no-repeat #f1f0ee;
 }
 .universe .first {
   margin-left: 0px;
