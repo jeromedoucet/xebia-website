@@ -26,6 +26,7 @@
   height: 80px;
   background-color: rgba(0, 0, 0, 0.1);
   margin-bottom: 4px;
+  overflow: hidden;
 }
 .trust .trust-content .logo-small div {
   background: url('../images/trust-logos-small.png') 0px 0px no-repeat;
