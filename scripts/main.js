@@ -104,8 +104,7 @@ Xebia = {
     var newLogo = hiddenLogos.eq(this.random(0,hiddenLogos.length));
 
     $(oldLogo).fadeOut("slow", function(){
-      //$(oldLogo).clone().appendTo(selector);
-      $(oldLogo).replaceWith($(newLogo));
+      $(oldLogo).before($(newLogo));
       $(newLogo).fadeIn("slow");
     });
 
