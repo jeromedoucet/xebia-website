@@ -21,8 +21,8 @@ Xebia = {
       Xebia.next();
     });
     var timer = setInterval(function(){Xebia.next()}, 10000);
-    var timerSmallLogo = setInterval(function(){Xebia.nextClient('.logo-small div')}, 2100);
-    var timerSmallLogo = setInterval(function(){Xebia.nextClient('.logo-large div')}, 1800);
+    var timerSmallLogo = setInterval(function(){Xebia.nextClient('.logo-small div')}, 5500);
+    var timerSmallLogo = setInterval(function(){Xebia.nextClient('.logo-large div')}, 4500);
 
     this.initLogos();
 
@@ -103,9 +103,9 @@ Xebia = {
     var hiddenLogos = $(selector).filter(":hidden");
     var newLogo = hiddenLogos.eq(this.random(0,hiddenLogos.length));
 
-    $(oldLogo).fadeOut("slow", function(){
+    $(oldLogo).fadeOut(3000, function(){
       $(oldLogo).before($(newLogo));
-      $(newLogo).fadeIn("slow");
+      $(newLogo).fadeIn(3000);
     });
 
   },
