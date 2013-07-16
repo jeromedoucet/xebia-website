@@ -1,0 +1,11 @@
+{
+    "name": "Xebia-Website",
+    "version": "1.0.0",
+    "description": "Xebia website",
+    "devDependencies" : {
+        "grunt": "~0.4.1",
+        "grunt-cli": "0.1.9",
+        "grunt-contrib-less":"~0.6.0",
+        "grunt-contrib-watch":"~0.4.4"
+    }
+}

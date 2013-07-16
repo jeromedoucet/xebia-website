@@ -72,7 +72,7 @@ Xebia = {
     for (var i = 0; i < 26; i ++) {
       $('<div>')
       .css('background',
-        "url('../images/trust-logos-small.png') -"+(i*170)+"px 0px no-repeat")
+        "url('images/trust-logos-small.png') -"+(i*170)+"px 0px no-repeat")
       .hide()
       .appendTo('.logo-small')
     }
@@ -86,7 +86,7 @@ Xebia = {
     for (var i = 0; i < 14; i ++) {
       $('<div>')
       .css('background',
-        "url('../images/trust-logos-large.png') -"+(i*220)+"px 0px no-repeat")
+        "url('images/trust-logos-large.png') -"+(i*220)+"px 0px no-repeat")
       .hide()
       .appendTo('.logo-large')
     }
