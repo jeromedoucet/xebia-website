@@ -1,4 +1,5 @@
 @import "colors.less";
+
 /* Contact http://essentials.xebia.com/rich-communication */
 .contact {
   background: url('../images/contact-flare.jpg') no-repeat top right @darkviolet;
@@ -17,20 +18,45 @@
 
     .contact-talk {
       position: absolute;
-      background: url('../images/contact-talk.png') no-repeat 0px 0px;
+
       width: 244px;
       height: 97px;
       top: 148px;
       left: 124px;
       cursor: pointer;
-      &.active {
-        background: url('../images/contact-talk-hover.png') no-repeat 0px 0px !important;
+
+      .first-line, .second-line {
+        background-color: @darkerViolet;
+        color: @pink;
+        font: 20px 'UbuntuLight', Arial, sans-serif;
+        text-transform: uppercase;
       }
-      &:hover {
-        background: url('../images/contact-talk-hover.png') no-repeat 0px 0px;
+
+      .first-line {
+        text-transform: uppercase;
+        padding: 12px 0 0 13px;
       }
+
+      .second-line {
+        padding: 2px 0 7px 13px;
+
+        .big-word {
+          float: right;
+          font: 59px 'UbuntuBold', Arial, sans-serif;
+
+          padding: 0 17px 10px 9px;
+          background-color: @darkerViolet;
+          line-height: 49px;
+        }
+      }
+
+      &.active, &:hover {
+        .second-line .big-word {
+          color: white;
+        }
+      }
+
     }
-    
 
     .contact-slash {
       position: absolute;
@@ -69,7 +95,9 @@
       line-height: 160px;
       padding-left: 10px;
     }
-    .contact-form-join { display:none }
+    .contact-form-join {
+      display: none
+    }
     .contact-form-talk, .contact-form-join {
       display: block;
       width: 998px;
@@ -131,7 +159,7 @@
         }
       }
     }
-    
+
     .send {
       background-color: @violet;
       text-transform: uppercase;
