@@ -6,12 +6,32 @@ Xebia = {
     current: 0,
     init: function () {
 
+        //On recode ici le debounce de underscore car pour 1 fonction
+        // il ne semblait pas utile de tirer toute la librairie
+        var debounce = function (func, wait, immediate) {
+            var result;
+            var timeout = null;
+            return function () {
+                var context = this, args = arguments;
+                var later = function () {
+                    timeout = null;
+                    if (!immediate) result = func.apply(context, args);
+                };
+                var callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+                if (callNow) result = func.apply(context, args);
+                return result;
+            };
+        };
+
+
         $(".nav a").click(function (event) {
             event.preventDefault();
             $('html,body').animate({scrollTop: $(this.hash).offset().top - 25}, 400);
         });
 
-        $(window).scroll(_.debounce(Xebia.menuSlider, 100));
+        $(window).scroll(debounce(Xebia.menuSlider, 100));
 
         this.next();
 
