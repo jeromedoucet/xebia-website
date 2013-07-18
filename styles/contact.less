@@ -16,6 +16,20 @@
     position: relative;
     z-index: 9;
 
+    .first-line, .second-line {
+      background-color: @darkerViolet;
+      color: @pink;
+      font: 20px 'UbuntuLight', Arial, sans-serif;
+      text-transform: uppercase;
+    }
+
+    .big-word {
+      position:absolute;
+      right:0;
+      font: 59px 'UbuntuBold', Arial, sans-serif;
+      background-color: @darkerViolet;
+    }
+
     .contact-talk {
       position: absolute;
 
@@ -25,15 +39,7 @@
       left: 124px;
       cursor: pointer;
 
-      .first-line, .second-line {
-        background-color: @darkerViolet;
-        color: @pink;
-        font: 20px 'UbuntuLight', Arial, sans-serif;
-        text-transform: uppercase;
-      }
-
       .first-line {
-        text-transform: uppercase;
         padding: 12px 0 0 13px;
       }
 
@@ -41,11 +47,7 @@
         padding: 2px 0 7px 13px;
 
         .big-word {
-          float: right;
-          font: 59px 'UbuntuBold', Arial, sans-serif;
-
           padding: 0 17px 10px 9px;
-          background-color: @darkerViolet;
           line-height: 49px;
         }
       }
@@ -68,18 +70,38 @@
     }
     .contact-join {
       position: absolute;
-      background: url('../images/contact-join.png') no-repeat 0px 0px;
-      width: 360px;
+
+      width: 353px;
       height: 100px;
       top: 148px;
       left: 553px;
       cursor: pointer;
-      &.active {
-        background: url('../images/contact-join-hover.png') no-repeat 0px 0px !important;
+
+      .first-line {
+        padding: 12px 0 0 13px;
       }
-      &:hover {
-        background: url('../images/contact-join-hover.png') no-repeat 0px 0px;
+
+      .second-line {
+        height:25px;
+        padding: 2px 0 7px 13px;
+
+        .big-word {
+          padding: 0 17px 10px 15px;
+          line-height: 49px;
+        }
+
+        .over-big-word {
+          position:absolute;
+          z-index:1;
+        }
       }
+
+      &.active, &:hover {
+        .second-line .big-word {
+          color: white;
+        }
+      }
+
     }
     .contact-pointer {
 
