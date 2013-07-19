@@ -52,22 +52,25 @@ Xebia = {
 
         this.initLogos();
 
-        $('.contact-join').click(function () {
+        var activateContactJoinForm = function () {
             $('.contact-talk').removeClass('active');
-            $(this).addClass('active');
+            $('.contact-join').addClass('active');
             $('.contact-form-talk').fadeOut('slow');
             $('.contact-form-join').fadeIn('slow');
             $('.contact-pointer').animate({left: "750px"}, 300);
-        });
+        };
 
-        $('.contact-talk').click(function () {
+        var activateContactTalkForm = function () {
             $('.contact-join').removeClass('active');
-            $(this).addClass('active');
+            $('.contact-talk').addClass('active');
             $('.contact-form-join').fadeOut('slow');
             $('.contact-form-talk').fadeIn('slow');
             $('.contact-pointer').animate({left: "230px"}, 300);
-        });
+        };
 
+        $('.contact-join').click(activateContactJoinForm);
+        $('.contact-talk').click(activateContactTalkForm);
+        $('.maybe-you').click(activateContactTalkForm);
     },
     menuSlider: function () {
 
@@ -94,6 +97,7 @@ Xebia = {
         return Math.floor(Math.random() * (max - min)) + min;
     },
     initLogos: function () {
+
         for (var i = 0; i < 26; i++) {
             $('<div>')
                 .css('background',
@@ -107,16 +111,15 @@ Xebia = {
             hiddenLogos.eq(this.random(0, hiddenLogos.length)).show();
         }
 
-
         for (var i = 0; i < 14; i++) {
             $('<div>')
                 .css('background',
                     "url('images/trust-logos-large.png') -" + (i * 220) + "px 0px no-repeat")
                 .hide()
-                .appendTo('.logo-large')
+                .prependTo('.logo-large')
         }
 
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 4; i++) {
             var hiddenLogos = $('.logo-large div').filter(":hidden");
             hiddenLogos.eq(this.random(0, hiddenLogos.length)).show();
         }
@@ -128,9 +131,9 @@ Xebia = {
         var hiddenLogos = $(selector).filter(":hidden");
         var newLogo = hiddenLogos.eq(this.random(0, hiddenLogos.length));
 
-        $(oldLogo).fadeOut(3000, function () {
+        $(oldLogo).fadeOut(2000, function () {
             $(oldLogo).before($(newLogo));
-            $(newLogo).fadeIn(3000);
+            $(newLogo).fadeIn(2000);
         });
 
     },
