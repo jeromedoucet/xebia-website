@@ -2,7 +2,8 @@
 /* Trust http://essentials.xebia.com/dare-to-say-no */
 .trust {
   background: url('../images/trust-bg.png');
-  height: 400px; /* before: 720px */
+  padding-bottom: 50px;
+
   position: relative;
   .trust-boids {
     width: 620px;
@@ -63,12 +64,22 @@
       right: 0px;
       top: 0px;
     }
+
+    .studies {
+      height: 350px;
+      padding-bottom:50px;
+    }
+
     .study {
       width: 310px;
       color: white;
       font: 11px 'UbuntuLight', Arial, sans-serif;
       display: inline-block;
       margin-top: 50px;
+      vertical-align: top;
+      position:relative;
+      height:100%;
+
       img {
         z-index: 1;
       }
@@ -79,6 +90,10 @@
         padding: 5px 10px;
         margin-top: -35px;
         z-index: 5;
+
+        a {
+          color:white;
+        }
       }
       p {
         line-height: 16px;
@@ -91,10 +106,13 @@
         margin-top: 10px;
         display: inline-block;
         color: white;
+        position:absolute;
+        bottom:0;
       }
     }
     .middle {
-      margin: 0 30px;
+      margin-left:30px;
+      margin-right:30px;
     }
   }
 }
