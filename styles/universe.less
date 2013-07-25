@@ -1,4 +1,5 @@
 @import "colors.less";
+
 /* Universe http://essentials.xebia.com/one-feature-at-a-time */
 .universe {
   padding-bottom: 70px;
@@ -29,6 +30,58 @@
       font-weight: normal;
     }
   }
+
+  .upper-line {
+
+    div.span3 {
+      float: left;
+      width: 33%;
+
+      > div {
+        width: 310px;
+        height: 400px;
+        text-align: center;
+        margin:auto;
+        position:relative;
+        padding:1px;
+
+        .title {
+          margin-top: 152px;
+          height: 40px;
+          font: 25px 'UbuntuRegular', Arial, sans-serif;
+          line-height: 40px;
+          color: @violet;
+          text-transform: uppercase;
+        }
+
+        .desc {
+          margin-top: 20px;
+          margin-left: 55px;
+          margin-right: 55px;
+          font: 13px 'UbuntuRegular', Arial, sans-serif;
+          color: @grey;
+        }
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  .studio {
+    background: url('../images/universe/universe_xl_studio.png') no-repeat;
+  }
+  .training {
+    background: url('../images/universe/universe_xl_training.png') no-repeat;
+  }
+  .labs {
+    background: url('../images/universe/universe_xl_labs.png') no-repeat;
+  }
+
+  /*
   .studio {
     background: url('../images/universe-studio-logo.jpg') 70px 28px no-repeat rgb(241, 240, 238);
   }
@@ -56,6 +109,7 @@
   .essentials {
     background: url('../images/universe-essentials-logo.png') 75px 30px no-repeat rgb(241, 240, 238);
   }
+  */
   .first {
     margin-left: 0px;
   }
