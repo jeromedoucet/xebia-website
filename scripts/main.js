@@ -74,23 +74,21 @@ Xebia = {
     },
     menuSlider: function () {
 
-        var top = $(window).scrollTop();
+        var top = $(window).scrollTop() + 1;
         var pointer = $('.nav .pointer');
 
-        if (top < 550) {
+        if (top < $('#passion').position().top) {
             pointer.animate({left: "150px"}, 300); // hello
-        } else if (top < 1300) {
+        } else if (top < $('#trust').position().top) {
             pointer.animate({left: "260px"}, 300); // passion
-        } else if (top < 1455) {// prev: 2000
+        } else if (top < $('#universe').position().top) {// prev: 2000
             pointer.animate({left: "405px"}, 300); // trust
-        } else if (top < 2080) { // prev: 2850 preprev 2530
+        } else if (top < $('#contact').position().top) { // prev: 2850 preprev 2530
             pointer.animate({left: "555px"}, 300); // universe
-        } else if (top < 3130) { // prev: 3450
+        } else if (top < $('#work').position().top) { // prev: 3450
             pointer.animate({left: "680px"}, 300); // contact
-        } else if (top < 4180) { // prev: 4500
-            pointer.animate({left: "805px"}, 300); // work
         } else {
-            pointer.animate({left: "150px"}, 300);
+            pointer.animate({left: "805px"}, 300); // work
         }
     },
     random: function (min, max) {
