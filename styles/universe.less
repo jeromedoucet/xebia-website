@@ -2,7 +2,7 @@
 
 /* Universe http://essentials.xebia.com/one-feature-at-a-time */
 .universe {
-  padding-bottom: 70px;
+  padding-bottom: 20px;
   h2 {
     margin-bottom: 0px;
   }
@@ -37,13 +37,15 @@
       float: left;
       width: 33%;
 
-      > div {
+      > a {
+        display:block;
         width: 310px;
-        height: 400px;
+        height: 275px;
         text-align: center;
-        margin:auto;
-        position:relative;
-        padding:1px;
+        margin: auto;
+        position: relative;
+        padding: 1px;
+        cursor:pointer;
 
         .title {
           margin-top: 152px;
@@ -64,6 +66,16 @@
       }
     }
 
+    .studio {
+      background: url('../images/universe/universe_xl_studio.png') no-repeat;
+    }
+    .training {
+      background: url('../images/universe/universe_xl_training.png') no-repeat;
+    }
+    .labs {
+      background: url('../images/universe/universe_xl_labs.png') no-repeat;
+    }
+
     &:after {
       content: '';
       display: block;
@@ -71,45 +83,64 @@
     }
   }
 
-  .studio {
-    background: url('../images/universe/universe_xl_studio.png') no-repeat;
-  }
-  .training {
-    background: url('../images/universe/universe_xl_training.png') no-repeat;
-  }
-  .labs {
-    background: url('../images/universe/universe_xl_labs.png') no-repeat;
+  .lower-line {
+
+    div.span5 {
+      float: left;
+      width: 20%;
+
+      > a {
+        width: 185px;
+        height: 250px;
+        text-align: center;
+        margin: auto;
+        position: relative;
+        display:block;
+        padding: 1px;
+        cursor:pointer;
+
+        .title {
+          margin-top: 126px;
+          height: 40px;
+          font: 20px 'UbuntuRegular', Arial, sans-serif;
+          line-height: 40px;
+          color: @violet;
+          text-transform: uppercase;
+        }
+
+        .desc {
+          margin-top: 3px;
+          margin-left: 10px;
+          margin-right: 10px;
+          font: 13px 'UbuntuRegular', Arial, sans-serif;
+          color: @grey;
+        }
+      }
+    }
+
+    .blog {
+      background: url('../images/universe/universe_s_blog.png') no-repeat;
+    }
+    .videos {
+      background: url('../images/universe/universe_s_video.png') no-repeat;
+    }
+    .code {
+      background: url('../images/universe/universe_s_code') no-repeat;
+    }
+    .tech-events {
+      background: url('../images/universe/universe_s_events.png') no-repeat;
+    }
+    .agile-contract {
+      background: url('../images/universe/universe_s_agile.png') no-repeat;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
   }
 
-  /*
-  .studio {
-    background: url('../images/universe-studio-logo.jpg') 70px 28px no-repeat rgb(241, 240, 238);
-  }
-  .training {
-    background: url('../images/universe-training-logo.png') 50px 15px no-repeat rgb(241, 240, 238);
-  }
-  .labs {
-    background: url('../images/universe-labs-logo.png') 40px 15px no-repeat rgb(241, 240, 238);
-  }
-  .blog {
-    background: url('../images/universe-blog-logo.png') 42px 15px no-repeat rgb(241, 240, 238);
-  }
-  .video {
-    background: url('../images/universe-video-logo.png') 40px 20px no-repeat rgb(241, 240, 238);
-  }
-  .code {
-    background: url('../images/universe-code-logo.png') 45px 20px no-repeat rgb(241, 240, 238);
-  }
-  .events {
-    background: url('../images/universe-events-logo.png') 45px 15px no-repeat rgb(241, 240, 238);
-  }
-  .agile {
-    background: url('../images/universe-agile-logo.png') 45px 15px no-repeat rgb(241, 240, 238);
-  }
-  .essentials {
-    background: url('../images/universe-essentials-logo.png') 75px 30px no-repeat rgb(241, 240, 238);
-  }
-  */
   .first {
     margin-left: 0px;
   }
