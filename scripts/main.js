@@ -44,8 +44,6 @@ Xebia = {
                     Xebia.displayCarousel(parseInt(currentClass.replace('dot', ''), 10));
                 }
             }
-
-
         });
 
         setInterval(function () {
@@ -87,17 +85,19 @@ Xebia = {
         var pointer = $('.nav .pointer');
 
         if (top < $('#passion').position().top) {
-            pointer.animate({left: "150px"}, 300); // hello
+            pointer.animate({left: "100px"}, 300); // hello
         } else if (top < $('#trust').position().top) {
-            pointer.animate({left: "260px"}, 300); // passion
+            pointer.animate({left: "210px"}, 300); // passion
         } else if (top < $('#universe').position().top) {// prev: 2000
-            pointer.animate({left: "405px"}, 300); // trust
-        } else if (top < $('#contact').position().top) { // prev: 2850 preprev 2530
-            pointer.animate({left: "555px"}, 300); // universe
+            pointer.animate({left: "355px"}, 300); // trust
+        } else if (top < $('#careers').position().top) { // prev: 2850 preprev 2530
+            pointer.animate({left: "505px"}, 300); // universe
+        } else if (top < $('#contact').position().top) { // prev: 3450
+            pointer.animate({left: "630px"}, 300); // contact
         } else if (top < $('#work').position().top) { // prev: 3450
-            pointer.animate({left: "680px"}, 300); // contact
+            pointer.animate({left: "725px"}, 300); // contact
         } else {
-            pointer.animate({left: "805px"}, 300); // work
+            pointer.animate({left: "860px"}, 300); // work
         }
     },
     random: function (min, max) {
