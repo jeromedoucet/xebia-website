@@ -36,7 +36,16 @@ Xebia = {
         this.next();
 
         $('.dot').click(function () {
-            Xebia.next();
+            var classes = $(this).attr('class').split(' ');
+
+            for (var i in classes) {
+                var currentClass = classes[i];
+                if (currentClass.match(/^dot\d+$/)) {
+                    Xebia.displayCarousel(parseInt(currentClass.replace('dot', ''), 10));
+                }
+            }
+
+
         });
 
         setInterval(function () {
@@ -136,10 +145,16 @@ Xebia = {
 
     },
     next: function () {
+        var nbSlides = $('.carousel-slides').children().size();
+        var slideId = (this.current >= nbSlides) ? 1 : this.current + 1;
+
+        this.displayCarousel(slideId)
+    },
+    displayCarousel: function (slideId) {
         $(".slide" + this.current).fadeOut(600);
         $(".dot" + this.current).removeClass('active');
-        var nbSlides = $('.carousel-slides').children().size();
-        this.current = (this.current >= nbSlides) ? 1 : this.current + 1;
+
+        this.current = slideId;
         $(".slide" + this.current).fadeIn(700);
         $(".dot" + this.current).addClass('active');
     }
