@@ -58,26 +58,6 @@ Xebia = {
         }, 4500);
 
         this.initLogos();
-
-        var activateContactJoinForm = function () {
-            $('.contact-talk').removeClass('active');
-            $('.contact-join').addClass('active');
-            $('.contact-form-talk').fadeOut('slow');
-            $('.contact-form-join').fadeIn('slow');
-            $('.contact-pointer').animate({left: "750px"}, 300);
-        };
-
-        var activateContactTalkForm = function () {
-            $('.contact-join').removeClass('active');
-            $('.contact-talk').addClass('active');
-            $('.contact-form-join').fadeOut('slow');
-            $('.contact-form-talk').fadeIn('slow');
-            $('.contact-pointer').animate({left: "230px"}, 300);
-        };
-
-        $('.contact-join').click(activateContactJoinForm);
-        $('.contact-talk').click(activateContactTalkForm);
-        $('.maybe-you').click(activateContactTalkForm);
     },
     menuSlider: function () {
 
