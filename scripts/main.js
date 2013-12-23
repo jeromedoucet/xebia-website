@@ -58,6 +58,24 @@ Xebia = {
         }, 4500);
 
         this.initLogos();
+
+        var $dialog = $("#dialog");
+        $dialog.dialog({
+            autoOpen: false,
+            width: 800,
+            show: {
+                effect: "blind",
+                duration: 1000
+            },
+            hide: {
+                effect: "explode",
+                duration: 1000
+            }
+        });
+
+        $('.mentions').click(function () {
+            $dialog.dialog("open");
+        });
     },
     menuSlider: function () {
 
