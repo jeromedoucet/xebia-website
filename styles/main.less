@@ -1,20 +1,25 @@
 @import "colors.less";
+
 /* Global */
 body {
   margin: 0px;
   min-width: 1100px;
 }
+
 a {
   text-decoration: none;
 }
+
 a:hover {
-  opacity:0.9;
+  opacity: 0.9;
 }
+
 h2 {
   color: @violet;
   font: 65px 'UbuntuLight', Arial, sans-serif;
   text-transform: uppercase;
 }
+
 .content {
   font: 18px 'UbuntuMedium', Arial, sans-serif;
   width: 100%;
@@ -69,23 +74,55 @@ h2 {
 }
 
 footer {
-  background-color: @lightgrey;
-  height: 80px;
+  background-color: #f1f0ee;
+  height: 180px;
+
   .tagline {
-    height: 80px;
-    background: url('../images/footer-tagline.png') 0px 20px no-repeat rgb(241, 240, 238);
+    width: 462px;
+    margin: auto;
+    height: 170px;
+    background: url('../images/footer-alliance.png') 0 20px no-repeat #f1f0ee;
+  }
+
+  .tagline-xebia {
+    width: 462px;
+    margin: auto;
+    height: 111px;
+    background: url('../images/footer-logo-xebia.png') 0 20px no-repeat #f1f0ee;
+  }
+
+  .tagline-alliance {
+    width: 450px;
+    margin: auto;
+    height: 47px;
+    border-top: 1px solid #bebab8;
+
+    p {
+      text-transform: uppercase;
+      line-height: 30px;
+      text-align: justify;
+      float: left;
+      margin-left: 7px;
+      margin-top: 16px;
+      font: 13px 'UbuntuRegular', Arial, sans-serif;
+      letter-spacing: 1px;
+    }
 
     a {
-      float:right;
-      margin-top:30px;
-      cursor:pointer;
-      font: 12px 'UbuntuMedium',Arial,sans-serif;
-      color: @violet;
-      text-transform: uppercase;
+      color: #6d626b;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
+  }
+
+  .logo-alliance {
+    margin-top: 10px;
+    float: left;
   }
 }
 
 .debug {
-    border: 1px solid lime;
+  border: 1px solid lime;
 }
