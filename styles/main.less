@@ -114,6 +114,23 @@ footer {
       &:hover {
         text-decoration: underline;
       }
+
+    }
+
+    .alliance-wrapper:after {
+      clear: both;
+      content: '';
+      display: block;
+    }
+    .mentions-wrapper {
+      text-align: center;
+      .mentions {
+        margin-top: 30px;
+        cursor: pointer;
+        font: 12px 'UbuntuMedium', Arial, sans-serif;
+        color: @violet;
+        text-transform: uppercase;
+      }
     }
   }
 
@@ -126,3 +143,4 @@ footer {
 .debug {
   border: 1px solid lime;
 }
+
