@@ -1,0 +1,130 @@
+
+.centering {
+  max-width: @firstBreakPoint;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: @firstBreakPoint) {
+    width: 100%;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+strong {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2 {
+  color: @subTitle;
+  font-size: 35px;
+  padding-bottom: 40px;
+  text-transform: uppercase;
+}
+
+h2 {
+  padding-top: 40px;
+}
+
+p, li {
+  color: @subMainTitle;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+p {
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 35px;
+  @media (max-width: @firstBreakPoint) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.col-wrapper {
+  .clearFloat();
+  text-align: center;
+}
+
+.col3 {
+  text-align: center;
+  width: 33%;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 280px;
+  position: relative;
+
+  margin-left: 2%;
+  margin-right: 2%;
+
+  img {
+    margin-top: 30px;
+  }
+
+  &:nth-child(2) img {
+    margin-top: 24px
+  }
+
+  h3 {
+    color: @contrastColor;
+    font-weight: 500;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid @xebiaBackgroundTextColor;
+
+    margin-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  a {
+    color: @linkColor;
+  }
+
+  @media (max-width: @firstBreakPoint) {
+
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: 240px;
+
+  }
+
+  @media (max-width: @secondBreakPoint) {
+
+    max-width: none;
+    width: 80%;
+    .centerBlock();
+    display: block;
+
+  }
+}
+
+.person {
+  .name {
+    margin-top: 10px;
+    display: block;
+    color: @contrastColor;
+    font-size: 16px;
+  }
+  .role {
+    margin-top: 5px;
+    display: block;
+    color: @xebiaBackgroundTextColor;
+    font-weight: 300;
+    font-size: 12px;
+  }
+}
+

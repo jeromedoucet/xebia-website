@@ -1,0 +1,202 @@
+header {
+  @headerHeight: 170px;
+  background-color: @xebiaColor;
+  padding-top: 15px;
+  height: @headerHeight;
+  margin-bottom: 70px;
+
+  .header-content {
+    padding: 2px 0;
+    background-color: white;
+
+    border-bottom: 1px solid @colorIndicator;
+
+    .indicator {
+      position: relative;
+
+      display: block;
+      width: 0;
+      @triangleSize: 15px;
+      border-top: @triangleSize solid @colorIndicator;
+      border-left: @triangleSize solid transparent;
+      border-right: @triangleSize solid transparent;
+
+      top: @triangleSize + 2px;
+      left: 0;
+      @media (max-width: @secondBreakPoint) {
+        display: none;
+      }
+    }
+
+    .centering {
+      .clearFloat();
+
+      > .logo-header {
+        margin-left: 10px;
+      }
+
+      > div {
+        margin-right: 10px;
+      }
+    }
+
+    .contact-bloc {
+      float: right;
+    }
+
+    .bottom-part {
+      margin-top: 15px;
+      a {
+        color: @contrastColor;
+        text-decoration: none;
+        margin-left: 45px;
+        font-size: 18px;
+        font-weight: normal;
+        @media (max-width: @secondBreakPoint) {
+          margin-left: 5px;
+        }
+
+        &:visited {
+          color: @contrastColor;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  nav {
+    @numberOfLi: 6;
+    margin-top: 30px;
+
+    position: relative;
+    ul {
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+
+    li {
+      display: inline-block;
+      width: 95%/@numberOfLi;
+      text-align: center;
+
+      &.selected {
+        font-weight: normal;
+      }
+
+      a {
+        color: @xebiaBackgroundTextColor;
+        text-decoration: none;
+        font-size: 22px;
+      }
+    }
+  }
+
+  .mobile-menu-button {
+    display: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: @secondBreakPoint) {
+
+    height: auto;
+
+    .centering {
+      position: relative;
+      text-align: center;
+      .clearFloat();
+
+    }
+
+    @widthOfIconBar: 35px;
+    .mobile-menu-button {
+      display: inline-block;
+      width: @widthOfIconBar;
+      height: @widthOfIconBar;
+      position: absolute;
+      left: 30px;
+      top: 9px;
+    }
+
+    .header-content .contact-bloc {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .icon-bar {
+      display: block;
+      width: @widthOfIconBar;
+      height: 3px;
+      border-radius: 1px;
+      background-color: @xebiaColor;
+      margin-top: 6px;
+    }
+
+    .logo-header {
+      width: 100px;
+    }
+
+    nav {
+      max-height: 0;
+      overflow: hidden;
+      .transition(max-height 1s);
+
+      margin: 0;
+      padding-bottom: 0;
+
+      &.shown {
+        max-height: 600px; // attention à modifier si le menu change
+      }
+      ul {
+        margin: 0;
+      }
+      li {
+        display: block;
+        width: 100%;
+        @heightMenu: 55px;
+        height: @heightMenu;
+        line-height: @heightMenu;
+        text-align: left;
+        border-bottom: 1px solid @xebiaLightColor;
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &.selected {
+          font-weight: 500;
+          background-color: @xebiaLightColor;
+        }
+
+        a {
+          display: inline-block;
+          width: 100%;
+          font-size: 26px;
+          margin-left: 10px;
+          color: white;
+          text-decoration: none;
+
+          &:visited {
+            color: white;
+          }
+        }
+        background-color: @xebiaColor;
+      }
+
+      &:before {
+        content: "\f0c9";
+        color: @xebiaColor;
+      }
+    }
+  }
+
+  @media (max-width: @thirdBreakPoint) {
+    .centering {
+      text-align: right;
+    }
+
+    .header-content .contact-bloc {
+      float: none;
+      position: static;
+    }
+  }
+}
