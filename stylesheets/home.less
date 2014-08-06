@@ -316,10 +316,10 @@ section h2 {
     color: white;
     text-align: left;
     margin-left: 5%;
+  }
 
-    @media (max-width: @secondBreakPoint) {
-      margin-left: 10px;
-    }
+  .col-wrapper {
+    margin-bottom: 50px;
   }
 
   h3, .description, .author, a {
@@ -331,10 +331,7 @@ section h2 {
     border-bottom: none;
     font-size: @defaultTitleSize * 0.60;
     margin-bottom: 0;
-    @media (max-width: @secondBreakPoint) {
-      max-width: none;
-    }
-
+    min-height: 100px;
   }
 
   .author {
@@ -344,6 +341,7 @@ section h2 {
     margin-bottom: 30px;
     display: block;
     margin-left: 10px;
+    min-height: 30px;
   }
 
   .description {
@@ -352,7 +350,24 @@ section h2 {
     min-height: 290px;
     margin-left: 10px;
 
-    @media (max-width: @secondBreakPoint) {
+  }
+
+  @media (max-width: @secondBreakPoint) {
+
+    h2 {
+      margin-left: 10px;
+    }
+
+    h3 {
+      max-width: none;
+      min-height: 0;
+    }
+
+    .author {
+      min-height: 0;
+    }
+
+    .description {
       min-height: 0;
       margin-bottom: 20px;
     }
@@ -360,47 +375,22 @@ section h2 {
 
   .read-more-wrapper {
     text-align: left;
-
+    margin-left: 10px;
     a {
+
       font-weight: normal;
-      position: relative;
+
       padding-left: 10px;
       padding-right: 10px;
 
-      &:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: white;
-        content: '';
-        .transition(top 0.3s);
-      }
-      &:hover:before {
-        top: 100%;
-        opacity: 1;
-      }
+      .linkDecoration();
+    }
+  }
 
-      &:after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 2px;
-        height: 2px;
-        background: white;
-        content: '';
-
-        .transition(height 0.3s);
-
-      }
-      &:hover:after {
-        height: 100%;
-      }
-
-      &:hover {
-        font-weight: normal;
-      }
+  .more-blog-wrapper {
+    text-align: right;
+    a {
+      margin-right: 20px;
     }
   }
 }
@@ -415,34 +405,10 @@ section h2 {
   p {
     min-height: 110px;
     margin-bottom: 0;
-  }
-
-  img {
-    margin-top: 10px;
-  }
-
-  @media (max-width: @secondBreakPoint) {
-    @imgSize: 200px;
-
-    h3, p {
-      max-width: ~"calc(75% - @{imgSize})";
-    }
-
-    img {
-      width: @imgSize;
+    @media (max-width: @thirdBreakPoint) {
+      min-height: 0;
+      margin-bottom: 20px;
     }
   }
 
-  @media (max-width: @thirdBreakPoint) {
-    @imgSize: 130px;
-
-    h3, p {
-      max-width: ~"calc(75% - @{imgSize})";
-    }
-
-    img {
-      margin-top: 80px;
-      width: @imgSize;
-    }
-  }
 }

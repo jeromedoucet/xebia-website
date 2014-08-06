@@ -45,3 +45,42 @@
     }
   }
 }
+
+.linkDecoration() {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    content: '';
+    .transition(top 0.3s);
+  }
+  &:hover:before {
+    top: 100%;
+    opacity: 1;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: white;
+    content: '';
+
+    .transition(height 0.3s);
+
+  }
+  &:hover:after {
+    height: 100%;
+  }
+
+  &:hover {
+    font-weight: normal;
+  }
+}
