@@ -11,3 +11,26 @@
 @firstBreakPoint: 1024px;
 @secondBreakPoint: 820px;
 @thirdBreakPoint: 400px;
+
+@reductionFactor : 0.9;
+@veryBigFontSize: 70px * @reductionFactor;
+@bigFontSize: 52px * @reductionFactor;
+@bigFontSizeResponsive: 40px * @reductionFactor;
+@standardTextSize: 18px * @reductionFactor;
+@defaultTitleSize: 35px * @reductionFactor;
+
+.veryBigFontSize() {
+  font-size: @veryBigFontSize;
+
+  @media (max-width: @thirdBreakPoint) {
+    font-size: @bigFontSize;
+  }
+}
+
+.bigFontSize() {
+  font-size: @bigFontSize;
+
+  @media (max-width: @thirdBreakPoint) {
+    font-size: @bigFontSizeResponsive;
+  }
+}
