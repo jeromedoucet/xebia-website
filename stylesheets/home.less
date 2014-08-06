@@ -1,0 +1,44 @@
+.what-we-do {
+
+  h1 {
+    font-weight: 300;
+    .veryBigFontSize();
+    text-transform: none;
+  }
+
+  .discover-service {
+    margin: 30px auto;
+    background-color: @contrastColor;
+    max-width: 210px;
+    padding: 10px 20px;
+
+    position: relative;
+
+    h2 {
+      color: white;
+      text-align: center;
+      padding: 0;
+      text-transform: none;
+
+      font-size: @defaultTitleSize*0.60;
+
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+
+      width: 0;
+      height: 0;
+      @sizeTriangle: 10px;
+      @sizeBaseTriangle: @sizeTriangle*2;
+      left: ~"calc(50% - @{sizeBaseTriangle})";
+      border-top: @sizeTriangle solid @contrastColor;
+      border-left: @sizeBaseTriangle solid transparent;
+      border-right: @sizeBaseTriangle solid transparent;
+      bottom: 0 - @sizeTriangle;
+    }
+
+  }
+}

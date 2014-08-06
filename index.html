@@ -7,6 +7,11 @@
     @@include('templates/standardHead.html')
 
 
+    <!-- build:css css/home.css -->
+    <link rel="stylesheet" href="stylesheets/vars.less"/>
+    <link rel="stylesheet" href="stylesheets/mixin.less"/>
+    <link rel="stylesheet" href="stylesheets/home.less"/>
+    <!-- endbuild -->
 
 
 </head>
@@ -14,7 +19,45 @@
 @@include('templates/header.html')
 
 <main>
+    <section class="what-we-do centering">
+        <h1>We <strong>accelerate</strong> the business of our customers by enabling <strong>innovation</strong></h1>
 
+        <div class="discover-service">
+            <h2>Discover Our Services</h2>
+        </div>
+
+        <div class="col-wrapper">
+            <div class="col3">
+                <img src="images/home/" alt="Acceleration"/>
+
+                <h3>Acceleration</h3>
+
+                <p>Fast Time-to-Market of new ideas for optimally servicing your clients</p>
+
+                <a href="">Read more</a>
+            </div>
+
+            <div class="col3">
+                <img src="images/home/" alt="Software Craftmanship"/>
+
+                <h3>Software Craftmanship</h3>
+
+                <p>We produce high quality systems that only need a minimum of maintenance</p>
+
+                <a href="">Read more</a>
+            </div>
+
+            <div class="col3">
+                <img src="images/home/" alt="Cutting Edge Technology"/>
+
+                <h3>Cutting Edge Technology</h3>
+
+                <p>As a frontrunner we apply high-tech innovation to the larger entreprises</p>
+
+                <a href="">Read more</a>
+            </div>
+        </div>
+    </section>
 </main>
 
 @@include('templates/footer.html')

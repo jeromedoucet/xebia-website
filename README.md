@@ -11,6 +11,10 @@ Todo
 
 
 
+###Home
+
+   * Les liens read more, ils mennent ou ?
+
 
 Info
 ---
