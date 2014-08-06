@@ -336,3 +336,45 @@ section h2 {
     }
   }
 }
+
+.xebia-universe {
+
+  h3 {
+    border-bottom: none;
+    min-height: 0;
+  }
+
+  p {
+    min-height: 110px;
+    margin-bottom: 0;
+  }
+
+  img {
+    margin-top: 10px;
+  }
+
+  @media (max-width: @secondBreakPoint) {
+    @imgSize: 200px;
+
+    h3, p {
+      max-width: ~"calc(75% - @{imgSize})";
+    }
+
+    img {
+      width: @imgSize;
+    }
+  }
+
+  @media (max-width: @thirdBreakPoint) {
+    @imgSize: 130px;
+
+    h3, p {
+      max-width: ~"calc(75% - @{imgSize})";
+    }
+
+    img {
+      margin-top: 80px;
+      width: @imgSize;
+    }
+  }
+}

@@ -19,7 +19,8 @@ Todo
    * on fait quoi quand y'a pas d'évenement prévu
    * j'ai pas d'API pour les formatiosn
    * Blog super chiant : je fais quoi des images ?
-
+   * En bas il me manques les icones
+   * Icone de labs sur FR et .COM pas la meme (go data driven)
 
 
 
