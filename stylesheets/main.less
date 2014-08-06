@@ -118,37 +118,36 @@ p {
       border-bottom: none;
       color: @xebiaColor;
       min-height: 0;
-
+      padding-bottom: 0;
+      margin-bottom: 10px;
     }
 
     h3, p, a {
       margin-left: 10px;
     }
 
-    @imgSize: 150px;
-
     h3, p {
-      max-width: ~"calc(75% - @{imgSize})";
+      max-width:55%;
       text-align: left;
     }
 
     img {
       margin-top: 0;
-      float: right;
-      width: @imgSize;
+      position: absolute;
+      right:10px;
+      top:20px;
     }
-
   }
 
   @media (max-width: @thirdBreakPoint) {
-    @imgSize: 100px;
+
+    @imgSize: 130px;
 
     h3, p {
-      max-width: ~"calc(95% - @{imgSize})";
+      margin-right:@imgSize + 40px;
     }
 
     img {
-      margin-top: 80px;
       width: @imgSize;
     }
   }

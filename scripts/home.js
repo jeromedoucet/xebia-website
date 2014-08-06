@@ -100,7 +100,7 @@
                     description: post.excerpt.replace(/\s\[(.*)]/g, '$1'),
                     url: post.url
                 };
-                console.log(post);
+
                 return blogTemplate(blogViewModel)
             }).join('');
 

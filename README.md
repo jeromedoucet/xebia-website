@@ -10,6 +10,8 @@ Todo
   * Traduire en FR
 
 
+###Header
+   * peut etre un effet sur les liens ?
 
 ###Home
 
@@ -21,6 +23,7 @@ Todo
    * Blog super chiant : je fais quoi des images ?
    * En bas il me manques les icones
    * Icone de labs sur FR et .COM pas la meme (go data driven)
+
 
 
 

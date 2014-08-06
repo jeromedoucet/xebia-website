@@ -4,10 +4,15 @@
     font-weight: 300;
     .veryBigFontSize();
     text-transform: none;
+    padding-bottom: 0;
+
+    @media (max-width: @secondBreakPoint) {
+      margin-bottom: 40px;
+    }
   }
 
   .discover-service {
-    margin: 30px auto;
+    margin: 20px auto;
     background-color: @contrastColor;
     max-width: 210px;
     padding: 10px 20px;
@@ -25,7 +30,6 @@
       text-transform: none;
 
       font-size: @defaultTitleSize*0.60;
-
     }
 
     &:after {
@@ -44,6 +48,21 @@
       bottom: 0 - @sizeTriangle;
     }
 
+  }
+
+  h3 {
+    padding-bottom: 25px;
+
+    @media (max-width: @secondBreakPoint) {
+      padding-bottom: inherit;
+    }
+  }
+
+  p {
+    min-height: 110px;
+    @media (max-width: @secondBreakPoint) {
+      min-height: inherit;
+    }
   }
 }
 
