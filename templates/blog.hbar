@@ -1,0 +1,10 @@
+<div class="blog-article col3">
+    <h3>{{title}}</h3>
+    <span class="author"> By {{name}} on {{date}} </span>
+    <div class="description">
+{{{description}}}
+    </div>
+    <div class="read-more-wrapper">
+        <a href="{{url}}" title="{{title}}">Read more</a>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="training-session">
+    <div class="photo">
+        <img alt="{{name}}" src="{{photoUrl}}" />
+    </div>
+    <div class="description">
+        <h3>{{session.title}}</h3>
+        <span class="name">{{name}}</span>
+        <time datetime="{{session.isoDate}}">{{session.formattedDate}}</time>
+        <a class="button-green">Register&nbsp;&gt;</a>
+    </div>
+</div>

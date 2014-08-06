@@ -14,11 +14,18 @@ Todo
 ###Home
 
    * Les liens read more, ils mennent ou ?
+   * Il me manque tous les logos clients, et le texte allant avec
+   * et de quoi faire les rayures aussi
+   * on fait quoi quand y'a pas d'évenement prévu
+   * j'ai pas d'API pour les formatiosn
+   * Blog super chiant : je fais quoi des images ?
+
+
 
 
 Info
 ---
-*
+
  * Read the case est en faire "More CLients" qui redirige vers la page des clients
  * Pas de partie news
  * Events -> c'est eventbrite

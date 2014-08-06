@@ -174,3 +174,16 @@ p {
   }
 }
 
+
+.button-green {
+  color: white;
+  background-color: @contrastColor;
+  font-weight: 300;
+  padding: 5px 20px;
+  cursor: pointer;
+  .transition(background-color 0.5s);
+
+  &:hover {
+    background-color: lighten(@contrastColor, 5%);
+  }
+}

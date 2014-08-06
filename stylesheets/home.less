@@ -45,6 +45,278 @@
     }
 
   }
+}
 
+section h2 {
+  font-weight: normal;
+  text-align: center;
+  text-transform: none;
+  .bigFontSize();
+}
 
+.we-work-with {
+
+  .client {
+    margin-bottom: 30px;
+    .clearFloat();
+    .logo-client {
+      float: left;
+      max-width: 49%;
+    }
+
+    .description {
+      float: right;
+      max-width: 49%;
+    }
+
+    blockquote {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      p {
+        font-weight: 300;
+      }
+
+      cite {
+        color: @xebiaColor;
+      }
+    }
+  }
+
+  .client-list {
+    height: 200px;
+
+  }
+}
+
+.sharing-our-knowledge {
+
+  @partSize: 45%;
+  .knowledge-wrapper {
+    .clearFloat();
+
+    h3 {
+      text-align: center;
+      font-size: @defaultTitleSize*0.75;
+    }
+
+    .events {
+      width: @partSize;
+      float: left;
+
+    }
+    .training {
+      min-width: @partSize;
+      float: right;
+    }
+
+    @media (max-width: @secondBreakPoint) {
+      .events, .training {
+        float: none;
+        display: block;
+        min-width: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .bottom-link {
+    border-top: 1px solid @contrastColor;
+    text-align: right;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    a {
+
+      color: @contrastColor;
+      &:hover {
+        color: lighten(@contrastColor, 10%);
+      }
+    }
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    @media (max-width: @secondBreakPoint) {
+      position: static;
+      a {
+        margin-right: 30px;
+      }
+    }
+
+  }
+
+  @minHeightParts: 760px;
+  .training, .events {
+    min-height: @minHeightParts;
+    position: relative;
+
+    @media (max-width: @secondBreakPoint) {
+      min-height: 0;
+    }
+  }
+  .event {
+
+    margin-top: 30px;
+    .clearFloat();
+    h3 {
+      margin-bottom: 20px;
+      text-align: left;
+      font-weight: 300;
+    }
+    @dateSize: 110px;
+    .date {
+      text-align: center;
+      display: inline-block;
+      min-width: @dateSize;
+      margin-right: 40px;
+      float: left;
+      vertical-align: top;
+    }
+    .month-year, .day {
+      color: @xebiaColor;
+      text-transform: uppercase;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .day {
+      width: 94px;
+      height: 91px;
+      line-height: 91px;
+      background: url(../images/home/calendar-bg.png);
+    }
+    .description {
+      display: block;
+      vertical-align: top;
+      padding-top: 30px;
+
+      a {
+        color: @xebiaColor;
+
+        &:hover {
+          color: lighten(@xebiaColor, 10%);
+        }
+      }
+    }
+
+  }
+
+  .training-session {
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .clearFloat();
+
+    h3, .name, time {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .name, time {
+      font-weight: 300;
+    }
+
+    .photo {
+      text-align: center;
+      float: left;
+      vertical-align: top;
+      min-width: 110px;
+      margin-right: 40px;
+    }
+
+    .description {
+      display: block;
+      vertical-align: top;
+      float: left;
+      min-width: 110px;
+    }
+
+  }
+
+}
+
+.blog {
+  background-color: @xebiaColor;
+  padding-bottom: 50px;
+
+  h2 {
+    color: white;
+    text-align: left;
+  }
+
+  h3, .description, .author, a {
+    color: white;
+    text-align: left;
+  }
+
+  h3 {
+    border-bottom: none;
+    font-size: @defaultTitleSize * 0.60;
+    margin-bottom: 0;
+  }
+
+  .author {
+    font-size: @standardTextSize*0.8;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  .description {
+    font-size: @standardTextSize;
+    font-weight: 300;
+    min-height: 290px;
+  }
+
+  .read-more-wrapper {
+    text-align: left;
+
+    a {
+      font-weight: normal;
+      position: relative;
+      padding-left:10px;
+      padding-right:10px;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: white;
+        content: '';
+        .transition(top 0.3s);
+      }
+      &:hover:before {
+        top: 100%;
+        opacity: 1;
+      }
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 2px;
+        background: white;
+        content: '';
+
+        .transition(height 0.3s);
+
+      }
+      &:hover:after {
+        height: 100%;
+      }
+
+      &:hover {
+        font-weight: normal;
+      }
+    }
+  }
 }
