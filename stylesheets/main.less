@@ -127,15 +127,15 @@ p {
     }
 
     h3, p {
-      max-width:50%;
+      max-width: 50%;
       text-align: left;
     }
 
     img {
       margin-top: 0;
       position: absolute;
-      right:10px;
-      top:20px;
+      right: 10px;
+      top: 20px;
     }
   }
 
@@ -144,7 +144,7 @@ p {
     @imgSize: 130px;
 
     h3, p {
-      margin-right:@imgSize + 40px;
+      margin-right: @imgSize + 40px;
     }
 
     img {
@@ -177,8 +177,11 @@ p {
   cursor: pointer;
   .transition(background-color 0.5s);
 
+
   &:hover {
     background-color: lighten(@contrastColor, 5%);
   }
+
+  .arrowNext(6px);
 }
 

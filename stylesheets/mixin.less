@@ -84,3 +84,14 @@
     font-weight: normal;
   }
 }
+
+.arrowNext(@top) {
+  position: relative;
+  &:after {
+    content: '›';
+    font-size: 160%;
+    position: absolute;
+    top: @top;
+    margin-left:12px;
+  }
+}

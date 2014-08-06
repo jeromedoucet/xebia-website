@@ -50,6 +50,10 @@
 
   }
 
+  .doings a {
+    .arrowNext(-3px);
+  }
+
   h3 {
     padding-bottom: 25px;
 
@@ -95,6 +99,7 @@ section h2 {
     blockquote {
       margin-top: 30px;
       margin-bottom: 30px;
+
       p {
         font-weight: 300;
       }
@@ -153,10 +158,14 @@ section h2 {
     margin-bottom: 50px;
     a {
 
+      margin-right:20px;
+
       color: @contrastColor;
       &:hover {
         color: lighten(@contrastColor, 10%);
       }
+
+      .arrowNext(-3px);
     }
 
     position: absolute;
@@ -409,6 +418,10 @@ section h2 {
       min-height: 0;
       margin-bottom: 20px;
     }
+  }
+
+  .societies a {
+    .arrowNext(-3px);
   }
 
 }

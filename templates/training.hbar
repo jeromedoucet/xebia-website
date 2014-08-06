@@ -8,6 +8,6 @@
             <span class="name">{{name}}</span>
             <time datetime="{{session.isoDate}}">{{session.formattedDate}}</time>
         </div>
-        <a class="button-green">Register&nbsp;&gt;</a>
+        <a class="button-green">Register</a>
     </div>
 </div>
