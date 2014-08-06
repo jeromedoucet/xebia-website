@@ -34,7 +34,7 @@ Info
  * More Trainings -> home du site training
  * Section Blog avec les 3 derniers articles, "Titre, auteur et date et desc", "pas de code"
  * http://tympanus.net/Development/CreativeLinkEffects/ le truc bleu inefable pour read more
- * read more -> redirection vers le blog
+
  * More -> redirection
 
 

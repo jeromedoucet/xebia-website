@@ -247,6 +247,11 @@ section h2 {
   h2 {
     color: white;
     text-align: left;
+    margin-left: 5%;
+
+    @media (max-width: @secondBreakPoint) {
+      margin-left: 10px;
+    }
   }
 
   h3, .description, .author, a {
@@ -258,6 +263,10 @@ section h2 {
     border-bottom: none;
     font-size: @defaultTitleSize * 0.60;
     margin-bottom: 0;
+    @media (max-width: @secondBreakPoint) {
+      max-width: none;
+    }
+
   }
 
   .author {
@@ -266,12 +275,19 @@ section h2 {
     font-style: italic;
     margin-bottom: 30px;
     display: block;
+    margin-left: 10px;
   }
 
   .description {
     font-size: @standardTextSize;
     font-weight: 300;
     min-height: 290px;
+    margin-left: 10px;
+
+    @media (max-width: @secondBreakPoint) {
+      min-height: 0;
+      margin-bottom: 20px;
+    }
   }
 
   .read-more-wrapper {
@@ -280,8 +296,8 @@ section h2 {
     a {
       font-weight: normal;
       position: relative;
-      padding-left:10px;
-      padding-right:10px;
+      padding-left: 10px;
+      padding-right: 10px;
 
       &:before {
         position: absolute;
