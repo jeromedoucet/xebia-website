@@ -158,13 +158,9 @@ section h2 {
     margin-bottom: 50px;
     a {
 
-      margin-right:20px;
+      margin-right: 20px;
 
-      color: @contrastColor;
-      &:hover {
-        color: lighten(@contrastColor, 10%);
-      }
-
+      .linkColored(@contrastColor);
       .arrowNext(-3px);
     }
 
@@ -231,11 +227,7 @@ section h2 {
       padding-top: 30px;
 
       a {
-        color: @xebiaColor;
-
-        &:hover {
-          color: lighten(@xebiaColor, 10%);
-        }
+        .linkColored(@xebiaColor);
       }
     }
 

@@ -95,3 +95,11 @@
     margin-left:12px;
   }
 }
+
+.linkColored(@color) {
+  color: @color;
+  .transition(color 0.3s);
+  &:hover {
+    color: lighten(@color, 10%);
+  }
+}
