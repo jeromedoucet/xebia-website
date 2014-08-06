@@ -64,12 +64,10 @@ p {
   margin-left: 2%;
   margin-right: 2%;
 
+  .clearFloat();
+
   img {
     margin-top: 30px;
-  }
-
-  &:nth-child(2) img {
-    margin-top: 24px
   }
 
   h3 {
@@ -78,20 +76,27 @@ p {
     font-size: @defaultTitleSize * 0.71;
     text-transform: uppercase;
     text-align: center;
-    border-bottom: 1px solid @xebiaBackgroundTextColor;
+    border-bottom: 1px solid @colorIndicator;
 
     margin-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    min-height: 55px;
   }
 
   p {
     margin-bottom: 30px;
-    text-align: left;
+    text-align: center;
   }
 
   a {
     color: @linkColor;
+
+    font-weight: 300;
+
+    &:hover {
+      font-weight: 400;
+    }
   }
 
   @media (max-width: @firstBreakPoint) {
@@ -104,11 +109,52 @@ p {
 
   @media (max-width: @secondBreakPoint) {
 
-    max-width: none;
-    width: 80%;
+    width: auto;
     .centerBlock();
+    max-width: none;
     display: block;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    margin-bottom: 60px;
 
+    h3 {
+      border-bottom: none;
+      color: @xebiaColor;
+      min-height: 0;
+
+    }
+
+    h3, p, a {
+      margin-left: 10px;
+    }
+
+    @imgSize: 150px;
+
+    h3, p {
+      max-width: ~"calc(75% - @{imgSize})";
+      text-align: left;
+    }
+
+    img {
+      margin-top: 0;
+      float: right;
+      width: @imgSize;
+    }
+
+  }
+
+  @media (max-width: @thirdBreakPoint) {
+    @imgSize: 100px;
+
+    h3, p {
+      max-width: ~"calc(95% - @{imgSize})";
+    }
+
+    img {
+      margin-top: 80px;
+      width: @imgSize;
+    }
   }
 }
 
