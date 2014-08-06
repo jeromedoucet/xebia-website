@@ -67,10 +67,14 @@
 }
 
 section h2 {
-  font-weight: normal;
+  font-weight: 300;
   text-align: center;
   text-transform: none;
   .bigFontSize();
+
+  @media (max-width: @secondBreakPoint) {
+    text-align: left;
+  }
 }
 
 .we-work-with {
@@ -103,7 +107,7 @@ section h2 {
 
   .client-list {
     height: 200px;
-
+    background: url(../images/stripes.png) repeat;
   }
 }
 
