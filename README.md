@@ -10,6 +10,9 @@ Todo
   * Traduire en FR
 
 
+###Tout
+   * l'anglais est globalement globish
+
 ###Header
    * peut etre un effet sur les liens ?
 
@@ -24,6 +27,10 @@ Todo
    * En bas il me manques les icones
    * Icone de labs sur FR et .COM pas la meme (go data driven)
    * Réduire la taille des images en largeur en bas (Thiga, etc.) pour que Labs soit centré correctement en 800
+
+###Clients
+
+    * Le sous texte est pourri
 
 
 

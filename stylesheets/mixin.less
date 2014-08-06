@@ -46,8 +46,10 @@
   }
 }
 
-.linkDecoration() {
+.linkDecoration(@color) {
   position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
 
   &:before {
     position: absolute;
@@ -55,7 +57,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: white;
+    background: @color;
     content: '';
     .transition(top 0.3s);
   }
@@ -70,7 +72,7 @@
     left: 0;
     width: 2px;
     height: 2px;
-    background: white;
+    background: @color;
     content: '';
 
     .transition(height 0.3s);

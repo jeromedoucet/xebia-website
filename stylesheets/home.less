@@ -1,16 +1,5 @@
 .what-we-do {
 
-  h1 {
-    font-weight: 300;
-    .veryBigFontSize();
-    text-transform: none;
-    padding-bottom: 0;
-
-    @media (max-width: @secondBreakPoint) {
-      margin-bottom: 40px;
-    }
-  }
-
   .discover-service {
     margin: 20px auto;
     background-color: @contrastColor;
@@ -27,7 +16,6 @@
       color: white;
       text-align: center;
       padding: 0;
-      text-transform: none;
 
       font-size: @defaultTitleSize*0.60;
     }
@@ -381,10 +369,7 @@ section h2 {
 
       font-weight: normal;
 
-      padding-left: 10px;
-      padding-right: 10px;
-
-      .linkDecoration();
+      .linkDecoration(white);
     }
   }
 
