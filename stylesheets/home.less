@@ -120,6 +120,10 @@ section h2 {
     h3 {
       text-align: center;
       font-size: @defaultTitleSize*0.75;
+
+      @media (max-width: @secondBreakPoint) {
+        text-align: left;
+      }
     }
 
     .events {
@@ -256,11 +260,12 @@ section h2 {
       margin-bottom: 30px;
     }
 
+    @photoMinSize: 110px;
     .photo {
       text-align: center;
       float: left;
       vertical-align: top;
-      min-width: 110px;
+      min-width: @photoMinSize;
       margin-right: 40px;
 
       img {
@@ -272,11 +277,35 @@ section h2 {
       display: block;
       vertical-align: top;
       float: left;
-      min-width: 110px;
+
+    }
+
+    @media (max-width: @secondBreakPoint) {
+      .photo {
+        min-height: 160px;
+      }
+
+      .description {
+        float: none;
+
+        width: 100%;
+        position: relative;
+        a {
+          // float: right;
+          position: absolute;
+          top: 0;
+          right: 10px;
+        }
+      }
+    }
+
+    @media (max-width: 540px) {
+      .description a {
+        position: static;
+      }
     }
 
   }
-
 }
 
 .blog {

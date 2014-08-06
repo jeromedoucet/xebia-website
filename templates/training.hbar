@@ -3,9 +3,11 @@
         <img alt="{{name}}" src="{{photoUrl}}" />
     </div>
     <div class="description">
-        <h3>{{session.title}}</h3>
-        <span class="name">{{name}}</span>
-        <time datetime="{{session.isoDate}}">{{session.formattedDate}}</time>
+        <div class="inner-desc">
+            <h3>{{session.title}}</h3>
+            <span class="name">{{name}}</span>
+            <time datetime="{{session.isoDate}}">{{session.formattedDate}}</time>
+        </div>
         <a class="button-green">Register&nbsp;&gt;</a>
     </div>
 </div>
