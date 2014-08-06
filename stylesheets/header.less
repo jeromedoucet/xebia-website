@@ -5,6 +5,8 @@ header {
   height: @headerHeight;
   margin-bottom: 40px;
 
+  @thirdHeaderBreakPoint:580px;
+
   .header-content {
     padding: 2px 0;
     background-color: white;
@@ -58,7 +60,7 @@ header {
 
     .contact-bloc {
       float: right;
-      @media (max-width: @thirdBreakPoint) {
+      @media (max-width: @thirdHeaderBreakPoint) {
         .clearFloat();
       }
     }
@@ -74,9 +76,8 @@ header {
         margin-top: 5px;
       }
 
-      @media (max-width: @thirdBreakPoint) {
+      @media (max-width: @thirdHeaderBreakPoint) {
         display: inline-block;
-
       }
       a {
         color: @contrastColor;
@@ -110,7 +111,7 @@ header {
         }
       }
 
-      @media (max-width: @thirdBreakPoint) {
+      @media (max-width: @thirdHeaderBreakPoint) {
         float: left;
       }
     }
@@ -265,7 +266,7 @@ header {
     }
   }
 
-  @media (max-width: @thirdBreakPoint) {
+  @media (max-width: @thirdHeaderBreakPoint) {
     .centering {
       text-align: right;
     }
