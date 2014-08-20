@@ -31,6 +31,21 @@ Todo
 ###Clients
 
     * Le sous texte est pourri
+    * les liens doivent etre actif aussi au survol de l'icone
+
+###Services
+
+    * Il manque le texte cutting-edge
+    * IL manque l'API pour training pour le truc à droite
+    * Je met quoi pour le truc de vente pour le truc  à droite ?
+
+
+###Knowledge
+
+    * On utilise pas JIRA !
+    * Je sais pas ou pointent les liens
+    * Il me manque les images
+
 
 
 
@@ -45,7 +60,6 @@ Info
  * Training -> 3 prochaines formations
  * More Trainings -> home du site training
  * Section Blog avec les 3 derniers articles, "Titre, auteur et date et desc", "pas de code"
- * http://tympanus.net/Development/CreativeLinkEffects/ le truc bleu inefable pour read more
 
  * More -> redirection
 
