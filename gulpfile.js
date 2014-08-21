@@ -15,7 +15,7 @@ var fileInclude = require('gulp-file-include');
 
 var paths = {
     scripts: 'scripts/**/*',
-    font: 'font/**/*',
+    font: 'fonts/**/*',
     stylesheets: 'stylesheets/**/*.less',
     templates: 'templates/**/*',
     images: 'images/**/*',

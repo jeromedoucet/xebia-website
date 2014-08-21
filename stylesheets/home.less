@@ -103,7 +103,8 @@ section h2 {
 
 .sharing-our-knowledge {
 
-  @partSize: 45%;
+  //@partSize: 45%;
+  @partSize: 90%; //pour l'instant car il n'y a pas training
   .knowledge-wrapper {
     .clearFloat();
 
@@ -297,6 +298,9 @@ section h2 {
 .blog {
   background-color: @xebiaColor;
   padding-bottom: 50px;
+  .centering {
+    position: relative;
+  }
 
   h2 {
     color: white;
@@ -308,6 +312,21 @@ section h2 {
     margin-bottom: 50px;
   }
 
+  .rss {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+
+    i {
+      margin-left: 10px;
+      font-size: 15px;
+    }
+  }
+
   h3, .description, .author, a {
     color: white;
     text-align: left;
@@ -317,7 +336,7 @@ section h2 {
     border-bottom: none;
     font-size: @defaultTitleSize * 0.60;
     margin-bottom: 0;
-    min-height: 100px;
+    min-height: 75px;
   }
 
   .author {
@@ -327,13 +346,13 @@ section h2 {
     margin-bottom: 30px;
     display: block;
     margin-left: 10px;
-    min-height: 30px;
+    min-height: 20px;
   }
 
   .description {
     font-size: @standardTextSize;
     font-weight: 300;
-    min-height: 290px;
+    min-height: 210px;
     margin-left: 10px;
 
   }
@@ -374,6 +393,7 @@ section h2 {
     text-align: right;
     a {
       margin-right: 20px;
+      padding-left: 20px;
     }
   }
 }
@@ -386,11 +406,68 @@ section h2 {
   }
 
   p {
-    min-height: 110px;
+    min-height: 80px;
     margin-bottom: 0;
     @media (max-width: @thirdBreakPoint) {
       min-height: 0;
       margin-bottom: 20px;
+    }
+  }
+
+  .logo-wrapper {
+    height: 160px;
+    position: relative;
+
+    img {
+      margin-top: 0;
+      position: relative;
+    }
+
+    .logoPosition(@height) {
+      height: @height;
+      top: ~"calc(50% - @{height}/2)";
+
+      @media (max-width: @secondBreakPoint) {
+        position: static;
+        top: 0;
+
+      }
+    }
+
+    .thiga-logo {
+      .logoPosition(150px)
+    }
+
+    .ux-logo {
+      .logoPosition(110px)
+    }
+
+    .labs-logo {
+      .logoPosition(76px)
+    }
+  }
+
+  @media (max-width: @secondBreakPoint) {
+    .col3 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    p, h3 {
+      text-align: center;
+      max-width: none;
+      min-height: 0;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .logo-wrapper {
+      height: auto;
+      text-align: center;
+      min-height: 130px;
+
     }
   }
 

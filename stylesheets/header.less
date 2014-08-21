@@ -5,7 +5,7 @@ header {
   height: @headerHeight;
   margin-bottom: 40px;
 
-  @thirdHeaderBreakPoint:580px;
+  @thirdHeaderBreakPoint: 580px;
 
   .header-content {
     padding: 2px 0;
@@ -44,7 +44,7 @@ header {
     .centering {
       .clearFloat();
       .link-home {
-        min-height:55px;
+        min-height: 55px;
         display: inline-block;
 
       }
@@ -80,13 +80,15 @@ header {
         display: inline-block;
       }
       a {
-        color: @contrastColor;
+
+        .linkColored(@contrastColor);
         font-size: @topMenuSize;
 
         &:visited {
           color: @contrastColor;
           text-decoration: none;
         }
+
       }
     }
 
@@ -94,7 +96,7 @@ header {
       border-right: 1px solid @contrastColor;
       padding-right: 20px;
 
-      .socicon {
+      .fa {
 
         margin-left: 10px;
         margin-right: 10px;
@@ -105,7 +107,7 @@ header {
         padding-right: 0;
         border: none;
 
-        .socicon {
+        .fa {
           margin-left: 5px;
           margin-right: 5px;
         }
@@ -210,7 +212,7 @@ header {
 
     .logo-header {
       width: 100px;
-      margin-right:10px;
+      margin-right: 10px;
     }
 
     nav {

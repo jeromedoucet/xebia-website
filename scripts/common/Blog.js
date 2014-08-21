@@ -22,7 +22,7 @@
                 var blogViewModel = {
                     title: post.title,
                     name: post.author ? post.author.name : '',
-                    date: post.date ? moment(post.date).format('MMMM DD, YYYY') : '',
+                    date: post.date ? moment(post.date).format('DD MMMM YYYY') : '',
                     description: post.excerpt.replace(/\s\[(.*)]/g, '$1'),
                     url: post.url
                 };
