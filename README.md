@@ -18,33 +18,39 @@ Todo
 
 ###Home
 
-   * Les liens read more, ils mennent ou ?
-   * Il me manque tous les logos clients, et le texte allant avec
+   * Les liens read more, ils mennent ou ? -> services
+   * Il me manque tous les logos clients, et le texte allant avec -> Mettre les meme
 
-   * on fait quoi quand y'a pas d'évenement prévu
-   * j'ai pas d'API pour les formatiosn
-   * Blog super chiant : je fais quoi des images ?
-   * En bas il me manques les icones
-   * Icone de labs sur FR et .COM pas la meme (go data driven)
-   * Réduire la taille des images en largeur en bas (Thiga, etc.) pour que Labs soit centré correctement en 800
+   * on fait quoi quand y'a pas d'évenement prévu -> texte "pas d'évènements prévus"
+
+   * j'ai pas d'API pour les formations -> Coder une API sur le site de training
+
+
+   * En bas il me manques les icones -> les logos des boites
+
 
 ###Clients
 
-    * Le sous texte est pourri
-    * les liens doivent etre actif aussi au survol de l'icone
+    * Le sous texte est pourri -> reprendre le texte hollandais
+    * les liens doivent etre actif aussi au survol de l'icone -> virer les catégories et mettre tous les clients en une seule bande
 
 ###Services
 
-    * Il manque le texte cutting-edge
-    * IL manque l'API pour training pour le truc à droite
-    * Je met quoi pour le truc de vente pour le truc  à droite ?
+    * Il manque le texte cutting-edge -> reprend xebia.com
+    * IL manque l'API pour training pour le truc à droite -> à virer
+    * Je met quoi pour le truc de vente pour le truc  à droite ?  -> a virer
 
 
 ###Knowledge
 
-    * On utilise pas JIRA !
-    * Je sais pas ou pointent les liens
+    * On utilise pas JIRA ! -> remplacer par slack, confluence
+    * Je sais pas ou pointent les liens -> techevents (eventbrite) ; events -> pas de liens ;
+
     * Il me manque les images
+
+    * techtrends -> fusionner directement
+
+
 
 
 

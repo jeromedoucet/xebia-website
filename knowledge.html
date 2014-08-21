@@ -13,34 +13,66 @@
     <link rel="stylesheet" href="stylesheets/knowledge.less"/>
     <!-- endbuild -->
 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+
+    <!-- build:hbar js/templates.js -->
+    <script src="templates/knowledge/blog.hbar"></script>
+    <!-- endbuild -->
+
+
+    <!-- build:js js/main.js -->
+    <script src="scripts/common/Blog.js"></script>
+    <script src="scripts/knowledge/Blog.js"></script>
+    <!-- endbuild -->
 
 </head>
 <body>
 @@include('templates/header.html')
 
 <main>
-    <section>
+    <section class="knowledge centering">
         <h1>Knowledge</h1>
 
         <h2>We share knowledge in a number of ways, amongst others:</h2>
 
         <ul class="left-list">
             <li>A, mandatory, monthly XKE (Xebia Knowledge Exchange), a 1 day
-            gathering of all colleagues, where we share knowledge and present
-            on technology, processes and other topics of interest</li>
+                gathering of all colleagues, where we share knowledge and present
+                on technology, processes and other topics of interest
+            </li>
 
             <li>Our <a href="http://blog.xebia.fr" title="blog">Blog</a></li>
 
-            <li>Techevents and meetups</li>
+
         </ul>
 
         <ul class="right-list">
-            <li>Frequent presentations at various events</li>
+            <li>Techevents and meetups</li>
 
-            <li>Articles, white paper and case studies</li>
+            <li>Frequent presentations at various events</li>
 
             <li>Confluence and Jira for internal sharing amongst colleagues</li>
         </ul>
+    </section>
+
+    <section class="techtrends">
+        <div class="centering">
+
+        </div>
+    </section>
+
+    <section class="video centering">
+
+    </section>
+
+    <section class="blog centering">
+        <h2>Nos derniers articles</h2>
+
+        <div class="blog-articles-wrapper" id="blog-articles-wrapper">
+            <!-- rempli dynamiquement -->
+        </div>
+
     </section>
 </main>
 
