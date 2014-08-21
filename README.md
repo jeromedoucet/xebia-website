@@ -18,7 +18,7 @@ Todo
 
 ###Home
 
-   * Les liens read more, ils mennent ou ? -> services
+
    * Il me manque tous les logos clients, et le texte allant avec -> Mettre les meme
 
    * on fait quoi quand y'a pas d'évenement prévu -> texte "pas d'évènements prévus"
