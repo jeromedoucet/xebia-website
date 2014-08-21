@@ -12,9 +12,101 @@ section {
     text-align: center;
     height: 75px;
     line-height: 75px;
+
+    &.sticky {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      border-top: 0;
+    }
+
+    @media (max-width: @firstBreakPoint) {
+      display: none;
+    }
     a {
       color: white;
+      display: inline-block;
+      min-width: 280px;
+      font-weight: 300;
+      text-transform: uppercase;
+      height: 45px;
+      line-height: 45px;
+      vertical-align: middle;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      &:first-child {
+        border-right: 1px solid white;
+      }
+
+      &:last-child {
+        border-left: 1px solid white;
+      }
+
+      img {
+        margin-right: 10px;
+
+        height: 35px;
+        vertical-align: middle;
+      }
     }
   }
 
+}
+
+.main-section  {
+  position: relative;
+  border-bottom: 1px solid @alternativeBackgroundColor;
+
+  .description {
+    width:80%;
+  }
+
+  .fondations {
+    width:15%;
+    position: absolute;
+    right:0;
+    top:110px;
+
+    li {
+      margin-bottom:5px;
+    }
+
+    a {
+      background-color: @xebiaColor;
+      color: white;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      display: inline-block;
+      width:85px;
+      position: relative;
+      font-weight: 300;
+
+      &:after {
+        content:'›';
+        margin-left:20px;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        font-size: 27px;
+      }
+    }
+  }
+
+  @media (max-width: @secondBreakPoint) {
+    .description {
+      width: auto;
+    }
+    .fondations {
+      width: auto;
+      position: static;
+      text-align: center;
+
+      li {
+        display: inline-block;
+      }
+    }
+  }
 }

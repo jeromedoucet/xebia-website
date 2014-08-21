@@ -20,9 +20,9 @@ Todo
 
 ###Services
 
-    * Il manque le texte cutting-edge -> reprend xebia.com
-    * IL manque l'API pour training pour le truc à droite -> à virer
-    * Je met quoi pour le truc de vente pour le truc  à droite ?  -> a virer
+    * Images en dessous à mettre
+
+
 
 
 ###Knowledge
