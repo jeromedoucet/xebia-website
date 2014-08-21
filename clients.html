@@ -6,10 +6,22 @@
 
     @@include('templates/standardHead.html')
 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+
+    <!-- build:hbar js/templates.js -->
+    <script src="templates/common/client.hbar"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/main.js -->
+    <script src="scripts/common/data/clients-data.js"></script>
+    <script src="scripts/common/Clients.js"></script>
+    <script src="scripts/clients/Clients.js"></script>
+    <!-- endbuild -->
 
     <!-- build:css css/home.css -->
     <link rel="stylesheet" href="stylesheets/vars.less"/>
     <link rel="stylesheet" href="stylesheets/mixin.less"/>
+    <link rel="stylesheet" href="stylesheets/clients-list.less"/>
     <link rel="stylesheet" href="stylesheets/clients.less"/>
     <!-- endbuild -->
 
@@ -20,67 +32,16 @@
 
 <main>
     <section class="introduction centering">
-        <h1>We help entreprise <strong>accelerate</strong></h1>
+        <h1>Nous aidons les entreprises à <strong>accelerer</strong></h1>
 
-        <p>Delivering higher quality software faster is the #1 goal of top delivery organizations today.</p>
+        <p>Nous aidons nos clients à construire les logiciels de haute qualité dont ils ont besoin,
+            et à livre rapidement et souvent, à moindre coûts.</p>
 
-        <p> We help you reach it XXXXXXXXXX.</p>
-
-        <div class="link-to-subpart col-wrapper">
-            <div class="col3">
-                <img src="images/clients/acceleration.png" alt="Acceleration"/>
-
-                <a href="#acceleration">Acceleration</a>
-            </div>
-
-            <div class="col3">
-                <img src="images/clients/softwareCraftmanship.png" alt="Software Craftmanship"/>
-
-                <a href="#software-craftmanship">Software Craftmanship</a>
-            </div>
-
-            <div class="col3">
-                <img src="images/clients/cuttingEdgeTechnology.png" alt="Cutting Edge Technology"/>
-
-                <a href="#cutting-edge-technology">Cutting-edge Technology</a>
-            </div>
-
-        </div>
     </section>
 
-    <section class="acceleration" id="acceleration">
-
+    <section class="clients">
         <div class="centering">
-            <h2>Acceleration</h2>
-
-        </div>
-        <div class="client-list">
-            <div class="centering">
-
-            </div>
-        </div>
-    </section>
-    <section class="software-craftmanship" id="software-craftmanship">
-
-        <div class="centering">
-            <h2>Software Craftmanship</h2>
-
-        </div>
-        <div class="client-list">
-            <div class="centering">
-
-            </div>
-        </div>
-    </section>
-    <section class="cutting-edge-technology" id="cutting-edge-technology">
-
-        <div class="centering">
-            <h2>Cutting-edge technology</h2>
-
-        </div>
-        <div class="client-list">
-            <div class="centering">
-
+            <div id="clients-logo">
             </div>
         </div>
     </section>

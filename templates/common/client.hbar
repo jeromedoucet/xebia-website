@@ -1,3 +1,2 @@
 <div title="{{name}}" class="client-logo client-{{slurpedName}} client-{{idx}}" >
-
 </div>

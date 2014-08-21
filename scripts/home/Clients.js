@@ -1,25 +1,10 @@
 (function (TEMPLATES, clients) {
 
-    var slurp = function (str) {
-        return str.replace(/\s/g, '-').replace(/['.]/g, '_').replace(/[ô]/g, 'o').replace(/[éè]/g, 'e').replace(/\+/g, '_plus').toLowerCase()
-    };
-
     $(function () {
-
 
         var clientTemplate = TEMPLATES['client'];
 
-        var html = clients.map(function (client, idx) {
-            return clientTemplate({
-                name: client.name,
-                slurpedName: slurp(client.name),
-                idx: idx
-            });
-        }).join('');
-
-
-        var $clientsLogo = $('#clients-logo');
-        $clientsLogo.append(html);
+        new Client(clientTemplate).displayIn(clients, 'clients-logo');
 
         var $clientLogo = $('.client-logo');
         var sizeOfLogo = $clientLogo.outerWidth(true);
@@ -50,7 +35,7 @@
             },
             move: function (newPosition) {
                 this.currentPosition = newPosition;
-                $clientsLogo.css('left', newPosition);
+                $('#clients-logo').css('left', newPosition);
             }
         };
 

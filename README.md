@@ -13,26 +13,10 @@ Todo
 ###Tout
    * l'anglais est globalement globish
 
-###Header
-   * peut etre un effet sur les liens ?
-
 ###Home
 
-
-   * Il me manque tous les logos clients, et le texte allant avec -> Mettre les meme
-
    * on fait quoi quand y'a pas d'évenement prévu -> texte "pas d'évènements prévus"
-
    * j'ai pas d'API pour les formations -> Coder une API sur le site de training
-
-
-   * En bas il me manques les icones -> les logos des boites
-
-
-###Clients
-
-    * Le sous texte est pourri -> reprendre le texte hollandais
-    * les liens doivent etre actif aussi au survol de l'icone -> virer les catégories et mettre tous les clients en une seule bande
 
 ###Services
 
