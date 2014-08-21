@@ -13,6 +13,7 @@
     <script src="templates/home/training.hbar"></script>
     <script src="templates/home/event.hbar"></script>
     <script src="templates/home/blog.hbar"></script>
+    <script src="templates/home/client.hbar"></script>
     <!-- endbuild -->
 
     <!-- build:js js/main.js -->
@@ -21,11 +22,15 @@
     <script src="scripts/home/Training.js"></script>
     <script src="scripts/common/Blog.js"></script>
     <script src="scripts/home/Blog.js"></script>
+
+    <script src="scripts/home/data/clients-data.js"></script>
+    <script src="scripts/home/Clients.js"></script>
     <!-- endbuild -->
 
     <!-- build:css css/home.css -->
     <link rel="stylesheet" href="stylesheets/vars.less"/>
     <link rel="stylesheet" href="stylesheets/mixin.less"/>
+    <link rel="stylesheet" href="stylesheets/clients-list.less"/>
     <link rel="stylesheet" href="stylesheets/home.less"/>
     <!-- endbuild -->
 
@@ -36,10 +41,10 @@
 
 <main>
     <section class="what-we-do centering">
-        <h1>We <strong>accelerate</strong> the business of our customers by enabling <strong>innovation</strong></h1>
+        <h1>Nous <strong>accelerons</strong> le métier de vos clients à travers <strong>l'innovation</strong></h1>
 
         <div class="discover-service">
-            <h2>Discover Our Services</h2>
+            <h2>Découvrez nos services</h2>
         </div>
 
         <div class="col-wrapper doings">
@@ -48,9 +53,9 @@
 
                 <h3>Acceleration</h3>
 
-                <p>Fast Time-to-Market of new ideas for optimally servicing your clients</p>
+                <p>Time-to-Market rapide de nouvelles idées pour servir vos clients de façon optimale</p>
 
-                <a href="services.html#acceleration">Read more</a>
+                <a href="services.html#acceleration">En savoir plus</a>
             </div>
 
             <div class="col3">
@@ -58,17 +63,17 @@
 
                 <h3>Software Craftmanship</h3>
 
-                <p>We produce high quality systems that only need a minimum of maintenance</p>
+                <p>Nous produisons des systèmes de hautes qualités qui ne nécessitent qu'un minimum de maintenance.</p>
 
-                <a href="services.html#software-craftmanship">Read more</a>
+                <a href="services.html#software-craftmanship">En savoir plus</a>
             </div>
 
             <div class="col3">
                 <img src="images/home/cutting-edge-tech.png" alt="Cutting Edge Technology"/>
 
-                <h3>Cutting Edge Technology</h3>
+                <h3>Technologie de pointe</h3>
 
-                <p>As a frontrunner we apply high-tech innovation to the larger entreprises</p>
+                <p>En tant que leader, nous utilisons l'innovation technologique aux plus grands entreprises.</p>
 
                 <a href="services.html#cutting-edge">Read more</a>
             </div>
@@ -76,58 +81,51 @@
     </section>
 
     <section class="we-work-with centering">
-        <h2>We work with</h2>
+        <h2>Nous travaillons avec</h2>
 
-        <div class="client">
-            <img class="logo-client" alt="canal+"/>
-
-            <div class="description">
-                <blockquote>
-                    <p>
-                        Thanks to Xebia Agile and Scrum are now the adopted way of working within our organization.
-                        Because of this we can successfully organize our complex ICT-organization.
-                    </p>
-
-                    <cite>Canal+<br/> Frederic Brochard, CTO</cite>
-                </blockquote>
-
-                <a class="button-green" href="">More Clients</a>
-            </div>
-        </div>
 
         <div class="client-list">
+            <button class="nav-button before-button">‹</button>
+
+            <div class="client-list-wrapper">
+                <div class="inner-client-list" id="clients-logo">
+                    <!-- rempli dynamiquement -->
+                </div>
+            </div>
+
+            <button class="nav-button after-button">›</button>
 
         </div>
     </section>
 
     <section class="sharing-our-knowledge centering">
-        <h2>Sharing our knowledge</h2>
+        <h2>Partage de nos connaissances</h2>
 
         <div class="knowledge-wrapper">
             <div class="events">
-                <h3>Events</h3>
+                <h3>Evenements</h3>
 
                 <div id="events-wrapper">
                     <!-- rempli par JS -->
                 </div>
 
                 <div class="bottom-link">
-                    <a href="">All Events</a>
+                    <a href="">Tous les evenements</a>
                 </div>
             </div>
+            <!-- WAITING FOR API
+                        <div class="training">
+                            <h3>Training</h3>
 
-            <div class="training">
-                <h3>Training</h3>
+                            <div id="training-session-wrapper">
 
-                <div id="training-session-wrapper">
-                    <!-- rempli par JS -->
-                </div>
+                            </div>
 
-                <div class="bottom-link">
-                    <a href="">All Training</a>
-                </div>
-            </div>
-
+                            <div class="bottom-link">
+                                <a href="">Toutes les formations</a>
+                            </div>
+                        </div>
+            -->
         </div>
 
     </section>
@@ -141,7 +139,7 @@
             </div>
 
             <div class="more-blog-wrapper">
-                <a class="button-green" href="http://blog.xebia.fr">More Blog</a>
+                <a class="button-green" href="http://blog.xebia.fr">Plus d'articles</a>
             </div>
         </div>
     </section>
@@ -155,9 +153,9 @@
 
                 <h3>Thiga</h3>
 
-                <p>Digital innovation consulting firm</p>
+                <p>Digital innovation & Lean Product Management</p>
 
-                <a href="http://www.thiga.fr">Read more</a>
+                <a href="http://www.thiga.fr">En savoir plus</a>
             </div>
 
             <div class="col3">
@@ -167,7 +165,7 @@
 
                 <p>User eXperience, Data Vizualisation & Digital Thinking</p>
 
-                <a href="http://www.ux-republic.com/">Read more</a>
+                <a href="http://www.ux-republic.com/">En savoir plus</a>
             </div>
 
             <div class="col3">
@@ -177,7 +175,7 @@
 
                 <p>Deliver faster</p>
 
-                <a href="http://xebialabs.com/">Read more</a>
+                <a href="http://xebialabs.com/">En savoir plus</a>
             </div>
         </div>
     </section>
