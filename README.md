@@ -22,9 +22,6 @@ Todo
 
     * Images en dessous à mettre
 
-
-
-
 ###Knowledge
 
     * On utilise pas JIRA ! -> remplacer par slack, confluence

@@ -94,13 +94,16 @@
     font-size: 160%;
     position: absolute;
     top: @top;
-    margin-left:12px;
+    margin-left: 12px;
   }
 }
 
 .linkColored(@color) {
   color: @color;
   .transition(color 0.3s);
+  &:visited {
+    color: @color;
+  }
   &:hover {
     color: lighten(@color, 10%);
   }
