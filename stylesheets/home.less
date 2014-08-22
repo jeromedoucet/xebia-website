@@ -105,7 +105,7 @@ section h2 {
   //@partSize: 45%;
   @partSize: 90%; //pour l'instant car il n'y a pas training
 
-  margin-bottom:30px;
+  margin-bottom: 30px;
   .knowledge-wrapper {
     .clearFloat();
 
@@ -138,36 +138,7 @@ section h2 {
     }
   }
 
-  .bottom-link {
-    border-top: 1px solid @contrastColor;
-    text-align: right;
-    padding-top: 20px;
-    margin-bottom: 50px;
-    a {
-
-      margin-right: 20px;
-
-      .linkColored(@contrastColor);
-      .arrowNext(-3px);
-    }
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    @media (max-width: @secondBreakPoint) {
-      position: static;
-      a {
-        margin-right: 30px;
-      }
-    }
-
-  }
-
-
   .training, .events {
-   // min-height: 760px;
     min-height: 150px;
     position: relative;
 
@@ -401,6 +372,9 @@ section h2 {
 }
 
 .xebia-universe {
+
+
+  border-bottom: 1px solid @colorIndicator;
 
   h3 {
     border-bottom: none;
