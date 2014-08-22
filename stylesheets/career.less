@@ -1,0 +1,131 @@
+.career {
+  padding-bottom: 30px;
+}
+
+.we-work-with {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.citations {
+  background: url(../images/stripes.png) repeat;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  .citation {
+    background-color: white;
+    margin-bottom: 20px;
+
+    blockquote {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 30px;
+
+      width: 64%;
+
+      p {
+        font-size: @standardTextSize * 1.2;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+      cite {
+        font-size: @standardTextSize * 0.8;
+        font-weight: bold;
+      }
+    }
+
+    @media (max-width: @secondBreakPoint) {
+
+      text-align: center;
+
+      blockquote {
+        width: auto;
+        display: block;
+        margin-left: 0;
+      }
+
+    }
+
+    .clearFloat();
+  }
+
+  .img-wrapper {
+    display: inline-block;
+    max-width: none;
+    vertical-align: middle;
+    position: relative;
+    float: none;
+
+    img {
+      width: 150px;
+    }
+
+    &.right {
+      float: none;
+    }
+
+    @media (min-width: @secondBreakPoint) {
+
+      float: left;
+      max-width: 35%;
+
+
+      @arrowWidth: 15px;
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: @arrowWidth solid transparent;
+        border-bottom: @arrowWidth solid transparent;
+        border-right: @arrowWidth solid white;
+        display: block;
+        position: absolute;
+        top: 45%;
+        right: 0;
+      }
+
+      &.right {
+
+        float: right;
+
+        &:after {
+          border: none;
+        }
+
+        &:before {
+          content: '';
+          width: 0;
+          height: 0;
+          border-top: @arrowWidth solid transparent;
+          border-bottom: @arrowWidth solid transparent;
+          border-left: @arrowWidth solid white;
+          display: block;
+          position: absolute;
+          top: 45%;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.jobs {
+  ul {
+    margin-left: 10px;
+  }
+  li {
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 32%;
+    min-width: 200px;
+  }
+  a {
+    .linkColored(@linkColor);
+
+    &:before {
+      content: '›';
+      margin-right: 10px;
+    }
+
+  }
+}

@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="stylesheets/vars.less"/>
     <link rel="stylesheet" href="stylesheets/mixin.less"/>
     <link rel="stylesheet" href="stylesheets/clients-list.less"/>
-    <link rel="stylesheet" href="stylesheets/clients.less"/>
+    <link rel="stylesheet" href="stylesheets/career.less"/>
     <!-- endbuild -->
 
 
@@ -31,7 +31,62 @@
 @@include('templates/header.html')
 
 <main>
-    
+    <section class="career centering">
+        <div class="main-photo-wrapper">
+            <img src="images/career/career_photo.jpg" alt="Photo de xebian partageant la connaissance"/>
+
+            <h1 class="photo-description">
+                Xebia croit en la qualité et la volonté de ses employés
+            </h1>
+        </div>
+    </section>
+
+    <section class="jobs centering">
+        <ul>
+            <li><a href="mailto:recrutement@xebia.fr">Consultant Mobilité</a></li>
+            <li><a href="mailto:recrutement@xebia.fr">Consultant Java</a></li>
+            <li><a href="mailto:recrutement@xebia.fr">Consultant DevOps</a></li>
+            <li><a href="mailto:recrutement@xebia.fr">Expert BigData</a></li>
+            <li><a href="mailto:recrutement@xebia.fr">Expert Cloud</a></li>
+            <li><a href="mailto:recrutement@xebia.fr">Coach Agile</a></li>
+        </ul>
+    </section>
+
+    <section class="citations">
+        <div class="centering">
+            <div class="citation">
+                <div class="img-wrapper">
+                    <img alt="Christophe Heubes" src="images/career/christophe_heubes.png">
+                </div>
+                <blockquote>
+                    <p>Xebia c'est cool.</p>
+                    <cite>Christophe Heubes, Chef</cite>
+                </blockquote>
+            </div>
+
+            <div class="citation">
+                <div class="img-wrapper  right">
+                    <img alt="Christophe Heubes" src="images/career/christophe_heubes.png">
+                </div>
+                <blockquote>
+                    <p>Xebia c'est cool.</p>
+                    <cite>Christophe Heubes, Chef</cite>
+                </blockquote>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="we-work-with centering">
+        <div class="centering">
+            <h2>Nous travaillons avec</h2>
+
+            <div id="clients-logo">
+                <!-- rempli dynamiquement -->
+            </div>
+        </div>
+    </section>
 </main>
 
 @@include('templates/footer.html')
