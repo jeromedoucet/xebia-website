@@ -257,7 +257,11 @@ section h2 {
     position: absolute;
     top: 40px;
     right: 10px;
-    background-color: black;
+    .transition(background-color 0.2s);
+    background-color: lighten(black, 15%);
+    &:hover {
+      background-color: black;
+    }
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 12px;
@@ -277,7 +281,7 @@ section h2 {
     border-bottom: none;
     font-size: @defaultTitleSize * 0.60;
     margin-bottom: 0;
-    min-height: 75px;
+    min-height: 65px;
   }
 
   .author {
@@ -399,6 +403,8 @@ section h2 {
       text-align: center;
       max-width: none;
       min-height: 0;
+      margin-left:auto;
+      margin-right:auto;
     }
 
     p {
@@ -411,10 +417,6 @@ section h2 {
       min-height: 130px;
 
     }
-  }
-
-  .societies a {
-    .arrowNext(-3px);
   }
 
 }

@@ -132,10 +132,12 @@
     font-size: @standardTextSize * 1.2;
 
     a {
-
       .linkColored(@linkColor);
       font-weight: 300;
+    }
 
+    @media (max-width: @secondBreakPoint) {
+      margin-right: 0;
     }
 
   }
