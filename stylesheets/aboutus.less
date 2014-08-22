@@ -1,0 +1,55 @@
+.aboutus {
+  margin-bottom: 80px;
+}
+
+.what-we-do {
+  .left-list, .right-list {
+    .greenTickedList();
+  }
+
+  padding-bottom: 30px;
+}
+
+.ingredients-wrapper {
+
+  text-align: center;
+
+  .ingredient {
+
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    vertical-align: top;
+    img {
+      width: 150px;
+      display: block;
+      .centerBlock();
+    }
+
+  }
+}
+
+.join-us {
+  background-color: @contrastColor;
+  h2 {
+    color: white;
+    text-transform: uppercase;
+    .bigFontSize();
+    padding-bottom: 10px;
+  }
+  h3 {
+    color: white;
+    font-size: @defaultTitleSize;
+    @media (max-width: @thirdBreakPoint) {
+      font-size: @defaultTitleSize * 0.9;
+    }
+    margin-bottom: 30px;
+  }
+  .do-you-want-to-know-more {
+    border-top: 2px solid white;
+    .linkColored(white);
+    width: 95%;
+
+  }
+  padding-bottom: 30px;
+}

@@ -212,3 +212,35 @@ p {
   padding-right: 30px;
   .arrowNext(8px);
 }
+
+.main-photo-wrapper {
+  position: relative;
+  margin-bottom: 50px;
+  img {
+    width: 1024px;
+
+    @media (max-width: @firstBreakPoint) {
+      width: 100%;
+    }
+  }
+  .photo-description {
+    position: absolute;
+    color: white;
+    background-color: @contrastColor;
+    max-width: 700px;
+    display: inline-block;
+    font-size: @defaultTitleSize;
+    padding: 20px;
+    bottom: -50px;
+    left: 70px;
+
+  }
+
+  @media (max-width: @secondBreakPoint) {
+    margin-bottom: 0;
+    .photo-description {
+      position: static;
+      max-width: none;
+    }
+  }
+}

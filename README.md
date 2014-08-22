@@ -23,12 +23,16 @@ Todo
 
     * Images en dessous à mettre
 
-###Knowledge
+### Career
 
+ * récupéré de xebia.Fr les 6 offres
 
+ * Mettre le logo GPT en superposition de l'image
 
+###AboutUs
 
-    * techtrends -> fusionner directement
+ * c'est pas la bonne image en image principale
+
 
 
 

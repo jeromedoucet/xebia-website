@@ -1,63 +1,8 @@
 .knowledge {
-  .photo-wrapper {
-    position: relative;
-    margin-bottom: 50px;
-    img {
-      width: 1024px;
 
-      @media (max-width: @firstBreakPoint) {
-        width: 100%;
-      }
-    }
-    .photo-description {
-      position: absolute;
-      color: white;
-      background-color: @contrastColor;
-      max-width: 700px;
-      display: inline-block;
-      font-size: @defaultTitleSize;
-      padding: 20px;
-      bottom: -50px;
-      left: 70px;
-
-    }
-
-    @media (max-width: @secondBreakPoint) {
-      margin-bottom: 0;
-      .photo-description {
-        position: static;
-        max-width: none;
-      }
-    }
-  }
 
   .left-list, .right-list {
-    display: inline-block;
-    vertical-align: top;
-    width: 45%;
-    margin-left: 30px;
-
-    @media (max-width: @secondBreakPoint) {
-      width: auto;
-      display: block;
-    }
-
-    li {
-      margin-bottom: 20px;
-      margin-right: 30px;
-      margin-left: 10px;
-      padding-left: 10px;
-      list-style-image: url("../images/knowledge/check-icon.png");
-      font-size: @standardTextSize * 1.2;
-
-      a {
-
-        .linkColored(@linkColor);
-        font-weight: 300;
-
-      }
-
-    }
+    .greenTickedList();
   }
 }
 
