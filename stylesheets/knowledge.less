@@ -1,6 +1,5 @@
 .knowledge {
 
-
   .left-list, .right-list {
     .greenTickedList();
   }
@@ -74,6 +73,9 @@
     border-radius: 5px;
     font-size: @standardTextSize;
     .linkColored(white);
+    &:visited {
+      .linkColored(white);
+    }
     background-color: @xebiaColor;
 
     display: inline-block;
