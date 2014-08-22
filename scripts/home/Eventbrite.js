@@ -21,24 +21,30 @@
 
         var event = eventWrapper.event;
 
-
         var startDate = moment(event.start_date);
-        //    return !!event.event.title && startDate.valueOf() > now && event.status == 'Live';
-        //FIXME pour afficher des évènements
-        return !!event.title && startDate.valueOf() > new Date(2014, 1, 1).getTime()
 
+        return !!event.event && !!event.event.title && startDate.valueOf() > now && event.status == 'Live';
     };
 
     $(function () {
         Eventbrite({'app_key': 'UW2IBMBZKW4U6EPHQK'}, function (ebClient) {
             //http://developer.eventbrite.com/doc/organizers/organizer_list_events/
             ebClient.organizer_list_events({id: 1627902102, only_display: 'url, status, start_date, title, logo'}, function (response) {
-                if (response.events && response.events.length > 0) {
+                var content;
 
-                    var nextEvents = response.events.filter(isEventDisplayable).slice(0, 3);
+                var events = response.events;
+                if (events && events.length > 0) {
+                    var nextEvents = events.filter(isEventDisplayable).slice(0, 3);
 
-                    $('#events-wrapper').html(nextEvents.map(eventToHtml).join(''));
+                    if (nextEvents.length > 0) {
+                        content = nextEvents.map(eventToHtml).join('');
+                    }
                 }
+
+                if (!content) {
+                    content = "Il n'y a pas d'évènement à afficher pour l'instant";
+                }
+                $('#events-wrapper').html(content);
             });
         });
     });

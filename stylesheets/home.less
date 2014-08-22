@@ -43,7 +43,6 @@
   }
 
   h3 {
-
     min-height: 30px;
 
     @media (max-width: @secondBreakPoint) {
@@ -105,6 +104,8 @@ section h2 {
 
   //@partSize: 45%;
   @partSize: 90%; //pour l'instant car il n'y a pas training
+
+  margin-bottom:30px;
   .knowledge-wrapper {
     .clearFloat();
 
@@ -164,9 +165,10 @@ section h2 {
 
   }
 
-  @minHeightParts: 760px;
+
   .training, .events {
-    min-height: @minHeightParts;
+   // min-height: 760px;
+    min-height: 150px;
     position: relative;
 
     @media (max-width: @secondBreakPoint) {

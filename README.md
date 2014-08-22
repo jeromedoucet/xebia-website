@@ -13,6 +13,7 @@ Todo
 ###Tout
    * l'anglais est globalement globish
    * Mettre des marges à droite et gauche en mode responsive
+   * Bouton pour switcher vers xebia hollande en haut
 
 ###Home
 
