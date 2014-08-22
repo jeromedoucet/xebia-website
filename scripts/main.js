@@ -11,7 +11,7 @@ $(function () {
         $('nav li').each(function () {
             var $li = $(this);
 
-            if ($li.find('a').attr('href') == filename) {
+            if (filename.indexOf($li.find('a').attr('href')) === 0) {
                 currentLi = $li;
             }
         });
