@@ -1,0 +1,7 @@
+<div class="video col3">
+
+    <iframe frameborder="0" class="video-frame" src="{{url}}" />
+    <h3>{{title}}</h3>
+
+    <span>{{{description}}}</span>
+</div>

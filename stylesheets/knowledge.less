@@ -22,8 +22,6 @@
 
     }
 
-
-
     @media (max-width: @secondBreakPoint) {
       margin-bottom: 0;
       .photo-description {
@@ -63,16 +61,223 @@
   }
 }
 
-.blog {
+.techtrends {
+  position: relative;
+  @minHeight: 300px;
+  .head-techtrend {
+    background-color: @contrastColor;
+    min-height: @minHeight;
+    h2, p {
+      color: white;
+    }
 
-  h3 {
-    border-bottom: none;
-    font-size: @defaultTitleSize * 0.60;
-    margin-bottom: 0;
-    min-height: 100px;
+    .inner-head {
+      width: 50%;
+    }
+
   }
 
-  .author {
-    color: @contrastColor;
+  .go-to-techtrend {
+    @dimension: 30px;
+    width: @dimension;
+    height: @dimension;
+    line-height: @dimension;
+    border-radius: 5px;
+
+    .linkColored(@xebiaColor);
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 2px;
+
+    &.selected {
+      .linkColored(white);
+      background-color: @xebiaColor;
+      cursor: default;
+    }
+  }
+
+  .current-techtrend {
+    .packshot-wrapper {
+      position: absolute;
+      @heightImg: 270px;
+      img {
+        height: @heightImg;
+      }
+      top: @minHeight - @heightImg + 80px;
+      left: 60%;
+    }
+
+    h3 {
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+  }
+
+  .techtrend-button {
+    cursor: pointer;
+    text-transform: uppercase;
+    max-width: 150px;
+    vertical-align: top;
+
+    line-height: 20px;
+
+    border-radius: 5px;
+    font-size: @standardTextSize;
+    .linkColored(white);
+    background-color: @xebiaColor;
+
+    display: inline-block;
+    text-align: center;
+
+    margin-top: 20px;
+    margin-right: 10px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 28px;
+    position: relative;
+    font-weight: 300;
+
+    &:before {
+      position: absolute;
+      left: 10px;
+      top: 20px;
+
+      //font-awesome
+      content: "\f01a";
+      font-size: 30px;
+      display: inline-block;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+  }
+
+  .summary-background-wrapper {
+    background-color: @alternativeBackgroundColor;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .summary, .description {
+      display: inline-block;
+      width: 45%;
+      vertical-align: top;
+    }
+
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      margin-bottom: 40px;
+    }
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (max-width: @secondBreakPoint) {
+    .head-techtrend {
+      .inner-head {
+        width: auto;
+      }
+    }
+
+    .packshot-wrapper {
+      display: none;
+    }
+
+    .summary-background-wrapper {
+      .summary, .description {
+        display: block;
+        width: auto;
+      }
+    }
+  }
+}
+
+.video-section {
+  .videos-wrapper {
+
+    h3 {
+      font-size: @defaultTitleSize * 0.60;
+      color: black;
+      min-height: 50px;
+    }
+
+    span {
+      color: @subMainTitle;
+    }
+
+    .video-frame {
+      @ratio: 1/2;
+
+      .videoWithRatio(@width) {
+        width: @width;
+        height: @ratio * @width;
+      }
+
+      @media (max-width: @firstBreakPoint) {
+        .videoWithRatio(200px);
+      }
+
+      @media (max-width: @secondBreakPoint) {
+        .videoWithRatio(380px);
+      }
+
+      @media (max-width: @thirdBreakPoint) {
+        .videoWithRatio(280px);
+      }
+    }
+  }
+}
+
+.blog {
+
+  .blog-article {
+    padding-bottom: 35px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid @subMainTitle;
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+    h3 {
+      border-bottom: none;
+      font-size: @defaultTitleSize * 0.60;
+      margin-bottom: 10px;
+    }
+
+    .author {
+      color: @contrastColor;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .description {
+      color: @subMainTitle;
+      margin-bottom: 20px;
+    }
+
+    .read-more-wrapper {
+      text-align: right;
+      margin-right: 15px;
+      a {
+        .linkColored(@linkColor);
+      }
+    }
   }
 }

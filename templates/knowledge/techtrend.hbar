@@ -1,0 +1,23 @@
+
+<div class="summary">
+    {{#each summary}}
+    <div class="summary-element">
+        <h3>{{title}}</h3>
+        <ul>
+            {{#each content}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/each}}
+</div>
+<div class="description">
+    <h3>{{description.title}}</h3>
+
+    <p>{{description.content}}</p>
+
+    <a class="techtrend-button techtrend-download-pdf" id="techtrend-download-pdf">Télécharger la version PDF</a>
+    <!-- href généré dynamiquement -->
+    <a class="techtrend-button techtrend-ask-for-paper" id="techtrend-ask-for-paper">Demander une version papier</a>
+    <!-- href généré dynamiquement -->
+</div>

@@ -15,15 +15,21 @@
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/lang/fr.min.js"></script>
 
     <!-- build:hbar js/templates.js -->
     <script src="templates/knowledge/blog.hbar"></script>
+    <script src="templates/knowledge/techtrend.hbar"></script>
+    <script src="templates/knowledge/video.hbar"></script>
     <!-- endbuild -->
 
 
     <!-- build:js js/main.js -->
     <script src="scripts/common/Blog.js"></script>
     <script src="scripts/knowledge/Blog.js"></script>
+    <script src="data/techtrends/techtrends-data.js"></script>
+    <script src="scripts/knowledge/Techtrends.js"></script>
+    <script src="scripts/knowledge/Video.js"></script>
     <!-- endbuild -->
 
 </head>
@@ -68,13 +74,55 @@
     </section>
 
     <section class="techtrends">
-        <div class="centering">
+        <!-- aller voir le fichier data/techtrends-data.js -->
+        <div class="head-techtrend">
+            <div class="centering">
+                <div class="inner-head">
+                    <h2>TechTrends <span id="techtrend-number"><!-- remplacer dynamiquement --></span></h2>
+
+                    <p>Décryptage des technologies de demain pour vous aider à opérer dès aujourd'hui des choix d'avenir
+                        dans votre SI.</p>
+
+                    <div class="techtrends-links" id="techtrends-links">
+                        <!-- rempli dynamiquement -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="centering current-techtrend" id="current-techtrend">
+            <a class="techtrend-button techtrend-download-pdf" id="techtrend-download-pdf">Télécharger la version
+                PDF</a>
+            <!-- href généré dynamiquement -->
+            <a class="techtrend-button techtrend-ask-for-paper" id="techtrend-ask-for-paper">Demander une version
+                papier</a>
+            <!-- href généré dynamiquement -->
+            <div class="packshot-wrapper" id="packshot-wrapper">
+                <!-- rempli dynamiquement -->
+            </div>
+
+            <h2>Le Programme</h2>
 
         </div>
+
+        <div class="summary-background-wrapper">
+            <div class="summary-wrapper centering" id="summary-wrapper">
+                <!-- rempli dynamiquement -->
+            </div>
+        </div>
+
+
     </section>
 
-    <section class="video centering">
+    <section class="video-section centering">
+        <h2>Nos dernières vidéos</h2>
 
+        <div class="col-wrapper videos-wrapper" id="videos-wrapper">
+            <!-- rempli dynamiquement -->
+        </div>
+
+        <a class="do-you-want-to-know-more" href="http://vimeo.com/xebia" title="Viméo">Voir toutes nos vidéos</a>
     </section>
 
     <section class="blog centering">
@@ -84,6 +132,7 @@
             <!-- rempli dynamiquement -->
         </div>
 
+        <a class="do-you-want-to-know-more" href="http://blog.xebia.fr" title="Blog">Voir toutes nos articles</a>
     </section>
 </main>
 

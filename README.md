@@ -12,6 +12,7 @@ Todo
 
 ###Tout
    * l'anglais est globalement globish
+   * Mettre des marges à droite et gauche en mode responsive
 
 ###Home
 
@@ -24,10 +25,8 @@ Todo
 
 ###Knowledge
 
-    * On utilise pas JIRA ! -> remplacer par slack, confluence
-    * Je sais pas ou pointent les liens -> techevents (eventbrite) ; events -> pas de liens ;
 
-    * Il me manque les images
+
 
     * techtrends -> fusionner directement
 

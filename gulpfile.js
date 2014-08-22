@@ -16,16 +16,16 @@ var fileInclude = require('gulp-file-include');
 var paths = {
     scripts: 'scripts/**/*',
     font: 'fonts/**/*',
+    data: 'data/**/*',
     stylesheets: 'stylesheets/**/*.less',
     templates: 'templates/**/*',
     images: 'images/**/*',
     html: '*.html',
     dist: 'dist',
     resources: ['CNAME', 'robots.txt', 'sitemap.xml', 'favicon.ico']
-
 };
 
-var distTasks = ['_image', '_html', '_resources', '_fonts'];
+var distTasks = ['_image', '_html', '_resources', '_fonts', '_data'];
 (function () {
     var cleanTask = function () {
         return gulp.src(paths.dist, {read: false})
@@ -44,6 +44,9 @@ var distTasks = ['_image', '_html', '_resources', '_fonts'];
     var fontsTask = function () {
         gulp.src(paths.font).pipe(gulp.dest(paths.dist + '/font'));
     };
+    var dataTask = function () {
+        gulp.src(paths.data).pipe(gulp.dest(paths.dist + '/data'));
+    };
     var htmlTask = function () {
         return gulp.src(paths.html)
             .pipe(fileInclude())
@@ -60,15 +63,17 @@ var distTasks = ['_image', '_html', '_resources', '_fonts'];
         gulp.watch([paths.images], ['image']);
         gulp.watch(paths.resources, ['resources']);
         gulp.watch([paths.font], ['fonts']);
+        gulp.watch([paths.data], ['data']);
     };
 
-
     gulp.task('clean', cleanTask);
+    gulp.task('data', dataTask);
     gulp.task('fonts', fontsTask);
     gulp.task('resources', resourcesTask);
     gulp.task('image', imageTask);
     gulp.task('html', htmlTask);
     gulp.task('_fonts', ['clean'], fontsTask);
+    gulp.task('_data', ['clean'], dataTask);
     gulp.task('_resources', ['clean'], resourcesTask);
     gulp.task('_image', ['clean'], imageTask);
     gulp.task('_html', ['clean'], htmlTask);
