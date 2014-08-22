@@ -12,7 +12,11 @@
 
         var nbToDisplay = Math.round($('.client-list-wrapper').width() / sizeOfLogo);
 
-        var maxLeft = (countOfLogo - countOfLogo % nbToDisplay) * sizeOfLogo;
+
+        var rest = countOfLogo % nbToDisplay;
+
+        var maxLeft = (countOfLogo - (rest ? rest : nbToDisplay)) * sizeOfLogo;
+
         var offset = nbToDisplay * sizeOfLogo;
 
         var carrousel = {
