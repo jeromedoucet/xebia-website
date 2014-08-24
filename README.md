@@ -6,8 +6,8 @@ Todo
   * Keywords
   * favicon
   * Mentions légales
-  * Remettre les boutons sociaux en haut
-  * Traduire en FR
+
+
 
 
 ###Tout
@@ -18,7 +18,6 @@ Todo
 
 ###Home
 
-   * on fait quoi quand y'a pas d'évenement prévu -> texte "pas d'évènements prévus"
    * j'ai pas d'API pour les formations -> Coder une API sur le site de training
 
 ###Services
