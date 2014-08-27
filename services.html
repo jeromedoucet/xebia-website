@@ -15,8 +15,8 @@
     <!-- endbuild -->
 
     <!-- build:js js/main.js -->
+    <script src="scripts/services/Services-Menu.js"></script>
     <script src="scripts/services/Services.js"></script>
-
     <!-- endbuild -->
 
 </head>
@@ -25,18 +25,7 @@
 
 <main>
 
-    <nav class="service-menu centering">
-        <ul>
-            <li><a href="agile.html">Agile</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
-            <li><a href="devops.html">DevOps</a></li>
-            <li><a href="craft.html">Craft</a></li>
-            <li><a href="front.html">Front</a></li>
-            <li><a href="cloud.html">Cloud</a></li>
-            <li><a href="back.html">Back</a></li>
-            <li><a href="data.html">Data</a></li>
-        </ul>
-    </nav>
+    @@include('templates/services/service-menu.html')
 
 
     <section class="title centering">
@@ -96,9 +85,9 @@
 
             <div class="fondations">
                 <ul>
-                    <li><a href="mobile.html" title="Mobile">Mobile</a></li>
-                    <li><a href="craft.html" title="Craft">Craft</a></li>
-                    <li><a href="front.html" title="Front">Front</a></li>
+                    <li><a href="http://mobile.xebia.fr" title="Mobile">Mobile</a></li>
+                    <li><a href="http://blog.xebia.fr/category/craftsmanship/" title="Craft">Craft</a></li>
+                    <li><a href="http://blog.xebia.fr/category/woa/" title="Front">Front</a></li>
                 </ul>
             </div>
         </section>
@@ -117,8 +106,8 @@
             <div class="fondations">
                 <ul>
                     <li><a href="data.html" title="Data">Data</a></li>
-                    <li><a href="cloud.html" title="Cloud">Cloud</a></li>
-                    <li><a href="back.html" title="Back">Back</a></li>
+                    <li><a href="http://cloud.xebia.fr" title="Cloud">Cloud</a></li>
+                    <li><a href="http://blog.xebia.fr/category/back/" title="Back">Back</a></li>
                 </ul>
             </div>
         </section>

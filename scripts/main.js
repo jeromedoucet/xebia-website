@@ -1,7 +1,20 @@
+window.selectMainMenu = function (li) {
+    var $indicator = $('.indicator');
+    if (li) {
+        li.addClass('selected');
+
+        var indicatorPosition = li.position().left + li.outerWidth() / 2 - $indicator.outerWidth() / 2;
+        $indicator.css('left', indicatorPosition);
+    } else {
+        $indicator.css('visibility', 'hidden');
+    }
+};
+
 $(function () {
     $('.mobile-menu-button').click(function () {
         $('nav').toggleClass('shown');
     });
+
 
     var positionMenu = function () {
         var currentUrl = window.location.href;
@@ -16,15 +29,7 @@ $(function () {
             }
         });
 
-        var $indicator = $('.indicator');
-        if (currentLi) {
-            currentLi.addClass('selected');
-
-            var indicatorPosition = currentLi.position().left + currentLi.outerWidth() / 2 - $indicator.outerWidth() / 2;
-            $indicator.css('left', indicatorPosition);
-        } else {
-            $indicator.css('visibility', 'hidden');
-        }
+        selectMainMenu(currentLi);
     };
 
     positionMenu();
