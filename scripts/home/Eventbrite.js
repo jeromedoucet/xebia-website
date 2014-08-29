@@ -42,7 +42,7 @@
                 }
 
                 if (!content) {
-                    content = "Il n'y a pas d'évènement à afficher pour l'instant";
+                    content = "Il n'y a pas d'événement à afficher pour l'instant";
                 }
                 $('#events-wrapper').html(content);
             });
