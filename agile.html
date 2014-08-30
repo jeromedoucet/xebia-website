@@ -20,6 +20,7 @@
 
     <!-- build:hbar js/templates.js -->
     <script src="templates/common/client.hbar"></script>
+    <script src="templates/knowledge/video.hbar"></script>
     <!-- endbuild -->
 
     <!-- build:js js/main.js -->
@@ -28,6 +29,9 @@
     <script src="data/clients/clients-data.js"></script>
     <script src="scripts/common/Clients.js"></script>
     <script src="scripts/services/agile/Clients.js"></script>
+
+    <script src="scripts/common/Video.js"></script>
+    <script src="scripts/services/agile/Video.js"></script>
     <!-- endbuild -->
 
 </head>
@@ -70,7 +74,7 @@
 
     <section class="clients ">
         <div class="centering">
-            <h2>Nous travaillons avec</h2>
+            <h2>Nos Clients</h2>
         </div>
 
         <div class="client-list">
@@ -88,15 +92,25 @@
         </div>
     </section>
 
-    <section class="our-profil centering">
+    <section class="our-profils centering">
         <h2>Nos profils</h2>
 
-        <img/>
+        <div class="profils-bubble">
+            <span class="coach-agile" data-featherlight="#coach-agile-popup">Le Coach agile</span>
+            <span class="product-owner" data-featherlight="#product-owner-popup">Le Product Owner</span>
+            <span class="scrum-master" data-featherlight="#scrum-master-popup">Le Scrum Master</span>
+            <span class="devops" data-featherlight="#devops-popup">Le DevOps</span>
+        </div>
     </section>
 
     <section class="videos centering">
         <h2>Nos dernières vidéos</h2>
 
+        <div class="col-wrapper videos-wrapper" id="videos-wrapper">
+            <!-- rempli dynamiquement -->
+        </div>
+
+        <a class="do-you-want-to-know-more" href="" title="Viméo">Voir toutes nos vidéos</a>
     </section>
 
 </main>
