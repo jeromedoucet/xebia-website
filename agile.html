@@ -17,10 +17,13 @@
     <!-- endbuild -->
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/lang/fr.min.js"></script>s
 
     <!-- build:hbar js/templates.js -->
+    <script src="templates/common/blog.hbar"></script>
     <script src="templates/common/client.hbar"></script>
-    <script src="templates/knowledge/video.hbar"></script>
+    <script src="templates/common/video.hbar"></script>
     <!-- endbuild -->
 
     <!-- build:js js/main.js -->
@@ -32,6 +35,9 @@
 
     <script src="scripts/common/Video.js"></script>
     <script src="scripts/services/agile/Video.js"></script>
+
+    <script src="scripts/common/Blog.js"></script>
+    <script src="scripts/services/agile/Blog.js"></script>
     <!-- endbuild -->
 
 </head>
@@ -110,9 +116,18 @@
             <!-- rempli dynamiquement -->
         </div>
 
-        <a class="do-you-want-to-know-more" href="" title="Viméo">Voir toutes nos vidéos</a>
+        <a class="do-you-want-to-know-more" href="http://vimeo.com/channels/agilite" title="Viméo">Voir toutes nos vidéos</a>
     </section>
 
+    <section class="blog centering">
+        <h2>Nos derniers articles</h2>
+
+        <div class="blog-articles-wrapper" id="blog-articles-wrapper">
+            <!-- rempli dynamiquement -->
+        </div>
+
+        <a class="do-you-want-to-know-more" href="http://blog.xebia.fr/category/agilite/" title="Blog">Voir toutes nos articles</a>
+    </section>
 </main>
 
 @@include('templates/footer.html')

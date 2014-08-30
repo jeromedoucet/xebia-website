@@ -1,17 +1,14 @@
-(function ($) {
-    window.Blog = function Blog(template) {
+(function ($, exp) {
+    var Blog = function Blog(template) {
         this.template = template;
     };
 
-    window.Blog.prototype.displayIn = function (idContainer) {
-
-        var urlApiBlog = 'http://blog.xebia.fr/wp-json-api/get_recent_posts/?count=3';
-
-        var promiseForBlog = $.ajax(urlApiBlog, {
+    var displayBlogArticle = function (url, template, idContainer) {
+        var promiseForBlog = $.ajax(url, {
             dataType: 'jsonp'
         });
 
-        var self = this;
+
         promiseForBlog.done(function (blogResponse) {
             var posts = blogResponse.posts;
 
@@ -27,13 +24,23 @@
                     url: post.url
                 };
 
-                return self.template(blogViewModel)
+                return template(blogViewModel)
             }).join('');
 
             $('#' + idContainer).html(htmls);
         });
+    };
 
-    }
+    Blog.prototype.displayIn = function (idContainer) {
+        var urlApiBlog = 'http://blog.xebia.fr/wp-json-api/get_recent_posts/?count=3';
+        displayBlogArticle(urlApiBlog, this.template, idContainer);
+    };
 
+    Blog.prototype.displayCategoryIn = function (category, idContainer) {
+        var urlApiBlog = 'http://blog.xebia.fr/wp-json-api/get_category_posts/?slug=' + category + '&count=3';
+        displayBlogArticle(urlApiBlog, this.template, idContainer);
+    };
+
+    exp.Blog = Blog;
 
 })($, window);
