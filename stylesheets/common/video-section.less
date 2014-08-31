@@ -1,0 +1,35 @@
+.video-section {
+  .videos-wrapper {
+
+    h3 {
+      font-size: @subSubTitleSize;
+      color: black;
+      min-height: 50px;
+    }
+
+    span {
+      color: @subMainTitle;
+    }
+
+    .video-frame {
+      @ratio: 1/2;
+
+      .videoWithRatio(@width) {
+        width: @width;
+        height: @ratio * @width;
+      }
+
+      @media (max-width: @firstBreakPoint) {
+        .videoWithRatio(200px);
+      }
+
+      @media (max-width: @secondBreakPoint) {
+        .videoWithRatio(380px);
+      }
+
+      @media (max-width: @thirdBreakPoint) {
+        .videoWithRatio(280px);
+      }
+    }
+  }
+}

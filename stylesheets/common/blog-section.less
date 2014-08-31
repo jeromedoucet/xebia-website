@@ -1,0 +1,39 @@
+.blog {
+
+  .blog-article {
+    padding-bottom: 35px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid @subMainTitle;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+    h3 {
+      border-bottom: none;
+      font-size: @subSubTitleSize;
+      margin-bottom: 10px;
+    }
+
+    .author {
+      color: @contrastColor;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .description {
+      color: @subMainTitle;
+      margin-bottom: 20px;
+    }
+
+    .read-more-wrapper {
+      text-align: right;
+      margin-right: 15px;
+      a {
+        .linkColored(@linkColor);
+      }
+    }
+  }
+}
