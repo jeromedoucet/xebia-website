@@ -20,9 +20,6 @@ Todo
    * j'ai pas d'API pour les formations -> Coder une API sur le site de training
 
 
-### Career
- * Mettre le logo GPT en superposition de l'image
-
 ###AboutUs
 
  * c'est pas la bonne image en image principale
