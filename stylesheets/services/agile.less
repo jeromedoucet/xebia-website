@@ -74,6 +74,27 @@
     }
 
   }
+
+  @media (max-width: @firstBreakPoint) {
+    .profils-bubble {
+      background: white;
+      height: auto;
+      span {
+        position: static;
+        color: white;
+        text-align: left;
+        display: block;
+        .gradient(@xebiaColor, @xebiaLightColor);
+        padding:10px 10px;
+
+        &.coach-agile, &.product-owner, &.scrum-master, &.devops {
+          font-size: @bigTextSize;
+          width: 100%;
+        }
+
+      }
+    }
+  }
 }
 
 .lightbox {
@@ -109,4 +130,9 @@
     }
   }
 
+}
+
+.profil-popup .description img {
+  float: right;
+  margin: 0 20px;
 }

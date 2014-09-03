@@ -43,6 +43,7 @@
     <script src="scripts/services/agile/Blog.js"></script>
 
     <script src="scripts/vendor/featherlight.js"></script>
+    <script src="scripts/services/agile/Agile.js"></script>
     <!-- endbuild -->
 
 </head>
@@ -51,136 +52,282 @@
 
 <main>
 
-    @@include('templates/services/service-menu.html')
+@@include('templates/services/service-menu.html')
 
-    <section class="presentation centering">
+<section class="presentation centering">
 
-        <h1>Agile&nbsp;?</h1>
+    <h1>Agile&nbsp;?</h1>
 
-        <p>
-            La mission de Xebia est de développer du logiciel de très haute qualité (Software Develoment Done Right).
-            L'ambition de notre équipe agile est de changer, dans le paysage de l’IT en France, les pratiques peu
-            efficaces et une culture tayloriste du développement logiciel.</p>
+    <p>
+        La mission de Xebia est de développer du logiciel de très haute qualité (Software Develoment Done Right).
+        L'ambition de notre équipe agile est de changer, dans le paysage de l’IT en France, les pratiques peu
+        efficaces et une culture tayloriste du développement logiciel.</p>
 
-        <p> Nous vous proposons une offre
-            d'accompagnement riche et complète, depuis l'idée jusqu'à la production. Notre offre vous permettra de tirer
-            le meilleur de vos équipes en les associant étroitement à notre démarche.</p>
+    <p> Nous vous proposons une offre
+        d'accompagnement riche et complète, depuis l'idée jusqu'à la production. Notre offre vous permettra de tirer
+        le meilleur de vos équipes en les associant étroitement à notre démarche.</p>
 
-        <p> Nous partageons également
-            généreusement notre savoir-faire au travers de notre blog, de publications, ou participations aux
-            conférences.</p>
-    </section>
+    <p> Nous partageons également
+        généreusement notre savoir-faire au travers de notre blog, de publications, ou participations aux
+        conférences.</p>
+</section>
 
-    <section class="our-missions">
-        <div class="centering">
-            <h2>Nos missions types</h2>
+<section class="our-missions">
+    <div class="centering">
+        <h2>Nos missions types</h2>
 
-            <div class="missions-desc">
-                <div class="mission" data-featherlight="#scrum">
-                    <img src="images/services/agile/vague-accompagnement-scrum.png" alt="vague accompagnement scrum"/>
+        <div class="missions-desc">
+            <div class="mission" data-featherlight="#scrum">
+                <img src="images/services/agile/vague-accompagnement-scrum.png" alt="vague accompagnement scrum"/>
 
-                    <p>Vague d'Accompagnement Scrum</p>
-                </div>
-
-                <div class="mission" data-featherlight="#kanban">
-                    <img src="images/services/agile/vague-accompagnement-kanban.png" alt="vague accompagnement kanban"/>
-
-                    <p>Vague d'Accompagnement Kanban</p>
-                </div>
-
-                <div class="maturite mission" data-featherlight="#maturite">
-                    <img src="images/services/agile/analyse-maturite-agile.png" alt="Analyse de maturité Agile"/>
-
-                    <p>Analyse de maturité Agile</p>
-                </div>
-
-                <div class="sauvetage mission" data-featherlight="#sauvetage">
-                    <img src="images/services/agile/sauvetage-projet.png" alt="Sauvetage projet"/>
-
-                    <p>Sauvetage Projet</p>
-                </div>
-
-
-                <div class="lean mission" data-featherlight="#lean">
-                    <img src="images/services/agile/lean-start-up-mvp.png" alt="Lean Startup MVP"/>
-
-                    <p>Lean Startup MVP</p>
-                </div>
-
-                <div class="tma mission" data-featherlight="#tma">
-                    <img src="images/services/agile/tma-agile.png" alt="TMA Agile"/>
-
-                    <p>TMA Agile</p>
-                </div>
-
-                <div class="transformation mission" data-featherlight="#transformation">
-                    <img src="images/services/agile/transformation-agile.png" alt="Transformation Agile"/>
-
-                    <p>Transformation Agile</p>
-                </div>
-
-                <div class="centre mission" data-featherlight="#centre">
-                    <img src="images/services/agile/centre-agile.png" alt="Centre Agile"/>
-
-                    <p>Centre Agile</p>
-                </div>
-
+                <p>Vague d'Accompagnement Scrum</p>
             </div>
-        </div>
-    </section>
 
-    <section class="clients ">
+            <div class="mission" data-featherlight="#kanban">
+                <img src="images/services/agile/vague-accompagnement-kanban.png" alt="vague accompagnement kanban"/>
+
+                <p>Vague d'Accompagnement Kanban</p>
+            </div>
+
+            <div class="maturite mission" data-featherlight="#maturite">
+                <img src="images/services/agile/analyse-maturite-agile.png" alt="Analyse de maturité Agile"/>
+
+                <p>Analyse de maturité Agile</p>
+            </div>
+
+            <div class="sauvetage mission" data-featherlight="#sauvetage">
+                <img src="images/services/agile/sauvetage-projet.png" alt="Sauvetage projet"/>
+
+                <p>Sauvetage Projet</p>
+            </div>
+
+
+            <div class="lean mission" data-featherlight="#lean">
+                <img src="images/services/agile/lean-start-up-mvp.png" alt="Lean Startup MVP"/>
+
+                <p>Lean Startup MVP</p>
+            </div>
+
+            <div class="tma mission" data-featherlight="#tma">
+                <img src="images/services/agile/tma-agile.png" alt="TMA Agile"/>
+
+                <p>TMA Agile</p>
+            </div>
+
+            <div class="transformation mission" data-featherlight="#transformation">
+                <img src="images/services/agile/transformation-agile.png" alt="Transformation Agile"/>
+
+                <p>Transformation Agile</p>
+            </div>
+
+            <div class="centre mission" data-featherlight="#centre">
+                <img src="images/services/agile/centre-agile.png" alt="Centre Agile"/>
+
+                <p>Centre Agile</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="clients ">
+    <div class="centering">
+        <h2>Nos Clients</h2>
+    </div>
+
+    <div class="client-list">
         <div class="centering">
-            <h2>Nos Clients</h2>
+            <button class="nav-button before-button">‹</button>
+
+            <div class="client-list-wrapper">
+                <div class="inner-client-list" id="clients-logo">
+                    <!-- rempli dynamiquement -->
+                </div>
+            </div>
+
+            <button class="nav-button after-button">›</button>
         </div>
+    </div>
+</section>
 
-        <div class="client-list">
-            <div class="centering">
-                <button class="nav-button before-button">‹</button>
+<section class="our-profils centering">
+    <h2>Nos profils</h2>
 
-                <div class="client-list-wrapper">
-                    <div class="inner-client-list" id="clients-logo">
-                        <!-- rempli dynamiquement -->
+    <div class="profils-bubble">
+        <span class="coach-agile" data-featherlight="#coach-agile-popup">Le Coach agile</span>
+
+        <div class="lightbox profil-popup" id="coach-agile-popup">
+            <h3>Le Coach agile</h3>
+
+            <div class="description">
+                <img src="images/services/agile/profils/coach-agile.png" alt="coach agile picto"/>
+
+                <p>L’agilité fait partie de l’ADN de Xebia.</p>
+
+                <p>Agilistes depuis de nombreuses années, nos coachs sauront vous accompagner pour vos projets ou
+                    transformations et vous guider vers la méthodologie correspondant le mieux à votre besoin.</p>
+
+                <div class="profil-popup-box">
+                    <div class="profil-popup-left">
+                        <h4>Profil type</h4>
+                        <ul>
+                            <li>Plus de 10 années d’expérience</li>
+                            <li>Plus de 5 années d’expérience des pratiques agiles</li>
+                            <li>Connaissance du monde IT</li>
+                            <li>Expériences significatives dans la gestion et/ou la direction de projet</li>
+                        </ul>
+                    </div>
+                    <div class="profil-popup-right">
+                        <h4>Expertise</h4>
+                        <ul>
+                            <li>Kanban</li>
+                            <li>Scrum</li>
+                            <li>Résolution de problèmes</li>
+                            <li>Charisme</li>
+                            <li>Rigueur</li>
+                            <li>Sens de l’écoute</li>
+                        </ul>
                     </div>
                 </div>
-
-                <button class="nav-button after-button">›</button>
             </div>
         </div>
-    </section>
 
-    <section class="our-profils centering">
-        <h2>Nos profils</h2>
 
-        <div class="profils-bubble">
-            <span class="coach-agile" data-featherlight="#coach-agile-popup">Le Coach agile</span>
-            <span class="product-owner" data-featherlight="#product-owner-popup">Le Product Owner</span>
-            <span class="scrum-master" data-featherlight="#scrum-master-popup">Le Scrum Master</span>
-            <span class="devops" data-featherlight="#devops-popup">Le DevOps</span>
+        <span class="product-owner" data-featherlight="#product-owner-popup">Le Product Owner</span>
+
+        <div class="lightbox profil-popup" id="product-owner-popup">
+            <h3>Le Product Owner</h3>
+
+            <div class="description">
+                <img src="images/services/agile/profils/product-owner.png" alt="product owner"/>
+
+                <p>Le Product Owner représente les utilisateurs et les parties prenantes au sein de l’équipe. Capable
+                    d’exprimer simplement les fonctionnalités, de prioriser les tâches et de prendre les décisions à
+                    temps, nos product owners sauront être mes garants de produits qui apportent de la valeur à vos
+                    utilisateurs.</p>
+
+                <div class="profil-popup-box">
+                    <div class="profil-popup-left">
+                        <h4 class="h3-profils">Profil type</h4>
+                        <ul>
+                            <li>Plus de 5 années d’expérience</li>
+                            <li>Compréhension du monde IT</li>
+                        </ul>
+                    </div>
+                    <div class="profil-popup-right">
+                        <h4>Expertise</h4>
+                        <ul>
+                            <li>Rédaction de users stories</li>
+                            <li>Backlog grooming</li>
+                            <li>Animation d’ateliers de priorisation avec les parties prenantes</li>
+                            <li>Charisme</li>
+                            <li>Rigueur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
 
-    <section class="video-section centering">
-        <h2>Nos dernières vidéos</h2>
 
-        <div class="col-wrapper videos-wrapper" id="videos-wrapper">
-            <!-- rempli dynamiquement -->
+        <span class="scrum-master" data-featherlight="#scrum-master-popup">Le Scrum Master</span>
+
+        <div class="lightbox profil-popup" id="scrum-master-popup">
+            <h3 class="h3-profils">Le Scrum Master</h3>
+
+            <div class="description">
+                <img src="images/services/agile/profils/scrum-master.png" alt="scrummaster"/>
+
+                <p>Le Scrum Master est le garant du processus au sein de l’équipe.</p>
+
+                <p>Nos Scrum Master pratiquent l’agilité au quotidien et sauront l’adapter à votre entreprise.
+                    Véritables facilitateurs, ils aideront l’équipe à s’améliorer dans sa pratique de Scrum mais aussi à
+                    surperformer (innover au quotidien, prise d’initiatives... ).</p>
+
+                <div class="profil-popup-box">
+                    <div class="profil-popup-left">
+                        <h4 class="h3-profils">Profil type</h4>
+                        <ul>
+                            <li>Scrum Master d’une équipe projet</li>
+                            <li>Scrum de Scrum</li>
+                        </ul>
+                    </div>
+                    <div class="profil-popup-right">
+                        <h4>Expertise</h4>
+                        <ul>
+                            <li>Méthodologies</li>
+                            <li>Scrum</li>
+                            <li>Animation de rétrospectives</li>
+                            <li>Résolution de problèmes</li>
+                            <li>Charisme</li>
+                            <li>Sens de l’écoute</li>
+                            <li>Forte connaissances techniques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <a class="do-you-want-to-know-more" href="http://vimeo.com/channels/agilite" title="Viméo">Voir toutes nos
-            vidéos</a>
-    </section>
 
-    <section class="blog centering">
-        <h2>Nos derniers articles</h2>
+        <span class="devops" data-featherlight="#devops-popup">Le DevOps</span>
 
-        <div class="blog-articles-wrapper" id="blog-articles-wrapper">
-            <!-- rempli dynamiquement -->
+        <div class="lightbox profil-popup" id="devops-popup">
+            <h3 class="h3-profils">Le DevOps</h3>
+
+            <div class="description">
+                <img src="images/services/agile/profils/devops.png" alt="devops"/>
+
+                <p>Le DevOps doit par son expertise fluidifier les relations de travail entre les dev et les ops.</p>
+
+                <p>Nos consultants DevOps sont en fait des binômes constitués d’un coach agile et d'un techlead. Ils
+                    interviendront conjointement durant la mission pour identifier les axes d’amélioration, animer des
+                    ateliers, mais également identifier et mettre en oeuvre des solutions techniques.</p>
+
+                <div class="profil-popup-box">
+                    <div class="profil-popup-left">
+                        <h4 class="h3-profils">Profil type</h4>
+                        <ul>
+                            <li>Mise en place d’usine logicielle</li>
+                            <li>Amélioration de la relation DevOps</li>
+                        </ul>
+                    </div>
+                    <div class="profil-popup-right">
+                        <h4>Expertise</h4>
+                        <ul>
+                            <li>Très fortes connaissances techniques</li>
+                            <li>Méthodologies</li>
+                            <li>Scrum</li>
+                            <li>Résolution de problèmes</li>
+                            <li>Charisme</li>
+                            <li>Sens de l’écoute</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
 
-        <a class="do-you-want-to-know-more" href="http://blog.xebia.fr/category/agilite/" title="Blog">Voir toutes nos
-            articles</a>
-    </section>
+<section class="video-section centering">
+    <h2>Nos dernières vidéos</h2>
+
+    <div class="col-wrapper videos-wrapper" id="videos-wrapper">
+        <!-- rempli dynamiquement -->
+    </div>
+
+    <a class="do-you-want-to-know-more" href="http://vimeo.com/channels/agilite" title="Viméo">Voir toutes nos
+        vidéos</a>
+</section>
+
+<section class="blog centering">
+    <h2>Nos derniers articles</h2>
+
+    <div class="blog-articles-wrapper" id="blog-articles-wrapper">
+        <!-- rempli dynamiquement -->
+    </div>
+
+    <a class="do-you-want-to-know-more" href="http://blog.xebia.fr/category/agilite/" title="Blog">Voir toutes nos
+        articles</a>
+</section>
 </main>
 
 <div class="lightbox" id="scrum">
@@ -396,6 +543,7 @@
         <li>Projet pilote opérationnel sur Agile</li>
     </ul>
 </div>
+
 
 @@include('templates/footer.html')
 </body>
