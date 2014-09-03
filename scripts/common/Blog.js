@@ -16,11 +16,14 @@
                 if (!post) {
                     return '';
                 }
+
+                var description = post.excerpt.replace(/\s\[(.*)]/g, '$1').split(' ').slice(0, 30).join(' ') + '...';
+
                 var blogViewModel = {
                     title: post.title,
                     name: post.author ? post.author.name : '',
                     date: post.date ? moment(post.date).format('DD MMMM YYYY') : '',
-                    description: post.excerpt.replace(/\s\[(.*)]/g, '$1'),
+                    description: description,
                     url: post.url
                 };
 
