@@ -7,12 +7,6 @@
 
 }
 
-.you-are {
-  h2 {
-    text-align: center;
-  }
-}
-
 .our-missions {
   background-color: @xebiaColor;
   h2 {
@@ -23,6 +17,7 @@
   .missions-desc {
     text-align: center;
     .mission {
+      cursor: pointer;
       width: 240px;
       display: inline-block;
       vertical-align: top;
@@ -79,4 +74,39 @@
     }
 
   }
+}
+
+.lightbox {
+  display: none;
+  h3 {
+    color: @xebiaColor;
+    font-size: @mainTitleSize;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  li {
+    margin-bottom: 15px;
+    margin-left: 5px;
+    &:before {
+      content: '- ';
+      margin-right: 10px;
+
+    }
+  }
+  ul {
+    margin-bottom: 35px;
+  }
+
+  h4 {
+    color: @xebiaColor;
+    font-size: @defaultTitleSize;
+    font-weight: 300;
+    margin-bottom: 10px;
+
+    &.tagline-missions {
+      color: @contrastColor;
+    }
+  }
+
 }
