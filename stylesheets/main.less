@@ -253,13 +253,20 @@ section {
   }
 }
 
-section h2 {
-  font-weight: 300;
-  text-align: center;
-  text-transform: none;
-  .bigFontSize();
-
-  @media (max-width: @secondBreakPoint) {
+section {
+  h1 {
     text-align: left;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-weight: 300;
+    text-align: center;
+    text-transform: none;
+    .bigFontSize();
+
+    @media (max-width: @secondBreakPoint) {
+      text-align: left;
+    }
   }
 }
