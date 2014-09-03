@@ -3,9 +3,9 @@
 
   .gptw {
     position: absolute;
-    top:0;
-    right:0;
-    width:24%;
+    top: 0;
+    right: 0;
+    width: 24%;
   }
 }
 
@@ -20,19 +20,19 @@
   padding-top: 20px;
 
   .citation {
-    background-color: white;
     margin-bottom: 20px;
 
     blockquote {
       display: inline-block;
       vertical-align: middle;
       margin-left: 30px;
+      margin-top: 10px;
 
-      width: 64%;
+      width: 70%;
 
       p {
         font-size: @littleTextSize;
-        line-height:18px;
+        line-height: 30px;
         font-weight: 300;
         margin-bottom: 10px;
       }
@@ -63,9 +63,11 @@
     vertical-align: middle;
     position: relative;
     float: none;
+    margin-top: 25px;
+
 
     img {
-      width: 150px;
+      width: 170px;
     }
 
     &.right {
@@ -77,41 +79,8 @@
       float: left;
       max-width: 35%;
 
-
-      @arrowWidth: 15px;
-      &:after {
-        content: '';
-        width: 0;
-        height: 0;
-        border-top: @arrowWidth solid transparent;
-        border-bottom: @arrowWidth solid transparent;
-        border-right: @arrowWidth solid white;
-        display: block;
-        position: absolute;
-        top: 45%;
-        right: 0;
-      }
-
       &.right {
-
         float: right;
-
-        &:after {
-          border: none;
-        }
-
-        &:before {
-          content: '';
-          width: 0;
-          height: 0;
-          border-top: @arrowWidth solid transparent;
-          border-bottom: @arrowWidth solid transparent;
-          border-left: @arrowWidth solid white;
-          display: block;
-          position: absolute;
-          top: 45%;
-          left: 0;
-        }
       }
     }
   }
