@@ -10,6 +10,8 @@ window.selectMainMenu = function (li) {
     }
 };
 
+
+
 $(function () {
     $('.mobile-menu-button').click(function () {
         $('nav').toggleClass('shown');
@@ -35,4 +37,8 @@ $(function () {
     positionMenu();
     $(window).resize(positionMenu);
 
+
+    $('.xebia-global').click(function() {
+        $('.xebia-links').slideToggle();
+    })
 });

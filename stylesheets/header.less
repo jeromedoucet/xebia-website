@@ -1,12 +1,70 @@
 header {
   @headerHeight: 126px;
   background-color: @xebiaColor;
-  padding-top: 15px;
+
   height: @headerHeight;
   margin-bottom: 40px;
 
   @thirdHeaderBreakPoint: 580px;
+  .header-links {
+    @heightLinks: 30px;
 
+    height: @heightLinks;
+
+    line-height: @heightLinks;
+    .menu-wrapper {
+      position: relative;
+      margin-right: 30px;
+      float: right;
+
+      .xebia-links {
+        width: 170px;
+        position: absolute;
+        top: @heightLinks;
+        left: -20px;
+        background-color: @xebiaLightColor;
+        display:none;
+
+        li {
+
+          text-align: center;
+
+          &:hover {
+            background-color: @xebiaColor;
+            .arrowNext(0);
+            &:after {
+              color:white;
+            }
+          }
+
+          a {
+            .linkColored(white);
+            font-size: 14px;
+          }
+
+        }
+      }
+    }
+    .xebia-global {
+      color: white;
+      font-size: 14px;
+      font-weight: 300;
+      cursor: pointer;
+
+      &:before {
+        .fontAwesome('\f0ac');
+        margin-right: 10px;
+      }
+
+      &:after {
+        .fontAwesome('\f107');
+        margin-left: 10px;
+      }
+
+    }
+
+    .clearFloat();
+  }
   .header-content {
     padding: 2px 0;
     background-color: white;
