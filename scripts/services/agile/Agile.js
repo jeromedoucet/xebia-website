@@ -1,9 +1,14 @@
 $.featherlight.defaults.beforeOpen = function (event) {
     var targetEl = $(this.$elm.data('featherlight'));
-    targetEl.slideToggle(function() {
-        $('.profils-bubble .lightbox').not(targetEl).slideUp();
-    });
+    if ($(window).width() <= 1023) {
 
+        targetEl.slideToggle(function () {
+            $('.profils-bubble .lightbox').not(targetEl).slideUp();
+        });
 
-    return false;
+        return false;
+    } else {
+        targetEl.css('display','');
+        return true;
+    }
 };
