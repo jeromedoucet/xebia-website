@@ -11,3 +11,43 @@ h1 {
   }
 }
 
+.ordi-moche {
+  text-align: center;
+  padding-bottom: 0;
+  @media (max-width: @secondBreakPoint) {
+    display: none;
+  }
+}
+
+.our-missions {
+  background-color: @xebiaColor;
+  h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .missions-desc {
+    text-align: center;
+    .mission {
+      cursor: pointer;
+      width: 240px;
+      display: inline-block;
+      vertical-align: top;
+      p {
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.our-partners {
+  text-align: center;
+  @media (max-width: @secondBreakPoint) {
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -213,12 +213,21 @@ section {
   border-top: 2px solid @contrastColor;
   .linkColored(@contrastColor);
 
+  &.violet {
+    border-top: 2px solid @xebiaColor;
+    .linkColored(@xebiaColor);
+  }
+
   text-align: right;
   display: block;
-  width: 90%;
-
+  width: 100%;
+  position: relative;
   padding-right: 30px;
   .arrowNext(8px);
+  &:after {
+    right: 15px;
+  }
+
 }
 
 .main-photo-wrapper {
