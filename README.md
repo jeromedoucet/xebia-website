@@ -1,30 +1,22 @@
 Site Web Corporate Xebia
-===
+========================
 
-Todo
+Travailler sur le site
 ---
-  * Keywords
 
-  * Mentions légales
-
-
-
-
-###Tout
-
-   * Bouton pour switcher vers xebia hollande en haut
-   * Remplacer emailvision par smartfocus parmi les clients
-
-###Home
-
-   * j'ai pas d'API pour les formations -> Coder une API sur le site de training
+  * Ouvrir un terminal
+  * aller dans le répertoire contenant le site (cd <nom du site>)
+  * Lancer la commande <code>npm run watch</code>
+  * Faire les modifications que l'on désire
+  * Voir le rendu ou ouvrant le fichier *index.html* du répertoire *dist*
 
 
-###AboutUs
+Déployer en prod
+---
 
- * c'est pas la bonne image en image principale
-
-
+  * Ouvrir un terminal
+  * aller dans le répertoire contenant le site (cd <nom du site>)
+  * Lancer la commande <code>npm run deploy</code>
 
 
 
