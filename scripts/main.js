@@ -38,7 +38,16 @@ $(function () {
     $(window).resize(positionMenu);
 
 
-    $('.xebia-global').click(function() {
+    $('.xebia-global').click(function () {
         $('.xebia-links').slideToggle();
-    })
+    });
+
+    var $mentionsPopup = $('#mentions-legales-popup');
+    $('.mentions-legales').click(function () {
+        $mentionsPopup.slideDown();
+    });
+
+    $mentionsPopup.find('.close').click(function () {
+        $('#mentions-legales-popup').slideUp();
+    });
 });
