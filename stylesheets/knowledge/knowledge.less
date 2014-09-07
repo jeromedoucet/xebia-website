@@ -4,16 +4,16 @@
     .greenTickedList();
 
     li {
-      line-height:30px;
+      line-height: 30px;
     }
   }
-
 
 }
 
 .techtrends {
   position: relative;
   @minHeight: 300px;
+  padding-bottom: 0;
   .head-techtrend {
     background-color: @contrastColor;
     min-height: @minHeight;
@@ -121,13 +121,11 @@
   }
 
   .summary-background-wrapper {
-    background-color: @alternativeBackgroundColor;
+
     padding-top: 20px;
-    padding-bottom: 20px;
+
 
     .summary, .description {
-      display: inline-block;
-      width: 45%;
       vertical-align: top;
     }
 
@@ -138,10 +136,35 @@
 
     ul {
       margin-bottom: 40px;
+      list-style: disc;
+      margin-left: 20px;
     }
 
     li {
       margin-bottom: 15px;
+    }
+
+    p {
+      margin-left: 0;
+    }
+
+    .techtrends-logo {
+      text-align: center;
+      padding-bottom: 30px;
+      padding-top: 30px;
+
+      @media (max-width: 370px) {
+        img {
+          width:100%;
+        }
+      }
+    }
+    .link-wrapper {
+      text-align: center;
+    }
+    .description {
+      background-color: @alternativeBackgroundColor;
+      padding-bottom: 50px;
     }
   }
 
@@ -156,12 +179,6 @@
       display: none;
     }
 
-    .summary-background-wrapper {
-      .summary, .description {
-        display: block;
-        width: auto;
-      }
-    }
   }
 }
 

@@ -1,5 +1,5 @@
 
-<div class="summary">
+<div class="summary centering">
     {{#each summary}}
     <div class="summary-element">
         <h3>{{title}}</h3>
@@ -12,12 +12,19 @@
     {{/each}}
 </div>
 <div class="description">
+<div class="centering">
+    <div class="techtrends-logo">
+        <img src="images/knowledge/techtrends-logo.png" alt="Techtrends"  />
+    </div>
     <h3>{{description.title}}</h3>
 
     <p>{{description.content}}</p>
 
-    <a class="techtrend-button techtrend-download-pdf" id="techtrend-download-pdf">Télécharger la version PDF</a>
-    <!-- href généré dynamiquement -->
-    <a class="techtrend-button techtrend-ask-for-paper" id="techtrend-ask-for-paper">Demander une version papier</a>
-    <!-- href généré dynamiquement -->
+        <div class="link-wrapper">
+            <a class="techtrend-button techtrend-download-pdf" id="techtrend-download-pdf">Télécharger la version PDF</a>
+            <!-- href généré dynamiquement -->
+            <a class="techtrend-button techtrend-ask-for-paper" id="techtrend-ask-for-paper">Demander une version papier</a>
+            <!-- href généré dynamiquement -->
+        </div>
+    </div>
 </div>
