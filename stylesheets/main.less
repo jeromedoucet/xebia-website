@@ -220,14 +220,16 @@ section {
 
   text-align: right;
   display: block;
-  width: 100%;
+  @rightPadding: 30px;
+  padding-right: @rightPadding;
+
   position: relative;
-  padding-right: 30px;
+
   .arrowNext(8px);
   &:after {
     right: 15px;
   }
-
+  width: ~"calc(100% - @{rightPadding})";
 }
 
 .main-photo-wrapper {
