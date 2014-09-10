@@ -6,6 +6,7 @@ header {
   margin-bottom: 40px;
 
   @thirdHeaderBreakPoint: 580px;
+
   .header-links {
     @heightLinks: 30px;
 
@@ -23,7 +24,7 @@ header {
         top: @heightLinks;
         left: -20px;
         background-color: @xebiaLightColor;
-        display:none;
+        display: none;
 
         li {
 
@@ -33,7 +34,7 @@ header {
             background-color: @xebiaColor;
             .arrowNext(0);
             &:after {
-              color:white;
+              color: white;
             }
           }
 
@@ -299,6 +300,10 @@ header {
           border-bottom: none;
         }
 
+        &:hover {
+          background-color: @xebiaLightColor;
+        }
+
         &.selected {
           font-weight: 500;
           background-color: @xebiaLightColor;
@@ -323,6 +328,12 @@ header {
         content: "\f0c9";
         color: @xebiaColor;
       }
+    }
+  }
+
+  @media (max-width: @secondBreakPoint) {
+    .header-content .centering {
+      width: 100%;
     }
   }
 

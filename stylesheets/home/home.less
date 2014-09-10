@@ -66,6 +66,9 @@ h1 {
 
     p {
       min-height: 110px;
+      @media (max-width: @firstBreakPoint) {
+        min-height: 150px;
+      }
       @media (max-width: @secondBreakPoint) {
         min-height: inherit;
       }
@@ -318,6 +321,11 @@ h1 {
 
   }
 
+  @media (max-width: @firstBreakPoint) {
+    .description {
+      height: 250px;
+    }
+  }
   @media (max-width: @secondBreakPoint) {
 
     h2 {
@@ -335,6 +343,7 @@ h1 {
     }
 
     .description {
+      height:auto;
       min-height: 0;
       margin-bottom: 20px;
       margin-left: 10px;
