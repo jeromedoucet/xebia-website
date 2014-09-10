@@ -9,6 +9,8 @@ h1 {
     display: block;
     margin: 20px auto;
     background-color: @contrastColor;
+    .transition(all 0.3s);
+
     max-width: 210px;
     padding: 10px 20px;
 
@@ -40,6 +42,13 @@ h1 {
       border-left: @sizeBaseTriangle solid transparent;
       border-right: @sizeBaseTriangle solid transparent;
       bottom: 0 - @sizeTriangle;
+      .transition(all 0.3s);
+    }
+    &:hover {
+      background-color: lighten(@contrastColor, 5%);
+      &:after {
+        border-top-color: lighten(@contrastColor, 5%);
+      }
     }
   }
 
@@ -63,7 +72,6 @@ h1 {
     }
   }
 }
-
 
 .sharing-our-knowledge {
 
@@ -302,11 +310,11 @@ h1 {
     font-size: @standardTextSize;
     font-weight: 300;
 
-    height:220px;
+    height: 220px;
     overflow: hidden;
-    margin-bottom:26px;
+    margin-bottom: 26px;
 
-    line-height:30px;
+    line-height: 30px;
 
   }
 
@@ -323,13 +331,13 @@ h1 {
 
     .author {
       min-height: 0;
-      margin-left:10px;
+      margin-left: 10px;
     }
 
     .description {
       min-height: 0;
       margin-bottom: 20px;
-      margin-left:10px;
+      margin-left: 10px;
     }
   }
 
@@ -433,7 +441,7 @@ h1 {
 
       @media (max-width: @thirdBreakPoint) {
         min-height: 0;
-        margin-bottom:30px;
+        margin-bottom: 30px;
       }
     }
   }
