@@ -52,11 +52,19 @@ h1 {
     }
   }
 
-  .doings a {
+  .doings a.title-wrapper:hover {
+    h3 {
+      color:lighten(@contrastColor, 10%);
+    }
+  }
+
+
+  .doings a.more {
     .arrowNext(-3px);
   }
   .col3 {
     h3 {
+      .transition(color 0.3s);
       min-height: 40px;
 
       @media (max-width: @secondBreakPoint) {
