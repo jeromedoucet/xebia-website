@@ -22,8 +22,8 @@
         var event = eventWrapper.event;
 
         var startDate = moment(event.start_date);
-
-        return !!event.event && !!event.event.title && startDate.valueOf() > now && event.status == 'Live';
+        
+        return !!event && !!event.title && startDate.valueOf() > now && event.status == 'Live';
     };
 
     $(function () {
@@ -33,6 +33,7 @@
                 var content;
 
                 var events = response.events;
+
                 if (events && events.length > 0) {
                     var nextEvents = events.filter(isEventDisplayable).slice(0, 3);
 
