@@ -5,6 +5,6 @@
     </div>
     <div class="description">
         <h3>{{title}}</h3>
-        <a href="{{link}}" title="{{title}}">Lire plus</a>
+        <a href="{{link}}" target="_blank" title="{{title}}">Lire plus</a>
     </div>
 </div>

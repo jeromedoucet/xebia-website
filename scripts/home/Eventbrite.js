@@ -22,7 +22,7 @@
         var event = eventWrapper.event;
 
         var startDate = moment(event.start_date);
-        
+
         return !!event && !!event.title && startDate.valueOf() > now && event.status == 'Live';
     };
 
