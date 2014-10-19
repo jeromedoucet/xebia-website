@@ -54,14 +54,28 @@ h1 {
 
   .doings a.title-wrapper:hover {
     h3 {
-      color:lighten(@contrastColor, 10%);
+      color: lighten(@contrastColor, 10%);
     }
   }
-
 
   .doings a.more {
     .arrowNext(-3px);
   }
+
+  @media (max-width: @thirdBreakPoint) {
+    .doings .col3 {
+      h3, p {
+        margin-right: 0;
+        max-width:none;
+      }
+
+
+      img {
+        display: none;
+      }
+    }
+  }
+
   .col3 {
     h3 {
       .transition(color 0.3s);
@@ -109,9 +123,9 @@ h1 {
 
     .events {
       width: @partSize;
-    //  float: left;
-      margin-left:auto;
-      margin-right:auto;
+      //  float: left;
+      margin-left: auto;
+      margin-right: auto;
 
     }
     .training {
@@ -353,7 +367,7 @@ h1 {
     }
 
     .description {
-      height:auto;
+      height: auto;
       min-height: 0;
       margin-bottom: 20px;
       margin-left: 10px;
