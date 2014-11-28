@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/services/mobile.less"/>
+    <title>Xebia France - Mobile</title>
+
+    @@include('templates/standardHead.html')
+
+
+    <!-- build:css css/home.css -->
+    <link rel="stylesheet" href="stylesheets/vars.less"/>
+    <link rel="stylesheet" href="stylesheets/mixin.less"/>
+    <link rel="stylesheet" href="stylesheets/common/clients-list.less"/>
+    <link rel="stylesheet" href="stylesheets/services/top-service.less"/>
+    <link rel="stylesheet" href="stylesheets/services/subpage.less"/>
+    <link rel="stylesheet" href="stylesheets/services/agile.less"/>
+    <link rel="stylesheet" href="stylesheets/services/mobile.less"/>
+    <link rel="stylesheet" href="stylesheets/common/video-section.less"/>
+    <link rel="stylesheet" href="stylesheets/common/blog-section.less"/>
+    <link rel="stylesheet" href="stylesheets/vendor/featherlight.css"/>
+    <!-- endbuild -->
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/lang/fr.min.js"></script>
+
+    <!-- build:hbar js/templates.js -->
+    <script src="templates/common/blog.hbar"></script>
+    <script src="templates/common/client.hbar"></script>
+    <script src="templates/common/video.hbar"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/main.js -->
+    <script src="scripts/services/Services-Menu.js"></script>
+
+    <script src="scripts/common/Video.js"></script>
+    <script src="scripts/services/agile/Video.js"></script>
+
+    <script src="scripts/common/Blog.js"></script>
+    <script src="scripts/services/mobile/Blog.js"></script>
+
+    <script src="scripts/vendor/featherlight.js"></script>
+    <script src="scripts/services/agile/Agile.js"></script>
+    <!-- endbuild -->
+
+</head>
+<body>
+@@include('templates/header.html')
+
+<main>
+
+    @@include('templates/services/service-menu.html')
+
+    <section class="presentation centering">
+
+        <h1>Mobile&nbsp;?</h1>
+
+        <p>
+            La mobilité est autant une révolution technologique qu’une révolution
+            dans les usages : l’utilisateur peut ainsi accéder à tous ses services
+            partout, tout le temps.</p>
+
+        <p>
+            De nombreuses sociétés ont saisi cette opportunité de pouvoir adresser
+            leur service sur ce nouveau vecteur, voire de cibler purement
+            et simplement une nouvelle clientèle. Alors qu’elles “pensaient Web”,
+            celles-ci se mettent à penser “Mobile First” et accumulent près de
+            20% de leur CA global sur le mobile.</p>
+
+        <p>
+            En parallèle, les outils pour les développeurs mobiles deviennent
+            plus matures et permettent d’envisager sereinement une réelle politique
+            de qualité, d’industrialisation et d’intégration au sein des SI de
+            l’entreprise, de quoi accélérer définitivement sa production de services
+            et produits mobiles.</p>
+    </section>
+
+    <section class="ordi-moche centering">
+        <a href="career.html" title="nous rejoindre">
+            <img src="images/services/ordi-moche.png" alt="Ordinateur moche"/>
+        </a>
+    </section>
+
+
+    <section class="our-missions">
+        <div class="centering">
+            <h2>Nos offres</h2>
+
+            <div class="missions-desc">
+                <div class="mission" data-featherlight="#audit">
+                    <img src="images/services/mobile/audit.svg" alt="audit"/>
+
+                    <p>Audit</p>
+                </div>
+
+                <div class="mission" data-featherlight="#projet">
+                    <img src="images/services/mobile/projet.svg" alt="projet"/>
+
+                    <p>Projet</p>
+                </div>
+
+                <div class="mission" data-featherlight="#innovation">
+                    <img src="images/services/mobile/innovation.svg" alt="innovation"/>
+
+                    <p>Innovation</p>
+                </div>
+
+                <div class="mission" data-featherlight="#conseil">
+                    <img src="images/services/mobile/conseil.svg" alt="conseil"/>
+
+                    <p>Conseil</p>
+                </div>
+
+
+                <div class="mission" data-featherlight="#formation">
+                    <img src="images/services/mobile/formation.svg" alt="formation"/>
+
+                    <p>Formation</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="clients ">
+        <div class="centering">
+            <h2>Nos Clients</h2>
+        </div>
+
+        <div class="client-list-wrapper">
+            <div class="client-row3">
+                <img src="images/services/mobile/givaudan.png" width="200">
+                <img src="images/services/mobile/lacentrale.png" width="200">
+                <img src="images/services/mobile/lefigaro.png" width="200">
+
+                <div style="clear: both"></div>
+            </div>
+            <div class="client-row3">
+                <img src="images/services/mobile/orange.png" width="200">
+                <img src="images/services/mobile/pmu.png" width="200">
+                <img src="images/services/mobile/sephora.png" width="200">
+
+                <div style="clear: both"></div>
+            </div>
+            <div class="client-row1">
+                <img src="images/services/mobile/voyagessncf.png" width="200">
+            </div>
+        </div>
+    </section>
+
+    <section class="our-profils centering">
+        <h2>Déploiement continue</h2>
+
+        <img src="images/services/mobile/continous-delivery.svg" width="100%"/>
+    </section>
+
+    <section class="video-section centering">
+        <h2>Nos dernières vidéos</h2>
+
+        <div class="col-wrapper videos-wrapper" id="videos-wrapper">
+            <!-- rempli dynamiquement -->
+        </div>
+
+        <a class="do-you-want-to-know-more" href="http://vimeo.com/channels/agilite" title="Viméo">Voir toutes nos
+            vidéos</a>
+    </section>
+
+    <section class="blog centering">
+        <h2>Nos derniers articles</h2>
+
+        <div class="blog-articles-wrapper" id="blog-articles-wrapper">
+            <!-- rempli dynamiquement -->
+        </div>
+
+        <a class="do-you-want-to-know-more" href="http://blog.xebia.fr/category/mobilite/" title="Blog">Voir toutes nos
+            articles</a>
+    </section>
+</main>
+
+<div class="lightbox" id="scrum">
+    <h3>Vague d'accompagnement Scrum</h3>
+
+    <h4 class="tagline-missions">Vous voulez réussir votre projet agile&nbsp;?</h4>
+
+    <p>
+        Cette offre s’adresse aux équipes débutantes ou peu expérimentées en agile. S’appuyant sur nos formations et
+        notre expérience accumulée depuis de nombreuses années, notre ambition est de vous donner toutes les armes
+        pour remplir un triple objectif&nbsp;: fournir un produit de grande qualité, en respectant des contraintes
+        fortes, et en atteignant un niveau de maturité agile satisfaisant.</p>
+    <h4 class="popup-title">Notre intervention</h4>
+    <ul>
+        <li>Formation de l’équipe et des parties prenantes&nbsp;: Scrum, management visuel, User Stories</li>
+        <li>Création du backlog produit à l’aide de Story Mapping et Customer Experience Mapping</li>
+        <li>Coordination du sprint 0&nbsp;: Management visuel, environnement de travail, team building</li>
+        <li>Animation des cérémonies Scrum par le coach puis transfert de compétence progressif</li>
+        <li>Observation sur 2 sprints et recadrage des pratiques le cas échéant</li>
+    </ul>
+    <h4 class="popup-title">Nos livrables</h4>
+    <ul>
+        <li>Diagnostique de maturité au démarrage, à mi-chemin, et à la fin du coaching</li>
+        <li>Questionnaire de satisfaction équipe et bilan du coaching</li>
+    </ul>
+</div>
+
+<div class="lightbox" id="kanban">
+    <h3>Vague d'accompagnement Kanban</h3>
+
+    <h4 class="tagline-missions">Augmentez la transparence et la fluidité de vos projets</h4>
+
+    <p>
+        Cette offre s’adresse aux équipes débutantes ou peu expérimentées en agile. S’appuyant sur nos formations et
+        notre expérience accumulée depuis de nombreuses années, notre ambition est de vous donner toutes les armes
+        pour remplir un triple objectif&nbsp;: fournir un produit de grande qualité, en respectant des contraintes
+        fortes, et en atteignant un niveau de maturité agile satisfaisant.</p>
+    <h4 class="popup-title">Notre intervention</h4>
+    <ul>
+        <li>Formation de l’équipe et des parties prenantes&nbsp;: Kanban, User Stories</li>
+        <li>Définition des releases avec le Story Mapping</li>
+        <li>Définition des éléments de travail et des flux</li>
+        <li>Mise en place du management visuel&nbsp;: cockpit d’équipe, calendriers, indicateurs</li>
+        <li>Apprentissage de la gestion des limites</li>
+        <li>Support au traitement des obstacles, animation des katas de résolution de problème</li>
+        <li>Revue du flux et adaptation de la cadence du projet</li>
+    </ul>
+    <h4 class="popup-title">Nos livrables</h4>
+    <ul>
+        <li>Cockpit d’équipes</li>
+        <li>Indicateurs de prédictibilité</li>
+        <li>Matrices de maturité</li>
+        <li>Questionnaire de satisfaction équipe et bilan du coaching</li>
+    </ul>
+</div>
+<div class="lightbox" id="maturite">
+    <h3>Analyse de la maturité agile</h3>
+
+    <h4 class="tagline-missions">Pour se fixer des objectifs, il faut savoir d’où l’on part</h4>
+
+    <p>
+        Vous souhaitez vous situer par rapport aux pratiques agiles, voire au marché. Dans le cadre de l’analyse de
+        la maturité, nos coachs identifient vos points forts mais également vos axes d’améliorations pour assurer
+        une agilité durable et efficace dans votre organisation.</p>
+    <h4 class="popup-title">Notre intervention</h4>
+    <ul>
+        <li>Entretiens avec les équipes</li>
+        <li>Observation des cérémonies</li>
+        <li>Inspection des livrables</li>
+        <li>Animation d’ateliers pour recueil de contexte</li>
+    </ul>
+    <h4 class="popup-title">Nos livrables</h4>
+    <ul>
+        <li>Restitution et recommandations</li>
+        <li>Mise à disposition de cas client</li>
+        <li>Plan d’action</li>
+    </ul>
+</div>
+<div class="lightbox" id="sauvetage">
+    <h3>Sauvetage projet</h3>
+
+    <h4 class="tagline-missions">Aux grands maux, les grands remèdes</h4>
+
+    <p>
+        La situation est difficile, voire critique. Votre projet a déjà raté plusieurs jalons et les relations avec
+        le sponsor sont tendues. Vous avez perdu le contrôle du planning et personne n’arrive à prédire une date de
+        fin crédible. Notre offre de conseil se base sur une thérapie de choc dans laquelle nous adoptons une
+        approche directive et parfois intrusive pour donner des résultats rapides.</p>
+    <h4 class="popup-title">Notre intervention</h4>
+    <ul>
+        <li>Etat des lieux du projet, qu’il soit en V ou Agile&nbsp;: revue des engagements, des rôles, des
+            environnements, des livrables
+        </li>
+        <li>Evaluation de la maturité des rôles clés</li>
+        <li>Revue complète du backlog de produit et restructuration le cas échéant</li>
+        <li>Mise en place d’un flux de travail simple et stricte limitation de l’encours</li>
+        <li>Collecte des indicateurs de prédictibilité et extrapolation des dates d’atterrissages</li>
+        <li>Modification des environnements de travail pour permettre une collaboration optimale</li>
+        <li>Aide à la négociation du contenu des releases avec les donneurs d’ordres</li>
+        <li>Escalade des obstacles et support à la résolution de problèmes</li>
+    </ul>
+    <h4 class="popup-title">Nos livrables</h4>
+    <ul>
+        <li>Synthèse de l’état des lieux</li>
+        <li>Indicateurs de prédictibilité</li>
+        <li>Rapports de résolution de problème A3</li>
+    </ul>
+</div>
+
+<div class="lightbox" id="lean">
+    <h3>Lean Start Up MVP</h3>
+
+    <h4 class="tagline-missions">La création d’un produit commence bien avant son développement</h4>
+
+    <p>
+        La création d’un nouveau produit ou service est une étape passionnante mais également risquée. Comment être
+        en effet sûr de sa pertinence vis à vis de ses futurs utilisateurs ? Quelles sont les fonctionnalités à
+        mettre en avant ? Quelles sont celles qui feront de votre produit un incontournable ? Notre offre Lean Start
+        Up MVP s’appuie sur un travail itératif et incrémental dans la découverte du besoin pour identifier les
+        fonctionnalités de votre futur produit, mais surtout pour lui donner une vision et un sens auprès des
+        utilisateurs.</p>
+    <h4 class="popup-title">Notre intervention</h4>
+    <ul>
+        <li>Définition de la vision, de la proposition de valeur et des KPI de succès</li>
+        <li>Obtenir la liste des fonctionnalités du produit</li>
+        <li>Estimation et coût de la version 1</li>
+        <li>Développement du minimum viable</li>
+    </ul>
+    <h4 class="popup-title">Nos livrables</h4>
+    <ul>
+        <li>Synthèse du Business Case</li>
+        <li>Liste des fonctionnalités (Backlog de produit) MVP (Minimum Viable Product)</li>
+        <li>Plan de release</li>
+    </ul>
+</div>
+<div class="lightbox" id="tma">
+    <h3>TMA Agile</h3>
+
+    <h4 class="tagline-missions">L’activité de maintenance applicative est un candidat naturel à une démarche Agile</h4>
+
+    <p>
+        Les équipes de TMA sont engagées contractuellement à assurer un niveau de service strict sur différentes
+        natures de travaux&nbsp;: correction d’anomalies, petites évolutions, maintien en condition opérationnelle. Les
+        maintenances se prêtent mal à un cadre itératif tel que proposé par Scrum. Kanban est le système idéal pour
+        structurer le travail et répondre aux situations évoluant rapidement.</p>
+    <h4 class="popup-title">Notre intervention</h4>
+    <ul>
+        <li>Formation des équipes au Kanban</li>
+        <li>Analyse des travaux et définition des classes de service</li>
+        <li>Mise en place du système Kanban et des SLA des classes de service</li>
+        <li>Mise en place des indicateurs Kanban, vecteurs de transparence, d’engagement et de rythme soutenable
+        </li>
+    </ul>
+    <h4 class="popup-title">Nos livrables</h4>
+    <ul>
+        <li>Cockpit d’équipe</li>
+        <li>Indicateurs de suivi</li>
+        <li>Guide Kanban</li>
+    </ul>
+</div>
+<div class="lightbox" id="transformation">
+    <h3>Transformation Agile</h3>
+
+    <h4 class="tagline-missions">Intégrer l’agilité à l’ensemble de votre organisation</h4>
+
+    <p>
+        Passer d’une réussite sur un projet pilote à un mode de fonctionnement maîtrisé et reproductible nécessite
+        un travail de longue haleine. La transformation d’une organisation vers un mode agile ne s’improvise pas… La
+        réussite de cette transformation dépend de la capacité de l’organisation à ancrer l’agilité dans la durée et
+        de se questionner sur ses pratiques existantes. Nous vous proposons de vous accompagner avec une démarche
+        basée sur 3 axes&nbsp;: conduite du changement, coaching opérationnel des équipes, transfert de compétences.</p>
+    <h4 class="popup-title">Notre intervention</h4>
+    <ul>
+        <li>Définition des motivations et des KPI de transformation</li>
+        <li>Formalisation du processus agile et de la gouvernance agile</li>
+        <li>Organisation et animation de la communauté agile</li>
+        <li>Sensibilisation aux méthodes agiles de tous les acteurs&nbsp;: management, métiers...</li>
+        <li>Support aux projets</li>
+        <li>Identification et coaching des relais internes</li>
+    </ul>
+    <h4 class="popup-title">Nos livrables</h4>
+    <ul>
+        <li>Plan d’accompagnement du changement</li>
+        <li>Guides de mise en oeuvre</li>
+        <li>Fiche de synthèse des projets coachés</li>
+        <li>Projet pilote opérationnel sur Agile</li>
+    </ul>
+</div>
+<div class="lightbox" id="centre">
+    <h3>Centre Agile</h3>
+
+    <h4 class="tagline-missions">Pérenniser l’agilité avec une structure dédiée</h4>
+
+    <p>
+        La transformation d’une organisation importante nécessite une attention accrue et un coaching d’envergure.
+        Cette offre de coaching est destinée aux organisations gérant un portefeuille important de projets (80+) et
+        souhaitant une économie d’échelle et une cohérence forte dans leur transformation agile. Nous vous aidons à
+        réaliser toutes les étapes nécessaires à la construction d’un centre agile.</p>
+    <h4 class="popup-title">Notre intervention</h4>
+    <ul>
+        <li>Définition de la vision et des moyens du centre agile</li>
+        <li>Revue du portefeuille de projets et des critères d’éligibilité au coaching</li>
+        <li>Définition des cursus de formation</li>
+        <li>Recrutement des coachs internes</li>
+        <li>Création du référentiel méthodologique agile</li>
+        <li>Animation des communautés de pratiques</li>
+    </ul>
+    <h4 class="popup-title">Nos livrables</h4>
+    <ul>
+        <li>Plan d’accompagnement du changement</li>
+        <li>Guides de mise en oeuvre</li>
+        <li>Fiche de synthèse des projets coachés</li>
+        <li>Projet pilote opérationnel sur Agile</li>
+    </ul>
+</div>
+
+
+@@include('templates/footer.html')
+</body>
+</html>
