@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/services/mobile.less"/>
     <title>Xebia France - Mobile</title>
 
     @@include('templates/standardHead.html')
@@ -34,14 +32,10 @@
     <!-- build:js js/main.js -->
     <script src="scripts/services/Services-Menu.js"></script>
 
-    <script src="scripts/common/Video.js"></script>
-    <script src="scripts/services/agile/Video.js"></script>
-
     <script src="scripts/common/Blog.js"></script>
     <script src="scripts/services/mobile/Blog.js"></script>
 
     <script src="scripts/vendor/featherlight.js"></script>
-    <script src="scripts/services/agile/Agile.js"></script>
     <!-- endbuild -->
 
 </head>
@@ -113,10 +107,12 @@
                 </div>
 
 
-                <div class="mission" data-featherlight="#formation">
-                    <img src="images/services/mobile/formation.svg" alt="formation"/>
+                <div class="mission">
+                    <a href="http://training.xebia.fr/techniques/mobile" target="_blank">
+                        <img src="images/services/mobile/formation.svg" alt="formation"/>
 
-                    <p>Formation</p>
+                        <p>Formation</p>
+                    </a>
                 </div>
 
             </div>
@@ -132,15 +128,15 @@
         <div class="client-list-wrapper">
             <div class="client-row3">
                 <img src="images/services/mobile/givaudan.png" width="200">
-                <img src="images/services/mobile/lacentrale.png" width="200">
+                <img src="images/services/mobile/lacentrale.png" width="200" data-featherlight="#lacentrale">
                 <img src="images/services/mobile/lefigaro.png" width="200">
 
                 <div style="clear: both"></div>
             </div>
             <div class="client-row3">
                 <img src="images/services/mobile/orange.png" width="200">
-                <img src="images/services/mobile/pmu.png" width="200">
-                <img src="images/services/mobile/sephora.png" width="200">
+                <img src="images/services/mobile/pmu.png" width="200" data-featherlight="#pmu">
+                <img src="images/services/mobile/sephora.png" width="200" data-featherlight="#sephora">
 
                 <div style="clear: both"></div>
             </div>
@@ -159,12 +155,14 @@
     <section class="video-section centering">
         <h2>Nos dernières vidéos</h2>
 
-        <div class="col-wrapper videos-wrapper" id="videos-wrapper">
-            <!-- rempli dynamiquement -->
+        <div class="col-wrapper videos-wrapper">
+            <div class="video col3">
+                <iframe width="300" height="150"
+                        src="//www.youtube.com/embed/EVvp1h81i68?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
+                        allowfullscreen></iframe>
+                <h3>De l'intégration continue au déploiement continu sur iOS et Android - Open XKE 2013</h3>
+            </div>
         </div>
-
-        <a class="do-you-want-to-know-more" href="http://vimeo.com/channels/agilite" title="Viméo">Voir toutes nos
-            vidéos</a>
     </section>
 
     <section class="blog centering">
@@ -179,220 +177,203 @@
     </section>
 </main>
 
-<div class="lightbox" id="scrum">
-    <h3>Vague d'accompagnement Scrum</h3>
+<div class="lightbox" id="audit">
+    <h3>L'audit</h3>
 
-    <h4 class="tagline-missions">Vous voulez réussir votre projet agile&nbsp;?</h4>
+    <p>Lorsqu’une application Android ou iOS est instable, sa notation n’est pas à la hauteur de vos attentes et les
+        coûts de maintenance deviennent élevés, il est très probable que <span class="purple-highlight">la qualité du code en soit le problème</span>.
+    </p>
 
     <p>
-        Cette offre s’adresse aux équipes débutantes ou peu expérimentées en agile. S’appuyant sur nos formations et
-        notre expérience accumulée depuis de nombreuses années, notre ambition est de vous donner toutes les armes
-        pour remplir un triple objectif&nbsp;: fournir un produit de grande qualité, en respectant des contraintes
-        fortes, et en atteignant un niveau de maturité agile satisfaisant.</p>
-    <h4 class="popup-title">Notre intervention</h4>
+        Que ce soit à cause d’une utilisation erronée de la mémoire, de librairies tierces, de l’absence de tests, de
+        l’utilisation d’API obsolètes ou d’une architecture incorrecte, l’offre audit mobilité by Xebia peut
+        identifier, en 2 à 4 jours ouvrables, toutes ces anomalies techniques.
+    </p>
+
+    <p>
+        <span class="purple-highlight">Contrairement aux outils automatisés</span>, nous analysons également de manière
+        <span class="purple-highlight">manuelle</span> et <span class="purple-highlight">exhaustive</span> tous les
+        aspects de votre application.
+    </p>
+
+    <p>
+        L’audit mobilité débouche notamment sur un document de synthèse qui décrit l’analyse des aspects suivants&nbsp;:
+    </p>
     <ul>
-        <li>Formation de l’équipe et des parties prenantes&nbsp;: Scrum, management visuel, User Stories</li>
-        <li>Création du backlog produit à l’aide de Story Mapping et Customer Experience Mapping</li>
-        <li>Coordination du sprint 0&nbsp;: Management visuel, environnement de travail, team building</li>
-        <li>Animation des cérémonies Scrum par le coach puis transfert de compétence progressif</li>
-        <li>Observation sur 2 sprints et recadrage des pratiques le cas échéant</li>
+        <li>la mémoire utilisée par votre application,</li>
+        <li>la qualité du code (analyse humaine et automatisée),</li>
+        <li>les fichiers de définition d’interface (layout, nib/storyboard),</li>
+        <li>les aspects de sécurité lorsque cela est nécessaire,</li>
+        <li>la performance réseau,</li>
+        <li>la chaîne de build et de déploiement.</li>
     </ul>
-    <h4 class="popup-title">Nos livrables</h4>
-    <ul>
-        <li>Diagnostique de maturité au démarrage, à mi-chemin, et à la fin du coaching</li>
-        <li>Questionnaire de satisfaction équipe et bilan du coaching</li>
-    </ul>
+
+    <p>
+        Vous y trouverez également nos <span class="purple-highlight">recommandations</span> personnalisées pour <span
+            class="purple-highlight">améliorer votre application</span>.
+    </p>
 </div>
 
-<div class="lightbox" id="kanban">
-    <h3>Vague d'accompagnement Kanban</h3>
+<div class="lightbox" id="projet">
+    <h3>Projet</h3>
 
-    <h4 class="tagline-missions">Augmentez la transparence et la fluidité de vos projets</h4>
-
-    <p>
-        Cette offre s’adresse aux équipes débutantes ou peu expérimentées en agile. S’appuyant sur nos formations et
-        notre expérience accumulée depuis de nombreuses années, notre ambition est de vous donner toutes les armes
-        pour remplir un triple objectif&nbsp;: fournir un produit de grande qualité, en respectant des contraintes
-        fortes, et en atteignant un niveau de maturité agile satisfaisant.</p>
-    <h4 class="popup-title">Notre intervention</h4>
-    <ul>
-        <li>Formation de l’équipe et des parties prenantes&nbsp;: Kanban, User Stories</li>
-        <li>Définition des releases avec le Story Mapping</li>
-        <li>Définition des éléments de travail et des flux</li>
-        <li>Mise en place du management visuel&nbsp;: cockpit d’équipe, calendriers, indicateurs</li>
-        <li>Apprentissage de la gestion des limites</li>
-        <li>Support au traitement des obstacles, animation des katas de résolution de problème</li>
-        <li>Revue du flux et adaptation de la cadence du projet</li>
-    </ul>
-    <h4 class="popup-title">Nos livrables</h4>
-    <ul>
-        <li>Cockpit d’équipes</li>
-        <li>Indicateurs de prédictibilité</li>
-        <li>Matrices de maturité</li>
-        <li>Questionnaire de satisfaction équipe et bilan du coaching</li>
-    </ul>
-</div>
-<div class="lightbox" id="maturite">
-    <h3>Analyse de la maturité agile</h3>
-
-    <h4 class="tagline-missions">Pour se fixer des objectifs, il faut savoir d’où l’on part</h4>
+    <h4 class="tagline-missions">Développement de votre projet mobile</h4>
 
     <p>
-        Vous souhaitez vous situer par rapport aux pratiques agiles, voire au marché. Dans le cadre de l’analyse de
-        la maturité, nos coachs identifient vos points forts mais également vos axes d’améliorations pour assurer
-        une agilité durable et efficace dans votre organisation.</p>
-    <h4 class="popup-title">Notre intervention</h4>
+        Tous nos projets s’articulent autour d’une exigence et d’une méthodologie au service de vos objectifs de qualité
+        et de Time-To-Market&nbsp;:
+    </p>
     <ul>
-        <li>Entretiens avec les équipes</li>
-        <li>Observation des cérémonies</li>
-        <li>Inspection des livrables</li>
-        <li>Animation d’ateliers pour recueil de contexte</li>
-    </ul>
-    <h4 class="popup-title">Nos livrables</h4>
-    <ul>
-        <li>Restitution et recommandations</li>
-        <li>Mise à disposition de cas client</li>
-        <li>Plan d’action</li>
-    </ul>
-</div>
-<div class="lightbox" id="sauvetage">
-    <h3>Sauvetage projet</h3>
-
-    <h4 class="tagline-missions">Aux grands maux, les grands remèdes</h4>
-
-    <p>
-        La situation est difficile, voire critique. Votre projet a déjà raté plusieurs jalons et les relations avec
-        le sponsor sont tendues. Vous avez perdu le contrôle du planning et personne n’arrive à prédire une date de
-        fin crédible. Notre offre de conseil se base sur une thérapie de choc dans laquelle nous adoptons une
-        approche directive et parfois intrusive pour donner des résultats rapides.</p>
-    <h4 class="popup-title">Notre intervention</h4>
-    <ul>
-        <li>Etat des lieux du projet, qu’il soit en V ou Agile&nbsp;: revue des engagements, des rôles, des
-            environnements, des livrables
+        <li><span class="purple-highlight">La qualité</span> : mise en place de tests unitaires et tests fonctionnels
+            (End-to-End).
         </li>
-        <li>Evaluation de la maturité des rôles clés</li>
-        <li>Revue complète du backlog de produit et restructuration le cas échéant</li>
-        <li>Mise en place d’un flux de travail simple et stricte limitation de l’encours</li>
-        <li>Collecte des indicateurs de prédictibilité et extrapolation des dates d’atterrissages</li>
-        <li>Modification des environnements de travail pour permettre une collaboration optimale</li>
-        <li>Aide à la négociation du contenu des releases avec les donneurs d’ordres</li>
-        <li>Escalade des obstacles et support à la résolution de problèmes</li>
-    </ul>
-    <h4 class="popup-title">Nos livrables</h4>
-    <ul>
-        <li>Synthèse de l’état des lieux</li>
-        <li>Indicateurs de prédictibilité</li>
-        <li>Rapports de résolution de problème A3</li>
-    </ul>
-</div>
-
-<div class="lightbox" id="lean">
-    <h3>Lean Start Up MVP</h3>
-
-    <h4 class="tagline-missions">La création d’un produit commence bien avant son développement</h4>
-
-    <p>
-        La création d’un nouveau produit ou service est une étape passionnante mais également risquée. Comment être
-        en effet sûr de sa pertinence vis à vis de ses futurs utilisateurs ? Quelles sont les fonctionnalités à
-        mettre en avant ? Quelles sont celles qui feront de votre produit un incontournable ? Notre offre Lean Start
-        Up MVP s’appuie sur un travail itératif et incrémental dans la découverte du besoin pour identifier les
-        fonctionnalités de votre futur produit, mais surtout pour lui donner une vision et un sens auprès des
-        utilisateurs.</p>
-    <h4 class="popup-title">Notre intervention</h4>
-    <ul>
-        <li>Définition de la vision, de la proposition de valeur et des KPI de succès</li>
-        <li>Obtenir la liste des fonctionnalités du produit</li>
-        <li>Estimation et coût de la version 1</li>
-        <li>Développement du minimum viable</li>
-    </ul>
-    <h4 class="popup-title">Nos livrables</h4>
-    <ul>
-        <li>Synthèse du Business Case</li>
-        <li>Liste des fonctionnalités (Backlog de produit) MVP (Minimum Viable Product)</li>
-        <li>Plan de release</li>
-    </ul>
-</div>
-<div class="lightbox" id="tma">
-    <h3>TMA Agile</h3>
-
-    <h4 class="tagline-missions">L’activité de maintenance applicative est un candidat naturel à une démarche Agile</h4>
-
-    <p>
-        Les équipes de TMA sont engagées contractuellement à assurer un niveau de service strict sur différentes
-        natures de travaux&nbsp;: correction d’anomalies, petites évolutions, maintien en condition opérationnelle. Les
-        maintenances se prêtent mal à un cadre itératif tel que proposé par Scrum. Kanban est le système idéal pour
-        structurer le travail et répondre aux situations évoluant rapidement.</p>
-    <h4 class="popup-title">Notre intervention</h4>
-    <ul>
-        <li>Formation des équipes au Kanban</li>
-        <li>Analyse des travaux et définition des classes de service</li>
-        <li>Mise en place du système Kanban et des SLA des classes de service</li>
-        <li>Mise en place des indicateurs Kanban, vecteurs de transparence, d’engagement et de rythme soutenable
+        <li><span class="purple-highlight">L’industrialisation</span> : mise en place du déploiement continu du début à
+            la fin du projet.
+        </li>
+        <li><span class="purple-highlight">L’agilité</span> : développement itératif, permettant la mise en production
+            de votre application toutes les 2 semaines.
+        </li>
+        <li><span class="purple-highlight">L’expertise</span> : utilisation au sein de votre projet de technologies
+            mobiles pérennes les plus récentes.
+        </li>
+        <li><span class="purple-highlight">Les Feature Teams</span> : mise en place d’une équipe pluridisciplinaire,
+            capable de traiter chaque fonctionnalité de bout en bout (développement de la partie mobile mais également
+            la partie backend).
+        </li>
+        <li><span class="purple-highlight">L’objectif</span> : une équipe autonome et réactive. Possibilité d’inclure un
+            de vos développeurs mobiles au sein de l’équipe projet pour faciliter à terme le transfert de compétences.
         </li>
     </ul>
-    <h4 class="popup-title">Nos livrables</h4>
-    <ul>
-        <li>Cockpit d’équipe</li>
-        <li>Indicateurs de suivi</li>
-        <li>Guide Kanban</li>
-    </ul>
-</div>
-<div class="lightbox" id="transformation">
-    <h3>Transformation Agile</h3>
+    <h4 class="popup-title">Reprise de votre application mobile</h4>
 
-    <h4 class="tagline-missions">Intégrer l’agilité à l’ensemble de votre organisation</h4>
+    <p>Vous avez développé votre application mobile et vous souhaitez un partenaire pour perdurer son développement ou
+        l’accélérer&nbsp;?</p>
+
+    <p>Dans le cadre de la reprise d’un parc applicatif mobile existant, l’équipe Xebia procédera de la manière suivante&nbsp;:</p>
+
+    <ul>
+        <li>L’évaluation et la quantification de la <span class="purple-highlight">qualité du code</span> actuel afin de
+            bien suivre son évolution et si
+            nécessaire proposer des actions pour son amélioration.
+        </li>
+        <li>La reprise en main de l’<span class="purple-highlight">historique des fonctionnalités</span> du projet et
+            réaliser un story mapping afin
+            d’identifier clairement les prochaines priorités pour votre produit mobile.
+        </li>
+        <li>La mise en place ou mise à jour de <span class="purple-highlight">votre usine logicielle</span> afin qu’elle
+            permette le déploiement continu de
+            votre application mobile.
+        </li>
+    </ul>
+
+    <p>S’ils n’existent pas, nous mettrons en place des indicateurs agiles permettant de suivre l’avancement de la
+        réalisation et la planification des prochaines releases.</p>
+
+</div>
+<div class="lightbox" id="innovation">
+    <h3>Innovation</h3>
 
     <p>
-        Passer d’une réussite sur un projet pilote à un mode de fonctionnement maîtrisé et reproductible nécessite
-        un travail de longue haleine. La transformation d’une organisation vers un mode agile ne s’improvise pas… La
-        réussite de cette transformation dépend de la capacité de l’organisation à ancrer l’agilité dans la durée et
-        de se questionner sur ses pratiques existantes. Nous vous proposons de vous accompagner avec une démarche
-        basée sur 3 axes&nbsp;: conduite du changement, coaching opérationnel des équipes, transfert de compétences.</p>
-    <h4 class="popup-title">Notre intervention</h4>
+        La veille technologique fait partie de l’ADN de Xebia, et cela vaut également pour la mobilité. <br/>
+        En couplant méthodologie agile et savoir-faire technique, nous vous proposons des solutions efficaces et
+        calibrées pour la réalisation de vos projets mobiles innovants.
+    </p>
+
+    <p>A titre d’exemple, Xebia a déjà mené des POC (dont certains sont aujourd’hui en production) sur les sujets
+        suivants&nbsp;:</p>
+
     <ul>
-        <li>Définition des motivations et des KPI de transformation</li>
-        <li>Formalisation du processus agile et de la gouvernance agile</li>
-        <li>Organisation et animation de la communauté agile</li>
-        <li>Sensibilisation aux méthodes agiles de tous les acteurs&nbsp;: management, métiers...</li>
-        <li>Support aux projets</li>
-        <li>Identification et coaching des relais internes</li>
-    </ul>
-    <h4 class="popup-title">Nos livrables</h4>
-    <ul>
-        <li>Plan d’accompagnement du changement</li>
-        <li>Guides de mise en oeuvre</li>
-        <li>Fiche de synthèse des projets coachés</li>
-        <li>Projet pilote opérationnel sur Agile</li>
+        <li><span class="purple-highlight">iBeacon</span>&nbsp;: intégration de push géolocalisés au sein d’une
+            application mobile, basés sur des bornes iBeacon en
+            point de vente.
+        </li>
+        <li><span class="purple-highlight">NFC</span>&nbsp;: développement d’une application mobile innovante grâce aux
+            puces NFC
+        </li>
+        <li><span class="purple-highlight">Android Wear / Apple Watch</span>&nbsp;: développement d’une application pour
+            une montre connectée reliée aux services
+            proposées sur mobile.
+        </li>
+        <li><span class="purple-highlight">Material Design</span>&nbsp;: étude et refonte d’une application pour adopter
+            les nouvelles guidelines Google sur le
+            material design.
+        </li>
+        <li><span class="purple-highlight">Widget</span>&nbsp;: exposition d’une partie des services d’une application
+            mobile sous forme de widgets, sur Android
+            mais aussi notamment au sein d’iOS 8.
+        </li>
     </ul>
 </div>
-<div class="lightbox" id="centre">
-    <h3>Centre Agile</h3>
-
-    <h4 class="tagline-missions">Pérenniser l’agilité avec une structure dédiée</h4>
+<div class="lightbox" id="conseil">
+    <h3>Conseil</h3>
 
     <p>
-        La transformation d’une organisation importante nécessite une attention accrue et un coaching d’envergure.
-        Cette offre de coaching est destinée aux organisations gérant un portefeuille important de projets (80+) et
-        souhaitant une économie d’échelle et une cohérence forte dans leur transformation agile. Nous vous aidons à
-        réaliser toutes les étapes nécessaires à la construction d’un centre agile.</p>
-    <h4 class="popup-title">Notre intervention</h4>
+        Grâce à sa veille technologique et la réalisation de projets mobiles d’envergure aussi bien B2B que B2C, Xebia a
+        acquis une expertise que nous mettons à votre disposition dans cette offre.</p>
+
+    <p>Sans que cela soit exhaustif, nous pouvons par exemple vous conseiller sur&nbsp;:</p>
+
     <ul>
-        <li>Définition de la vision et des moyens du centre agile</li>
-        <li>Revue du portefeuille de projets et des critères d’éligibilité au coaching</li>
-        <li>Définition des cursus de formation</li>
-        <li>Recrutement des coachs internes</li>
-        <li>Création du référentiel méthodologique agile</li>
-        <li>Animation des communautés de pratiques</li>
-    </ul>
-    <h4 class="popup-title">Nos livrables</h4>
-    <ul>
-        <li>Plan d’accompagnement du changement</li>
-        <li>Guides de mise en oeuvre</li>
-        <li>Fiche de synthèse des projets coachés</li>
-        <li>Projet pilote opérationnel sur Agile</li>
+        <li>La <span class="purple-highlight">meilleure stratégie mobile</span> à adopter dans votre contexte :
+            développement natif ou développement
+            hybride/Web.
+        </li>
+        <li>Comment améliorer sur iOS et Android, la <span class="purple-highlight">qualité</span> de vos développements
+            et quels outils choisir pour y
+            parvenir.
+        </li>
+        <li>Comment mettre en place une seule <span class="purple-highlight">usine logicielle mobile</span> vous
+            permettant d’atteindre le déploiement continu
+            sur iOS et Android.
+        </li>
+        <li>La mise en place de <span class="purple-highlight">tests fonctionnels automatisés</span> qui vous
+            permettront de vous assurer du bon
+            fonctionnement des parcours utilisateurs critiques et limiter les régressions à chaque nouvelle version de
+            votre application mobile.
+        </li>
+        <li>Les <span class="purple-highlight">impacts d’une nouvelle version</span> d’iOS ou Android sur votre
+            application et les bénéfices que vous pouvez
+            en tirer.
+        </li>
     </ul>
 </div>
 
+<div class="lightbox" id="lacentrale">
+    <div class="application-container">
+        <div class="application-logo"><img src="images/services/mobile/android_logo.svg" alt="" height="100%" width="100%"/></div>
+        <div class="application-logo"><img src="images/services/mobile/apple_logo.svg" alt="" height="100%" width="100%"/></div>
+        <div class="application-name"><h4>La Centrale</h4></div>
+    </div>
+    <div class="application-container">
+        <div class="application-logo"><img src="images/services/mobile/android_logo.svg" alt="" height="100%" width="100%"/></div>
+        <div class="application-logo"><img src="images/services/mobile/apple_logo.svg" alt="" height="100%" width="100%"/></div>
+        <div class="application-name"><h4>Annonces du Bateau</h4></div>
+    </div>
+    <div class="application-container">
+        <div class="application-logo"><img src="images/services/mobile/android_logo.svg" alt="" height="100%" width="100%"/></div>
+        <div class="application-logo"><img src="images/services/mobile/apple_logo.svg" alt="" height="100%" width="100%"/></div>
+        <div class="application-name"><h4>Caradisiac</h4></div>
+    </div>
+</div>
+<div class="lightbox" id="pmu">
+    <div class="application-container">
+        <div class="application-logo"><img src="images/services/mobile/android_logo.svg" alt="" height="100%" width="100%"/></div>
+        <div class="application-logo"><img src="images/services/mobile/apple_logo.svg" alt="" height="100%" width="100%"/></div>
+        <div class="application-name"><h4>PMU Hippique</h4></div>
+    </div>
+    <div class="application-container">
+        <div class="application-logo"><img src="images/services/mobile/android_logo.svg" alt="" height="100%" width="100%"/></div>
+        <div class="application-logo"></div>
+        <div class="application-name"><h4>PMU Sports</h4></div>
+    </div>
+</div>
+<div class="lightbox" id="sephora">
+    <div class="application-container">
+        <div class="application-logo"></div>
+        <div class="application-logo"><img src="images/services/mobile/apple_logo.svg" alt="" height="100%" width="100%"/></div>
+        <div class="application-name"><h4>MySephora</h4></div>
+    </div>
+</div>
 
 @@include('templates/footer.html')
 </body>
