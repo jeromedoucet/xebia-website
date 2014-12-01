@@ -25,6 +25,10 @@ var paths = {
     resources: ['CNAME', 'robots.txt', 'sitemap.xml', 'favicon.ico']
 };
 
+var deployOpts = {
+    cacheDir: 'deployCache'
+};
+
 var distTasks = ['_image', '_html', '_resources', '_fonts', '_data'];
 (function () {
     var cleanTask = function () {
@@ -33,7 +37,7 @@ var distTasks = ['_image', '_html', '_resources', '_fonts', '_data'];
     };
     var deployTask = function () {
         return gulp.src(paths.dist + '/**/*')
-            .pipe(deploy());
+            .pipe(deploy(deployOpts));
     };
     var imageTask = function () {
         return gulp.src(paths.images).pipe(imagemin()).pipe(gulp.dest(paths.dist + '/images'));
