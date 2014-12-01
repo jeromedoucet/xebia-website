@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <title>Xebia France - Mobile</title>
 
     @@include('templates/standardHead.html')
@@ -12,7 +13,6 @@
     <link rel="stylesheet" href="stylesheets/common/clients-list.less"/>
     <link rel="stylesheet" href="stylesheets/services/top-service.less"/>
     <link rel="stylesheet" href="stylesheets/services/subpage.less"/>
-    <link rel="stylesheet" href="stylesheets/services/agile.less"/>
     <link rel="stylesheet" href="stylesheets/services/mobile.less"/>
     <link rel="stylesheet" href="stylesheets/common/video-section.less"/>
     <link rel="stylesheet" href="stylesheets/common/blog-section.less"/>
@@ -31,6 +31,10 @@
 
     <!-- build:js js/main.js -->
     <script src="scripts/services/Services-Menu.js"></script>
+
+    <script src="data/services/mobile/clients-data.js"></script>
+    <script src="scripts/common/Clients.js"></script>
+    <script src="scripts/services/mobile/Clients.js"></script>
 
     <script src="scripts/common/Blog.js"></script>
     <script src="scripts/services/mobile/Blog.js"></script>
@@ -112,29 +116,22 @@
         </div>
     </section>
 
-
     <section class="clients ">
         <div class="centering">
             <h2>Nos Clients</h2>
         </div>
 
-        <div class="client-list-wrapper">
-            <div class="client-row3">
-                <img src="images/services/mobile/givaudan.png" width="200">
-                <img src="images/services/mobile/lacentrale.png" width="200" data-featherlight="#lacentrale">
-                <img src="images/services/mobile/lefigaro.png" width="200">
+        <div class="client-list">
+            <div class="centering">
+                <button class="nav-button before-button">‹</button>
 
-                <div style="clear: both"></div>
-            </div>
-            <div class="client-row3">
-                <img src="images/services/mobile/orange.png" width="200">
-                <img src="images/services/mobile/pmu.png" width="200" data-featherlight="#pmu">
-                <img src="images/services/mobile/sephora.png" width="200" data-featherlight="#sephora">
+                <div class="client-list-wrapper">
+                    <div class="inner-client-list" id="clients-logo">
+                        <!-- rempli dynamiquement -->
+                    </div>
+                </div>
 
-                <div style="clear: both"></div>
-            </div>
-            <div class="client-row1">
-                <img src="images/services/mobile/voyagessncf.png" width="200">
+                <button class="nav-button after-button">›</button>
             </div>
         </div>
     </section>
@@ -329,53 +326,6 @@
             en tirer.
         </li>
     </ul>
-</div>
-
-<div class="lightbox" id="lacentrale">
-    <div class="application-container">
-        <div class="application-logo"><img src="images/services/mobile/android_logo.svg" alt="" height="100%"
-                                           width="100%"/></div>
-        <div class="application-logo"><img src="images/services/mobile/apple_logo.svg" alt="" height="100%"
-                                           width="100%"/></div>
-        <div class="application-name"><h4>La Centrale</h4></div>
-    </div>
-    <div class="application-container">
-        <div class="application-logo"><img src="images/services/mobile/android_logo.svg" alt="" height="100%"
-                                           width="100%"/></div>
-        <div class="application-logo"><img src="images/services/mobile/apple_logo.svg" alt="" height="100%"
-                                           width="100%"/></div>
-        <div class="application-name"><h4>Annonces du Bateau</h4></div>
-    </div>
-    <div class="application-container">
-        <div class="application-logo"><img src="images/services/mobile/android_logo.svg" alt="" height="100%"
-                                           width="100%"/></div>
-        <div class="application-logo"><img src="images/services/mobile/apple_logo.svg" alt="" height="100%"
-                                           width="100%"/></div>
-        <div class="application-name"><h4>Caradisiac</h4></div>
-    </div>
-</div>
-<div class="lightbox" id="pmu">
-    <div class="application-container">
-        <div class="application-logo"><img src="images/services/mobile/android_logo.svg" alt="" height="100%"
-                                           width="100%"/></div>
-        <div class="application-logo"><img src="images/services/mobile/apple_logo.svg" alt="" height="100%"
-                                           width="100%"/></div>
-        <div class="application-name"><h4>PMU Hippique</h4></div>
-    </div>
-    <div class="application-container">
-        <div class="application-logo"><img src="images/services/mobile/android_logo.svg" alt="" height="100%"
-                                           width="100%"/></div>
-        <div class="application-logo"></div>
-        <div class="application-name"><h4>PMU Sports</h4></div>
-    </div>
-</div>
-<div class="lightbox" id="sephora">
-    <div class="application-container">
-        <div class="application-logo"></div>
-        <div class="application-logo"><img src="images/services/mobile/apple_logo.svg" alt="" height="100%"
-                                           width="100%"/></div>
-        <div class="application-name"><h4>MySephora</h4></div>
-    </div>
 </div>
 
 @@include('templates/footer.html')
