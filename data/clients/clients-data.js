@@ -18,7 +18,6 @@ window.CLIENTS = [
     {name:'SFR'},
     {name:'LB Poker'},
     {name:'JC Decaux'},
-    {name:'SNCF'},
     {name:'Crédit Agricole'},
     {name:'Egencia'},
     {name:'B For Bank'},
