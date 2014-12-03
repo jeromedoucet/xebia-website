@@ -26,7 +26,6 @@ window.CLIENTS = [
     {name:'Cofiroute'},
     {name:"Conseil d'état"},
     {name:'ManPower'},
-    {name:'Voyages-SCNF.com'},
     {name:'Bi-Sam'},
     {name:'Banque de France'},
     {name:'Emailvision'},
