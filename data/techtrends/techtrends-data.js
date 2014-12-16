@@ -139,5 +139,39 @@ window.TECHTRENDS = [
             title: 'Les bâtisseurs de cathédrale du XXIème siècle',
             content: "Aujourd’hui, de nombreuses entreprises ont adopté les processus agiles. Cependant, trop souvent les projets agiles déçoivent en se heurtant fréquemment à des problématiques telles que les pratiques de développement logiciel, la qualité intrinsèque des équipes et leur capacité à intégrer en continu de nouvelles méthodes de réalisation d’un logiciel de très haute qualité au juste coût. Cet amer constat a poussé les équipes de développement à agir. C’est ainsi qu’est né le mouvement Software Craftsmanship. Nous sommes convaincus que les bénéfices au sein de vos équipes sont réels : une base de code évolutive et à juste coût, une montée en compétences homogène de l’équipe et des engagements de développement en termes de délai et de qualité plus souvent respectés. Ce TechTrends vous permettra d’identifier l’attitude type des software craftsmen, de comprendre comment ils travaillent et de faire émerger ces comportements et ces pratiques au sein de vos équipes, pour en retirer tous les bénéfices."
         }
+    },
+    {
+        file: 'techtrends-xebia-front.pdf',
+        date: '12/2014',
+        packshot:'packshot-front.jpg',
+        summary: [
+            {
+                title: 'MAQUETTER',
+                content: [
+                    "Mettre vos utilisateurs au centre de vos réflexions",
+                    "Adapter votre design aux canaux de diffusion choisis"
+                ]
+            },
+            {
+                title: 'CRÉER',
+                content: [
+                    "Évaluer la pertinence d’un templating côté client",
+                    "Préparer l’arrivée des interfaces modulaires",
+                    "Envisager les langages alternatifs à JavaScript"
+                ]
+            },
+            {
+                title: 'INDUSTRIALISER',
+                content: [
+                    "Intégrer les tests à chaque étape de développement",
+                    "Mettre en place des outils de validation du code fiable",
+                    "Afficher, partager et diffuser l’information à toutes les parties prenantes du projet"
+                ]
+            }
+        ],
+        description: {
+            title: '',
+            content: "L’apparition et la démocratisation de nouveaux vecteurs d’informations (smartphone, tablette, TV connectée, etc.), l’amélioration continue du matériel et des connexions internet et la montée en puissance de nouveaux navigateurs (Chrome, Firefox) sont venues bouleverser les codes. Ainsi, une nouvelle “branche” des projets Web est apparue : les applications Front-end, pour lesquelles le serveur n’est qu’un vecteur d’information parmi d’autres, et pour qui le navigateur est un réel moteur d’exécution. Ce Techtrends, à travers la gestation d’une application web - maquettage, développement et industrialisation - tentera de vous aiguiller dans ce dédale, et de pointer les technologies d’aujourd’hui et de demain afin de créer des interfaces modernes, ludiques et interactives fluidifiant l’accès des utilisateurs à l’information."
+        }
     }
 ];
