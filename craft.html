@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Xebia France - Craft</title>
+
+    @@include('templates/standardHead.html')
+
+    <!-- build:css css/home.css -->
+    <link rel="stylesheet" href="stylesheets/vars.less"/>
+    <link rel="stylesheet" href="stylesheets/mixin.less"/>
+    <link rel="stylesheet" href="stylesheets/common/clients-list.less"/>
+    <link rel="stylesheet" href="stylesheets/services/top-service.less"/>
+    <link rel="stylesheet" href="stylesheets/services/subpage.less"/>
+
+    <link rel="stylesheet" href="stylesheets/services/craft.less"/>
+
+    <link rel="stylesheet" href="stylesheets/common/video-section.less"/>
+    <link rel="stylesheet" href="stylesheets/common/blog-section.less"/>
+    <link rel="stylesheet" href="stylesheets/vendor/featherlight.css"/>
+    <!-- endbuild -->
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/lang/fr.min.js"></script>
+
+    <!-- build:hbar js/templates.js -->
+    <script src="templates/common/blog.hbar"></script>
+    <script src="templates/common/client.hbar"></script>
+    <script src="templates/common/video.hbar"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/main.js -->
+    <script src="scripts/services/Services-Menu.js"></script>
+
+    <script src="data/clients/clients-data.js"></script>
+    <script src="scripts/common/Clients.js"></script>
+    <script src="scripts/services/craft/Clients.js"></script>
+
+    <script src="scripts/common/Blog.js"></script>
+    <script src="scripts/services/craft/Blog.js"></script>
+
+    <script src="scripts/vendor/featherlight.js"></script>
+    <!-- endbuild -->
+
+</head>
+<body>
+@@include('templates/header.html')
+
+<main>
+
+    @@include('templates/services/service-menu.html')
+
+    <section class="presentation centering">
+
+        <h1>Craft&nbsp;?</h1>
+
+        <p>Nous constatons trop souvent que la durée de vie des projets informatiques dépasse rarement cinq ans : code 
+            non maintenable, connaissance perdue au gré des départs des "développeurs clés", des technologies devenues 
+            obsolètes, etc.</p>
+        
+        <p>Cet amer constat a donné naissance au mouvement Software Craftsmanship utilisant la qualité et 
+            l'apprentissage comme maîtres mots.</p>
+
+        <p>Le Software Craftsmanship permet de limiter la dette technique en construisant une base de code de qualité 
+            et évolutive à juste coût et de respecter les délais de développement.</p>
+
+        <p>Nous partageons généreusement notre savoir-faire au travers de notre blog, de publications, des 
+            participations aux conférences et de notre <a class="xebia-link">Techtrends #4</a>.</p>
+
+    </section>
+
+    <section class="ordi-moche centering">
+        <a href="career.html" title="nous rejoindre">
+            <img src="images/services/ordi-moche.png" alt="Ordinateur moche"/>
+        </a>
+    </section>
+
+
+    <section class="our-missions">
+        <div class="centering">
+            <h2>Notre aide</h2>
+
+            <div class="missions-desc">
+                <div class="mission" data-featherlight="#accompagnement">
+                    <img src="images/services/craft/craft_accompagnement.png" alt="accompagnement"/>
+
+                    <p>Accompagnement</p>
+                </div>
+
+                <div class="mission">
+                    <img src="images/services/craft/craft_formation.png" alt="formation développeur agile"/>
+
+                    <p>Formation Développeur Agile</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients">
+        <div class="centering">
+            <h2>Nos Clients</h2>
+        </div>
+
+        <div class="client-list">
+            <div class="centering">
+                <button class="nav-button before-button">‹</button>
+
+                <div class="client-list-wrapper">
+                    <div class="inner-client-list" id="clients-logo">
+                        <!-- rempli dynamiquement -->
+                    </div>
+                </div>
+
+                <button class="nav-button after-button">›</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog centering">
+        <h2>Nos derniers articles</h2>
+
+        <div class="blog-articles-wrapper" id="blog-articles-wrapper">
+            <!-- rempli dynamiquement -->
+        </div>
+
+        <a class="do-you-want-to-know-more" href="http://blog.xebia.fr/category/craftsmanship/" title="Blog">Voir tous nos
+            articles</a>
+    </section>
+</main>
+
+<div class="lightbox" id="accompagnement">
+    <h3>L'Accompagnement</h3>
+    
+    <p>Xebia accompagne vos équipes vers une transformation Craft à l'aide de bonnes pratiques telles que le pair 
+        programming, le code katas, la revue de code et pour aller plus loin l'intégration continue. </p>
+
+</div>
+
+@@include('templates/footer.html')
+</body>
+</html>
