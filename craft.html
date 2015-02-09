@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title>Xebia France</title>
+    <title>Xebia France - Craft</title>
 
     <meta charset="UTF-8">
 <meta name="author" content="Xebia IT Architects"/>
@@ -28,10 +28,15 @@
 
 <script src="js/main-6ac2fe11.js"></script>
 
+    <link rel="stylesheet" href="css/home-2f9afe9f.css"/>
 
-    <link rel="stylesheet" href="css/home-f4f15561.css"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/lang/fr.min.js"></script>
 
-    <script src="js/main-64be95b0.js"></script>
+    <script src="js/templates-512293cb.js"></script>
+
+    <script src="js/main-1f95da2e.js"></script>
 
 </head>
 <body>
@@ -114,102 +119,102 @@
     </ul>
 </nav>
 
+    <section class="presentation centering">
 
-    <section class="title centering">
-        <h1>Software development done right</h1>
+        <h1>Craft&nbsp;?</h1>
 
-        <p>Un meilleur time-to-market vous garantira un avantage concurrentiel sur votre marché. Les nouvelles
-            technologies et l'innovation sont des leviers essentiels aujourd'hui.</p>
+        <p>Nous constatons trop souvent que la durée de vie des projets informatiques dépasse rarement cinq ans : code 
+            non maintenable, connaissance perdue au gré des départs des "développeurs clés", des technologies devenues 
+            obsolètes, etc.</p>
+        
+        <p>Cet amer constat a donné naissance au mouvement Software Craftsmanship utilisant la qualité et 
+            l'apprentissage comme maîtres mots.</p>
+
+        <p>Le Software Craftsmanship permet de limiter la dette technique en construisant une base de code de qualité 
+            et évolutive à juste coût et de respecter les délais de développement.</p>
+
+        <p>Nous partageons généreusement notre savoir-faire au travers de notre blog, de publications, des 
+            participations aux conférences et de notre <a class="xebia-link" href="http://bit.ly/tt-craft-xebiaFr">Techtrends #4</a>.</p>
+
     </section>
 
-    <section class="section-header">
-        <div class="navbar-wrapper">
-            <div class="navbar centering">
-                <nav class="">
-                    <a href="#acceleration" class="acceleration" title="acceleration">
-                        <img src="images/services/acceleration-icon.png" alt="Icone accélération"/>
-                        Accélération
-                    </a>
-                    <a href="#software-craftsmanship" class="software-craftsmanship" title="Software Craftsmanship">
-                        <img src="images/services/craftmanship-icon.png" alt="Icone software craftsmanship"/>
-                        Software Craftsmanship
-                    </a>
-                    <a href="#cutting-edge" class="cutting-edge" title="Technologie de pointe">
-                        <img src="images/services/cutting-edge-icon.png" alt="Icone Technologie de pointe"/>
-                        Technologie de pointe
-                    </a>
-                </nav>
+    <section class="ordi-moche centering">
+        <a href="career.html" title="nous rejoindre">
+            <img src="images/services/ordi-moche.png" alt="Ordinateur moche"/>
+        </a>
+    </section>
+
+
+    <section class="our-missions">
+        <div class="centering">
+            <h2>Notre aide</h2>
+
+            <div class="missions-desc">
+                <div class="mission" data-featherlight="#accompagnement">
+                    <img src="images/services/craft/craft_accompagnement.png" alt="accompagnement"/>
+
+                    <p>Accompagnement</p>
+                </div>
+
+                <div class="mission">
+                    <img src="images/services/craft/craft_formation.png" alt="formation développeur agile"/>
+
+                    <p>Formation Développeur Agile</p>
+                </div>
             </div>
         </div>
-
-        <section class="acceleration main-section centering" id="acceleration">
-
-            <h2>Accélération</h2>
-
-            <div class="description">
-                <p>
-                    Un logiciel qui a de la valeur est un logiciel livré en production.
-                </p>
-
-                <img src="images/services/Xebia_Services_Acceleration.png" alt="Accélération"/>
-            </div>
-
-            <div class="fondations">
-                <ul>
-                    <li><a href="agile.html" title="Agile">Agile</a></li>
-                    <li><a href="devops.html" title="DevOps">DevOps</a></li>
-                    <li><a href="http://cloud.xebia.fr" target="_blank" title="Cloud">Cloud</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="software-craftsmanship main-section centering" id="software-craftsmanship">
-
-            <h2>Software Craftsmanship</h2>
-
-            <div class="description">
-                <p>Les craftsmen recherchent la simplicité et divisent les problèmes complexes en sous-parties
-                    qui peuvent être résolues par du code simple et lisible.
-                </p>
-
-                <img src="images/services/Xebia_Services_Craft.png" alt="Software Craftsmanship"/>
-            </div>
-
-            <div class="fondations">
-                <ul>
-                    <li><a href="http://blog.xebia.fr/category/craftsmanship/" target="_blank" title="Craft">Craft</a></li>
-                    <li><a href="mobile.html" title="Mobile">Mobile</a></li>
-                    <li><a href="http://blog.xebia.fr/category/woa/" target="_blank" title="Front">Front</a></li>
-                    <li><a href="http://blog.xebia.fr/category/back/" target="_blank" title="Back">Back</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="cutting-edge main-section centering" id="cutting-edge">
-            <h2>Technologie de pointe</h2>
-
-            <div class="description">
-                <p>
-                    L'émergence des nouvelles technologies est en train de bouleverser l'industrie du développement
-                    logiciel.
-                </p>
-
-                <img src="images/services/Xebia_Services_Cutting.png" alt="Technologie de pointe"/>
-            </div>
-            <div class="fondations">
-                <ul>
-                    <li><a href="data.html" title="Data">Data</a></li>
-                    <li><a href="http://cloud.xebia.fr" target="_blank" title="Cloud">Cloud</a></li>
-                    <li><a href="http://blog.xebia.fr/category/back/" target="_blank" title="Back">Back</a></li>
-                    <li><a href="mobile.html" target="_blank" title="Mobile">Mobile</a></li>
-                    <li><a href="http://blog.xebia.fr/category/woa/" target="_blank" title="Front">Front</a></li>
-                </ul>
-            </div>
-        </section>
-
     </section>
 
+    <section class="clients">
+        <div class="centering">
+            <h2>Nos Clients</h2>
+        </div>
+
+        <div class="client-list">
+            <div class="centering">
+                <button class="nav-button before-button">‹</button>
+
+                <div class="client-list-wrapper">
+                    <div class="inner-client-list" id="clients-logo">
+                        <!-- rempli dynamiquement -->
+                    </div>
+                </div>
+
+                <button class="nav-button after-button">›</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog centering">
+        <h2>Nos derniers articles</h2>
+
+        <div class="blog-articles-wrapper" id="blog-articles-wrapper">
+            <!-- rempli dynamiquement -->
+        </div>
+
+        <a class="do-you-want-to-know-more" href="http://blog.xebia.fr/category/craftsmanship/" title="Blog">Voir tous nos
+            articles</a>
+    </section>
 </main>
+
+<div class="lightbox" id="accompagnement">
+    <h3>Accompagnement d'équipe</h3>
+
+    <div>
+        <p>Xebia accompagne vos équipes vers une transformation Craft à l'aide de bonnes pratiques</p>
+        <ul>
+            <li>le pair programming favorise le partage de connaissances techniques et métiers et engage un dialogue
+            au sein du binôme résultant en un code de meilleur qualité</li>
+            <li>le code kata forme les développeurs par la pratique à traiter des problèmatiques variées en toute
+            confiance</li>
+            <li>la revue de code permet de prendre du recul sur un code afin de partager la solution choisie et
+            de la retravailler voir la repenser si nécessaire</li>
+            <li>l'intégration continue outil précieux qui apporte un feedback systématique et automatisé. Cette démarche
+                sensibilise l'équipe à la qualité</li>
+        </ul>
+    </div>
+
+</div>
 
 <footer>
 
