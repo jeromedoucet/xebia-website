@@ -28,7 +28,15 @@ En ligne de commande
   * Faire les modifications que l'on désire
   * Voir le rendu ou ouvrant le fichier *index.html* du répertoire *dist*
 
+### Mettre à jour sa copie local
 
+  `git pull --rebase`
+  
+### Envoyer ses modifications au serveur
+
+   `git add .`
+   `git commit -am "mon message"`
+   `git push`
 
 
 ### Déployer en prod
