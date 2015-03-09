@@ -30,13 +30,13 @@ En ligne de commande
 
 ### Mettre à jour sa copie local
 
-  `git pull --rebase`
+  * `git pull --rebase`
   
 ### Envoyer ses modifications au serveur
 
-   `git add .`
-   `git commit -am "mon message"`
-   `git push`
+   * `git add .`
+   * `git commit -am "mon message"`
+   * `git push`
 
 
 ### Déployer en prod
