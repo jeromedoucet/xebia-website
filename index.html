@@ -6,6 +6,8 @@
 
     @@include('templates/standardHead.html')
 
+
+
     <!-- build:css css/home.css -->
     <link rel="stylesheet" href="stylesheets/vars.less"/>
     <link rel="stylesheet" href="stylesheets/mixin.less"/>
@@ -18,6 +20,7 @@
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/lang/fr.min.js"></script>
+
 
     <!-- build:hbar js/templates.js -->
     <script src="templates/home/training.hbar"></script>
@@ -58,7 +61,7 @@
         <div class="col-wrapper doings">
             <div class="col3">
                 <a href="services.html#acceleration" class="title-wrapper">
-                    <img src="images/home/acceleration.png" alt="Acceleration"/>
+                    <img src="images/home/acceleration.png" class="acceleration_anim" alt="Acceleration"/>
 
                     <h3>Acceleration</h3>
                 </a>
@@ -117,55 +120,7 @@
         </div>
     </section>
 
-    <!--
-    <section class="sharing-our-knowledge centering">
-        <h2>Partage de connaissances</h2>
 
-        <div class="knowledge-wrapper">
-            <div class="events">
-                <h3>Evénements</h3>
-
-                <div id="events-wrapper">
-                    <!-- rempli par JS -->
-                <!--</div>
-
-
-                <a href="http://www.eventbrite.fr/o/xebia-1627902102" class="do-you-want-to-know-more">Tous les
-                    événements</a>
-
-            </div>
-            <!-- WAITING FOR API
-                        <div class="training">
-                            <h3>Training</h3>
-
-                            <div id="training-session-wrapper">
-
-                            </div>
-
-                            <a href="" class="do-you-want-to-know-more">Toutes les formations</a>
-                        </div>
-            --><!--
-        </div>
-
-    </section>
-
-    <section class="blog">
-        <div class="centering">
-            <h2>Blog</h2>
-
-            <a class="rss" href="http://blog.xebia.com/feed/" title="flux RSS du blog">
-                Flux RSS <i class="fa fa-rss"></i>
-            </a>
-
-            <div class="col-wrapper" id="blog-articles-wrapper">
-                <!-- rempli dynamiquement --><!--
-            </div>
-
-            <div class="more-blog-wrapper">
-                <a class="button-green" href="http://blog.xebia.fr">Plus d'articles</a>
-            </div>
-        </div>
-    </section>-->
 
     <section class=" xebia-value centering">
 
@@ -196,55 +151,53 @@
 
     </section>
 
-    <section class="xebia-universe centering">
-        <h2>Alliance Xebia</h2>
+    <section class="xebia-universe">
+      <div class="centering">
+        <h2>Alliance</h2>
 
-        <p>L'alliance Xebia est un écosystème de sociétés complémentaires,
+        <p>L'Alliance est un écosystème de sociétés complémentaires,
             expertes dans leur domaine et liées par des relations capitalistiques.
-            Les membres de l'alliance Xebia partagent tous un ADN commun&nbsp;: l'excellence.</p>
+            Les membres de l'alliance partagent tous un ADN commun&nbsp;: l'excellence.</p>
 
-        <div class="col-wrapper societies">
-            <div class="col3">
-                <div class="logo-wrapper">
-                    <a href="http://www.thiga.fr" target="_blank">
-                        <img class="thiga-logo" src="images/home/logo-thiga.png" alt="Thiga"/>
-                    </a>
-                </div>
-
-
-                <p>Thiga est un cabinet de conseil spécialisé en Product Management. Notre métier est de procurer à nos
-                    clients une expertise et un accompagnement sur toutes les phases de la création d'un Produit
-                    numérique.</p>
+            <div class="col-wrapper societies">
+              <div class="logo-wrapper">
+                <ul class="slider3 logo-wrapper">
+                    <li class="slide"><a href="http://www.thiga.fr" target="_blank"><img src="images/home/logo-thiga.png" class="thiga-logo" title="Thiga est un cabinet de conseil spécialisé en Product Management.
+                      Notre métier est de procurer à nos clients une expertise et un accompagnement sur toutes les phases de la création d'un Produit numérique."/></a></li>
+                    <li class="slide"><a href="http://www.ux-republic.com/" target="_blank"><img src="images/home/logo-UX.png" class="ux-logo" title="Spécialistes de la conception et du design.
+                      UX-Republic accompagne ses clients de l’analyse du problème ou de l’opportunité jusqu’au prototypage et testing des concepts et spécifications fonctionnelles et créatives."/></a></li>
+                    <li class="slide"><a href="http://xebialabs.com/" target="_blank"><img src="images/home/logo-labs.png" class="labs-logo" title="Éditeur de logiciel. XebiaLabs est un leader dans le domaine des logiciels de déploiement
+                        automatisé."/></a></li>
+                    <li class="slide"><a href="http://www.cellenza.com" target="_blank"><img src="images/home/logo-cellenza.png" class="cellenza-logo" title="Éditeur de logiciel. XebiaLabs est un leader dans le domaine des logiciels de déploiement
+                        automatisé."/></a></li>
+                    <li class="slide"><a href="http://www.wescale.fr" target="_blank"><img src="images/home/logo-wescale.png" class="wescale-logo" title="Éditeur de logiciel. XebiaLabs est un leader dans le domaine des logiciels de déploiement
+                        automatisé."/></a></li>
+                    <li class="slide"><a href="http://www.akamis.com" target="_blank"><img src="images/home/logo-akamis.png" class="akamis-logo" title="Éditeur de logiciel. XebiaLabs est un leader dans le domaine des logiciels de déploiement
+                        automatisé."/></a></li>
+                </ul>
             </div>
 
-            <div class="col3">
-                <div class="logo-wrapper">
-                    <a href="http://www.ux-republic.com/" target="_blank">
-                        <img class="ux-logo" src="images/home/logo-UX.png" alt="UX-Republic"/>
-                    </a>
-                </div>
+        <a href="http://alliance.xebia.fr/" target="_blank" class="alliance_more">En savoir plus sur l'Alliance</a>
 
 
-                <p>Spécialistes de la conception et du design. UX-Republic accompagne ses clients de l’analyse du
-                    problème ou de l’opportunité jusqu’au prototypage et testing des concepts et spécifications
-                    fonctionnelles et créatives.</p>
-            </div>
-
-            <div class="col3">
-                <div class="logo-wrapper">
-                    <a href="http://xebialabs.com/" target="_blank">
-                        <img class="labs-logo" src="images/home/logo-labs.png" alt="Xebia Labs"/>
-                    </a>
-                </div>
-
-
-                <p>Éditeur de logiciel. XebiaLabs est un leader dans le domaine des logiciels de déploiement
-                    automatisé.</p>
-            </div>
-        </div>
+      </div>
     </section>
 </main>
 
+
 @@include('templates/footer.html')
+<script>
+$(document).ready(function(){
+  $('.slider3').bxSlider({
+    auto: true,
+    autoControls: true,
+    slideWidth: 5000,
+    minSlides: 1,
+    maxSlides: 4,
+    slideMargin: 10,
+    captions: true
+  });
+});
+</script>
 </body>
 </html>

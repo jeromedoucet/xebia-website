@@ -417,9 +417,10 @@ h1 {
     {
     position: relative;
     bottom: 273px;
-    right: 95px;
-    color: white;
+    right: 115px;
+    color: #fff;
     padding: 10px 35px;
+    padding-left: 80px;
     }
 
 
@@ -496,7 +497,12 @@ h1 {
 
 .xebia-universe {
 
-  border-bottom: 1px solid @colorIndicator;
+  background-color: @alternativeBackgroundColor;
+  height:550px;
+
+  @media (max-width: @thirdBreakPoint) {
+    height: 650px;
+  }
 
   h3 {
     border-bottom: none;
@@ -510,7 +516,39 @@ h1 {
       min-height: 0;
       margin-bottom: 20px;
     }
+
   }
+
+  .alliance_more{
+    position:relative;
+    top: 100px;
+  }
+
+  a.alliance_more
+  {
+    color:#0062ad;
+    font-weight:300;
+  }
+
+
+
+  a.alliance_more:hover {
+      font-weight:400;
+  }
+
+
+  .alliance_more:after {
+  content: '›';
+  font-size: 160%;
+  position: absolute;
+  top:-5px;
+  margin-left: 12px;
+  }
+
+
+
+
+
 
   .logo-wrapper {
     height: 160px;
@@ -532,12 +570,12 @@ h1 {
       }
 
       @media (max-width: @thirdBreakPoint) {
-        height: auto;
+        height: @height;
       }
     }
 
     .thiga-logo {
-      .logoPosition(150px)
+      .logoPosition(110px)
     }
 
     .ux-logo {
@@ -545,7 +583,26 @@ h1 {
     }
 
     .labs-logo {
-      .logoPosition(76px)
+      .logoPosition(70px);
+      margin-top: 25px;
+    }
+
+    .akamis-logo
+    {
+      .logoPosition(100px);
+      margin-top: 5px;
+    }
+
+    .cellenza-logo
+    {
+      .logoPosition(70px);
+      margin-top: 25px;
+    }
+
+    .wescale-logo
+    {
+      .logoPosition(70px);
+      margin-top: 20px;
     }
   }
 
