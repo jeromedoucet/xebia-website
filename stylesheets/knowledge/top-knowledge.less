@@ -1,0 +1,64 @@
+header {
+  margin-bottom: 20px;
+}
+
+.knowledge-menu {
+  margin-bottom: 40px;
+  border-bottom: 1px solid @colorIndicator;
+  text-align: left;
+  padding-bottom: 10px;
+
+
+  @media (max-width: @secondBreakPoint) {
+    text-align:center;
+  }
+
+  @media (max-width: @thirdBreakPoint) {
+  text-align:center;
+  }
+
+  ul{
+    padding-top:10px;
+  }
+
+
+  li {
+    margin: 10px;
+    margin-top:0px;
+    display: inline-block;
+    min-width: 97% / 7;
+    text-align: center;
+
+    a {
+      .linkColored(@contrastColor);
+      .arrowNext(-3px);
+
+
+    }
+
+    &.selected {
+      a {
+        font-weight: normal;
+      }
+    }
+  }
+
+  @media (max-width: @firstBreakPoint) {
+    li {
+      min-width: 92px;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: @secondBreakPoint) {
+    li {
+      min-width: 24%;
+    }
+  }
+
+  @media (max-width: @thirdBreakPoint) {
+    li {
+      min-width: 49%;
+    }
+  }
+}
