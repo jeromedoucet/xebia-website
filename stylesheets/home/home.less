@@ -522,7 +522,21 @@ h1 {
   .alliance_more{
     position:relative;
     top: 100px;
+
+    @media (max-width: @firstBreakPoint) {
+      top:70px;
+    }
+
+    @media (max-width: @secondBreakPoint) {
+      top:10px;
+    }
+
+    @media (max-width: @thirdBreakPoint) {
+      top:0px;
+    }
   }
+
+
 
   a.alliance_more
   {
