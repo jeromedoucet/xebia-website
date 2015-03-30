@@ -3,6 +3,37 @@ h1 {
   margin-bottom: 30px;
 }
 
+.xebia-infographie {
+
+  .title-home
+  {
+    font-size:26px;
+  }
+
+  .infographie-desktop
+  {
+    width:100%;
+
+    @media (max-width: 690px) {
+      display: none;
+    }
+  }
+
+
+  .infographie-mobile
+  {
+    display:none;
+
+    @media (max-width: 690px) {
+      display: block;
+      width: 100%;
+      max-width: 314px;
+      margin:auto;
+    }
+  }
+
+}
+
 .what-we-do {
 
   .discover-service {
@@ -96,6 +127,13 @@ h1 {
     }
   }
 }
+
+
+.we-work-with
+{
+  background-color: #f0f0f0;
+}
+
 
 .sharing-our-knowledge {
 
@@ -400,7 +438,7 @@ h1 {
     .valeur-img
     {
       width: 100%;
-        max-width: 672px;
+      max-width: 672px;
     }
 
     .valeur1
