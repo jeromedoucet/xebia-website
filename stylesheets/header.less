@@ -1,8 +1,11 @@
-header {
+.header-bg {
   @headerHeight: 126px;
   background-color: @xebiaColor;
 
-  height: @headerHeight;
+  position:fixed;
+  width:100%;
+  z-index:100;
+
   margin-bottom: 40px;
 
   @thirdHeaderBreakPoint: 580px;
@@ -69,8 +72,10 @@ header {
   .header-content {
     padding: 2px 0;
     background-color: white;
-
-    border-bottom: 1px solid @colorIndicator;
+    border-bottom:1px solid #cacaca;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 
     .indicator {
       position: relative;
@@ -122,6 +127,8 @@ header {
       @media (max-width: @thirdHeaderBreakPoint) {
         .clearFloat();
       }
+
+
     }
 
     @topMenuSize: 18px;
@@ -161,6 +168,7 @@ header {
         margin-right: 10px;
 
       }
+
 
       @media (max-width: @secondBreakPoint) {
         padding-right: 0;
@@ -224,12 +232,15 @@ header {
         color: @xebiaBackgroundTextColor;
         text-decoration: none;
         font-size: 22px;
+
       }
 
       &.selected {
         font-weight: normal;
         a {
           color: @contrastColor;
+
+
         }
       }
     }
@@ -354,4 +365,115 @@ header {
       position: static;
     }
   }
+
+  .service-menu {
+    display:none;
+    position:absolute;
+    width: 100%;
+    left: 0;
+    padding-bottom: 0;
+    top: 20px;
+    margin-top: 0;
+    padding-top: 30px;
+    background: #fff;
+    height:30px;
+
+
+    li
+    {
+      min-width: 7.125%;
+      margin-bottom: 10px;
+
+      a{
+        font-size:18px;
+        color: #06a99c;
+        }
+    }
+
+    @media (max-width: @secondBreakPoint) {
+    display:none;
+    }
+
+  }
+
+  .knowledge-menu
+  {
+    position:absolute;
+    display:none;
+    width: 100%;
+    left: 0;
+    padding-bottom: 0;
+    top: 20px;
+    margin-top: 0;
+    padding-top: 30px;
+    background: #fff;
+    height:50px;
+
+
+    li{
+      min-width:3.85%;
+
+    a{
+      font-size:18px;
+      color: #06a99c;
+      }
+    }
+
+
+  }
+
+
+
+
+  .service-menu-mobile
+  {
+    @media (max-width: @secondBreakPoint) {
+    visibility:hidden;
+    }
+  }
+  .knowledge-menu-mobile
+  {
+    @media (max-width: @secondBreakPoint) {
+      visibility:hidden;
+    }
+  }
+
+  .service-menu ul li:first-of-type a:first-of-type :after
+  {
+    display:none;
+  }
+
+  .show-service-sub-menu a, .show-knowledge-sub-menu a
+  {
+    z-index:300;
+  }
+
+
+
+
+  .header-links{
+    display:block;
+  }
+
+  .scroll-header
+  {
+    display:none;
+  }
+
+  .scroll-header-2
+  {
+
+    height:80px;
+  a img
+  {
+    height:25px;
+    margin-left:53px !important;
+  }
+  nav{
+    bottom:42px;
+  }
+
+  }
+
+
 }

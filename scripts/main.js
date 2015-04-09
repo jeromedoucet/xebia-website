@@ -51,4 +51,51 @@ $(function () {
     $mentionsPopup.find('.close').click(function () {
         $('#mentions-legales-popup').slideUp();
     });
+
+    //$('.show-service-sub-menu').hover(function() {
+      //$('.service-menu').show();
+    //});
+
+    //$('.show-service-sub-menu').mouseleave(function() {
+      //$('.service-menu').hide();
+    //});
+
+    //$('.show-knowledge-sub-menu').hover(function() {
+      //$('.knowledge-menu').show();
+    //});
+
+    //$('.show-knowledge-sub-menu').mouseleave(function() {
+      //$('.knowledge-menu').hide();
+    //});
+
+    var shrinkHeader = 300;
+     $(window).scroll(function() {
+       var scroll = getCurrentScroll();
+
+       if ( scroll >= shrinkHeader ) {
+            $('.header-bg').addClass('scroll-header-bg');
+         }
+         else {
+             $('.header-bg').removeClass('scroll-header-bg');
+         }
+
+         if ( scroll >= shrinkHeader ) {
+              $('.header-links').addClass('scroll-header');
+           }
+           else {
+               $('.header-links').removeClass('scroll-header');
+           }
+
+           if ( scroll >= shrinkHeader ) {
+                $('.header-content').addClass('scroll-header-2');
+             }
+             else {
+                 $('.header-content').removeClass('scroll-header-2');
+             }
+
+
+     });
+   function getCurrentScroll() {
+       return window.pageYOffset || document.documentElement.scrollTop;
+       }
 });

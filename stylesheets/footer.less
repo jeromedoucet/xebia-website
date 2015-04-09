@@ -6,6 +6,13 @@ footer {
     height: @heightSocial;
     line-height: @heightSocial;
 
+    .xebiatvimg
+    {
+      background-image: url('http://blog.xebia.fr/wp-content/uploads/2015/01/xebia-tv-icon-white.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
     a {
       display: inline-block;
       border-radius: 100%;
@@ -20,6 +27,10 @@ footer {
       margin: 0 20px;
       font-size: 24px;
 
+      @media (max-width: 470px) {
+        margin: 0 5px;
+      }
+
       &:hover {
         background-color: @xebiaColor;
       }
@@ -32,11 +43,16 @@ footer {
     background-color: @xebiaColor;
     color: white;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 15px;
 
-    .name {
-      margin-bottom: 10px;
+    li {
+
+      text-decoration: none;
+      color: white;
+      display:inline-block;
+      margin: 0 20px;
+      font-size:14px;
     }
 
     a {
@@ -146,8 +162,8 @@ footer {
 #mentions-legales-popup {
   display: none;
   position: fixed;
-  top: 30px;
-
+  top: 60px;
+  z-index:99;
   left: 10px;
   right: 10px;
   background-color: white;

@@ -1,4 +1,4 @@
-<header>
+<header class="header-bg">
     <div class="header-links">
         <div class="menu-wrapper">
             <a class="xebia-global">Xebia France</a>
@@ -8,7 +8,7 @@
             </ul>
         </div>
     </div>
-    <div class="header-content">
+    <div class="header-content cbp-af-inner">
         <div class="centering">
 
             <div class="mobile-menu-button">
@@ -35,9 +35,15 @@
                     <a href="http://www.linkedin.com/company/xebia-france" class="fa fa-linkedin"
                        target="_blank">
                     </a>
+
+                    <a href="http://fr.slideshare.net/XebiaFrance" class="fa fa-slideshare" target="_blank">
+                    </a>
+
                 </div>
                 <div class="right-part">
                     <a href="http://blog.xebia.fr" target="_blank">Blog</a>
+
+                    <a href="http://www.xebia.tv" target="_blank">Xebia TV</a>
 
                     <a href="mailto:info@xebia.fr">Contact</a>
                 </div>
@@ -45,13 +51,17 @@
 
             <nav>
                 <ul>
-                    <li><a href="clients.html">Clients</a></li>
-                    <li><a href="services.html" class="show-service-sub-menu">Services</a></li>
-                    <li><a href="knowledge.html" class="show-knowledge-sub-menu">Connaissance</a></li>
+                    <li><a href="clients.html" class="main-nav-active">Clients</a></li>
+                    <li class="show-service-sub-menu"><a href="services.html" >Services</a>
+                      <!--@@include('templates/services/service-menu.html')-->
+                      </li>
+                    <li class="show-knowledge-sub-menu"><a href="knowledge.html" >Connaissance</a>
+                      <!--@@include('templates/knowledge/knowledge-menu.html')-->
+                    </li>
                     <li><a href="http://studio.xebia.fr" target="_blank">Studio</a></li>
                     <li><a href="http://training.xebia.fr" target="_blank">Training</a></li>
-                    <li><a href="career.html">Nous rejoindre</a></li>
-                    <li><a href="aboutus.html">À propos</a></li>
+                    <li><a href="career.html" class="main-nav-active">Nous rejoindre</a></li>
+                    <li><a href="aboutus.html" class="main-nav-active">À propos</a></li>
                 </ul>
                 <div class="indicator">
                     <div class="inner-indicator"></div>
@@ -60,4 +70,6 @@
 
         </div>
     </div>
+
+
 </header>
