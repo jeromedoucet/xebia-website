@@ -31,7 +31,7 @@ En ligne de commande
 ### Mettre à jour sa copie local
 
   * `git pull --rebase`
-  
+
 ### Envoyer ses modifications au serveur
 
    * `git add .`
@@ -45,7 +45,3 @@ En ligne de commande
   * Ouvrir un terminal
   * aller dans le répertoire contenant le site (cd <nom du site>)
   * Lancer la commande <code>npm run deploy</code>
-
-
-
-
