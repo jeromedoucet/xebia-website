@@ -27,7 +27,7 @@
         $('#techtrend-number').html('#' + index);
 
         //Links
-        $('.techtrend-download-pdf').attr('href', 'data/techtrends/' + techtrend.file);
+        
         $('.techtrend-ask-for-paper').attr('href', 'mailto:marketing@xebia.fr?subject=Version Papier du techtrends ' + index);
 
         //Packshot

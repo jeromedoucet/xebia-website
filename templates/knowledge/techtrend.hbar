@@ -21,9 +21,9 @@
     <p>{{description.content}}</p>
 
         <div class="link-wrapper">
-            <a class="techtrend-button techtrend-download-pdf" id="techtrend-download-pdf">Télécharger la version PDF</a>
+            <a href="http://techtrends.xebia.fr" target="_blank" class="techtrend-button techtrend-download-pdf" id="techtrend-download-pdf">Télécharger la version PDF</a>
             <!-- href généré dynamiquement -->
-            <a class="techtrend-button techtrend-ask-for-paper" id="techtrend-ask-for-paper">Demander une version papier</a>
+            <a href="mailto:marketing@xebia.fr"class="techtrend-button techtrend-ask-for-paper" id="techtrend-ask-for-paper">Demander une version papier</a>
             <!-- href généré dynamiquement -->
         </div>
     </div>

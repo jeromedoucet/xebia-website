@@ -173,5 +173,38 @@ window.TECHTRENDS = [
             title: '',
             content: "L’apparition et la démocratisation de nouveaux vecteurs d’informations (smartphone, tablette, TV connectée, etc.), l’amélioration continue du matériel et des connexions internet et la montée en puissance de nouveaux navigateurs (Chrome, Firefox) sont venues bouleverser les codes. Ainsi, une nouvelle “branche” des projets Web est apparue : les applications Front-end, pour lesquelles le serveur n’est qu’un vecteur d’information parmi d’autres, et pour qui le navigateur est un réel moteur d’exécution. Ce Techtrends, à travers la gestation d’une application web - maquettage, développement et industrialisation - tentera de vous aiguiller dans ce dédale, et de pointer les technologies d’aujourd’hui et de demain afin de créer des interfaces modernes, ludiques et interactives fluidifiant l’accès des utilisateurs à l’information."
         }
+    },
+    {
+        file: 'techtrends-xebia-datalab.pdf',
+        date: '03/2015',
+        packshot:'packshot-datalab.png',
+        summary: [
+            {
+                title: 'IMAGINER',
+                content: [
+                    "Faire émerger un maximum de cas business",
+                    "Sélectionner les use cases qui feront l'objet d'un prototypage"
+                ]
+            },
+            {
+                title: 'MATÉRIALISER',
+                content: [
+                    "Constituer une nouvelle équipe plus orientée technique et la doter des technologies les plus pertinentes et une architecture adaptée",
+                    "Déterminer les données disponibles et pouvant être collectées",
+                    "Centraliser toutes les données dans un Data Lake"
+                ]
+            },
+            {
+                title: 'EXPLOITER',
+                content: [
+                    "Réaliser votre PoC via l'exploration, le nettoyage et l'analyse des données",
+                    "Pour passer ce PoC en production, gérer finement les ressources de votre cluster de données et exposer les résultats aux consommateurs finaux"
+                ]
+            }
+        ],
+        description: {
+            title: '',
+            content: "Depuis quelques années maintenant, les « Big Data » font le buzz : impossible de passer à côté de ce phénomène né des nouveaux usages du Web, de l'explosion des données personnelles et des avancées technologiques dans le calcul distribué. Au-delà du mot et de la tendance, comment en tirer profit au sein de votre entreprise ? En construisant un Data Lab. Un Data Lab repose sur trois piliers : une équipe, un lieu et une approche. Monter un Lab, c'est faire travailler des personnes triées sur le volet, dans un lieu dédié en les dotant de l'outillage et des méthodologies les mieux adaptées afin de tirer avantage des données qui les entourent. Celui-ci prône l'adoption d'une approche dite « Business Driven » qui s'avère souvent fructueux grâce à la recherche de use cases sous un angle business."
+        }
     }
 ];
