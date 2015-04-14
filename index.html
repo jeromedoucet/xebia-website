@@ -20,29 +20,42 @@
 <link rel="icon" href="favicon.ico"/>
 
 <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' >
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-<link rel="stylesheet" href="css/style-28670ebf.css"/>
-
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-<script src="js/main-6ac2fe11.js"></script>
 
-    <link rel="stylesheet" href="css/home-aa185b85.css"/>
+
+
+<!-- bxSlider Javascript file -->
+<script src="../scripts/home/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="../stylesheets/home/jquery.bxslider.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style-690bfde7.css"/>
+
+
+
+<script src="js/main-0e0d3ad7.js"></script>
+
+
+
+
+    <link rel="stylesheet" href="css/home-d569f7af.css"/>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/lang/fr.min.js"></script>
 
+
     <script src="js/templates-6e8d6f84.js"></script>
 
-    <script src="js/main-c381e3dc.js"></script>
+    <script src="js/main-1d33e91b.js"></script>
 
 
 </head>
 <body>
-<header>
+<header class="header-bg">
     <div class="header-links">
         <div class="menu-wrapper">
             <a class="xebia-global">Xebia France</a>
@@ -52,7 +65,7 @@
             </ul>
         </div>
     </div>
-    <div class="header-content">
+    <div class="header-content cbp-af-inner">
         <div class="centering">
 
             <div class="mobile-menu-button">
@@ -79,9 +92,15 @@
                     <a href="http://www.linkedin.com/company/xebia-france" class="fa fa-linkedin"
                        target="_blank">
                     </a>
+
+                    <a href="http://fr.slideshare.net/XebiaFrance" class="fa fa-slideshare" target="_blank">
+                    </a>
+
                 </div>
                 <div class="right-part">
                     <a href="http://blog.xebia.fr" target="_blank">Blog</a>
+
+                    <a href="http://www.xebia.tv" target="_blank">Xebia TV</a>
 
                     <a href="mailto:info@xebia.fr">Contact</a>
                 </div>
@@ -89,13 +108,42 @@
 
             <nav>
                 <ul>
-                    <li><a href="clients.html">Clients</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="knowledge.html">Connaissance</a></li>
+                    <li><a href="clients.html" class="main-nav-active">Clients</a></li>
+                    <li class="show-service-sub-menu"><a href="services.html" >Services</a>
+                      <!--<nav class="service-menu centering service-menu-mobile">
+    <ul>
+        <li><a href="agile.html">Agile</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+        <li><a href="devops.html">DevOps</a></li>
+        <li><a href="craft.html">Craft</a></li>
+        <li><a href="front.html">Front</a></li>
+        <li><a href="cloud.html">Cloud</a></li>
+        <li><a href="http://blog.xebia.fr/category/back/">Back</a></li>
+        <li><a href="data.html">Data</a></li>
+    </ul>
+</nav>
+-->
+                      </li>
+                    <li class="show-knowledge-sub-menu"><a href="knowledge.html" >Connaissance</a>
+                      <!--<nav class="knowledge-menu centering knowledge-menu-mobile">
+    <ul>
+        <li><a href="xke.html">XKE</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="events.html">TechEvent et Meetup</a></li>
+        <li><a href="conferences.html">Conférences</a></li>
+        <li><a href="sponsoring.html">Sponsoring</a></li>
+        <li><a href="livres.html">Livres Blancs</a></li>
+        <li><a href="presse.html">Presse</a></li>
+        <li><a href="xebiatv.html">Xebia TV</a></li>
+        <li><a href="newsletter.html">Newsletter</a></li>
+    </ul>
+</nav>
+-->
+                    </li>
                     <li><a href="http://studio.xebia.fr" target="_blank">Studio</a></li>
                     <li><a href="http://training.xebia.fr" target="_blank">Training</a></li>
-                    <li><a href="career.html">Nous rejoindre</a></li>
-                    <li><a href="aboutus.html">À propos</a></li>
+                    <li><a href="career.html" class="main-nav-active">Nous rejoindre</a></li>
+                    <li><a href="aboutus.html" class="main-nav-active">À propos</a></li>
                 </ul>
                 <div class="indicator">
                     <div class="inner-indicator"></div>
@@ -104,10 +152,13 @@
 
         </div>
     </div>
+
+
 </header>
 
+
 <main>
-    <section class="what-we-do centering">
+    <!--<section class="what-we-do centering">
 
         <h1>L'<strong>innovation</strong> technologique au service de votre métier</h1>
 
@@ -119,7 +170,7 @@
         <div class="col-wrapper doings">
             <div class="col3">
                 <a href="services.html#acceleration" class="title-wrapper">
-                    <img src="images/home/acceleration.png" alt="Acceleration"/>
+                    <img src="images/home/acceleration.png" class="acceleration_anim" alt="Acceleration"/>
 
                     <h3>Acceleration</h3>
                 </a>
@@ -156,10 +207,61 @@
                 <a href="services.html#cutting-edge" class="more">En savoir plus</a>
             </div>
         </div>
+    </section>-->
+
+    <section class="xebia-infographie centering" >
+
+      <h1 class="title-home">Xebia est un cabinet de conseil international spécialisé dans les technologies <strong>Big Data, Cloud et Web, les architectures Java et la mobilité dans des environnements agiles.</strong></h1>
+
+      <a href="aboutus.html"><img src="images/home/illustration_xebia.png" class="infographie-desktop" alt="Infographie Xebia" title="Infographie Xebia" /></a>
+      <a href="aboutus.html"><img src="images/home/illustration_xebia_mobile.png" class="infographie-mobile" alt="Infographie Xebia" title="Infographie Xebia" /></a>
+
     </section>
 
-    <section class="we-work-with ">
+    <section class="we-work-with " >
+
         <div class="centering">
+          <div class="col-wrapper doings">
+            <h2>Notre mission</h2>
+              <div class="col3">
+                  <a href="services.html#acceleration" class="title-wrapper">
+                      <img src="images/home/acceleration.png" class="acceleration_anim" alt="Acceleration"/>
+
+                      <h3>Acceleration</h3>
+                  </a>
+
+                  <p>Nous vous aidons à améliorer le Time-to-market de vos idées afin de servir au mieux vos
+                      utilisateurs.</p>
+
+                  <a href="services.html#acceleration" class="more">En savoir plus</a>
+              </div>
+
+              <div class="col3">
+                  <a href="services.html#software-craftsmanship" class="title-wrapper">
+                      <img src="images/home/software-craftmanship.png" alt="Software Craftsmanship"/>
+
+
+                      <h3>Software Craftsmanship</h3>
+                  </a>
+
+                  <p>Nous produisons des systèmes de haute qualité qui ne nécessitent qu'un minimum de maintenance.</p>
+
+                  <a href="services.html#software-craftsmanship" class="more">En savoir plus</a>
+              </div>
+
+              <div class="col3">
+                  <a href="services.html#cutting-edge" class="title-wrapper">
+                      <img src="images/home/cutting-edge-tech.png" alt="Technologie de pointe"/>
+
+                      <h3>Technologie de pointe</h3>
+                  </a>
+
+                  <p>Nous sommes toujours à la pointe des nouvelles tendances technologiques afin de répondre à vos
+                      besoins.</p>
+
+                  <a href="services.html#cutting-edge" class="more">En savoir plus</a>
+              </div>
+          </div>
             <h2>Nous travaillons avec</h2>
         </div>
 
@@ -178,103 +280,68 @@
         </div>
     </section>
 
-    <section class="sharing-our-knowledge centering">
-        <h2>Partage de connaissances</h2>
-
-        <div class="knowledge-wrapper">
-            <div class="events">
-                <h3>Evénements</h3>
-
-                <div id="events-wrapper">
-                    <!-- rempli par JS -->
-                </div>
 
 
-                <a href="http://www.eventbrite.fr/o/xebia-1627902102" class="do-you-want-to-know-more">Tous les
-                    événements</a>
+    <section class=" xebia-value centering" >
 
-            </div>
-            <!-- WAITING FOR API
-                        <div class="training">
-                            <h3>Training</h3>
+        <h2>Nos valeurs</h2>
 
-                            <div id="training-session-wrapper">
+        <div class="our-value col-wrapper">
+            <img src="images/home/valeurs-xebia.png" class="valeur-img" alt="Valeurs Xebia" title="Valeurs"/>
 
-                            </div>
+                    <h3><a href="knowledge.html" class="valeur1">Sharing Knowledge</a></h3>
 
-                            <a href="" class="do-you-want-to-know-more">Toutes les formations</a>
-                        </div>
-            -->
+
+
+                    <h3><a href="career.html" class="valeur2">People First</a></h3>
+
+
+
+                    <h3><a href="clients.html" class="valeur3">Customer Intimacy</a></h3>
+
+
+
+                    <h3><a href="services.html" class="valeur4">Quality without Compromise</a></h3>
         </div>
+
+
+
+
+
 
     </section>
 
-    <section class="blog">
-        <div class="centering">
-            <h2>Blog</h2>
+    <section class="xebia-universe">
+      <div class="centering">
+        <h2>Alliance</h2>
 
-            <a class="rss" href="http://blog.xebia.com/feed/" title="flux RSS du blog">
-                Flux RSS <i class="fa fa-rss"></i>
-            </a>
-
-            <div class="col-wrapper" id="blog-articles-wrapper">
-                <!-- rempli dynamiquement -->
-            </div>
-
-            <div class="more-blog-wrapper">
-                <a class="button-green" href="http://blog.xebia.fr">Plus d'articles</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="xebia-universe centering">
-        <h2>Alliance Xebia</h2>
-
-        <p>L'alliance Xebia est un écosystème de sociétés complémentaires,
+        <p>L'Alliance est un écosystème de sociétés complémentaires,
             expertes dans leur domaine et liées par des relations capitalistiques.
-            Les membres de l'alliance Xebia partagent tous un ADN commun&nbsp;: l'excellence.</p>
+            Les membres de l'alliance partagent tous un ADN commun&nbsp;: l'excellence.</p>
 
-        <div class="col-wrapper societies">
-            <div class="col3">
-                <div class="logo-wrapper">
-                    <a href="http://www.thiga.fr" target="_blank">
-                        <img class="thiga-logo" src="images/home/logo-thiga.png" alt="Thiga"/>
-                    </a>
-                </div>
-
-
-                <p>Thiga est un cabinet de conseil spécialisé en Product Management. Notre métier est de procurer à nos
-                    clients une expertise et un accompagnement sur toutes les phases de la création d'un Produit
-                    numérique.</p>
+            <div class="col-wrapper societies">
+              <div class="logo-wrapper">
+                <ul class="slider3 logo-wrapper">
+                    <li class="slide"><a href="http://www.thiga.fr" target="_blank"><img src="images/home/logo-thiga.png" class="thiga-logo" title="Thiga est un cabinet de conseil spécialisé en Product Management.
+                      Notre métier est de procurer à nos clients une expertise et un accompagnement sur toutes les phases de la création d'un Produit numérique."/></a></li>
+                    <li class="slide"><a href="http://www.ux-republic.com/" target="_blank"><img src="images/home/logo-UX.png" class="ux-logo" title="Spécialistes de la conception et du design.
+                      UX-Republic accompagne ses clients de l’analyse du problème ou de l’opportunité jusqu’au prototypage et testing des concepts et spécifications fonctionnelles et créatives."/></a></li>
+                    <li class="slide"><a href="http://xebialabs.com/" target="_blank"><img src="images/home/logo-labs.png" class="labs-logo" title="Éditeur de logiciel. XebiaLabs est un leader dans le domaine des logiciels de déploiement
+                        automatisé."/></a></li>
+                    <li class="slide"><a href="http://www.cellenza.com" target="_blank"><img src="images/home/logo-cellenza.png" class="cellenza-logo" title="Cellenza est un cabinet de conseil, d’expertise technique et de réalisation, exclusivement dédié aux technologies Microsoft et aux Méthodes Agiles."/></a></li>
+                    <li class="slide"><a href="http://www.wescale.fr" target="_blank"><img src="images/home/logo-wescale.png" class="wescale-logo" title="Société de conseil dédiée au cloud computing, WeScale propose d’accompagner ses clients afin de tirer le meilleur parti des avancées technologiques du cloud."/></a></li>
+                    <li class="slide"><a href="http://www.akamis.com" target="_blank"><img src="images/home/logo-akamis.png" class="akamis-logo" title="Cabinet de conseil en stratégie marketing et acquisition clients sur l'ensemble des canaux digitaux, AKAMIS exploite les dernières techniques performantes et inventives : smart data, growth hacking...
+<br/>Notre mission : La conquête qualifiée de vos clients"/></a></li>
+                </ul>
             </div>
 
-            <div class="col3">
-                <div class="logo-wrapper">
-                    <a href="http://www.ux-republic.com/" target="_blank">
-                        <img class="ux-logo" src="images/home/logo-UX.png" alt="UX-Republic"/>
-                    </a>
-                </div>
+        <a href="http://alliance.xebia.fr/" target="_blank" class="alliance_more">En savoir plus sur l'Alliance</a>
 
 
-                <p>Spécialistes de la conception et du design. UX-Republic accompagne ses clients de l’analyse du
-                    problème ou de l’opportunité jusqu’au prototypage et testing des concepts et spécifications
-                    fonctionnelles et créatives.</p>
-            </div>
-
-            <div class="col3">
-                <div class="logo-wrapper">
-                    <a href="http://xebialabs.com/" target="_blank">
-                        <img class="labs-logo" src="images/home/logo-labs.png" alt="Xebia Labs"/>
-                    </a>
-                </div>
-
-
-                <p>Éditeur de logiciel. XebiaLabs est un leader dans le domaine des logiciels de déploiement
-                    automatisé.</p>
-            </div>
-        </div>
+      </div>
     </section>
 </main>
+
 
 <footer>
 
@@ -288,6 +355,11 @@
 
         <a href="https://twitter.com/XebiaFr" class="fa fa-twitter" target="_blank">
         </a>
+
+        <a href="http://fr.slideshare.net/XebiaFrance" class="fa fa-slideshare" target="_blank">
+        </a>
+
+        <a href="http://www.xebia.tv" class="xebiatvimg"></a>
     </div>
 
 
@@ -295,24 +367,24 @@
         <div class="tagline-xebia"></div>
         <div class="tagline-alliance">
             <div class="alliance-wrapper">
-                <a href="http://alliance.xebia.fr" class="logo-alliance"><img
-                        src="images/footer/footer-logo-alliance.png"
+                <a href="http://alliance.xebia.fr" target="_blank" class="logo-alliance"><img
+                        src="images/footer/logo-alliance-xebia-long.png"
                         alt="Alliance Xebia"></a>
 
                 <div><span class="unused">=</span>
-                    <a href="http://www.xebia.fr/">Xebia</a>
+                    <a href="http://www.xebia.fr/" target="_blank">Xebia</a>
                     <span class="unused">+</span>
-                    <a href="http://xebialabs.com/">XebiaLabs</a>
+                    <a href="http://xebialabs.com/" target="_blank">XebiaLabs</a>
                     <span class="unused">+</span>
-                    <a href="http://www.thiga.fr/">Thiga</a>
+                    <a href="http://www.thiga.fr/" target="_blank">Thiga</a>
                     <span class="unused">+</span>
-                    <a href="http://www.ux-republic.com/">UX-Republic</a>
+                    <a href="http://www.ux-republic.com/" target="_blank">UX-Republic</a>
                     <span class="unused">+</span>
-                    <a href="http://www.wescale.fr">WeScale</a>
+                    <a href="http://www.wescale.fr" target="_blank">WeScale</a>
                     <span class="unused">+</span>
-                    <a href="http://www.cellenza.com/">Cellenza</a>
+                    <a href="http://www.cellenza.com/" target="_blank">Cellenza</a>
                     <span class="unused">+</span>
-                    <a href="#">Akamis</a>
+                    <a href="http://www.akamis.com/" target="_blank">Akamis</a>
                 </div>
             </div>
 
@@ -320,11 +392,12 @@
     </div>
 
     <div class="address">
-        <address>
-            <div class="name">Xebia France</div>
-            <div class="telephone">+33 (0)1 53 89 99 99 - <a href="mailto:info@xebia.fr">info@xebia.fr</a></div>
-        </address>
-        <a class="mentions-legales">Mentions légales</a>
+        <ul>
+            <li>Xebia France</li>
+            <li><a href="tel:+33153899999">+33 (0)1 53 89 99 99</a></li>
+            <li><a href="mailto:info@xebia.fr">info@xebia.fr</a></li>
+            <li><a class="mentions-legales">Mentions légales</a></li>
+        </ul>
     </div>
 
 </footer>
@@ -364,5 +437,18 @@
     })();
 </script>
 
+<script>
+$(document).ready(function(){
+  $('.slider3').bxSlider({
+    auto: true,
+    autoControls: true,
+    slideWidth: 5000,
+    minSlides: 1,
+    maxSlides: 4,
+    slideMargin: 10,
+    captions: true
+  });
+});
+</script>
 </body>
 </html>
