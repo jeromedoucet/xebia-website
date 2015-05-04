@@ -35,16 +35,19 @@
     <div class="career-craft">
 
         <div class="sample-status centering">
-            <p>
-                La conception de code de qualité n’a plus de secrets pour vous ?
-                Les pratiques visant à  garantir fiabilité et maintenabilité du logiciel telles que TDD, BDD, pair programming, revue de code et tests automatisés sont au cœur de vos développements et sont des sujets qui vous passionnent ? <br/>
-                Vous aimez choisir la bonne technologie pour le bon problème, <a title="Java, Scala, node.js…">back-end</a>  comme <a title="javascript, typescript, coffeescript, angular…">front-end</a>?<br/> En tant que software craftsman, vous n’aurez alors aucun mal à compléter ce petit exercice pour découvrir ce que nous avons à vous offrir !
-
-            </p>
-            <div class="sample-ugly">
-                <div class="sample-ugly-file-name">TennisGame.java</div>
-                <div class="sample-ugly-source">
-                    <pre class="brush: java; notranslate">
+            <div id="game-display" class="game-display">
+                <p>
+                    La conception de code de qualité n’a plus de secrets pour vous ?
+                    Les pratiques visant à  garantir fiabilité et maintenabilité du logiciel telles que TDD, BDD, pair programming, revue de code et tests automatisés sont au cœur de vos développements et sont des sujets qui vous passionnent ? <br/>
+                    Vous aimez choisir la bonne technologie pour le bon problème, <a title="Java, Scala, node.js…">back-end</a>  comme <a title="javascript, typescript, coffeescript, angular…">front-end</a>?<br/> En tant que software craftsman, vous n’aurez alors aucun mal à compléter ce petit exercice pour découvrir ce que nous avons à vous offrir !
+                </p>
+                <p>
+                    Compte tenu du code source suivant:
+                </p>
+                <div class="sample-ugly">
+                    <div class="sample-ugly-file-name">TennisGame.java</div>
+                    <div class="sample-ugly-source">
+                        <pre class="brush: java; notranslate">
     package tennis;
 
     public class TennisGame {
@@ -85,13 +88,13 @@
         }
 
     }
-                    </pre>
+                        </pre>
+                    </div>
                 </div>
-            </div>
-            <div class="sample-ugly">
-                <div class="sample-ugly-file-name">TennisGameTests.java</div>
-                <div class="sample-ugly-source">
-                    <pre class="brush: java; notranslate">
+                <div class="sample-ugly">
+                    <div class="sample-ugly-file-name">TennisGameTests.java</div>
+                    <div class="sample-ugly-source">
+                        <pre class="brush: java; notranslate">
     package tennis;
 
     public class TennisGameTests {
@@ -101,30 +104,69 @@
             return true;
         }
     }
-                    </pre>
+                        </pre>
 
-                </div>
-            </div>
-            <div id="actions">
-                <div class="actions-columns">
-                    <div class="available-actions-title">Techniques disponibles</div>
-                    <div id="available-actions">
-                        <div>Implementer le test de TennisGame.getScore()</div>
-                        <div>Aller faire un tour sur le site de La Rache ;-)</div>
-                        <div>Supprimer la classe de test</div>
-                        <div>Renommer les variables</div>
-                        <div>Rajouter des fonctionnalités supplémentaires</div>
-                        <div>Repérer et supprimer le code mort</div>
-                        <div>Factoriser le code dupliqué dans des méthodes</div>
-                        <div>Ecrire un maximum de code sur une seule ligne</div>
-                        <div>Sortir les Strings "Love", "Fifteen", "Thirty" et "Forty" dans une enum</div>
                     </div>
                 </div>
-                <div class="actions-columns">
-                    <div class="available-actions-title">Techniques choisies</div>
-                    <div id="chosen-actions"></div>
+                <br/>
+                <p>
+                    Quelles sont les techniques à appliquer pour améliorer la qualité du code?
+                </p>
+                <div id="actions">
+                    <div class="actions-columns">
+                        <div class="available-actions-title">Techniques disponibles</div>
+                        <div id="available-actions">
+                            <div f-id="1" score="1">Implementer le test de TennisGame.getScore()</div>
+                            <div f-id="2" score="0">Aller faire un tour sur le site de La Rache ;-)</div>
+                            <div f-id="3" score="0">Supprimer la classe de test</div>
+                            <div f-id="4" score="1">Renommer les variables</div>
+                            <div f-id="5" score="0">Rajouter des fonctionnalités supplémentaires</div>
+                            <div f-id="6" score="1">Repérer et supprimer le code mort</div>
+                            <div f-id="7" score="1">Factoriser le code dupliqué dans des méthodes</div>
+                            <div f-id="8" score="0">Ecrire un maximum de code sur une seule ligne</div>
+                            <div f-id="9" score="1">Sortir les Strings "Love", "Fifteen", "Thirty" et "Forty" dans une enum</div>
+                        </div>
+                    </div>
+                    <div class="actions-columns">
+                        <div class="available-actions-title">Techniques choisies</div>
+                        <div id="chosen-actions"></div>
+                    </div>
+
                 </div>
 
+            </div>
+            <div id="success-message" class="success-display" style="display:none">
+                <p>
+                    Well done !<br/>
+
+                    Les défis ne vous font pas peur et c’est l’une des principales qualités de nos Xebians !<br/>
+
+                    Vous avez une véritable culture du développement piloté par les tests (TDD, BDD…), de l’application de standards de code propre (Clean Code) ou de la pratique du Design Emergent ?<br/>
+
+                    Vous prônez la qualité sans compromis et souhaitez travailler avec des technologies modernes sur des problématiques diverses?<br/>
+                    Vous aimez l’idée du « Software Development Done Right » et désirez exploiter vos talents en ayant la liberté de concevoir vos systèmes et logiciels avec les briques techniques les plus innovantes ?<br/>
+
+
+                    Alors n’hésitez plus et rejoignez-nous !<br/>
+                </p>
+                    Chez nous être développeur c’est :
+                    <ul>
+                        <li>partager votre savoir avec vos pairs ;</li>
+                        <li>être force de proposition et s’impliquer à la fois au sein de votre pôle technique mais aussi au sein de la communauté ;</li>
+                        <li>travailler sur des missions en méthodes agiles (exemples : Scrum, kanban, XP) ;</li>
+                        <li>profiter d’une ambiance pluridisciplinaire (back-end, front-end, mobile, data science…) ;</li>
+                        <li>être pro-actif en étant le/la premier(e) à partager les sujets qui vous passionnent grâce à l’organisation de <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.xebia.tv%2Fyoutube%3FvideoId%3Dh_eBWw1VlvQ&sa=D&sntz=1&usg=AFQjCNG1T9P3VoGfRb4MgPErhzwQRgJFFg">tech-events</a> ou encore la rédaction de <a href="http://www.google.com/url?q=http%3A%2F%2Fblog.xebia.fr%2Fcategory%2Fcraftsmanship%2F&sa=D&sntz=1&usg=AFQjCNHyoK4_nSFXKg7v3wI9UBOyrNDtGw">billets de blog</a>.</li>
+                    </ul>
+                <p>
+                    Xebia recherche de nouveaux talents créatifs et curieux pour rejoindre une équipe de passionnés !
+                    Prêt(e) à tenter l’aventure ? <a href="mailto:recrutement@xebia.fr">contactez-nous!</a>
+
+                </p>
+            </div>
+            <div id="fail-message"class="failure-display" style="display:none">
+                <p>
+                    Bon... A ce niveau, vous devriez tenter une certification ISO-1664.
+                </p>
             </div>
         </div>
     </div>
