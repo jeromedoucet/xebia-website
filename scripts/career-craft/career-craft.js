@@ -18,9 +18,11 @@ $(document).ready(function () {
             if(totalScore>=3){
                 $("#game-display").css('display', 'none');
                 $("#success-message").css('display', 'block');
+                $('body').scrollTop(0);
             } else if(targetList.getFields().length>5){
                 $("#game-display").css('display', 'none');
                 $("#fail-message").css('display', 'block');
+                $('body').scrollTop(0);
             }
         }
     });
