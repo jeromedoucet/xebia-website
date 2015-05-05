@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    var expectedGoodAnswers = 3;
+    var maximumBadAnswers = 4;
     var $availableActions = $("#available-actions");
     var $chosenActions = $("#chosen-actions");
     var $chooser = $("#actions").fieldChooser($availableActions, $chosenActions);
@@ -15,18 +17,17 @@ $(document).ready(function () {
                     totalScore+= parseInt(fieldScore);
                 }
             }
-            if(totalScore>=3){
+
+            if(totalScore>=expectedGoodAnswers){
+                location.href='#';
                 $("#game-display").css('display', 'none');
                 $("#success-message").css('display', 'block');
-                $('body').scrollTop(0);
-            } else if(targetList.getFields().length>5){
+            } else if(totalScore===0 && targetList.getFields().length>=(maximumBadAnswers+1)){
+                location.href='#';
                 $("#game-display").css('display', 'none');
                 $("#fail-message").css('display', 'block');
-                $('body').scrollTop(0);
             }
         }
     });
-
-
     SyntaxHighlighter.all();
 });
