@@ -1,50 +1,87 @@
 .career-craft {
   .sample-status{
+    padding-bottom:40px;
+    border-bottom:1px solid #f0f0f0;
+    h2{
+      font-size:24px;
+      font-weight:100;
+    }
+    h3{
+      padding-top:20px;
+      border-top: 1px solid black;
+      font-size: 20px;
+
+
+    }
     .sample-ugly{
       display:inline-block;
-      width:45%;
+      width:49%;
       vertical-align:top;
-      border : solid black 1px;
+      border: solid #6a205f 1px;
       border-radius:5px;
       .sample-ugly-file-name{
         padding:0.5em;
         text-align: center;
-        border-bottom : solid black 1px;
+        border-bottom: solid #6a205f 1px;
+        background-color: @xebiaColor;
+        color:white;
       }
       .sample-ugly-source{
         height:30em;
         overflow:auto;
+        .syntaxhighlighter .keyword {
+          color: #6a205f !important;
+        }
       }
     }
+    .titre-test{
+      padding-top:40px;
+      color: #06a99c;
+      font-weight:400;
+    }
+
   }
 
   #actions{
     margin-top:1em;
+
     .actions-columns{
       display:inline-block;
-      width:45%;
+      width:49%;
       vertical-align:top;
-      border : solid black 1px;
+      border: solid #6a205f 1px;
       border-radius:5px;
       .available-actions-title{
         padding:0.5em;
         text-align: center;
-        border-bottom : solid black 1px;
+        border-bottom : solid #6a205f 1px;
+        background-color: @xebiaColor;
+        color:white;
       }
       #available-actions,#chosen-actions{
         height:30em;
         overflow:auto;
+
         div{
-          border: solid black 1px;
+
           border-radius:2px;
           width:80%;
           margin-left:auto;
           margin-right:auto;
-          margin-top:0.2em;
-          padding:0.2em;
+          margin-top:0.4em;
+          padding:0.3em;
           text-align:center;
+          font-weight:100;
           font-size: 20px;
+          background-color:@contrastColor;
+          color: white;
         }
+      }
+      #chosen-actions{
+        background-image: url('../../images/drag_drop.png');
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position:center;
       }
     }
   }
@@ -52,10 +89,24 @@
   .failure-display{
     text-align:center;
     .trollface{
-      width: 30%;
+      width: 40%;
       margin-left:auto;
+      padding:60px;
       margin-right:auto;
 
     }
+  }
+
+  .success-display{
+    h2:first-of-type{
+    color:@contrastColor;
+  }
+    .titre-recrut{
+    color:@xebiaColor;
+  }
+  .centering
+  {
+    text-align:center;
+  }
   }
 }

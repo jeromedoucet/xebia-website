@@ -1,0 +1,55 @@
+.form-test
+{
+  padding-top:40px;
+}
+
+h4
+{
+  font-size:20px;
+
+}
+
+input[type="radio"] {
+  display:none;
+}
+
+input[type="radio"] +label {
+font-size: 18px;
+color:black;
+}
+
+input[type="radio"]:checked +label {
+color: #06a99c;  
+}
+
+
+input[type="radio"] + label span {
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background-color:#CACACA;
+  border:1px solid #06a99c;
+  display:inline-block;
+  vertical-align:middle;
+  margin-right: 10px;
+
+}
+
+input[type="radio"]:checked + label span {
+
+  background-color: #06a99c !important;
+  color: #06a99c;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+  -webkit-transition:color 0.4s linear;
+  -o-transition:color 0.4s linear;
+  -moz-transition:color 0.4s linear;
+  transition:color 0.4s linear;
+
+}
