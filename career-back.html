@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title>Xebia France - Annonce Back</title>
+    <title>Xebia France - Consultant Back</title>
 
     @@include('templates/standardHead.html')
     <!-- build:css css/home.css -->
@@ -46,67 +46,66 @@
 
                 <h3>Testez-vous</h3>
 
-<form class="form-test">
-                <form role="form">
-  <h4>L'une des grandes promesses du futur Java 9 est la modularisation du JDK. Quel est le nom du projet réunissant les développements dans ce sens ?</h4>
+<form class="form-test-back">
+
+  <p class="titre-test">L'une des grandes promesses du futur Java 9 est la modularisation du JDK. Quel est le nom du projet réunissant les développements dans ce sens ?</p>
   <div class="radio">
-    <input type="radio" name="optradio" value=""/><label><span></span>a) Valhalla</label>
+    <input type="radio" id="java1" name="java" value="java1"/><label for="java1"><span></span>a) Valhalla</label>
   </div>
   <div class="radio">
-    <input type="radio" name="optradio" value=""/><label><span></span>b) Panama</label>
+    <input type="radio" id="java2" name="java" value="java2"/><label for="java2"><span></span>b) Panama</label>
   </div>
   <div class="radio">
-    <input type="radio" name="optradio" value=""/><label><span></span>c) JigSaw</label>
+    <input type="radio" id="java3" name="java" value="java3"/><label for="java3"><span></span>c) JigSaw</label>
   </div>
   <div class="radio">
-    <input type="radio" name="optradio" value=""/><label><span></span>d) Obi one</label>
+    <input type="radio" id="java4" name="java" value="java4"/><label for="java4"><span></span>d) Obi one</label>
   </div>
-</form>
-<form>
-  <h4>Quel outil facilite la scalabilité des microservices ?</h4>
+
+  <p class="titre-test">Quel outil facilite la scalabilité des microservices ?</p>
   <div class="radio">
-    <label><input type="radio" name="optradio" value="">a) Nagios</label>
-  </div>
-  <div class="radio">
-    <label><input type="radio" name="optradio" value="">b) Docker</label>
+    <input type="radio" id="scala1" name="scala" value="scala1"/><label for="scala1"><span></span>a) Nagios</label>
   </div>
   <div class="radio">
-    <label><input type="radio" name="optradio" value="">c) Statds</label>
+    <input type="radio" id="scala2" name="scala" value="scala2"/><label for="scala2"><span></span>b) Docker</label>
   </div>
   <div class="radio">
-    <label><input type="radio" name="optradio"  value="">d) Flux</label>
+    <input type="radio" id="scala3" name="scala" value="scala3"/><label for="scala3"><span></span>c) Statds</label>
+  </div>
+  <div class="radio">
+    <input type="radio" id="scala4" name="scala" value="scala4"/><label for="scala4"><span></span>d) Flux</label>
+  </div>
+
+  <p class="titre-test">Quels sont les deux types de communications mis en avant par les architectures microservices ?</p>
+  <div class="radio">
+    <input type="radio" id="archi1" name="archi" value="archi1"/><label for="archi1"><span></span>a) SOAP et RMI</label>
+  </div>
+  <div class="radio">
+    <input type="radio" id="archi2" name="archi" value="archi2"/><label for="archi2"><span></span>b) REST et Bus de messages</label>
+  </div>
+  <div class="radio">
+    <input type="radio" id="archi3" name="archi" value="archi3"/><label for="archi3"><span></span>c) SPDY et AMQP</label>
+  </div>
+
+  <p class="titre-test">Quel concept est régulièrement associé à l'event sourcing ?</p>
+  <div class="radio">
+    <input type="radio" id="sourcing1" name="sourcing" value="sourcing1"/><label for="sourcing1"><span></span>a) CQRS</label>
+  </div>
+  <div class="radio">
+    <input type="radio" id="sourcing2" name="sourcing" value="sourcing2"/><label for="sourcing2"><span></span>b) NoSQL</label>
+  </div>
+  <div class="radio">
+    <input type="radio" id="sourcing3" name="sourcing" value="sourcing3"/><label for="sourcing3"><span></span>c) La découverte de service</label>
+  </div>
+  <div class="radio">
+    <input type="radio" id="sourcing4" name="sourcing" value="sourcing4"/><label for="sourcing4"><span></span>d) L'auto monitoring</label>
+  </div>
+
+  <div class="centering">
+      <input id="button" class="button_valid" type="button" value="Validate">
   </div>
 </form>
 
-<form>
-  <h4>Quels sont les deux types de communications mis en avant par les architectures microservices ?</h4>
-  <div class="radio">
-    <label><input type="radio" name="optradio" value="">a) SOAP et RMI</label>
-  </div>
-  <div class="radio">
-    <label><input type="radio" name="optradio" value="">b) REST et Bus de messages</label>
-  </div>
-  <div class="radio">
-    <label><input type="radio" name="optradio" value="">c) SPDY et AMQP</label>
-  </div>
-</form>
-
-<form>
-  <h4>Quel concept est régulièrement associé à l'event sourcing ?</h4>
-  <div class="radio">
-    <label><input type="radio" name="optradio">a) CQRS</label>
-  </div>
-  <div class="radio">
-    <label><input type="radio" name="optradio">b) NoSQL</label>
-  </div>
-  <div class="radio">
-    <label><input type="radio" name="optradio">c) La découverte de service</label>
-  </div>
-  <div class="radio">
-    <label><input type="radio" name="optradio">d) L'auto monitoring</label>
-  </div>
-</form>
-</form>
 
 
 

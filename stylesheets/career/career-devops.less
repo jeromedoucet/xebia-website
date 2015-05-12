@@ -3,9 +3,10 @@
   padding-top:40px;
 }
 
-h4
+
+.radio
 {
-  font-size:20px;
+  display: inline-block;
 
 }
 
@@ -14,12 +15,12 @@ input[type="radio"] {
 }
 
 input[type="radio"] +label {
-font-size: 18px;
+font-size: 16px;
 color:black;
 }
 
 input[type="radio"]:checked +label {
-color: #06a99c;  
+color: #06a99c;
 }
 
 
@@ -27,7 +28,7 @@ input[type="radio"] + label span {
   width:20px;
   height:20px;
   border-radius:50%;
-  background-color:#CACACA;
+  background-color:#f9f9f9;
   border:1px solid #06a99c;
   display:inline-block;
   vertical-align:middle;
@@ -37,19 +38,37 @@ input[type="radio"] + label span {
 
 input[type="radio"]:checked + label span {
 
-  background-color: #06a99c !important;
-  color: #06a99c;
+  background-color: #06a99c;
 }
 
 input[type="radio"] + label span,
-input[type="radio"]:checked + label span {
+input[type="radio"]:checked + label span,
+input[type="radio"]:checked +label
+ {
   -webkit-transition:background-color 0.4s linear;
   -o-transition:background-color 0.4s linear;
   -moz-transition:background-color 0.4s linear;
   transition:background-color 0.4s linear;
-  -webkit-transition:color 0.4s linear;
-  -o-transition:color 0.4s linear;
-  -moz-transition:color 0.4s linear;
-  transition:color 0.4s linear;
+}
 
+textarea
+{
+  outline:none;
+  border:1px solid #06a99c;
+  resize:none;
+  border-radius:4px;
+  padding:5px;
+
+}
+
+.button_valid
+{
+  text-align:center;
+}
+
+
+.font-programming
+{
+  font-family:Courrier;
+  font-style:italic;
 }

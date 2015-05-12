@@ -26,6 +26,7 @@
     <script src="scripts/vendor/shCore.js"></script>
     <script src="scripts/vendor/shBrushJava.js"></script>
     <script src="scripts/career-craft/career-craft.js"></script>
+    <script src="scripts/career/career-script.js"></script>
     <!-- endbuild -->
 
 
@@ -52,69 +53,62 @@ avons à vous offrir …</span>
 
                 <h3>Testez-vous</h3>
 
-<form class="form-test">
-                <form role="form">
-  <h4>Amazon Beastlalk est une plateform :</h4>
-  <div class="radio">
-    <input type="radio" id="amazon1" name="optradio" value=""/><label for="amazon1"><span></span>a) IAAS</label>
-  </div>
-  <div class="radio">
-    <input type="radio" id="amazon2" name="optradio" value=""/><label for="amazon2"><span></span>b) PAAS</label>
-  </div>
-  <div class="radio">
-    <input type="radio" id="amazon3" name="optradio" value=""/><label for="amazon3"><span></span>c) SAAS</label>
-  </div>
-  <div class="radio">
-    <input type="radio" id="amazon4" name="optradio" value=""/><label for="amazon4"><span></span>d) La réponse d</label>
-  </div>
-</form>
-<form>
-  <h4>Si je veux automatiser le déploiement de mon infrastructure, je vais me tourner vers :</h4>
-  <div class="radio">
-    <label><input type="radio" name="optradio" value="">a) Ansible</label>
-  </div>
-  <div class="radio">
-    <label><input type="radio" name="optradio" value="">b) JMeter</label>
-  </div>
-  <div class="radio">
-    <label><input type="radio" name="optradio" value="">c) Docker</label>
-  </div>
-  <div class="radio">
-    <label><input type="radio" name="optradio"  value="">d) La réponse d</label>
-  </div>
-</form>
+<form class="form-test-devops">
 
-<form>
-  <h4>Sur quoi est basée la technologie Docker ?</h4>
+  <p class="titre-test">1) Amazon Beastlalk est une plateform :</p>
   <div class="radio">
-    <label><input type="radio" name="optradio" value="">a) lsd</label>
+    <input type="radio" id="amazon1" name="amazon" value="amazon1"/><label for="amazon1"><span></span>a) IAAS</label>
   </div>
   <div class="radio">
-    <label><input type="radio" name="optradio" value="">b) lxc</label>
+    <input type="radio" id="amazon2" name="amazon" value="amazon2"/><label for="amazon2"><span></span>b) PAAS</label>
   </div>
   <div class="radio">
-    <label><input type="radio" name="optradio" value="">c) ldap</label>
+    <input type="radio" id="amazon3" name="amazon" value="amazon3"/><label for="amazon3"><span></span>c) SAAS</label>
   </div>
   <div class="radio">
-    <label><input type="radio" name="optradio" value="">d) La réponse d</label>
+    <input type="radio" id="amazon4" name="amazon" value="amazon4"/><label for="amazon4"><span></span>d) La réponse d</label>
   </div>
-</form>
 
-<form>
-  <h4>Dans mon usine logicielle, comment dois-je ordonner les briques suivantes :</h4>
+  <p class="titre-test">2) Si je veux automatiser le déploiement de mon infrastructure, je vais me tourner vers :</p>
   <div class="radio">
-    <label><input type="radio" name="optradio">a) Jenkins</label>
+    <input type="radio" id="ansible" name="infra" value="infra1"/><label for="ansible"><span></span>a) Ansible</label></div>
+  <div class="radio">
+    <input type="radio" id="jmeter" name="infra" value="infra2"/><label for="jmeter"><span></span>b) JMeter</label></div>
+  <div class="radio">
+    <input type="radio" id="docker" name="infra" value="infra3"/><label for="docker"><span></span>c) Docker</label></div>
+  <div class="radio">
+    <input type="radio" id="d" name="infra" value="infra4"/><label for="d"><span></span>d) La réponse d</label>
+  </div>
+
+  <p class="titre-test">3) Sur quoi est basée la technologie Docker ?</p>
+  <div class="radio">
+    <input type="radio" id="docker1" name="docker" value="docker1"/><label for="docker1"><span></span>a) Lsd</label></div>
+  <div class="radio">
+    <input type="radio" id="docker2" name="docker" value="docker2"/><label for="docker2"><span></span>b) Lxc</label></div>
+  <div class="radio">
+    <input type="radio" id="docker3" name="docker" value="docker3"/><label for="docker3"><span></span>c) Ldap</label></div>
+  <div class="radio">
+    <input type="radio" id="docker4" name="docker" value="docker4"/><label for="docker4"><span></span>d) La réponse d</label>
+  </div>
+
+  <p class="titre-test">4) Dans mon usine logicielle, comment dois-je ordonner les briques suivantes :</p>
+  <div class="radio">
+    <label><input type="radio" name="brique">a) Jenkins</label>
   </div>
   <div class="radio">
-    <label><input type="radio" name="optradio">b) Beanstalk</label>
+    <label><input type="radio" name="brique">b) Beanstalk</label>
   </div>
   <div class="radio">
-    <label><input type="radio" name="optradio">c) Git</label>
+    <label><input type="radio" name="brique">c) Git</label>
   </div>
   <div class="radio">
-    <label><textarea rows="1" type="text" name="optradio" placeholder="Exemple : a-b-c" value=""></textarea></label>
+    <label><textarea rows="1" type="text" name="optradio" placeholder="Exemple : a-b-c" value="c-a-b"></textarea></label>
   </div>
-</form>
+
+
+<div class="centering">
+    <input id="button" class="button_valid" type="button" value="Validate">
+</div>
 </form>
 
 
@@ -161,7 +155,7 @@ Openstack, Jenkins ou Puppet n’ont pas de secret pour vous ?<br/>
                 </h1>
                 <img class="trollface" src="images/you_wrong_craft.jpg" alt="problem?">
                 <p>
-                    C'est bon ! OK ! OK ! On vous laisse exécuter la commande <a href="career-craft.html"  class="titre-test"><i>git checkout</i></a>.
+                    C'est bon ! OK ! OK ! On vous laisse exécuter la commande <a href="career-expert-devops.html"  class="titre-test"><i>git checkout</i></a>.
                 </p>
             </div>
         </div>
