@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="stylesheets/career/career-craft.less"/>
     <link rel="stylesheet" href="stylesheets/career/career-devops.less"/>
     <link rel="stylesheet" href="stylesheets/career/career-data.less"/>
+    <link rel="stylesheet" href="stylesheets/career/career.less"/>
     <link rel="stylesheet" href="stylesheets/career/shCore.css" type="text/css" />
     <link rel="stylesheet" href="stylesheets/career/shCoreDefault.css" type="text/css" />
     <!-- endbuild -->
@@ -53,52 +54,68 @@ aucun mal à résoudre ce problème pour découvrir ce que nous avons à offrir<
 
 <form class="form-test-data">
 
-  <p class="titre-test">1)</p>
+
+
+  <div class="test-data">
+  <p class="titre-test">Question 1)</p>
+
+
   <div class="radio">
-    <input type="radio" id="elephant1" name="elephant" value="elephant1"/><label for="elephant1"><span></span>a) <img src="images/career/hadoop-elephant.png" class="img_test_career" /></label>
+    <input type="radio" id="elephant1" name="elephant" value="elephant1"/><label for="elephant1"><span></span><img src="images/career/hadoop-elephant.png" class="img_test_career" /></label>
   </div><p class="versus">OU</p>
   <div class="radio">
-    <input type="radio" id="elephant2" name="elephant" value="elephant2"/><label for="elephant2"><span></span>b) <img src="images/career/logo_php.png" class="img_test_career" /></label>
+    <input type="radio" id="elephant2" name="elephant" value="elephant2"/><label for="elephant2"><span></span><img src="images/career/logo_php.png" class="img_test_career" /></label>
+  </div>
   </div>
 
 
-  <p class="titre-test">2)</p>
+  <div class="test-data">
+  <p class="titre-test">Question 2)</p>
+
   <div class="radio">
-    <input type="radio" id="bee1" name="bee" value="bee1"/><label for="bee1"><span></span>a) <img src="images/career/box-hive.png" class="img_test_career" /></label>
+    <input type="radio" id="bee1" name="bee" value="bee1"/><label for="bee1"><span></span><img src="images/career/box-hive.png" class="img_test_career" /></label>
   </div><p class="versus">OU</p>
   <div class="radio">
-    <input type="radio" id="bee2" name="bee" value="bee2"/><label for="bee2"><span></span>b) <img src="images/career/bee_2.png" class="img_test_career" /></label>
+    <input type="radio" id="bee2" name="bee" value="bee2"/><label for="bee2"><span></span><img src="images/career/bee_2.png" class="img_test_career" /></label>
+  </div>
   </div>
 
 
-  <p class="titre-test">3)</p>
+  <div class="test-data">
+  <p class="titre-test">Question 3)</p>
+
   <div class="radio">
-    <input type="radio" id="spark1" name="spark" value="spark1"/><label for="spark1"><span></span>a) <img src="images/career/spark-logo.png" class="img_test_career" /></label>
+    <input type="radio" id="spark1" name="spark" value="spark1"/><label for="spark1"><span></span><img src="images/career/spark-logo.png" class="img_test_career" /></label>
   </div><p class="versus">OU</p>
   <div class="radio">
-    <input type="radio" id="spark2" name="spark" value="spark2"/><label for="spark2"><span></span>b) <img src="images/career/spark_2.png" class="img_test_career" /></label>
+    <input type="radio" id="spark2" name="spark" value="spark2"/><label for="spark2"><span></span><img src="images/career/spark_2.png" class="img_test_career" /></label>
   </div>
+</div>
 
-  <p class="titre-test">4)</p>
+<div class="test-data">
+  <p class="titre-test">Question 4)</p>
+
   <div class="radio">
-    <input type="radio" id="pig1" name="pig" value="pig1"/><label for="pig1"><span></span>a) <img src="images/career/pig.gif" class="img_test_career" /></label>
+    <input type="radio" id="pig1" name="pig" value="pig1"/><label for="pig1"><span></span><img src="images/career/pig.gif" class="img_test_career" /></label>
   </div><p class="versus">OU</p>
   <div class="radio">
-    <input type="radio" id="pig2" name="pig" value="pig2"/><label for="pig2"><span></span>b) <img src="images/career/pig_2.jpg" class="img_test_career" /></label>
+    <input type="radio" id="pig2" name="pig" value="pig2"/><label for="pig2"><span></span><img src="images/career/pig_2.jpg" class="img_test_career" /></label>
   </div>
+</div>
 
-  <p class="titre-test">5)</p>
+<div class="test-data">
+  <p class="titre-test">Question 5)</p>
+
   <div class="radio">
-    <input type="radio" id="oeil1" name="oeil" value="oeil1"/><label for="oeil1"><span></span>a) <img src="images/career/cassandra_logo.png" class="img_test_career" /></label>
+    <input type="radio" id="oeil1" name="oeil" value="oeil1"/><label for="oeil1"><span></span><img src="images/career/cassandra_logo.png" class="img_test_career" /></label>
   </div><p class="versus">OU</p>
   <div class="radio">
-    <input type="radio" id="oeil2" name="oeil" value="oeil2"/><label for="oeil2"><span></span>b) <img src="images/career/logo-oeil-2.png" class="img_test_career" /></label>
+    <input type="radio" id="oeil2" name="oeil" value="oeil2"/><label for="oeil2"><span></span><img src="images/career/logo-oeil-2.png" class="img_test_career" /></label>
   </div>
+</div>
 
-
-  <div class="centering">
-      <input id="button" class="button_valid" type="button" value="Validate">
-  </div>
+  <p class="center">
+   <input name="Submit" value="Valider" onclick="resultat()" type="button"></p>
 </form>
 
 
@@ -109,7 +126,8 @@ aucun mal à résoudre ce problème pour découvrir ce que nous avons à offrir<
             </div>
             <div id="success-message" class="success-display" style="display:none;">
 
-                    <h2>Good Work!</h2>
+                    <h1>Good Work!</h1>
+                    <img class="success-meme" src="images/career/meme_success_2.png" alt="CONGRATS!"/>
 
                   <p>Les défis ne vous font pas peur et c’est l’une des principales qualités de nos Xebians !<br/>
 
@@ -154,7 +172,7 @@ Alors n’hésitez plus et rejoignez-nous !</span><br/>
                 <h1>
                     Bon... À ce niveau, vous devriez tenter une certification ISO-1664.
                 </h1>
-                <img class="trollface" src="images/you_wrong_craft.jpg" alt="problem?">
+                <img class="trollface" src="images/meme_wrong_3.png" alt="problem?">
                 <p>
                     C'est bon ! OK ! OK ! On vous laisse exécuter la commande <a href="career-ingenieur-data.html"  class="titre-test"><i>git checkout</i></a>.
                 </p>

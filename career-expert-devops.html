@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="stylesheets/mixin.less"/>
     <link rel="stylesheet" href="stylesheets/career/career-craft.less"/>
     <link rel="stylesheet" href="stylesheets/career/career-devops.less"/>
+    <link rel="stylesheet" href="stylesheets/career/career.less"/>
     <link rel="stylesheet" href="stylesheets/career/shCore.css" type="text/css" />
     <link rel="stylesheet" href="stylesheets/career/shCoreDefault.css" type="text/css" />
     <!-- endbuild -->
@@ -106,9 +107,8 @@ avons à vous offrir …</span>
   </div>
 
 
-<div class="centering">
-    <input id="button" class="button_valid" type="button" value="Validate">
-</div>
+  <p class="center">
+   <input name="Submit" value="Valider" onclick="resultat()" type="button"></p>
 </form>
 
 
@@ -118,7 +118,8 @@ avons à vous offrir …</span>
             </div>
             <div id="success-message" class="success-display" style="display:none;">
 
-                    <h2>Good Work</h2>
+                    <h1>Good Work</h1>
+                    <img class="success-meme" src="images/career/meme_success_1.png" alt="CONGRATS!"/>
 
                   <p>Les défis ne vous font pas peur et c’est l’une des principales qualités de nos Xebians !<br/>
 
@@ -153,7 +154,7 @@ Openstack, Jenkins ou Puppet n’ont pas de secret pour vous ?<br/>
                 <h1>
                     Bon... À ce niveau, vous devriez tenter une certification ISO-1664.
                 </h1>
-                <img class="trollface" src="images/you_wrong_craft.jpg" alt="problem?">
+                <img class="trollface" src="images/meme_wrong_7.png" alt="problem?">
                 <p>
                     C'est bon ! OK ! OK ! On vous laisse exécuter la commande <a href="career-expert-devops.html"  class="titre-test"><i>git checkout</i></a>.
                 </p>

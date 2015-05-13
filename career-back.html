@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="stylesheets/mixin.less"/>
     <link rel="stylesheet" href="stylesheets/career/career-craft.less"/>
     <link rel="stylesheet" href="stylesheets/career/career-devops.less"/>
+    <link rel="stylesheet" href="stylesheets/career/career.less"/>
     <link rel="stylesheet" href="stylesheets/career/shCore.css" type="text/css" />
     <link rel="stylesheet" href="stylesheets/career/shCoreDefault.css" type="text/css" />
     <!-- endbuild -->
@@ -40,7 +41,7 @@
                 <h1>De l'art d'être architecte</h1>
                 <h2>
                   L’univers des back-end et la conception d’architecture de systèmes n’ont plus de secrets pour vous ? La mise en place de microservices ou l’optimisation des performances en continu sont des sujets qui vous passionnent. En tant qu’architecte technique ou tech lead chevronné(e), vous n’aurez alors aucun mal à trouver résoudre ce petit quizz pour découvrir ce que nous avons à vous offrir !
-
+<br/>
 <span class="titre-test">#BeBrave :)</span>
                 </h2>
 
@@ -101,9 +102,8 @@
     <input type="radio" id="sourcing4" name="sourcing" value="sourcing4"/><label for="sourcing4"><span></span>d) L'auto monitoring</label>
   </div>
 
-  <div class="centering">
-      <input id="button" class="button_valid" type="button" value="Validate">
-  </div>
+  <p class="center">
+   <input name="Submit" value="Valider" onclick="resultat()" type="button"></p>
 </form>
 
 
@@ -114,7 +114,8 @@
             </div>
             <div id="success-message" class="success-display" style="display:none;">
 
-                    <h2>Well done!</h2>
+                    <h1>Well done!</h1>
+                    <img class="success-meme" src="images/career/meme_success_3.png" alt="CONGRATS!"/>
 
                   <p>Les défis ne vous font pas peur et c’est l’une des principales qualités de nos Xebians !<br/>
 
@@ -136,7 +137,7 @@ Javascript avec Node.js ou SBT avec Scala sont des technos qui font sens pour vo
                         - Être pro-actif en étant le/la premier(e) à partager les sujets qui vous passionnent grâce à l’organisation de <a href="http://www.xebia.tv/youtube?videoId=h_eBWw1VlvQ" class="titre-test">tech-events</a> ou encore la rédaction de <a href="http://blog.xebia.fr/category/back" class="titre-test">billets de blog</a>.</br>
                     </p>
                 <p class="titre-test">
-                  Faîtes un tour sur notre <a href="http://www.blog.xebia.fr" target="_blank">blog</a> et sur notre <a href="http://techtrends.xebia.fr#back" target="_blank">Techtrend Devops</a> pour en savoir plus !
+                  Faîtes un tour sur notre <a href="http://www.blog.xebia.fr" target="_blank">blog</a> et sur notre <a href="http://techtrends.xebia.fr#back" target="_blank">Techtrend Back</a> pour en savoir plus !
                     Prêt(e) à tenter l’aventure ?
 
                 </p>
@@ -148,9 +149,9 @@ Javascript avec Node.js ou SBT avec Scala sont des technos qui font sens pour vo
                 <h1>
                     Bon... À ce niveau, vous devriez tenter une certification ISO-1664.
                 </h1>
-                <img class="trollface" src="images/you_wrong_craft.jpg" alt="problem?">
+                <img class="trollface" src="images/meme_wrong_2.png" alt="problem?">
                 <p>
-                    C'est bon ! OK ! OK ! On vous laisse exécuter la commande <a href="career-craft.html"  class="titre-test"><i>git checkout</i></a>.
+                    C'est bon ! OK ! OK ! On vous laisse exécuter la commande <a href="career-back.html"  class="titre-test"><i>git checkout</i></a>.
                 </p>
             </div>
         </div>

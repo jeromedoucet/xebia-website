@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Xebia France - Coach Agile</title>
+
+    @@include('templates/standardHead.html')
+    <!-- build:css css/home.css -->
+    <link rel="stylesheet" href="stylesheets/vars.less"/>
+    <link rel="stylesheet" href="stylesheets/mixin.less"/>
+    <link rel="stylesheet" href="stylesheets/career/career-craft.less"/>
+    <link rel="stylesheet" href="stylesheets/career/career-devops.less"/>
+    <link rel="stylesheet" href="stylesheets/career/career-sql.less"/>
+    <link rel="stylesheet" href="stylesheets/career/career.less"/>
+    <link rel="stylesheet" href="stylesheets/career/shCore.css" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/career/shCoreDefault.css" type="text/css" />
+    <!-- endbuild -->
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+
+    <!-- build:hbar js/templates.js -->
+    <script src="templates/common/client.hbar"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/main.js -->
+    <script src="scripts/vendor/jquery-ui.js"></script>
+    <script src="scripts/vendor/fieldChooser.min.js"></script>
+    <script src="scripts/vendor/shCore.js"></script>
+    <script src="scripts/vendor/shBrushJava.js"></script>
+    <script src="scripts/career-craft/career-craft.js"></script>
+    <!-- endbuild -->
+
+
+</head>
+<body>
+@@include('templates/header.html')
+<main>
+    <div class="career-craft">
+
+        <div class="sample-status centering">
+            <div id="game-display" class="game-display">
+                <h1>Coach Agile</h1>
+                <h2>
+                  Si vous êtes passé maitre dans l’art de décoller les post-its, si pour vous Kanban et Scrum
+
+sont aussi des outils pour permettre aux organisations et aux personnes d’atteindre quelque
+
+chose de plus grand, si lorsque vous  entendez Agilité à l’échelle, vous pensez au
+
+changement de culture et enfin, si vous pensez avoir votre place dans cette galerie de
+
+portraits (<a href="http://adopteunagiliste.fr" target="_blank">Adopte un agiliste</a>) ALORS le petit test suivant ne devrait pas vous poser de
+
+problème.
+
+<span class="titre-test">On se retrouve après !</span>
+                </h2>
+
+                <h3>Testez-vous</h3>
+
+<form class="form-test-agile">
+
+  <p class="titre-test">Paris ces 4 phrases, quelle est celle qui ne figure pas dans le manifeste Agile ?</p>
+  <div class="radio">
+    <input type="radio" id="agile1" name="agile" value="agile1"/><label for="agile1"><span></span>a) Des logiciels opérationnels plus qu’une documentation exhaustive</label>
+  </div>
+  <div class="radio">
+    <input type="radio" id="agile2" name="agile" value="agile2"/><label for="agile2"><span></span>b) Les mails et les preuves écrites priment sur des communications riches et efficaces</label>
+  </div>
+  <div class="radio">
+    <input type="radio" id="agile3" name="agile" value="agile3"/><label for="agile3"><span></span>c) Des logiciels opérationnels plus qu’une documentation exhaustive</label>
+  </div>
+  <div class="radio">
+    <input type="radio" id="agile4" name="agile" value="agile4"/><label for="agile4"><span></span>d) L’adaptation au changement plus que le suivi d’un plan</label>
+  </div>
+
+
+  <p class="center">
+   <input name="Submit" value="Valider" onclick="resultat()" type="button"></p>
+</form>
+
+
+
+
+
+
+            </div>
+            <div id="success-message" class="success-display" style="display:none;">
+
+                    <h1>Bravo !</h1>
+
+                    <img class="success-meme" src="images/career/meme_success_1.png" alt="CONGRATS!"/>
+
+                  <p>! Vous l’avez compris, nous cherchons des coachs agiles expérimentés
+
+notre équipe de passionnés.<br/>
+
+Pour nous, l’intelligence collective est au cœur de nos pratiques
+
+de travail et nous adorons travailler sur tous les domaines qui touchent à l’agilité.
+<br/>
+
+
+
+
+                </p>
+                    <h2>En gros, chez Xebia, votre quotidien pourrait ressembler à ça :</h2>
+                    <p>
+                        - Mettre en place les pratiques agiles a tous les niveaux d’une organisation,
+
+alternant des postures de coachs et de conseil</br>
+                        - Former vos interlocuteurs projets à l'agilité grâce aux supports de cours Xebia et à
+
+des jeux d'apprentissage (Lean Lego Game, GetKanban, Scrum Game, ...)</br>
+                        - Accompagner les équipes de réalisation dans l'application des pratiques agiles</br>
+                        - Accompagner les métiers et product owners sur les problématiques d’innovation des
+
+produits logiciels (Innovation Games, Lean StartUp, customer experience mapping, ...)</br>
+                        - Accompagner les métiers et product owners sur les problématiques d’innovation des
+                        - Parler, argumenter et travailler avec le management pour les guider vers de
+
+                        nouveaux horizons</br>
+                        - Participez aux cycles d'avant-vente en partenariat avec l'équipe commerciale et
+
+alimentez les offres avec les références et cas client</br>
+                        - De partager ses connaissances via les XKE et via l'animation de groupes de
+
+réflexion</br>
+                        - De travailler avec une équipe de coachs passionnés, et convaincus des bienfaits du
+
+travail en équipe</br>
+                        - De contribuer à la notoriété et l'autorité de l’entreprise via la publication d'articles,
+
+prise de parole dans les conférences spécialisées et les évènements
+
+communautaires agiles</br>
+
+                    </p>
+                <p class="titre-test">
+                  Si  une larme d’émotion coule sur votre joue à la lecture de cette offre, ou si plus
+
+simplement vous souhaitez en savoir plus, la suite est ici :
+
+                    <br/>Prêt(e) à tenter l’aventure ?
+
+                </p>
+                <div class="centering">
+                <a href="form.html" class="button_contact">Contactez-nous!</a>
+                </div>
+            </div>
+            <div id="fail-message"class="failure-display" style="display:none">
+                <h1>
+                    Bon... À ce niveau, vous devriez tenter une certification ISO-1664.
+                </h1>
+                <img class="trollface" src="images/meme_wrong_3.png" alt="problem?">
+                <p>
+                    C'est bon ! OK ! OK ! On vous laisse exécuter la commande <a href="career-coach-agile.html"  class="titre-test"><i>git checkout</i></a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+@@include('templates/footer.html')
+</body>
+</html>

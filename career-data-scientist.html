@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Xebia France - Data Scientist</title>
+
+    @@include('templates/standardHead.html')
+    <!-- build:css css/home.css -->
+    <link rel="stylesheet" href="stylesheets/vars.less"/>
+    <link rel="stylesheet" href="stylesheets/mixin.less"/>
+    <link rel="stylesheet" href="stylesheets/career/career-craft.less"/>
+    <link rel="stylesheet" href="stylesheets/career/career-devops.less"/>
+    <link rel="stylesheet" href="stylesheets/career/career-sql.less"/>
+    <link rel="stylesheet" href="stylesheets/career/career.less"/>
+    <link rel="stylesheet" href="stylesheets/career/shCore.css" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/career/shCoreDefault.css" type="text/css" />
+    <!-- endbuild -->
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+
+    <!-- build:hbar js/templates.js -->
+    <script src="templates/common/client.hbar"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/main.js -->
+    <script src="scripts/vendor/jquery-ui.js"></script>
+    <script src="scripts/vendor/fieldChooser.min.js"></script>
+    <script src="scripts/vendor/shCore.js"></script>
+    <script src="scripts/vendor/shBrushJava.js"></script>
+    <script src="scripts/career-craft/career-craft.js"></script>
+    <!-- endbuild -->
+
+
+</head>
+<body>
+@@include('templates/header.html')
+<main>
+    <div class="career-craft">
+
+        <div class="sample-status centering">
+            <div id="game-display" class="game-display">
+                <h1>Data Scientist</h1>
+                <h2>
+                  Les données vous passionnent, les algorithmes n’ont plus aucun secret pour vous, vous êtes créatif et
+
+un explorateur dans l’âme !
+<span class="titre-test">En Data Scientist averti(e) vous n’aurez aucun mal à résoudre cette
+
+énigme pour découvrir ce que nous avons à offrir !</span>
+                </h2>
+
+                <h3>Testez-vous</h3>
+
+<form class="form-test-nosql">
+
+  <p class="titre-test">Marie et Paul attendent un enfant. Sachant qu’ils ont déjà un premier enfant. Combien de chance
+
+ont-ils d’avoir deux garçons ?</p>
+<div class="radio">
+  <label><textarea rows="1" type="text" name="optradio" placeholder="1" value="0.75"></textarea></label>
+</div>
+
+
+<p class="center">
+ <input name="Submit" value="Valider" onclick="resultat()" type="button"></p>
+</form>
+
+
+
+
+
+
+            </div>
+            <div id="success-message" class="success-display" style="display:none;">
+
+                    <h1>Good Work!</h1>
+                    <img class="success-meme" src="images/career/meme_success_4.png" alt="CONGRATS!"/>
+
+                  <p>Les défis ne vous font pas peur et c’est l’une des principales qualités de nos Xebians !<br/>
+
+                    Collecter et nettoyer les données ne sont pas vos tâches préférées mais vous adorez explorer,
+
+modéliser des modèles et communiquer sur les résultats ? Vous faîtes du R ou du Python ? Scikit-
+
+learn n’a plus aucun secret pour vous ? Vous avez des connaissances en Hadoop ou encore en
+
+Spark ? Vous avez une sensibilité pour la Data Visualisation et aimez jouer avec d3.JS et Tableau ?
+
+Alors n’hésitez plus et rejoignez-nous !
+<br/>
+
+
+
+                    <span class="strong">Vous avez des connaissances en Hadoop ou encore en
+
+                    Spark ? Vous avez une sensibilité pour la Data Visualisation et aimez jouer avec d3.JS et Tableau ?
+
+                    Alors n’hésitez plus et rejoignez-nous !</span><br/>
+                </p>
+                    <h2>Chez nous être Data Scientist c'est :</h2>
+                    <p>
+                        - Des missions sur mesure</br>
+                        - Participer au mercredi de la Data en s’amusant sur des projets Kaggle</br>
+                        - Participer à des conférences telles que Paris Machine Learning ou Datageek</br>
+                        - Speaker à Devoxx et partager son savoir avec des pairs</br>
+
+                    </p>
+                <p class="titre-test">
+                  Faîtes un tour sur notre <a href="http://www.blog.xebia.fr" target="_blank">blog</a> et sur notre <a href="http://www.techtrends.xebia.fr" target="_blank">TechTrend Data</a> pour en savoir plus !
+
+                    <br/>Prêt(e) à tenter l’aventure ?
+
+                </p>
+                <div class="centering">
+                <a href="form.html" class="button_contact">Contactez-nous!</a>
+                </div>
+            </div>
+            <div id="fail-message"class="failure-display" style="display:none">
+                <h1>
+                    Bon... À ce niveau, vous devriez tenter une certification ISO-1664.
+                </h1>
+                <img class="trollface" src="images/meme_wrong_6.png" alt="problem?">
+                <p>
+                    C'est bon ! OK ! OK ! On vous laisse exécuter la commande <a href="career-data-scientist.html"  class="titre-test"><i>git checkout</i></a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+@@include('templates/footer.html')
+</body>
+</html>

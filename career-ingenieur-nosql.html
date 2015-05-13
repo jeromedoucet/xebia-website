@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="stylesheets/career/career-craft.less"/>
     <link rel="stylesheet" href="stylesheets/career/career-devops.less"/>
     <link rel="stylesheet" href="stylesheets/career/career-sql.less"/>
+    <link rel="stylesheet" href="stylesheets/career/career.less"/>
     <link rel="stylesheet" href="stylesheets/career/shCore.css" type="text/css" />
     <link rel="stylesheet" href="stylesheets/career/shCoreDefault.css" type="text/css" />
     <!-- endbuild -->
@@ -65,9 +66,8 @@ découvrir ce que nous avons à offrir !</span>
   </div>
 
 
-  <div class="centering">
-      <input id="button" class="button_valid" type="button" value="Validate">
-  </div>
+  <p class="center">
+   <input name="Submit" value="Valider" onclick="resultat()" type="button"></p>
 </form>
 
 
@@ -78,7 +78,8 @@ découvrir ce que nous avons à offrir !</span>
             </div>
             <div id="success-message" class="success-display" style="display:none;">
 
-                    <h2>Good Work!</h2>
+                    <h1>Good Work!</h1>
+                    <img class="success-meme" src="images/career/meme_success_6.png" alt="CONGRATS!"/>
 
                   <p>Les défis ne vous font pas peur et c’est l’une des principales qualités de nos Xebians !<br/>
 
@@ -95,7 +96,7 @@ orientée colonnes ? Vous hésitez entre MongoDB et Cassandra pour choisir entr
 
                     mémoire seront les problématiques principales ?</span><br/>
                 </p>
-                    <h2>Chez nous être ingénieur NoSQL chez Xebia c'est :</h2>
+                    <h2>Chez nous être ingénieur NoSQL c'est :</h2>
                     <p>
                         - Des missions sur mesure</br>
                         - Participer au mercredi de la Data pour débattre et apprendre avec vos pairs Xebians</br>
@@ -119,7 +120,7 @@ connaissances</br>
                 <h1>
                     Bon... À ce niveau, vous devriez tenter une certification ISO-1664.
                 </h1>
-                <img class="trollface" src="images/you_wrong_craft.jpg" alt="problem?">
+                <img class="trollface" src="images/meme_wrong_3.png" alt="problem?">
                 <p>
                     C'est bon ! OK ! OK ! On vous laisse exécuter la commande <a href="career-ingenieur-nosql.html"  class="titre-test"><i>git checkout</i></a>.
                 </p>

@@ -325,4 +325,33 @@ section {
   color:white;
   font-size:20px;
   padding:0.5em;
+  -webkit-transition: background-color .3s;
+  -moz-transition: background-color .3s;
+  -ms-transition: background-color .3s;
+  -o-transition: background-color .3s;
+  transition: background-color .3s;
+  outline-style:none;
+
+  &:hover
+  {
+    color:white;
+    background:#08dac9;
+    text-decoration:none;
+  }
+
+  &:active
+  {
+    outline-style:none;
+  }
+
+  &:focus
+  {
+    outline-style:none;
+  }
+}
+
+.center
+{
+  text-align:center;
+  margin-top:50px;
 }

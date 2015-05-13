@@ -52,6 +52,19 @@ $(function () {
         $('#mentions-legales-popup').slideUp();
     });
 
+
+    var $formPopup = $('#form-contact-popup');
+    $('.form-popup').click(function () {
+        $formPopup.slideDown();
+    });
+
+    $formPopup.find('.close').click(function () {
+        $('#form-contact-popup').slideUp();
+    });
+
+
+
+
     //$('.show-service-sub-menu').hover(function() {
       //$('.service-menu').show();
     //});
