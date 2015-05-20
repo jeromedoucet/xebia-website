@@ -21,6 +21,11 @@ a {
   text-decoration: none;
 }
 
+a:focus, a:hover
+{
+  text-decoration:none !important;
+}
+
 main {
   padding-top: 190px;
 }
@@ -270,7 +275,7 @@ section {
 
 .main-photo-wrapper {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   img {
     width: 1024px;
 
@@ -281,13 +286,11 @@ section {
   .photo-description {
     position: absolute;
     color: white;
-    background-color: @contrastColor;
-    max-width: 700px;
-    display: inline-block;
+    background-color: rgba(0,0,0,0.6);
+    max-width: 100%;
     font-size: @defaultTitleSize;
     padding: 20px;
-    bottom: -85px;
-    left: 70px;
+    bottom: 95px;
     line-height: 40px;
 
   }
@@ -339,16 +342,17 @@ section {
     text-decoration:none;
   }
 
-  &:active
-  {
-    outline-style:none;
-  }
 
-  &:focus
-  {
-    outline-style:none;
+}
+
+.link{
+  color:#06a99c;
+
+  &:hover{
+    font-weight:bold;
   }
 }
+
 
 .center
 {

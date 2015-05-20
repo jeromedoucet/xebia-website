@@ -27,7 +27,7 @@
     <script src="scripts/vendor/shCore.js"></script>
     <script src="scripts/vendor/shBrushJava.js"></script>
     <script src="scripts/career-craft/career-craft.js"></script>
-    <script src="scripts/career/career-script.js"></script>
+    <script src="scripts/career/career-devops.js"></script>
     <!-- endbuild -->
 
 
@@ -83,32 +83,32 @@ avons à vous offrir …</span>
 
   <p class="titre-test">3) Sur quoi est basée la technologie Docker ?</p>
   <div class="radio">
-    <input type="radio" id="docker1" name="docker" value="docker1"/><label for="docker1"><span></span>a) Lsd</label></div>
+    <input type="radio" id="docker1" name="docker" value="docker1"/><label for="docker1"><span></span>a) LSD</label></div>
   <div class="radio">
-    <input type="radio" id="docker2" name="docker" value="docker2"/><label for="docker2"><span></span>b) Lxc</label></div>
+    <input type="radio" id="docker2" name="docker" value="docker2"/><label for="docker2"><span></span>b) LXC</label></div>
   <div class="radio">
-    <input type="radio" id="docker3" name="docker" value="docker3"/><label for="docker3"><span></span>c) Ldap</label></div>
+    <input type="radio" id="docker3" name="docker" value="docker3"/><label for="docker3"><span></span>c) LDAP</label></div>
   <div class="radio">
     <input type="radio" id="docker4" name="docker" value="docker4"/><label for="docker4"><span></span>d) La réponse d</label>
   </div>
 
   <p class="titre-test">4) Dans mon usine logicielle, comment dois-je ordonner les briques suivantes :</p>
   <div class="radio">
-    <label><input type="radio" name="brique">a) Jenkins</label>
+    <label><input type="radio" name="brique">Jenkins</label>
   </div>
   <div class="radio">
-    <label><input type="radio" name="brique">b) Beanstalk</label>
+    <label><input type="radio" name="brique">Beanstalk</label>
   </div>
   <div class="radio">
-    <label><input type="radio" name="brique">c) Git</label>
+    <label><input type="radio" name="brique">Git</label>
   </div>
   <div class="radio">
-    <label><textarea rows="1" type="text" name="optradio" placeholder="Exemple : a-b-c" value="c-a-b"></textarea></label>
+    <label>Réponse :<input type="text" name="optradio" id="brique" placeholder="Exemple : a-b-c" value=""></input></label>
   </div>
 
 
   <p class="center">
-   <input name="Submit" value="Valider" onclick="resultat()" type="button"></p>
+   <input name="Submit" value="Valider" onclick="resultatdevops()" type="button"></p>
 </form>
 
 
@@ -147,14 +147,14 @@ Openstack, Jenkins ou Puppet n’ont pas de secret pour vous ?<br/>
 
                 </p>
                 <div class="centering">
-                <a href="form.html" class="button_contact">Contactez-nous!</a>
+                <a class="button_contact form-popup">Contactez-nous!</a>
                 </div>
             </div>
             <div id="fail-message"class="failure-display" style="display:none">
                 <h1>
                     Bon... À ce niveau, vous devriez tenter une certification ISO-1664.
                 </h1>
-                <img class="trollface" src="images/meme_wrong_7.png" alt="problem?">
+                <img class="trollface" src="images/career/meme_wrong_7.png" alt="problem?">
                 <p>
                     C'est bon ! OK ! OK ! On vous laisse exécuter la commande <a href="career-expert-devops.html"  class="titre-test"><i>git checkout</i></a>.
                 </p>

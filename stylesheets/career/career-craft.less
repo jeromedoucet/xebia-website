@@ -39,6 +39,15 @@
       padding-top:40px;
       color: #06a99c;
       font-weight:400;
+
+      a{
+        color: #0062ad;
+font-weight: 300;
+
+  &:hover{
+    text-decoration:underline;
+  }
+      }
     }
 
   }
@@ -89,22 +98,46 @@
 
   .failure-display{
     text-align:center;
+    padding-top:80px;
+    height: 750px;
+    h1{
+      font-family: 'Pacifico';
+      padding: 20px;
+      background-color: #06a99c;
+      color:white;
+      margin-bottom: 20px;
+    }
     .trollface{
       width: 40%;
-      margin-left:auto;
-      padding:60px;
-      margin-right:auto;
+  margin-left: auto;
+  padding: 0 30px 10px 0px;
+  margin-right: auto;
+  float:left;
 
+    @media(max-width:480px){
+      float:none;
+      width: 90% !important;
+    }
     }
   }
 
   .success-display{
     text-align:center;
+    padding-top:80px;
     p{
       text-align:left;
     }
+    h1{
+      font-family: 'Pacifico';
+      padding: 20px;
+      background-color: #06a99c;
+      color:white;
+      margin-bottom: 20px;
+    }
     h2:first-of-type{
     color:@contrastColor;
+    text-align:left;
+    font-size:30px;
   }
     .titre-recrut{
     color:@xebiaColor;
@@ -116,8 +149,14 @@
   .success-meme{
     width: 40%;
 margin-left: auto;
-padding: 60px;
+padding: 0 30px 10px 0px;
 margin-right: auto;
+float:left;
+
+  @media(max-width:480px){
+    float:none;
+    width: 90% !important;
+  }
   }
   }
 }

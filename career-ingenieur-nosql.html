@@ -27,7 +27,7 @@
     <script src="scripts/vendor/fieldChooser.min.js"></script>
     <script src="scripts/vendor/shCore.js"></script>
     <script src="scripts/vendor/shBrushJava.js"></script>
-    <script src="scripts/career-craft/career-craft.js"></script>
+    <script src="scripts/career/career-nosql.js"></script>
     <!-- endbuild -->
 
 
@@ -62,12 +62,12 @@ découvrir ce que nous avons à offrir !</span>
     <input type="radio" id="cap2" name="cap" value="cap2"/><label for="cap2"><span></span>b) Un jeu de bière ou un jeu d'enfant</label>
   </div>
   <div class="radio">
-    <input type="radio" id="cap3" name="cap" value="cap3"/><label for="cap3"><span></span>c) Consistency - Availibility - Partition Tolerence</label>
+    <input type="radio" id="cap3" name="cap"  value="cap3"/><label for="cap3"><span></span>c) Consistency - Availibility - Partition Tolerence</label>
   </div>
 
 
   <p class="center">
-   <input name="Submit" value="Valider" onclick="resultat()" type="button"></p>
+   <input name="Submit" value="Valider" onclick="resultatnosql();" type="button"/></p>
 </form>
 
 
@@ -113,14 +113,14 @@ connaissances</br>
 
                 </p>
                 <div class="centering">
-                <a href="form.html" class="button_contact">Contactez-nous!</a>
+                <a class="button_contact form-popup">Contactez-nous!</a>
                 </div>
             </div>
             <div id="fail-message"class="failure-display" style="display:none">
                 <h1>
                     Bon... À ce niveau, vous devriez tenter une certification ISO-1664.
                 </h1>
-                <img class="trollface" src="images/meme_wrong_3.png" alt="problem?">
+                <img class="trollface" src="images/career/meme_wrong_3.png" alt="problem?">
                 <p>
                     C'est bon ! OK ! OK ! On vous laisse exécuter la commande <a href="career-ingenieur-nosql.html"  class="titre-test"><i>git checkout</i></a>.
                 </p>
@@ -130,5 +130,7 @@ connaissances</br>
 </main>
 
 @@include('templates/footer.html')
+
+
 </body>
 </html>
