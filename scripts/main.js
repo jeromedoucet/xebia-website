@@ -62,6 +62,15 @@ $(function () {
         $('#form-contact-popup').slideUp();
     });
 
+    var $formPopup = $('#contact-popup');
+    $('.contact-popup').click(function () {
+        $formPopup.slideDown();
+    });
+
+    $formPopup.find('.close').click(function () {
+        $('#contact-popup').slideUp();
+    });
+
 
 
 
