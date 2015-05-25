@@ -62,12 +62,12 @@ $(function () {
         $('#form-contact-popup').slideUp();
     });
 
-    var $formPopup = $('#contact-popup');
+    var $formPopup2 = $('#contact-popup');
     $('.contact-popup').click(function () {
-        $formPopup.slideDown();
+        $formPopup2.slideDown();
     });
 
-    $formPopup.find('.close').click(function () {
+    $formPopup2.find('.close').click(function () {
         $('#contact-popup').slideUp();
     });
 
