@@ -20,9 +20,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <link rel="icon" href="favicon.ico"/>
 
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' >
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 
 
 <script>
@@ -37,13 +40,13 @@
 </script>
 
 
-<link rel="stylesheet" href="css/style-600973c7.css"/>
+<link rel="stylesheet" href="css/style-f591d22b.css"/>
 
 
 
-<script src="js/main-0e0d3ad7.js"></script>
+<script src="js/main-af6541e8.js"></script>
 
-    <link rel="stylesheet" href="css/home-afc3fc2d.css"/>
+    <link rel="stylesheet" href="css/home-e959691b.css"/>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
 
@@ -101,7 +104,7 @@
 
                     <a href="http://www.xebia.tv" target="_blank">Xebia TV</a>
 
-                    <a href="mailto:info@xebia.fr">Contact</a>
+                    <a class="contact-popup">Contact</a>
                 </div>
             </div>
 
@@ -156,60 +159,113 @@
 </header>
 
 
-<main>
+<main id="jobs">
+  <section class="jobs centering">
+    <h2> Nous recrutons : </h2>
+      <ul>
+          <li><a href="career-back.html" class="button_annonce">Consultant Back</a></li>
+          <li><a href="career-data-scientist.html" class="button_annonce">Data Scientist</a></li>
+          <li><a href="career-coach-agile.html" class="button_annonce">Coach Agile</a></li>
+          <li style="display:none;"><a class="button_annonce form-popup">Coach DevOps</a></li>
+          <li><a href="career-craft.html" class="button_annonce">Consultant Craft / Java</a></li>
+          <li><a href="career-expert-devops.html" class="button_annonce">Expert DevOps</a></li>
+      </ul>
+      <ul>
+          <li><a href="career-ingenieur-data.html" class="button_annonce">Ingénieur Data</a></li>
+          <li><a href="career-ingenieur-nosql.html" class="button_annonce">Ingénieur NoSQL</a></li>
+          <li><a href="career-android.html" class="button_annonce">Craftsman Android</a></li>
+          <li><a href="career-ios.html" class="button_annonce">Craftsman iOS</a></li>
+          <li style="display:none;"><a href="career-front.html" class="button_annonce">Consultant Front</a></li>
+      </ul>
+      <p>Vous avez d'autres talents ? C'est par <a class="link form-popup">ici</a> !</p>
+  </section>
+
     <section class="career centering">
         <div class="main-photo-wrapper">
             <img src="images/career/Img-Studio-contact-Xebia.jpg" alt="Photo de xebian heureux"/>
             <img src="images/career/GPTW.svg" alt="Great Place to Work Logo" class="gptw"/>
 
             <h1 class="photo-description">
-                Il faut des personnes passionnées pour résoudre des problématiques complexes et stimulantes
+                Il faut des personnes passionnées pour résoudre des problématiques complexes et stimulantes.
             </h1>
         </div>
     </section>
 
-    <section class="jobs centering">
-        <ul>
-            <li><a href="mailto:recrutement@xebia.fr">Consultant Mobilité</a></li>
-            <li><a href="mailto:recrutement@xebia.fr">Consultant Java</a></li>
-            <li><a href="mailto:recrutement@xebia.fr">Consultant DevOps</a></li>
-            <li><a href="mailto:recrutement@xebia.fr">Expert BigData</a></li>
-            <li><a href="mailto:recrutement@xebia.fr">Expert Cloud</a></li>
-            <li><a href="mailto:recrutement@xebia.fr">Coach Agile</a></li>
-        </ul>
+    <section class="xebian centering">
+      <h2>Qui sont les Xebian(e)s ?</h2>
+
+        <p>Spécialistes de l'écosystème Java, des technologies du web, du mobile et
+
+convaincus par l’agilité, les Xebian(e)s sont des passionné(e)s. Ils aiment échanger, bloguer, twitter, participer à des conférences, se réunir,
+
+progresser, tester de nouvelles technologies et partager leurs expériences.
+      </p>
     </section>
 
-    <section class="citations">
-        <div class="centering">
-            <div class="citation">
-                <div class="img-wrapper">
-                    <img alt="Christophe Heubes" src="images/career/christophe_heubes.png">
-                </div>
-                <blockquote>
-                    <p>« Etre un Xebian, c’est faire partie d’un groupe de techos passionnés&nbsp;;
-                        une communauté au sein de laquelle chacun est reconnu pour son expertise et sa passion. C’est
-                        l’opportunité de travailler et de partager avec des pairs parmi les plus talentueux.</p>
+    <section class="croisees">
+      <div class="centering">
+      <h2> Vous les avez forcément croisé(e)s...</h2>
+      <p>Que ce soit via notre blog technique, via des <a href="http://www.xebia.tv/youtube?videoId=h_eBWw1VlvQ" target="_blank" class="link">Tech-Events</a> ou encore des
 
-                    <p>La promotion du partage et la qualité sans compromis permettent aux Xebians de faire avancer et
-                        de promouvoir chez leurs clients l’état de l’art de la réalisation logicielle de très haute
-                        qualité.&nbsp;» </p>
-                    <cite>Christophe Heubès, COO</cite>
-                </blockquote>
-            </div>
+conférences techniques, les Xebian(e)s sont sur tous les fronts :). En
+
+plus, ils participent chaque mois à une journée de partage de
+
+connaissances en interne animée par et pour eux : c'est notre XKE !
+
+Vous vous sentez l'âme d'un(e) Xebian(e) ? Venez découvrir nos coulisses !</p>
+      </div>
 
 
-        </div>
     </section>
 
-    <section class="we-work-with centering">
+    <section class="xebian centering">
+      <h2>Les plus</h2>
+
+        <ul class="petit-plus">
+          <li>- XKE ! (Xebia Knowledge Exchange).</li>
+
+          <li>- Achats de livres techniques illimités.</li>
+
+          <li>- MacBook Pro.</li>
+
+          <li>- Un clan de passionné(e)s.</li>
+
+          <li>- De supers bureaux au cœur de Paris.</li>
+
+          <li>- Afterworks.
+
+          <li>- Concours de Street Fighter, Fifa et de lancer d'Angry Birds.</li>
+
+          <li>- Tournois de flipper et de ping-pong endiablés.</li>
+
+          <li>- Café / thé à volonté (et plus si affinité ;) ).</li>
+
+          <li>- Mutuelle / Participation / Tickets Restaurants / Prime de vacances.</li>
+
+          <li>- Contribution au <a href="blog.xebia.fr" target="_blank" class="link">blog</a>.
+
+
+</ul>
+
+
+        <a href="#jobs" class="link decouvrez">Découvrez nos offres</a>
+
+    </section>
+
+
+
+
+
+    <!--<section class="we-work-with centering">
         <div class="centering">
             <h2>Nous travaillons avec</h2>
 
             <div id="clients-logo">
-                <!-- rempli dynamiquement -->
-            </div>
+            --><!-- rempli dynamiquement -->
+          <!--  </div>
         </div>
-    </section>
+    </section>-->
 </main>
 
 <footer>
@@ -289,6 +345,26 @@
         Le site <a href="http://www.xebia.fr">www.xebia.fr</a> est hébergé par Github, 4th Street, San Francisco, CA,
         United States, <a href="https://github.com/">https://github.com/</a>.<br />
         Ces mentions légales sont générées gratuitement par l'agence web DelAdmin.
+    </p>
+</div>
+
+<div id="form-contact-popup">
+    <h2>Contactez-nous : <button class="close">X</button></h2>
+
+    <p>
+        Par téléphone : <span class="link">+33 (0)1 53 89 99 98</span></br>
+        Par mail : <a href="mailto:recrutement@xebia.fr" class="link">recrutement@xebia.fr</a></br>
+
+    </p>
+</div>
+
+<div id="contact-popup">
+    <h2>Contactez-nous : <button class="close">X</button></h2>
+
+    <p>
+        Par téléphone : <span class="link">+33 (0)1 53 89 99 99</span></br>
+        Par mail : <a href="mailto:info@xebia.fr" class="link">info@xebia.fr</a></br>
+
     </p>
 </div>
 
