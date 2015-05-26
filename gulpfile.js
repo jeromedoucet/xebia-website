@@ -20,6 +20,7 @@ var paths = {
     stylesheets: 'stylesheets/**/*.less',
     templates: 'templates/**/*',
     images: 'images/**/*',
+    frontFiles : 'career-front/**',
     html: '*.html',
     dist: 'dist',
     resources: ['CNAME', 'robots.txt', 'sitemap.xml', 'favicon.ico']
@@ -29,7 +30,7 @@ var deployOpts = {
     cacheDir: 'deployCache'
 };
 
-var distTasks = ['_image', '_html', '_resources', '_fonts', '_data'];
+var distTasks = ['_image', '_html', '_resources', '_fonts', '_data', '_frontFiles'];
 (function () {
     var cleanTask = function () {
         return gulp.src(paths.dist, {read: false})
@@ -44,6 +45,9 @@ var distTasks = ['_image', '_html', '_resources', '_fonts', '_data'];
     };
     var resourcesTask = function () {
         gulp.src(paths.resources).pipe(gulp.dest(paths.dist));
+    };
+    var frontFilesTask = function (){
+        gulp.src(paths.frontFiles).pipe(gulp.dest(paths.dist + '/career-front'));
     };
     var fontsTask = function () {
         gulp.src(paths.font).pipe(gulp.dest(paths.dist + '/font'));
@@ -73,10 +77,12 @@ var distTasks = ['_image', '_html', '_resources', '_fonts', '_data'];
     gulp.task('clean', cleanTask);
     gulp.task('data', dataTask);
     gulp.task('fonts', fontsTask);
+    gulp.task('frontFiles', frontFilesTask);
     gulp.task('resources', resourcesTask);
     gulp.task('image', imageTask);
     gulp.task('html', htmlTask);
     gulp.task('_fonts', ['clean'], fontsTask);
+    gulp.task('_frontFiles', ['clean'], frontFilesTask);
     gulp.task('_data', ['clean'], dataTask);
     gulp.task('_resources', ['clean'], resourcesTask);
     gulp.task('_image', ['clean'], imageTask);
