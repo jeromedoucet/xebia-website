@@ -2,7 +2,7 @@ function resultatscientist() {
 
   event.preventDefault();
 
-if ($("#scientist").val() == "0.75" || $("#scientist").val() == "0,75") {
+if ($("#scientist").val() == "1/3") {
   $('#success-message').show();
   $('html,body').animate({ scrollTop: $("#success-message").offset().top }, 1000);
   $('#fail-message').hide();
